@@ -1,0 +1,74 @@
+\documentclass[addpoints]{exam}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+
+  %% Custom commands
+  % Instructions for a section
+  \newcommand{\instr}[1]{
+    \begin{center}
+      \fbox{
+        \fbox{
+          \parbox{0.85\textwidth}
+                 {#1}
+        }
+      }
+    \end{center}
+  }
+
+  % Document information
+  \title{Exam 1}
+  \date{}
+
+\begin{document}
+  \maketitle
+
+  % Header
+  \noindent\makebox[0.5\textwidth][l]{Name:} \makebox[0.5\textwidth][r]{Course: LING2100, The Study of Language}\\
+  \makebox[0.5\textwidth][l]{Date:} \makebox[0.5\textwidth][r]{Instructor: Joshua McNeill}
+
+  % Instructions
+  \instr{Here are the instructions.}
+
+  % Questions
+  \begin{questions}
+    \question[2] This is a short question?
+
+    \question[10] This is the first long question?
+
+    \vspace{\stretch{1}}
+
+    \question[10] This is the second long question?
+
+    \vspace{\stretch{1}}
+
+  \newpage
+
+  \instr{Check the box for the correct choice.}
+
+  \question[2] Which choice do you want to check?
+
+    \begin{checkboxes}
+      \choice This one.
+      \choice No this one.
+    \end{checkboxes}
+
+  \question[2] Which choice do you want to circle?
+
+    \begin{oneparchoices}
+      \choice This one
+      \choice Or this one
+      \choice Or maybe this
+      \choice No this one
+      \choice Wait, this is right
+    \end{oneparchoices}
+
+  \end{questions}
+
+  \vspace{1.25cm}
+
+  % Grade
+  \begin{center}
+    \gradetable[v][pages]
+  \end{center}
+\end{document}
