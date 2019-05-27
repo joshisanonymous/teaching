@@ -1,0 +1,370 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Beamer settings
+  \usetheme{Berkeley}
+  \usecolortheme{dove}
+  \usecolortheme{rose}
+  \usefonttheme{professionalfonts}
+  \usefonttheme{serif}
+  \setbeamertemplate{bibliography item}{}
+
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{graphicx}
+    \graphicspath{{./figures/}}
+  \usepackage[backend=biber,style=apa]{biblatex}
+    \addbibresource{../References.bib}
+
+  % Document information
+  \title[Welcome]{LING2100: The Study of Language}
+  \author{Joshua McNeill}
+  \institute{\url{joshua.mcneill@uga.edu}}
+  \date{}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\subtwoone}{What is linguistics?}
+  \newcommand{\subtwotwo}{What is language?}
+  \newcommand{\subtwothree}{\citeauthor{hockett_origin_1960}'s (\citeyear{hockett_origin_1960}) design features of language}
+  \newcommand{\subtwofour}{What you know about your language}
+  \newcommand{\subtwofive}{What else?}
+  \newcommand{\subtwosix}{How we study this stuff}
+  \newcommand{\subtwoseven}{What about writing?}
+
+\begin{document}
+  \begin{frame}
+    \titlepage
+    \tiny{Office:\\
+          Office hours:}
+  \end{frame}
+
+  \begin{frame}
+    \tableofcontents[hideallsubsections]
+  \end{frame}
+
+  \AtBeginSection[]{
+    \begin{frame}
+      \tableofcontents[currentsection,
+                       hideallsubsections]
+    \end{frame}}
+
+  \section{Course Information}
+    \begin{frame}{Description}
+      \begin{block}{}
+        The \emph{scientific} study of language, emphasizing such topics as the organization of grammar, language in space and time, and the relationship between the study of language and other disciplines.
+      \end{block}
+    \end{frame}
+
+    \begin{frame}{Objectives}
+      \begin{block}{}
+        By the end of this course, you will be able to:
+        \begin{itemize}
+          \item Use linguistic terminology accurately
+          \item Discuss basic linguistic facts, theories, and methodologies
+          \item Analyze samples of written or spoken language from a variety of world languages
+          \item Understand both language change and how language supports all learning and communication
+        \end{itemize}
+      \end{block}
+    \end{frame}
+
+    \begin{frame}{Materials}
+      \begin{block}{}
+        \fullcitebib{dawson_language_2016}
+      \end{block}
+    \end{frame}
+
+    \begin{frame}{Grading}
+      \begin{block}{}
+        \begin{tabular}{r l}
+          Participation & 11\%\\
+          Homework      & 45\% (4x11\% + 1x1\%)\\
+          Exams         & 44\% (4x11\%)
+        \end{tabular}
+      \end{block}
+
+      \begin{alertblock}<2->{}
+        \begin{itemize}
+          \item Everything is 11\% of your grade
+          \item There will be 4 exams (3 regular + final)
+        \end{itemize}
+      \end{alertblock}
+    \end{frame}
+
+    \begin{frame}{Attendance}
+      \begin{block}{}
+        Basically your participation grade:
+        \begin{itemize}
+          \item Allowed 3 absences, \emph{no excuses required}
+          \item Each absence $>$3 reduces your participation grade by 1\% (out of the 11\%)
+        \end{itemize}
+      \end{block}
+      \begin{alertblock}<2>{That said... please participate}
+        \begin{itemize}
+          \item I'll try not to ask dumb questions
+          \item You try to to stop me to ask questions when you don't understand
+        \end{itemize}
+      \end{alertblock}
+    \end{frame}
+
+    \begin{frame}{Make-up Work}
+      \begin{block}{}
+        Not accepted unless you say something \emph{before the due date} so that we can work something out
+      \end{block}
+    \end{frame}
+
+    \begin{frame}{Schedule}
+      \begin{block}{}
+        By the beginning of each class, you will be expected to have:
+        \begin{itemize}
+          \item Read the relevant section(s) of the book
+          \item Turned in any assignment(s) that are due
+        \end{itemize}
+      \end{block}
+    \end{frame}
+
+  \section{Introduction}
+    \subsection{\subtwoone}
+      \begin{frame}{\subtwoone}
+        \begin{definition}<2->
+          The \emph{scientific} study of how language works
+        \end{definition}
+        \begin{block}<3->{A subfield of}
+          \begin{itemize}
+            \item Psychology and cognitive science when we're talking about the structure of a language
+            \item Sociology and anthropology when we're talking about use, variation, and change
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subtwotwo}
+      \begin{frame}{\subtwotwo}
+        \begin{definition}<2->{}
+          \begin{itemize}
+            \item ``Language'': Human communication
+            \item ``\emph{A} language'': A systematic set of words and rules that can be used for human communication \emph{and that is unique to each individual}
+          \end{itemize}
+        \end{definition}
+        \begin{alertblock}<3->{}
+          In this class, references to things like ``English'' are shorthand for ``the set of features that happen to be shared in the languages of some group of people''
+        \end{alertblock}
+      \end{frame}
+
+    \subsection{\subtwothree}
+      \begin{frame}{\subtwothree}
+        \only<1-2>{
+          \begin{block}<1-2>{Mode of communication}
+            Languages can be communicated in different ways
+            \begin{itemize}
+              \item speech, gesture, writing
+            \end{itemize}
+          \end{block}
+          \begin{block}<2>{Semanticity}
+            Language that is communicated has some meaning or function
+            \begin{itemize}
+              \item ``pizza'' means something, and you can assume that ``alveolar'' means something
+            \end{itemize}
+          \end{block}
+        }
+        \only<3-4>{
+          \begin{block}<3-4>{Pragmatic function}
+            Language that is communicated has some purpose
+            \begin{itemize}
+              \item I didn't tell you about ``alveolar'' for nothing
+            \end{itemize}
+          \end{block}
+          \begin{block}<4>{Interchangeability}
+            Language can be transmitted and interpreted
+            \begin{itemize}
+              \item This is happening right now
+            \end{itemize}
+          \end{block}
+        }
+        \only<5-6>{
+          \begin{block}<5-6>{Cultural transmission}
+            Features of languages can be passed from person to person through interaction
+            \begin{itemize}
+              \item You will (hopefully) know what ``alveolar'' means by the end of this course
+            \end{itemize}
+          \end{block}
+          \begin{block}<6>{Arbitrariness} % Book introduces symbols and icons here
+            The connection between the forms of a language's words and their meanings is arbitrary
+            \begin{itemize}
+              \item A strawberry is called ``strawberry'' in English but ``fraise'' in French
+            \end{itemize}
+          \end{block}
+        }
+        \only<7-8>{
+          \begin{block}<7-8>{Discreteness}
+            The elements of a language are made up of smaller elements
+            \begin{itemize}
+              \item Consonants and vowels make up words, words make up sentences
+            \end{itemize}
+          \end{block}
+          \begin{block}<8>{Displacement}
+            Language can be used to communicate about things that are not present
+            \begin{itemize}
+              \item ``Last week, I went to New Orleans.''
+            \end{itemize}
+          \end{block}
+        }
+        \only<9>{
+          \begin{block}{Productivity}
+            The elements of a language can be combined and recombined in novel ways
+            \begin{itemize}
+              \item You've probably never heard the sentence: ``Strawberry farmers throw pizza in New Orleans''
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subtwofour}
+      \begin{frame}{\subtwofour}
+        \only<1>{
+          \begin{block}{Competence vs performance \parencite{chomsky_syntactic_2002}}
+            \begin{itemize}
+              \item \alert{Competence}: What you know about your language
+              \item \alert{Performance}: What you actually produce when you use your language
+            \end{itemize}
+          \end{block}
+        }
+        \only<2>{
+          \begin{block}{Aspects of your language}
+            \begin{itemize}
+              \item Phonetics and Phonology
+              \item Morphology
+              \item Syntax
+              \item Semantics and Pragmatics
+            \end{itemize}
+          \end{block}
+        }
+        \only<3-4>{
+          \begin{block}<3-4>{Phonetics}
+            You know what is an is not a speech sound
+            \begin{itemize}
+              \item A dog's bark is not a speech sound
+            \end{itemize}
+          \end{block}
+          \begin{block}<4>{Phonology}
+            You know what combination of speech sounds is possible
+            \begin{itemize}
+              \item /pt/ at the beginning of a word is not possible in your language
+            \end{itemize}
+          \end{block}
+        }
+        \only<5-6>{
+          \begin{block}<5-6>{Morphology}
+            You know where word boundaries are and the boundaries of the elements of words
+            \begin{itemize}
+              \item thedogisplayinginthebackyard
+              % Might want to add
+                % unbelievable has how many parts?
+                % ungiraffelike makes sense? How?
+            \end{itemize}
+          \end{block}
+          \begin{block}<6>{Syntax}
+            You know what is and is not a grammatical (i.e., acceptable as possible) sentence
+            \begin{itemize}
+              \item ``Colorless green ideas sleep furiously'' vs
+              \item ``Furiously sleep ideas green colorless'' \parencite{chomsky_syntactic_2002}
+            \end{itemize}
+          \end{block}
+        }
+        \only<7-8>{
+          \begin{block}<7-8>{Semantics}
+            You know the meanings of the word forms in your lexicon
+            \begin{itemize}
+              \item What does ``duck'' mean?
+            \end{itemize}
+          \end{block}
+          \begin{block}<8>{Pragmatics}
+            You know what the purpose is behind an utterance you make
+            \begin{itemize}
+              \item What do you mean if you yell "duck"?
+            \end{itemize}
+          \end{block}
+        }
+        \only<9>{
+          \begin{block}{}
+            All the aspects of your language are stored in your \alert{mental lexicon} and \alert{your mental grammar}
+            \begin{itemize}
+              \item Mental lexicon: All the words you know, their meanings, functions, pronunciations, and relations to other words
+              \item Mental grammar: The set of rules that you use to combine sounds, parts of words, and words
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subtwofive}
+      \begin{frame}{\subtwofive}
+        \begin{block}<1-2>{Language acquisition}
+          \begin{itemize}
+            \item The process of learning your first language
+            \item Studied in psycholinguistics and neurolinguistics
+          \end{itemize}
+        \end{block}
+        \begin{block}<2>{Language variation and change}
+          \begin{itemize}
+            \item How the languages of individuals within and between communities differ and how the languages of individuals of different time periods differ
+            \item Studied in sociolinguistics
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subtwosix}
+      \begin{frame}{\subtwosix}
+        \only<1-3>{
+          \begin{block}<1-3>{Descriptive grammar}
+            The set of rules that you deduce from observing a speaker's linguistic performance
+          \end{block}
+          \begin{block}<2-3>{Mental grammar}
+            The set of rules that you use to combine sounds, parts of words, and words
+          \end{block}
+          \begin{block}<3>{Prescriptive grammar}
+            The set of rules that are prescribed for some context
+          \end{block}
+        }
+        \only<4>{
+          \begin{example}
+            A speaker says, ``Where do you come \emph{from}?'', which contains a stranded preposition
+            \begin{itemize}
+              \item Descriptive grammar: This speaker's language seems to allow stranded prepositions
+              \item Mental grammar: There is definitely some rule about this in this speaker's head, but we can only assume that it's the one we just described
+              \item Prescriptive grammar: Stranded prepositions are inappropriate when writing essays
+            \end{itemize}
+          \end{example}
+        }
+      \end{frame}
+
+    \subsection{\subtwoseven}
+      \begin{frame}{\subtwoseven}
+        \begin{block}{}
+          Writing differs from speech in one important way:
+          \begin{itemize}
+            \item Writing can be edited
+          \end{itemize}
+        \end{block}
+        \begin{block}<2->{}
+          We want to study spontaneous speech so as to avoid the influence of prescriptive grammars on performance
+        \end{block}
+        \begin{alertblock}<3->{}
+          Writing is not \emph{the} language nor a more perfect form of language nor primary over speech
+        \end{alertblock}
+      \end{frame}
+
+  \begin{frame}[allowframebreaks]{References}
+    \printbibliography
+  \end{frame}
+\end{document}
