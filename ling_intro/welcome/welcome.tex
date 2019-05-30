@@ -9,22 +9,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass{beamer}
-  % Beamer settings
-  \usetheme{Berkeley}
-  \usecolortheme{dove}
-  \usecolortheme{rose}
-  \usefonttheme{professionalfonts}
-  \usefonttheme{serif}
-  \setbeamertemplate{bibliography item}{}
+  % Read in standard preamble (cosmetic stuff)
+  \input{..\slide_preamble.tex}
 
-  % Packages and settings
-  \usepackage{fontspec}
-    \setmainfont{Charis SIL}
-  \usepackage{hyperref}
-    \hypersetup{colorlinks=true,
-                allcolors=blue}
-  \usepackage{graphicx}
-    \graphicspath{{./figures/}}
+  % Bibliography
   \usepackage[backend=biber,style=apa]{biblatex}
     \addbibresource{../References.bib}
 
@@ -45,21 +33,8 @@
   \newcommand{\subtwoseven}{What about writing?}
 
 \begin{document}
-  \begin{frame}
-    \titlepage
-    \tiny{Office:\\
-          Office hours:}
-  \end{frame}
-
-  \begin{frame}
-    \tableofcontents[hideallsubsections]
-  \end{frame}
-
-  \AtBeginSection[]{
-    \begin{frame}
-      \tableofcontents[currentsection,
-                       hideallsubsections]
-    \end{frame}}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../slide_intro.tex}
 
   \section{Course Information}
     \begin{frame}{Description}

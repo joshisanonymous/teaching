@@ -1,0 +1,25 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a standard set of intro slides used in for all slide %
+% documents. It basically contains the title page and table of %
+% contents.                                                    %
+%                                                              %
+% Joshua McNeill                                               %
+% joshua dot mcneill at uga dot edu                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \titlepage
+  \tiny{Office:\\
+        Office hours:}
+\end{frame}
+
+\begin{frame}
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+\AtBeginSection[]{
+  \begin{frame}
+    \tableofcontents[currentsection,
+                     hideallsubsections]
+  \end{frame}
+}
