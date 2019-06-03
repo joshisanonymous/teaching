@@ -1,0 +1,74 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This compiles both the English IPA consonant and vowel %
+% charts (_consonants and _vowels) into an actual        %
+% document.                                              %
+%                                                        %
+% Compile with XeLaTeX                                   %
+%                                                        %
+% -Joshua McNeill (joshua dot mcneill at uga dot edu)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../material_preamble.tex}
+
+  % Packages and settings
+  \usepackage{adjustbox}
+  \usepackage{tikz}
+
+  % Document information
+  \title{English IPA charts}
+  \date{}
+
+  %% Custom commands
+  % Taken from https://tex.stackexchange.com/questions/156955/tikz-pgf-linguistics-vowel-chart
+  \def\V(#1,#2){barycentric cs:hf={(3-#1)*(2-#2)},hb={(3-#1)*#2},lf={#1*(2-#2)},lb={#1*#2}}
+  % Space between heading and chart
+  \newcommand{\headspace}{0.4cm}
+
+\begin{document}
+  \maketitle
+  CONSONANTS
+
+  \vspace{\headspace}
+
+  \begin{adjustbox}{width=\textwidth}
+    % Read in the consonants IPA chart
+    \input{material_IPA_en_chart_consonants.tex}
+  \end{adjustbox}
+
+  {\tiny *Symbols on the right side of a box represent voiced sounds and on the left voiceless sounds.}
+
+  \vspace{2cm}
+
+  \parbox[l]{0.5\textwidth}{
+    OTHER SYMBOLS
+
+    \vspace{\headspace}
+
+    \begin{adjustbox}{width=0.3\textwidth}
+      \begin{tabular}{c l}
+        w  & Voiced labial-velar approximant \\
+        tʃ & Voiceless affricate \\
+        dʒ & Voiced affricate
+      \end{tabular}
+    \end{adjustbox}
+  }
+  \parbox[r]{0.5\textwidth}{
+    VOWELS
+
+    \vspace{\headspace}
+
+    \begin{adjustbox}{width=0.3\textwidth}
+      % Read in the vowels IPA chart
+      \input{material_IPA_en_chart_vowels.tex}
+    \end{adjustbox}
+  }
+
+  \begin{flushright}
+    {\tiny *Symbols on the right side of a node represent rounded vowels and on the left unrounded.
+
+    ** Vowels at the top are close/high vowels and at the bottom open/low vowels.}
+  \end{flushright}
+
+\end{document}
