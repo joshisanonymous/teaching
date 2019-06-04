@@ -15,14 +15,15 @@
   % Packages and settings
   \usepackage{adjustbox}
   \usepackage{tikz}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
 
   % Document information
   \title{English IPA charts}
   \date{}
 
   %% Custom commands
-  % Taken from https://tex.stackexchange.com/questions/156955/tikz-pgf-linguistics-vowel-chart
-  \def\V(#1,#2){barycentric cs:hf={(3-#1)*(2-#2)},hb={(3-#1)*#2},lf={#1*(2-#2)},lb={#1*#2}}
   % Space between heading and chart
   \newcommand{\headspace}{0.4cm}
 
@@ -71,4 +72,8 @@
     ** Vowels at the top are close/high vowels and at the bottom open/low vowels.}
   \end{flushright}
 
+  \begin{itemize}
+    \item To hear these sounds: \url{http://web.uvic.ca/ling/resources/ipa/charts/IPAlab/IPAlab.htm}
+    \item To type these symbols: \url{https://ipa.typeit.org/}
+  \end{itemize}
 \end{document}

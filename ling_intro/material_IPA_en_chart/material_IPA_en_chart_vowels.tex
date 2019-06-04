@@ -10,6 +10,10 @@
 % -Joshua McNeill (joshua dot mcneill at uga dot edu)                               %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Custom command
+\def\V(#1,#2){barycentric cs:hf={(3-#1)*(2-#2)},hb={(3-#1)*#2},lf={#1*(2-#2)},lb={#1*#2}}
+
+% Chart
 \begin{tikzpicture}[scale=3]
   \large
   \tikzset{
