@@ -12,16 +12,20 @@
   % Read in standard preamble (cosmetic stuff)
   \input{../slide_preamble.tex}
 
+  % Packages and settings
+  \usepackage[linguistics]{forest}
+  \usepackage{adjustbox}
+
   % Document information
   \subtitle[Phonetics Intro]{Introduction to Phonetics}
 
   %% Custom commands
   % Subsection/frame titles
   \newcommand{\suboneone}{Definition}
-  \newcommand{\subtwoone}{Studying speech sounds}
-  \newcommand{\subtwotwo}{The ``right'' phonetic alphabet}
-  \newcommand{\subtwothree}{Types of speech sounds}
-  \newcommand{\subtwofour}{Phonetic symbols for English}
+  \newcommand{\subtwoone}{How we study sounds}
+  \newcommand{\subtwotwo}{Why a new alphabet}
+  \newcommand{\subtwothree}{Organizing sounds}
+  \newcommand{\subtwofour}{The charts}
 
 \begin{document}
   % Read in the standard intro slides (title page and table of contents)
@@ -79,14 +83,133 @@
           \end{block}
         }
         \only<2>{
-
+          \begin{block}{Acoustic phonetics}
+            \begin{itemize}
+              \item Spectrographs
+            \end{itemize}
+            \includegraphics[scale=0.55]{sharcoustic.jpg}
+          \end{block}
+        }
+        \only<3-6>{
+          \begin{block}{Impressionistic transcription}
+            \href{https://youtu.be/J2oEmPP5dTM?t=51}{Satchmo and tomatoes}
+            \begin{itemize}
+              \item<4-6> təˈmeɪ.ɾoʊ
+              \item<4-6> təˈmɑ.ɾoʊ
+              \item<5-6> təˈmeɪ.ɾə
+            \end{itemize}
+          \end{block}
+          \begin{alertblock}<6>{International phonetic alphabet (IPA)}
+            A \emph{language independent} alphabet for which there is a \emph{one-to-one} correspondance between sounds and symbols
+          \end{alertblock}
         }
       \end{frame}
 
     \subsection{\subtwotwo}
+      \begin{frame}{\subtwotwo}
+        \begin{block}{English orthography is not exact enough}
+          \begin{itemize}
+            \item Multiple representations for individual sounds
+            \begin{itemize}
+              \item Why not \orth{tomatoe} like \orth{toe}?
+            \end{itemize}
+            \item Multiple individual sounds from one representation
+            \begin{itemize}
+              \item The two \orth{t}s in \orth{tomato} represent [t] and [ɾ]
+            \end{itemize}
+            \item One letter can represent multiple sounds
+            \begin{itemize}
+              \item The \orth{x} in \orth{exit} represents [ks]
+            \end{itemize}
+            \item There are silent letters
+            \begin{itemize}
+              \item The \orth{e} in \orth{toe} is silent
+            \end{itemize}
+          \end{itemize}
+        \end{block}
+      \end{frame}
 
     \subsection{\subtwothree}
+      \begin{frame}{\subtwothree}
+        \begin{block}{Smallest to biggest}
+          \alert{segments} $\rightarrow$ \alert{syllables} $\rightarrow$ \alert{suprasegmentals}
+        \end{block}
+        \only<2-3>{
+          \begin{alertblock}{A segment}
+            A consonant or a vowel
+            \begin{itemize}
+              \item<3> \alert{Consonant}: A segment produced by restricting airflow in the vocal tract
+              \item<3> \alert{Vowel}: A segment that is produced without restricting airflow in the vocal tract
+            \end{itemize}
+          \end{alertblock}
+        }
+        \only<4>{
+          \begin{block}{The thongs}
+            \begin{itemize}
+              \item A \alert{monophthong}: A syllable containing only one vowel
+              \item A \alert{diphthong}: A syllable containing more than one vowel
+            \end{itemize}
+          \end{block}
+        }
+        \only<5-6>{
+          \begin{columns}
+            \column{0.5\textwidth}
+              \only<5>{
+                \begin{alertblock}{A syllable}
+                  A unit of speech made up of one or more adjacent vowels, optionally surrounded by consonants
+                \end{alertblock}
+              }
+              \only<6>{
+                \begin{alertblock}{A nucleus}
+                    The required vocalic part of a syllable
+                \end{alertblock}
+              }
+            \column{0.5\textwidth}
+              \begin{forest}
+                [ Syllable
+                  [ Onset
+                    [ p, tier=segment ]
+                  ]
+                  [ \alert<6>{Rhyme}
+                    [ \alert<6>{Nucleus}
+                      [ \alert<6>{ɪ}, tier=segment ]
+                    ]
+                    [ Coda
+                      [ n, tier=segment ]
+                    ]
+                  ]
+                ]
+              \end{forest}
+          \end{columns}
+        }
+        \only<7>{
+          \begin{alertblock}{A suprasegmental}
+            Sound features that apply to whole syllables
+            \begin{itemize}
+              \item Stress, intonation, tone, etc.
+            \end{itemize}
+          \end{alertblock}
+        }
+      \end{frame}
 
     \subsection{\subtwofour}
-
+      \begin{frame}{\subtwofour}
+        \begin{block}{}
+          The sounds of English
+        \end{block}
+        \only<1>{
+          \begin{block}{Consonants}
+            \begin{adjustbox}{width=\textwidth}
+              \input{../material_IPA_en_chart/material_IPA_en_chart_consonants.tex}
+            \end{adjustbox}
+          \end{block}
+        }
+        \only<2>{
+          \begin{block}{Vowels}
+            \begin{adjustbox}{height=4.5cm}
+              \input{../material_IPA_en_chart/material_IPA_en_chart_vowels.tex}
+            \end{adjustbox}
+          \end{block}
+        }
+      \end{frame}
 \end{document}
