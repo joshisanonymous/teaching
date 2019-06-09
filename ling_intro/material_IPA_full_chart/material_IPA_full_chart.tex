@@ -1,0 +1,81 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This compiles both the full IPA consonant and vowel    %
+% charts (_consonants and _vowels) into an actual        %
+% document.                                              %
+%                                                        %
+% Compile with XeLaTeX                                   %
+%                                                        %
+% -Joshua McNeill (joshua dot mcneill at uga dot edu)    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../material_preamble.tex}
+
+  % Packages and settings
+  \usepackage{adjustbox}
+  \usepackage{tikz}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+
+  % Document information
+  \title{Full IPA charts}
+  \date{}
+
+  %% Custom commands
+  % Space between heading and chart
+  \newcommand{\headspace}{0.4cm}
+
+\begin{document}
+  \maketitle
+  CONSONANTS
+
+  \vspace{\headspace}
+
+  \begin{adjustbox}{width=\textwidth}
+    % Read in the consonants IPA chart
+    \input{material_IPA_full_chart_consonants.tex}
+  \end{adjustbox}
+
+  {\tiny *Symbols on the right side of a box represent voiced sounds and on the left voiceless sounds.}
+
+  \vspace{2cm}
+
+  \parbox[l]{0.5\textwidth}{
+    OTHER SYMBOLS
+
+    \vspace{\headspace}
+
+    \begin{adjustbox}{width=0.3\textwidth}
+      \begin{tabular}{c l}
+        w  & Voiced labial-velar approximant \\
+        tʃ & Voiceless affricate \\
+        dʒ & Voiced affricate
+      \end{tabular}
+    \end{adjustbox}
+  }
+  \parbox[r]{0.5\textwidth}{
+    VOWELS
+
+    \vspace{\headspace}
+
+    \begin{adjustbox}{width=0.3\textwidth}
+      % Read in the vowels IPA chart
+      \input{material_IPA_full_chart_vowels.tex}
+    \end{adjustbox}
+  }
+
+  \begin{flushright}
+    {\tiny *Symbols on the right side of a node represent rounded vowels and on the left unrounded.
+
+    ** Vowels at the top are close/high vowels and at the bottom open/low vowels.}
+  \end{flushright}
+
+  {\small
+    \begin{itemize}
+      \item To hear these sounds: \url{http://web.uvic.ca/ling/resources/ipa/charts/IPAlab/IPAlab.htm}
+      \item To type these symbols: \url{https://ipa.typeit.org/}
+    \end{itemize}
+  }
+\end{document}
