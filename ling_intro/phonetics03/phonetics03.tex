@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX              %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage{tikz}
+  \usepackage{adjustbox}
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../References.bib}
+
+  % Document information
+  \subtitle[Vowel Articulation]{Articulation of English Vowels}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{Not consonants}
+  \newcommand{\subtwoone}{Properties}
+  \newcommand{\subtwotwo}{Resources and practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../slide_intro.tex}
+
+  \section{What are vowels}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{block}{How do we describe consonants?}
+          \begin{itemize}
+            \item<2-3> Voicing \uncover<3->{$\times$ Always voiced}
+            \item<2-3> Place of articulation \uncover<3->{$\times$ No place}
+            \item<2-3> Manner of articulation \uncover<3->{$\times$ No manner}
+          \end{itemize}
+          \uncover<3>{These don't work for vowels}
+        \end{block}
+      \end{frame}
+
+  \section{Articulation}
+    \subsection{\subtwoone}
+      \begin{frame}{\subtwoone}
+        \begin{columns}
+          \column{0.5\textwidth}
+            \begin{minipage}[c][0.6\textheight]{\linewidth}
+              \only<1>{
+                \begin{block}{How to describe vowels}
+                  \begin{itemize}
+                    \item Tongue height
+                    \item Tongue advancement
+                    \item Lip rounding
+                    \item Tenseness
+                  \end{itemize}
+                \end{block}
+              }
+              \only<2>{
+                \begin{block}{Tongue height}
+                  \begin{itemize}
+                    \item high or close $\rightarrow$ [i ɪ u ʊ]
+                    \item high-mid or close-mid $\rightarrow$ [e o]
+                    \item mid $\rightarrow$ [ə]
+                    \item low-mid or open-mid $\rightarrow$ [ɛ ʌ ɔ]
+                    \item low or open $\rightarrow$ [æ a ɑ]
+                  \end{itemize}
+                \end{block}
+              }
+              \only<3>{
+                \begin{block}{Tongue advancement}
+                  \begin{itemize}
+                    \item front $\rightarrow$ [i ɪ e ɛ æ a]
+                    \item central $\rightarrow$ [ə]
+                    \item back $\rightarrow$ [u ʊ o ʌ ɔ ɑ]
+                  \end{itemize}
+                \end{block}
+              }
+              \only<4-5>{
+                \begin{block}{Lip rounding}
+                  \begin{itemize}
+                    \item rounded $\rightarrow$ [u ʊ o ɔ]
+                    \begin{itemize}
+                      \item<5> To the right of the dots
+                    \end{itemize}
+                    \item unrounded $\rightarrow$ [i ɪ e ɛ æ a ə ʌ ɑ]
+                    \begin{itemize}
+                      \item<5> To the left of the dots
+                    \end{itemize}
+                  \end{itemize}
+                \end{block}
+              }
+              \only<6>{
+                \begin{block}{Tenseness}
+                  \begin{itemize}
+                    \item tense $\rightarrow$ [i e a u o ɔ ɑ]
+                    \item lax $\rightarrow$ [ɪ ɛ æ ə ʊ ʌ]
+                  \end{itemize}
+                \end{block}
+              }
+              \only<7-8>{
+                \begin{block}{Diphthongs}
+                  \uncover<8>{
+                    More than one vowel in the nucleus of a syllable
+                    \begin{itemize}
+                      \item {[}eɪ oʊ ɔɪ aɪ aʊ{]}
+                      \item {[}e o{]} and [a] only ever appear in diphthongs
+                    \end{itemize}
+                  }
+                \end{block}
+              }
+              \only<9>{
+                \begin{block}{Schwas everywhere!}
+                  [ə] is found exclusively in unstressed syllables and almost all unstressed syllables contain [ə]
+                \end{block}
+              }
+            \end{minipage}
+          \column{0.5\textwidth}
+          \begin{adjustbox}{height=4.5cm}
+            % Read in vowel chart
+            \input{../material_IPA_en_chart/material_IPA_en_chart_vowels.tex}
+          \end{adjustbox}
+        \end{columns}
+      \end{frame}
+
+    \subsection{\subtwotwo}
+      \begin{frame}{\subtwotwo}
+        \begin{block}{}
+          \begin{itemize}
+            \item To hear these sounds: \url{http://web.uvic.ca/ling/resources/ipa/charts/IPAlab/IPAlab.htm}
+            \item To type these symbols: \url{https://ipa.typeit.org/}
+          \end{itemize}
+        \end{block}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 2 exercises 12, 13, 14, 15, 16, and 19
+        \end{block}
+      \end{frame}
+\end{document}
