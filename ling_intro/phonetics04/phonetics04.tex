@@ -1,0 +1,219 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage{tikz}
+  \usepackage{adjustbox}
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../References.bib}
+
+  % Document information
+  \subtitle[Non-English Sounds]{Articulation of non-English Sounds}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{Definition}
+  \newcommand{\subonetwo}{Non-English vowels}
+  \newcommand{\subonethree}{Non-English consonants}
+  \newcommand{\subonefour}{Resources and practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../slide_intro.tex}
+
+  \section{What else can the IPA do}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{alertblock}{}
+          The IPA is a \emph{language independent} alphabet
+        \end{alertblock}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}{\subonetwo}
+        \begin{columns}
+          \column{0.5\textwidth}
+            \begin{minipage}[c][0.6\textheight]{\linewidth}
+              \only<1>{
+                \begin{block}{}
+                  These are the vowels in English
+                \end{block}
+              }
+              \only<2>{
+                \begin{block}{}
+                  These are \emph{all} the vowels
+                \end{block}
+              }
+              \only<3>{
+                \begin{block}{Front rounded vowels}
+                  French has [y ø] and [œ]
+                  \begin{itemize}
+                    \item \orth{vue} `view' [vy] vs \orth{vous} `you' [vu]
+                    \item \orth{feu} `fire' [fø] vs \orth{faux} `false' [fo]
+                  \end{itemize}
+                  German has [y] and [ø]
+                  \begin{itemize}
+                    \item \orth{Güte} `kindness' [gytə] vs \orth{guter} `good' [gutə]
+                    \item \orth{schön} `beautiful' [ʃøn] vs \orth{schon} `already' [ʃon]
+                  \end{itemize}
+                \end{block}
+              }
+              \only<4>{
+                \begin{block}{Nasal vowels}
+                  Produced by lowering the velum to redirect the airstream through the nasal cavity
+                \end{block}
+                \begin{example}
+                  French has [ɛ̃ ɔ̃] and [ɑ̃]
+                  \begin{itemize}
+                    \item \orth{mais} `but' [mɛ] vs \orth{main} `hand' [mɛ̃]
+                    \item \orth{chasse} `hunt' [ʃɑs] vs \orth{chance} `luck' [ʃɑ̃s]
+                  \end{itemize}
+                \end{example}
+              }
+            \end{minipage}
+          \column{0.5\textwidth}
+            \only<1>{
+              \begin{adjustbox}{height=4.5cm}
+                % Read in English vowel chart
+                \input{../material_IPA_en_chart/material_IPA_en_chart_vowels.tex}
+              \end{adjustbox}
+            }
+            \only<2->{
+              \begin{adjustbox}{height=4.5cm}
+                % Read in full vowel chart
+                \input{../material_IPA_full_chart/material_IPA_full_chart_vowels.tex}
+              \end{adjustbox}
+            }
+        \end{columns}
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}[t]{\subonethree}
+        \only<1>{
+          \begin{adjustbox}{width=\textwidth}
+            % Read in English IPA consonant chart
+            \input{../material_IPA_en_chart/material_IPA_en_chart_consonants.tex}
+          \end{adjustbox}
+          \begin{block}{}
+            These are the consonants in English
+          \end{block}
+        }
+        \only<2->{
+          \begin{adjustbox}{width=\textwidth}
+            % Read in full IPA consonant chart
+            \input{../material_IPA_full_chart/material_IPA_full_chart_consonants.tex}
+          \end{adjustbox}
+        }
+        \only<2>{
+          \begin{block}{}
+            These are \emph{all} the consonants
+          \end{block}
+        }
+        \only<3>{
+          \begin{block}{All the fricatives}
+            Ewe has [ɸ]
+            \begin{itemize}
+              \item \orth{eya} `he' [́éɸá]
+            \end{itemize}
+            Dutch has [ʝ]
+            \begin{itemize}
+              \item \orth{goed} `good' [ʝut]
+            \end{itemize}
+            Greek has [x]
+            \begin{itemize}
+              \item \orth{χώμα} `soil' [xɔma]
+            \end{itemize}
+          \end{block}
+        }
+        \only<4-5>{
+          \begin{block}{More affricates}
+            \uncover<5>{
+              Quebec French has [dz]
+              \begin{itemize}
+                \item \orth{dîtes} `say' [dzɪt]
+              \end{itemize}
+              German has [pf]
+              \begin{itemize}
+                \item \orth{Pfennig} `penny' [pfɛnɪk]
+              \end{itemize}
+            }
+          \end{block}
+        }
+        \only<6>{
+          \begin{block}{More nasals}
+            Greek has [c]
+            \begin{itemize}
+              \item \orth{ᴋɛρí} `candle' [ceri]
+            \end{itemize}
+            Spanish has [ɲ]
+            \begin{itemize}
+              \item \orth{baño} `bathroom' [baɲo]
+            \end{itemize}
+            Italian, too
+            \begin{itemize}
+              \item \orth{gnocchi} `gnocchi' [ɲoki]
+            \end{itemize}
+          \end{block}
+        }
+        \only<7>{
+          \begin{block}{Going to other places... of articulation}
+            Farsi has [q]
+            \begin{itemize}
+              \item `little bit' [qædri]
+            \end{itemize}
+            Inuktitut adds [ɢ]
+            \begin{itemize}
+              \item `explore' [ihipɢeoqteq]
+            \end{itemize}
+          \end{block}
+        }
+        \only<8>{
+          \begin{block}{And other manners}
+            \begin{columns}
+              \column{0.5\textwidth}
+                Spanish has [r]
+                \begin{itemize}
+                  \item \orth{perro} `dog' [pero]
+                \end{itemize}
+                Russian has [pʲ]
+                \begin{itemize}
+                  \item \orth{пять} `five' [pʲatʲ]
+                \end{itemize}
+              \column{0.5\textwidth}
+                Lakota has [\href{https://youtu.be/mfrAlv-5P1c?t=7}{pʼ}]
+                \begin{itemize}
+                  \item `foggy' [pʼo]
+                \end{itemize}
+                Macedonian has [ɫ]
+                \begin{itemize}
+                  \item \orth{бела} `white' [beɫa]
+                \end{itemize}
+            \end{columns}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}{\subonefour}
+        \begin{block}{}
+          \begin{itemize}
+            \item To hear these sounds: \url{http://web.uvic.ca/ling/resources/ipa/charts/IPAlab/IPAlab.htm}
+            \item To type these symbols: \url{https://ipa.typeit.org/}
+          \end{itemize}
+        \end{block}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 2 exercises 22 and 23
+        \end{block}
+      \end{frame}
+\end{document}
