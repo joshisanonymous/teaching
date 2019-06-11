@@ -36,7 +36,7 @@
       \begin{frame}{\suboneone}
         \only<1-3>{
           \begin{block}<1-3>{}
-            The study of the minimal units that make up a language
+            \input{../definitions/part1/def_phonetics.tex}
             \begin{itemize}
               \item In other words, consonants, vowels, intonation, and stress
             \end{itemize}
@@ -46,15 +46,15 @@
             \begin{itemize}
               \item \alert<3>{Articulatory phonetics}
                 \begin{itemize}
-                  \item The study of the production of these minimal units
+                  \item \input{../definitions/part1/def_articulatory_phonetics.tex}
                 \end{itemize}
               \item \alert<3>{Acoustic phonetics}
                 \begin{itemize}
-                  \item The study of the acoustic properties of these minimal units and their transmission
+                  \item \input{../definitions/part1/def_acoustic_phonetics.tex}
                 \end{itemize}
               \item Auditory phonetics
                 \begin{itemize}
-                  \item The study of the perception of these minimal units
+                  \item \input{../definitions/part1/def_auditory_phonetics.tex}
                 \end{itemize}
             \end{itemize}
           \end{block}
@@ -100,7 +100,8 @@
             \end{itemize}
           \end{block}
           \begin{alertblock}<6>{International phonetic alphabet (IPA)}
-            A \emph{language independent} alphabet for which there is a \emph{one-to-one} correspondance between sounds and symbols
+            % Read in the definition of the IPA
+            \input{../definitions/part1/def_IPA.tex}
           \end{alertblock}
         }
       \end{frame}
@@ -136,18 +137,19 @@
         \end{block}
         \only<2-3>{
           \begin{alertblock}{A segment}
-            A consonant or a vowel
+            % Read in the definition of a segment
+            \input{../definitions/part1/def_segment.tex}
             \begin{itemize}
-              \item<3> \alert{Consonant}: A segment produced by restricting airflow in the vocal tract
-              \item<3> \alert{Vowel}: A segment that is produced without restricting airflow in the vocal tract
+              \item<3> \alert{Consonant}: \input{../definitions/part1/def_consonant.tex}
+              \item<3> \alert{Vowel}: \input{../definitions/part1/def_vowel.tex}
             \end{itemize}
           \end{alertblock}
         }
         \only<4>{
           \begin{block}{The phthongs}
             \begin{itemize}
-              \item A \alert{monophthong}: Only one vowel in a syllable
-              \item A \alert{diphthong}: More than one vowel in a syllable
+              \item A \alert{monophthong}: \input{../definitions/part1/def_monophthong.tex}
+              \item A \alert{diphthong}: \input{../definitions/part1/def_diphthong.tex}
             \end{itemize}
           \end{block}
         }
@@ -156,35 +158,44 @@
             \column{0.5\textwidth}
               \only<5>{
                 \begin{alertblock}{A syllable}
-                  A unit of speech made up of one or more adjacent vowels, optionally surrounded by consonants
+                  % Read in the definition of a syllable
+                  \input{../definitions/part1/def_syllable.tex}
                 \end{alertblock}
               }
               \only<6>{
                 \begin{alertblock}{A nucleus}
-                    The required vocalic part of a syllable
+                  % Read in the definition of a nucleus
+                  \input{../definitions/part1/def_nucleus.tex}
                 \end{alertblock}
               }
             \column{0.5\textwidth}
-              \begin{forest}
-                [ Syllable
-                  [ Onset
-                    [ p, tier=segment ]
-                  ]
-                  [ \alert<6>{Rhyme}
-                    [ \alert<6>{Nucleus}
-                      [ \alert<6>{ɪ}, tier=segment ]
+              \only<5>{
+                % Read in a tree graph of a syllable
+                \input{../material_syllable/material_syllable.tex}
+              }
+              \only<6>{
+                \begin{forest}
+                  [ Syllable
+                    [ Onset
+                      [ p, tier=segment ]
                     ]
-                    [ Coda
-                      [ n, tier=segment ]
+                    [ \alert{Rhyme}
+                      [ \alert{Nucleus}
+                        [ \alert{ɪ}, tier=segment ]
+                      ]
+                      [ Coda
+                        [ n, tier=segment ]
+                      ]
                     ]
                   ]
-                ]
-              \end{forest}
+                \end{forest}
+              }
           \end{columns}
         }
         \only<7>{
           \begin{alertblock}{A suprasegmental}
-            Sound features that apply to whole syllables
+            % Read in definition of a suprasegmental
+            \input{../definitions/part1/def_suprasegmental.tex}
             \begin{itemize}
               \item Stress, intonation, tone, etc.
             \end{itemize}
