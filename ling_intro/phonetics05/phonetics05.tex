@@ -1,0 +1,214 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage{forest}
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../References.bib}
+  \usepackage{xecjk}
+    \setCJKmainfont{SimSun}
+
+  % Document information
+  \subtitle[Suprasegmental Articulation]{Articulation of English Suprasegmentals}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{Definition}
+  \newcommand{\subonetwo}{Length}
+  \newcommand{\subonethree}{Intonation}
+  \newcommand{\subonefour}{Tone}
+  \newcommand{\subonefive}{Stress}
+  \newcommand{\subonesix}{Resources and Practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../slide_intro.tex}
+
+  \section{What are suprasegmentals?}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{columns}
+          \column{0.5\textwidth}
+            \begin{minipage}[c][0.6\textheight]{\linewidth}
+              \only<1-2>{
+                \begin{block}{A segment}
+                  \input{../definitions/part1/def_segment.tex}
+                \end{block}
+                \begin{block}<2>{A \emph{supra}segmental}
+                  % Read in definition of a suprasegmental
+                  \input{../definitions/part1/def_suprasegmental.tex}
+                \end{block}
+              }
+              \only<3>{
+                \begin{block}{Examples of suprasegmentals}
+                  \begin{itemize}
+                    \item Length
+                    \item Intonation
+                    \item Tone
+                    \item Stress
+                  \end{itemize}
+                \end{block}
+              }
+            \end{minipage}
+          \column{0.5\textwidth}
+            \uncover<2->{
+              % Read in a tree graph of a syllable
+              \input{../material_syllable/material_syllable.tex}
+            }
+        \end{columns}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}[t]{\subonetwo}
+        \begin{block}{}
+          Notated using [ː] (e.g., [kɑː]\only<2->{\orth{car}})
+        \end{block}
+        \begin{example}<3->
+          Finnish
+          \begin{itemize}
+            \item {[}tapan] `I kill' vs [tapaːn] `I meet'
+            \item {[}muta] `mud' vs [mutːa] `but'
+          \end{itemize}
+        \end{example}
+        \begin{alertblock}<4->{}
+          Length can only be determined through comparing lengths in an utterance
+        \end{alertblock}
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}[t]{\subonethree}
+        \only<1-2>{
+        \begin{definition}
+          \input{../definitions/part1/def_intonation.tex}
+        \end{definition}
+          \begin{block}<2>{Notation}
+            In \textcite{dawson_language_2016}:
+            \begin{itemize}
+              \item ``Use CAPS to indicate words where the pitch is HIGHER''
+            \end{itemize}
+            In general:
+            \begin{itemize}
+              \item ``Use ↗arrows ↘to indicate words where the pitch ↗changes.''
+            \end{itemize}
+          \end{block}
+        }
+        \only<3-6>{
+          \begin{example}
+            ``Use ↗arrows ↘to indicate words where the pitch ↗changes.''
+          \end{example}
+          \only<4>{
+            \begin{alertblock}{Pitch accent}
+              \input{../definitions/part1/def_pitch_accent.tex}
+              \begin{itemize}
+                \item \lexi{Arrows} receives a pitch accent here
+              \end{itemize}
+            \end{alertblock}
+          }
+          \only<5-6>{
+            \begin{alertblock}{Phrase tone}
+              \input{../definitions/part1/def_phrase_tone.tex}
+              \begin{itemize}
+                \item The phrase reads like a question
+              \end{itemize}
+            \end{alertblock}
+            \begin{block}<6>{Not limited to sentences}
+              ``You got an A on the ↘test, a C on the ↘homework, and a B on the ↘quiz.''
+            \end{block}
+          }
+        }
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}{\subonefour}
+        \only<1-2>{
+          \begin{definition}
+            \input{../definitions/part1/def_tone.tex}
+            \begin{itemize}
+              \item English does not have this
+            \end{itemize}
+          \end{definition}
+          \begin{block}<2->{Two types}
+            \begin{itemize}
+              \item \alert{Level tone}: \input{../definitions/part1/def_level_tone.tex}
+              \item \alert{Contour tone}: \input{../definitions/part1/def_contour_tone.tex}
+            \end{itemize}
+          \end{block}
+        }
+        \only<3>{
+          \begin{example}
+            \href{https://youtu.be/f-ZDrmP-N1s?t=23}{Mandarin}
+
+            \parbox{0.45\linewidth}{
+              \begin{itemize}
+                \item {[}ma55] or [má] or [ma˦] `mother' \orth{妈}
+                \item {[}ma35] or [ma᷄] or [ma˧˥] `hemp' \orth{麻}
+              \end{itemize}
+            }
+            \parbox{0.45\linewidth}{
+              \begin{itemize}
+                \item {[}ma214] or [ma᷉] or [ma˨˩˦] `horse' \orth{马}
+                \item {[}ma51] or [mâ] or [ma˥˩] `scold' \orth{骂}
+              \end{itemize}
+            }
+          \end{example}
+        }
+      \end{frame}
+
+    \subsection{\subonefive}
+      \begin{frame}[t]{\subonefive}
+        \begin{definition}
+          \input{../definitions/part1/def_stress.tex}
+        \end{definition}
+        \begin{block}<2->{Notation}
+          \begin{itemize}
+            \item {[}.] divides syllables
+            \item {[}ˈ] indicates primary stress
+            \item {[}ˌ] indicates secondary stress
+          \end{itemize}
+        \end{block}
+        \only<3>{
+          \begin{example}
+            \orth{photograph} [ˈfoʊ.də.gɹæf] vs \orth{photography} [fəˈtɑ.gɹəˌfi]
+          \end{example}
+        }
+        \only<4>{
+          \begin{block}{Stress can be predictable}
+            Almost always on the first syllable in Czech
+            \begin{itemize}
+              \item English is not so straight forward
+            \end{itemize}
+          \end{block}
+        }
+        \only<5>{
+          \begin{block}{Stress can be semantically contrastive}
+            \begin{itemize}
+              \item {[}waɪtˈhaʊs] vs [ˈwait.haʊs]
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonesix}
+      \begin{frame}{\subonesix}
+        \begin{block}{}
+          \begin{itemize}
+            \item To hear these sounds: \url{http://web.uvic.ca/ling/resources/ipa/charts/IPAlab/IPAlab.htm}
+            \item To type these symbols: \url{https://ipa.typeit.org/}
+          \end{itemize}
+        \end{block}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 2 exercises 25 and 27
+        \end{block}
+      \end{frame}
+\end{document}
