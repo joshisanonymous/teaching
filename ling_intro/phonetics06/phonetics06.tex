@@ -1,0 +1,262 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage{tikz}
+  \usepackage{adjustbox}
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[Acoustic Phonetics]{Acoustic Phonetics}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{Definition}
+  \newcommand{\subtwoone}{Simple sound waves}
+  \newcommand{\subtwotwo}{Complex sound waves}
+  \newcommand{\subtwothree}{Vowels}
+  \newcommand{\subtwofour}{Consonants}
+  \newcommand{\subtwofive}{Resources and practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{What is acoustic phonetics?}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \only<1-3>{
+          \begin{block}{}
+            The three broad areas of phonetics:
+            \begin{itemize}
+              \item Articulatory phonetics
+              \item \alert<2->{Acoustic phonetics}
+              \item Auditory phonetics
+            \end{itemize}
+          \end{block}
+          \begin{definition}<2-3>
+            % Read in the definition of articulatory phonetics
+            \input{../definitions/part1/def_acoustic_phonetics.tex}
+          \end{definition}
+          \begin{alertblock}<3>{}
+            We're no longer looking at how sounds are produced but what they look like when measured
+          \end{alertblock}
+        }
+        \only<4->{
+          \begin{block}{Why looking instead of listening?}
+            \uncover<5->{
+              Because listeners' impressions of sounds can differ
+              \begin{itemize}
+                \item Instead we use technology, mainly Praat
+                \item \url{http://www.fon.hum.uva.nl/praat/}
+              \end{itemize}
+            }
+          \end{block}
+          \begin{block}<6->{Two types of visualizations}
+            \begin{itemize}
+              \item Waveform
+              \item Spectrogram/Spectrograph
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+  \section{All about sound}
+    \subsection{\subtwoone}
+      \begin{frame}[t]{\subtwoone}
+        \only<1-2>{
+          \begin{alertblock}{A sound wave}
+            \input{../definitions/part1/def_sound_wave.tex}
+          \end{alertblock}
+        }
+        \only<2>{
+          \begin{columns}
+            \column{0.5\textwidth}
+              \begin{minipage}[c][0.6\textheight]{\linewidth}
+                \begin{block}{The simple kind}
+                  There is some consistent, steady pattern to the \href{https://youtu.be/PyD9cMarVJk}{sound wave}
+                \end{block}
+              \end{minipage}
+            \column{0.5\textwidth}
+              % Simple water ripple
+              \includegraphics[scale=0.055]{ripple_simple.jpg}
+          \end{columns}
+        }
+        \only<3-6>{
+          \begin{columns}
+            \column{0.5\textwidth}
+              \only<3>{
+                \begin{alertblock}{A waveform}
+                  % Definition of waveform
+                  \input{../definitions/part1/def_waveform.tex}
+                \end{alertblock}
+              }
+              \only<4-6>{
+                \begin{block}{Two aspects of a sound wave}
+                  \begin{itemize}
+                    \item \alert{Frequency}: \input{../definitions/part1/def_frequency.tex}
+                    \item \alert{Amplitude}: \input{../definitions/part1/def_amplitude.tex}
+                  \end{itemize}
+                \end{block}
+              }
+            \column{0.5\textwidth}
+              \uncover<3-6>{
+                % Basic waveform
+                \includegraphics[scale=0.4]{waveform_basic.jpg}
+              }
+              \uncover<5-6>{
+                % Higher frequency
+                \includegraphics[scale=0.385]{waveform_high_freq.jpg}
+              }
+              \uncover<6>{
+                % Lower amplitude
+                \includegraphics[scale=0.4]{waveform_low_amp.jpg}
+              }
+          \end{columns}
+        }
+      \end{frame} % Maybe give frequency range of human hearing and speech
+
+    \subsection{\subtwotwo}
+      \begin{frame}{\subtwotwo}
+          \begin{columns}
+            \column{0.48\textwidth}
+              \begin{minipage}[c][0.6\textheight]{\linewidth}
+                \only<1-3>{
+                  \begin{block}{Battling it out}
+                    Multiple simple sound waves overlapping and colliding
+                  \end{block}
+                }
+                \only<4->{
+                  \begin{block}{To make things more complicated}
+                    The vocal tract acts as a filter on the resulting complex sound waves
+                  \end{block}
+                  \begin{alertblock}<5->{}
+                    Waveforms ultimately only tell us about overall amplitude
+                  \end{alertblock}
+                }
+              \end{minipage}
+            \column{0.48\textwidth}
+              \begin{minipage}[c][0.6\textheight]{\linewidth}
+                \only<1>{
+                % Complex water ripples
+                \includegraphics[scale=0.04]{ripple_complex.jpg}
+                }
+                \only<2->{
+                  % Basic waveform
+                  \includegraphics[scale=0.4]{waveform_basic.jpg}
+
+                  % Lower amplitude
+                  \includegraphics[scale=0.4]{waveform_low_amp.jpg}
+
+                  \uncover<3->{
+                    % Complex composite
+                    \includegraphics[scale=0.4]{waveform_complex.jpg}
+                  }
+                }
+              \end{minipage}
+          \end{columns}
+      \end{frame}
+
+    \subsection{\subtwothree}
+      \begin{frame}{\subtwothree}
+        \only<1>{
+          \begin{block}{}
+            Vowels can be described acoustically by measuring their formants
+          \end{block}
+          \begin{alertblock}{Formant}
+            % Definition of a formant
+            \input{../definitions/part1/def_formant.tex}
+            There are two important formants for vowels:
+            \begin{itemize}
+              \item \alert{Formant 1 (F1)}: \input{../definitions/part1/def_F1.tex}
+              \item \alert{Formant 2 (F2)}: \input{../definitions/part1/def_F2.tex}
+            \end{itemize}
+          \end{alertblock}
+        }
+        \only<2>{
+          \begin{block}{}
+            A plot of a speaker's vowel space (right) using formant frequencies looks a lot like a vowel chart (left)
+          \end{block}
+          \begin{columns}
+            \column{0.45\textwidth}
+              \begin{adjustbox}{width=3.5cm}
+                \input{../material_IPA_en_chart/material_IPA_en_chart_vowels.tex}
+              \end{adjustbox}
+            \column{0.55\textwidth}
+              \includegraphics[scale=0.69]{vowel_space.jpg}
+          \end{columns}
+        }
+        \only<3->{
+          \begin{alertblock}{Spectrograms}
+            % Definition of spectrogram
+            \input{../definitions/part1/def_spectrogram.tex}
+          \end{alertblock}
+          \includegraphics[scale=0.7]{spectrogram_formants.jpg}
+        }
+      \end{frame}
+
+    \subsection{\subtwofour}
+      \begin{frame}{\subtwofour}
+        \only<1-2>{
+          \begin{block}{Stops}
+            Appear as gaps on a spectrogram
+            \begin{itemize}
+              \item Place of articulation can be determined by how the formants shift from a consonant to the following vowel
+              \item<2> Voiced sounds have a \alert{voice bar} at the bottom
+            \end{itemize}
+          \end{block}
+          \includegraphics[scale=0.95]{spectrogram_stops_voiced.jpg}
+        }
+        \only<3>{
+          \begin{alertblock}{Aspiration}
+            % Definition of aspiration
+            \input{../definitions/part1/def_aspiration.tex}, notated with [ʰ]
+            \begin{itemize}
+              \item In English, this occurs for voiceless stops
+            \end{itemize}
+          \end{alertblock}
+          \includegraphics[scale=0.45]{spectrogram_stops_aspirated.jpg}
+        }
+        \only<4>{
+          \begin{block}{Fricatives}
+            Appear as high amplitude masses covering large high frequency areas on a spectrogram
+            \begin{itemize}
+              \item Place of articulation can be determined by how high frequency the areas covered are
+            \end{itemize}
+          \end{block}
+          \includegraphics[scale=0.6]{spectrogram_fricatives.jpg}
+        }
+        \only<5-6>{
+          \begin{block}{Nasals}
+            Appear with formants on a spectrogram, like vowels, but the formants shift sharply when transitioning into vowels
+            \begin{itemize}
+              \item Formants are essentially the same for all nasals
+              \item<6> Liquids and glides also have formants
+            \end{itemize}
+          \end{block}
+          \includegraphics[scale=0.55]{spectrogram_nasals.jpg}
+        }
+      \end{frame}
+
+    \subsection{\subtwofive}
+      \begin{frame}{\subtwofive}
+        \begin{block}{Resources}
+          \input{../shared/phonetics_acoust_resources.tex}
+        \end{block}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 2 exercises 32 and 33
+        \end{block}
+      \end{frame}
+\end{document}
