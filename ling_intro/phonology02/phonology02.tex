@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Document information
+  \subtitle[Phonemes and Allophones]{Phonemes and Allophones}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{What's going on?}
+  \newcommand{\subonetwo}{A clearer example}
+  \newcommand{\subonethree}{Some definitions}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Phonemes and allophones}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \only<1-4>{
+          \begin{block}{Are they different words?}
+            \begin{itemize}
+              \item {[}ˈ\alert{t}ɛɹ]
+              \item {[}ˈ\alert{d}ɛɹ]
+            \end{itemize}
+            \uncover<2->{[t] and [d] are phonemes}
+          \end{block}
+          \begin{block}<3->{Why do we spell these with \orth{t}?}
+            \begin{itemize}
+              \item {[}ˈ\alert{t}ɛɹ]
+              \item {[}ˈwɔ.\alert{ɾ}ɹ̩]
+            \end{itemize}
+            \uncover<4->{This [t] and this [ɾ] are allophones of one phoneme}
+          \end{block}
+        }
+        \only<5-6>{
+          \begin{block}{And what's up with these?}
+            \begin{itemize}
+              \item {[}ˈwɔ.\alert{ɾ}ɹ̩]
+              \item {[}ˈwɔ.\alert{t}ə]
+              \item {[}ˈwɔ.\alert{ʔ}ə]
+            \end{itemize}
+            \uncover<6->{This [ɾ], this [t], and this [ʔ] are in free variation}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}{\subonetwo}
+        \begin{block}{Are these [p]s the same?}
+          \begin{itemize}
+            \item {[}ˈ\alert{p\only<2>{ʰ}}ɪt]
+            \item {[}ˈs\alert{p}ɪt]
+          \end{itemize}
+          \uncover<2>{Aspiration is lost when a stop is preceded by a fricative}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}{\subonethree}
+        \only<-3>{
+          \begin{alertblock}{Allophones}
+            \input{\defs/part2/def_allophones.tex}
+            \begin{itemize}
+              \item {[}pʰ] and [p] are allophones of the phoneme /p/
+            \end{itemize}
+          \end{alertblock}
+          \begin{alertblock}<2->{Phoneme}
+            \input{\defs/part2/def_phoneme.tex}
+            \begin{itemize}
+              \item /p/ is a phoneme that can be realized as [pʰ] or [p]
+            \end{itemize}
+          \end{alertblock}
+          \begin{alertblock}<3->{Phone}
+            \input{\defs/part2/def_phone.tex}
+          \end{alertblock}
+        }
+        \only<4-5>{
+          \begin{block}{Phonemes and allophones are language specific}
+            \begin{itemize}
+              \item {[}pʰ] and [p] are semantically \alert{non-constrastive} in English, but
+              \item {[}pʰ] and [p] are semantically \alert{constrastive} in Hindi
+            \end{itemize}
+            i.e., They're allophones in English but phonemes in Hindi
+          \end{block}
+          \begin{example}<5->
+            \begin{itemize}
+              \item {[}pʰəl] `fruit'
+              \item {[}pəl] `moment'
+            \end{itemize}
+          \end{example}
+        }
+        \only<6->{
+          \begin{block}{Summarizing these examples}
+            \begin{tabular}{l r}
+            Phonemes                  & Allophones \\
+            (mental representations)  & (actual acoustic sound) \\
+            \hline \\
+            \multicolumn{2}{c}{\emph{English}} \\
+            /p/                       & [p, pʰ] \\
+            /t/                       & [t, tʰ, ɾ, ʔ] \\
+            \multicolumn{2}{c}{\emph{Hindi}} \\
+            /t/                       & [t] \\
+            /tʰ/                      & [tʰ]
+            \end{tabular}
+          \end{block}
+        }
+      \end{frame}
+
+  \section{Identifying them}
+
+    % Sounds' distributions
+    % Phonemes and allophones
+    % Identifying phonemes and allophones
+\end{document}
