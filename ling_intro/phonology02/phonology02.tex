@@ -12,6 +12,10 @@
   % Read in standard preamble (cosmetic stuff)
   \input{../shared/slide_preamble.tex}
 
+  % Packages and settings
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
   % Document information
   \subtitle[Phonemes and Allophones]{Phonemes and Allophones}
 
@@ -20,6 +24,10 @@
   \newcommand{\suboneone}{What's going on?}
   \newcommand{\subonetwo}{A clearer example}
   \newcommand{\subonethree}{Some definitions}
+  \newcommand{\subtwoone}{The steps}
+  \newcommand{\subtwotwo}{Class practice}
+  \newcommand{\subtwothree}{Free variation}
+  \newcommand{\subtwofour}{Practice}
 
 \begin{document}
   % Read in the standard intro slides (title page and table of contents)
@@ -105,7 +113,7 @@
           \begin{block}{Summarizing these examples}
             \begin{tabular}{l r}
             Phonemes                  & Allophones \\
-            (mental representations)  & (actual acoustic sound) \\
+            (mental representations)  & (actual acoustic sounds) \\
             \hline \\
             \multicolumn{2}{c}{\emph{English}} \\
             /p/                       & [p, pʰ] \\
@@ -119,8 +127,171 @@
       \end{frame}
 
   \section{Identifying them}
+    \subsection{\subtwoone}
+      \begin{frame}[t]{\subtwoone}
+        \begin{block}{}
+          \begin{tabular}{r c c}
+            1)  & \multicolumn{2}{c}{Choose two phones} \\
+            2)  & \multicolumn{2}{c}{Determine distributions} \\
+            3)  & Contrastive?            & Complementary? \\
+                & $\rightarrow$ Phonemes  & $\rightarrow$ Allophones
+          \end{tabular}
+        \end{block}
+        \only<2>{
+          \begin{block}{Distribution types}
+            By distribution, we mean phonetic environment (e.g., [p] in [ˈspɪt] is between [s] and [ɪ])
+            \begin{itemize}
+              \item Contrastive distribution
+              \item Complementary distribution
+            \end{itemize}
+          \end{block}
+        }
+        \only<3-5>{
+          \begin{alertblock}{Contrastive distribution}
+            \only<3>{
+              \input{\defs/part2/def_contrastive_distribution.tex}
+            }
+            \only<4->{
+              The [t] and [d] in [ˈtɛɹ] and [ˈdɛɹ]
+            }
+          \end{alertblock}
+          \only<3-4>{
+            \begin{alertblock}{Complementary distribution}
+                \input{\defs/part2/def_complementary_distribution.tex}
+              \only<4>{
+                The [p] and [pʰ] in [ˈspɪt] and [ˈpʰɪt]
+                \begin{itemize}
+                  \item Their environments are [s\_ɪ] and [\#\_ɪ]
+                \end{itemize}
+              }
+            \end{alertblock}
+          }
+          \only<5->{
+            \begin{alertblock}{Minimal pair}
+              \input{\defs/part2/def_minimal_pair.tex}
+            \end{alertblock}
+          }
+        }
+      \end{frame}
 
-    % Sounds' distributions
-    % Phonemes and allophones
-    % Identifying phonemes and allophones
+    \subsection{\subtwotwo}
+      \begin{frame}{\subtwotwo}
+        \begin{columns}
+          \column{0.48\textwidth}
+            \only<1-2>{
+              \begin{block}{Data}
+                \begin{tabular}{r l}
+                  \lexi{dean}    & [ˈdĩn] \\
+                  \lexi{deed}    & [ˈdid] \\
+                  \lexi{lean}    & [ˈlĩn] \\
+                  \lexi{leap}    & [ˈlip] \\
+                  \lexi{mean}    & [ˈmĩn] \\
+                  \lexi{mere}    & [ˈmir] \\
+                  \lexi{team}    & [ˈtĩm] \\
+                  \lexi{seat}    & [ˈsit] \\
+                  \lexi{scream}  & [ˈskɹĩm] \\
+                  \lexi{see}     & [ˈsi]
+                \end{tabular}
+              \end{block}
+            }
+            \only<3-4>{
+              \begin{block}{Data}
+                \begin{tabular}{r l}
+                  \lexi{stop}   & [ˈstɑp] \\
+                  \lexi{steal}  & [ˈstil] \\
+                  \lexi{stump}  & [ˈstʌmp] \\
+                  \lexi{tap}    & [ˈtʰæp] \\
+                  \lexi{tool}   & [ˈtʰul] \\
+                  \lexi{teal}   & [ˈtʰil]
+                \end{tabular}
+              \end{block}
+            }
+            \only<5-6>{
+              \begin{block}{Data}
+                \begin{tabular}{r l}
+                  \lexi{card}   & [ˈkɑɹd] \\
+                  \lexi{garner}  & [ˈgɑɹ.nɹ̩] \\
+                  \lexi{good}   & [ˈgʊd] \\
+                  \lexi{could}  & [ˈkʊd] \\
+                  \lexi{cave}   & [ˈkeɪv] \\
+                  \lexi{gave}   & [ˈgeɪv] \\
+                  \lexi{graze}  & [ˈgɹeɪz] \\
+                  \lexi{credit} & [ˈkrɛ.dɪt]
+                \end{tabular}
+              \end{block}
+            }
+          \column{0.48\textwidth}
+            \only<1-2>{
+              \begin{block}{}
+                Are [i] and [ĩ] phonemes or allophones?
+              \end{block}
+              \uncover<2->{
+                \begin{block}{Allophones of /i/}
+                  They're in complementary distribution
+                  \begin{itemize}
+                    \item {[}ĩ] before nasals
+                    \item {[}i] elsewhere
+                  \end{itemize}
+                \end{block}
+              }
+            }
+            \only<3-4>{
+              \begin{block}{}
+                Are [t] and [tʰ] phonemes or allophones?
+              \end{block}
+              \uncover<4->{
+                \begin{block}{Allophones of /t/}
+                    They're in complementary distribution
+                    \begin{itemize}
+                      \item {[}t] after fricatives
+                      \item {[}tʰ] elsewhere
+                    \end{itemize}
+                \end{block}
+              }
+            }
+            \only<5-6>{
+              \begin{block}{}
+                Are [k] and [g] phonemes or allophones?
+              \end{block}
+              \uncover<6->{
+                \begin{block}{Phonemes /k/ and /g/}
+                  They're in contrastive distribution, some of the words even being minimal pairs
+                  \begin{itemize}
+                    \item \lexi{could}-\lexi{good} and \lexi{cave}-\lexi{gave}
+                  \end{itemize}
+                \end{block}
+              }
+            }
+        \end{columns}
+      \end{frame}
+
+    \subsection{\subtwothree}
+      \begin{frame}{\subtwothree}
+        \begin{columns}
+          \column{0.48\textwidth}
+            \begin{block}{Data}
+              \begin{itemize}
+                \item {[}ˈwɔ.ɾɹ̩]
+                \item {[}ˈwʊ.ɾɹ̩]
+              \end{itemize}
+            \end{block}
+            \begin{block}{}
+              Are [ɔ] and [ʊ] phonemes or allophones?
+            \end{block}
+          \column{0.48\textwidth}
+            \begin{block}<2->{Neither}
+              They're in overlapping distribution, making this ``free variation''
+            \end{block}
+            \begin{alertblock}<3->{Overlapping distribution}
+              \input{\defs/part2/def_overlapping_distribution.tex}
+            \end{alertblock}
+        \end{columns}
+      \end{frame}
+
+    \subsection{\subtwofour}
+      \begin{frame}{\subtwofour}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 3 exercises 9
+        \end{block}
+      \end{frame}
 \end{document}
