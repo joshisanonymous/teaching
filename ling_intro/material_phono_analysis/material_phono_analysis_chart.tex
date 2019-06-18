@@ -1,0 +1,22 @@
+% This draws a flow chart for how to do phonological analysis
+\begin{tikzpicture}
+  \node (sounds)   [process]                          {Indentify two phones};
+  \node (minpairs) [process, below=0.4cm of sounds]   {Are there minimal pairs?\\
+                                                       \emph{If yes, go right;}\\
+                                                       \emph{if no, go down}};
+  \node (meaning)  [process, right=0.4cm of minpairs] {Do they mean something\\
+                                                       different?\\
+                                                       \emph{If yes, phonemes;}\\
+                                                       \emph{if no, free variation}};
+  \node (environs) [process, below=0.4cm of minpairs] {Identify the left and right environments\\
+                                                       using natural classes};
+  \node (compenvs) [process, below=0.4cm of environs] {Indentify complementary environments};
+  \node (phoneme)  [process, below=0.4cm of compenvs] {Identify which allophone is the phoneme};
+  \node (rule)     [process, below=0.4cm of phoneme]  {Write the rules};
+  \draw [arrow] (sounds)   -- (minpairs);
+  \draw [arrow] (minpairs) -- (meaning);
+  \draw [arrow] (minpairs) -- (environs);
+  \draw [arrow] (environs) -- (compenvs);
+  \draw [arrow] (compenvs) -- (phoneme);
+  \draw [arrow] (phoneme)  -- (rule);
+\end{tikzpicture}
