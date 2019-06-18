@@ -1,0 +1,376 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage{tikz}
+    \usetikzlibrary{shapes.geometric, arrows}
+    \tikzstyle{process} = [rectangle,
+                           text centered,
+                           draw=black,
+                           align=center]
+    \tikzstyle{arrow} = [thick,->]
+  \usepackage{phonrule}
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[Phonological Rules]{Phonological Rules}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{What are rules}
+  \newcommand{\subonetwo}{Natural classes}
+  \newcommand{\subonethree}{Types of rules}
+  \newcommand{\subonefour}{Combining rules}
+  \newcommand{\subonefive}{Obligatory vs optional}
+  \newcommand{\subonesix}{Practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Phonological rules}
+    \subsection{\suboneone}
+      \begin{frame}[t]{\suboneone}
+        \begin{columns}
+          \column{0.48\textwidth}
+            \begin{block}{Data}
+              \begin{itemize}
+                \item \lexi{leap} [ˈlip]
+                \item \lexi{lean} [ˈlĩn]
+              \end{itemize}
+            \end{block}
+          \column{0.48\textwidth}
+            \begin{block}{Allophones of /i/}
+              \begin{itemize}
+                \item {[}ĩ] before a nasal consonant
+                \item {[}i] elsewhere
+              \end{itemize}
+            \end{block}
+        \end{columns}
+        \only<2>{
+          \begin{block}{General process}
+            \begin{tikzpicture}[node distance=3.5cm]
+              \node (underlying) [process] {Underlying form \\
+                                            Phoneme \\
+                                            /i/};
+              \node (rules) [process, right of=underlying] {Rules};
+              \node (surface) [process, right of=rules] {Surface form \\
+                                                         Phone \\
+                                                         {[}ĩ]};
+              \draw [arrow] (underlying) -- (rules);
+              \draw [arrow] (rules) -- (surface);
+            \end{tikzpicture}
+          \end{block}
+        }
+        \only<3>{
+          \begin{alertblock}{Underlying form}
+            \input{\defs/part2/def_underlying_form.tex}
+          \end{alertblock}
+          \begin{alertblock}{Surface form}
+            \input{\defs/part2/def_surface_form.tex}
+          \end{alertblock}
+        }
+        \only<4>{
+          \begin{alertblock}{Phonological rule}
+            \input{\defs/part2/def_phonological_rule.tex}
+          \end{alertblock}
+          \begin{alertblock}{Conditioning environment}
+            \input{\defs/part2/def_conditioning_environment.tex}
+          \end{alertblock}
+        }
+        \only<5>{
+          \begin{block}{Rule notation}
+            \begin{center}
+              \phonb{phoneme}{phone}{left context}{right context}
+            \end{center}
+          \end{block}
+        }
+        \only<6>{
+          \begin{example}
+            \begin{center}
+              \phonc{/i/}{[ĩ]}{\oneof{\phold n \\
+                                      \phold m \\
+                                      \phold ŋ}}
+            \end{center}
+          \end{example}
+        }
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}[t]{\subonetwo}
+        \only<4-7>{
+          \begin{columns}
+            \column{0.48\textwidth}
+              \begin{block}{Data}
+                \begin{itemize}
+                  \item {[}ˈ\alert{t}ɛɹ]
+                  \item {[}ˈwɔ.\alert{ɾ}ɹ̩]
+                  \item<2-> {[}ˈsi\alert{d}]
+                  \item<2-> {[}ˈsi.\alert{ɾ}əd]
+                \end{itemize}
+              \end{block}
+            \column{0.48\textwidth}
+              \begin{block}{Allophones of /t/}
+                \begin{itemize}
+                  \item {[}ɾ] between two vowels (or vocalic sounds)
+                  \item {[}t] elsewhere
+                \end{itemize}
+                \uncover<3->{This applies to /d/, too}
+              \end{block}
+          \end{columns}
+          \begin{block}{The rule}
+            \begin{center}
+              \phonb{/t, d/}{[ɾ]}{V}{V}
+            \end{center}
+          \end{block}
+          \only<5-6>{
+            \begin{block}{What do /t/ and /d/ have in common?}
+              \uncover<6->{They're both alveolar stops, a natural class}
+            \end{block}
+          }
+          \only<7>{
+            \begin{alertblock}{Natural class}
+              \input{\defs/part2/def_natural_class.tex}
+            \end{alertblock}
+          }
+        }
+        \only<8-11>{
+          \begin{block}{Some new natural classes}
+            \begin{itemize}
+              \item \alert{Sibilants}: \input{\defs/part2/def_sibilant.tex}
+              \begin{itemize}
+                \item Includes [s, z, ʃ, ʒ, tʃ, dʒ]
+              \end{itemize}
+              \item<9-> \alert{Labials}: \input{\defs/part2/def_labial.tex}
+              \begin{itemize}
+                \item Includes labiodentals and bilabials
+              \end{itemize}
+              \item<10-> \alert{Obstruents}: \input{\defs/part2/def_obstruent.tex}
+              \begin{itemize}
+                \item Includes stops, fricatives, and affricates
+              \end{itemize}
+              \item<11-> \alert{Sonorants}: \input{\defs/part2/def_sonorant.tex}
+              \begin{itemize}
+                \item Includes vowels, approximants, and nasals
+              \end{itemize}
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}{\subonethree}
+        \only<1>{
+          \begin{block}{We have seven}
+            \begin{itemize}
+              \item Assimilation
+              \item Dissimilation
+              \item Insertion (or epenthesis)
+              \item Deletion (or elision)
+              \item Metathesis
+              \item Strengthening (or fortition)
+              \item Weakening (or lenition)
+            \end{itemize}
+          \end{block}
+        }
+        \only<2-4>{
+          \begin{alertblock}{Assimilation}
+            \input{\defs/part2/def_assimilation.tex}
+          \end{alertblock}
+          \begin{example}<3->
+            \begin{tabular}{c c c}
+              [ˈlʌ\alert{m}p] & [ˈtɪ\alert{n}t] & [ˈθɪ\alert{ŋ}k]
+            \end{tabular}
+          \end{example}
+          \begin{block}<4->{The rules}
+            \begin{itemize}
+              \item \phonr{/N/}{[m]}{\phonfeat{+bilabial}}
+              \item \phonr{/N/}{[n]}{\phonfeat{+alveolar}}
+              \item \phonr{/N/}{[ŋ]}{\phonfeat{+velar}}
+            \end{itemize}
+          \end{block}
+        }
+        \only<5-6>{
+          \begin{block}{A special case}
+            \begin{itemize}
+              \item \alert{Vowel harmony}: \input{\defs/part2/def_vowel_harmony.tex}
+            \end{itemize}
+          \end{block}
+          \begin{example}<6->
+            In Finnish:
+            \begin{itemize}
+              \item All vowels in a word are either front vowels or back vowels
+              \item /metsæ/ `forest' + /ss\alert{ɑ}/ `in' = [metsæss\alert{æ}] `in the forest'
+            \end{itemize}
+          \end{example}
+        }
+        \only<7-10>{
+          \begin{alertblock}{Dissimilation}
+            \input{\defs/part2/def_dissimilation.tex}
+          \end{alertblock}
+          \begin{example}<8->
+            \begin{tabular}{c c}
+              \lexi{sixth}                & \\
+              \uncover<9->{/ˈsɪks\alert{θ}/}  & \uncover<9->{[ˈsiks\alert{t}]}
+            \end{tabular}
+          \end{example}
+          \begin{block}<10->{A possible rule}
+            \begin{itemize}
+              \item \phonb{/θ/}{[t]}{s}{\#}
+            \end{itemize}
+          \end{block}
+        }
+        \only<11-14>{
+          \begin{alertblock}{Insertion}
+            \input{\defs/part2/def_insertion.tex}
+          \end{alertblock}
+          \begin{example}<12->
+            \begin{tabular}{c c}
+              \lexi{dance}            & \lexi{hamster} \\
+              \uncover<13->{/ˈdæns/}  & \uncover<13->{/ˈhæm.stɹ̩/} \\
+              \uncover<13->{[ˈdæn\alert{t}s]} & \uncover<13->{[ˈhæm\alert{p}.stɹ̩]}
+            \end{tabular}
+          \end{example}
+          \begin{block}<14->{Some possible rules}
+            \begin{itemize}
+              \item \phonb{//}{[t]}{n}{s}
+              \item \phonb{//}{[p]}{m}{s}
+            \end{itemize}
+          \end{block}
+        }
+        \only<15-17>{
+          \begin{alertblock}{Deletion}
+            \input{\defs/part2/def_deletion.tex}
+          \end{alertblock}
+          \begin{example}<16->
+            \begin{tabular}{c c c}
+              \lexi{govern}       & \lexi{governer} & \lexi{government} \\
+              /ˈgʌ.və\alert{ɹn}/  & [ˈgʌ.və.nɹ̩]     & [ˈgʌ.vəɹ.mn̩t] \\
+            \end{tabular}
+          \end{example}
+          \begin{block}<17->{Some possible rules}
+            \begin{itemize}
+              \item \phonb{/ɹ/}{[]}{ə}{nɹ̩}
+              \item \phonb{/n/}{[]}{ɹ}{m}
+            \end{itemize}
+          \end{block}
+        }
+        \only<18-21>{
+          \begin{alertblock}{Metathesis}
+            \input{\defs/part2/def_metathesis.tex}
+          \end{alertblock}
+          \begin{example}<19->
+            \begin{tabular}{c c}
+              \href{https://youtu.be/h0JI33xyT8Q?t=30}{\lexi{ask}}  & \\
+              \uncover<20->{[ˈask]}                                 & \uncover<20->{[ˈaks]}
+            \end{tabular}
+          \end{example}
+          \begin{block}<21->{Two possible rules}
+            \begin{itemize}
+              \item \phonb{/sk/}{[ks]}{æ}{\#}
+              \item \phonb{/ks/}{[sk]}{æ}{\#}
+            \end{itemize}
+          \end{block}
+        }
+        \only<22-24>{
+          \begin{alertblock}{Strengthening}
+            \input{\defs/part2/def_strengthening.tex}
+          \end{alertblock}
+          \begin{example}<23->
+            \begin{tabular}{c c c}
+              \lexi{the}  & \lexi{they} & \lexi{their} \\
+              /ðə/       & /ˈðeɪ/      & /ˈðɛɹ/ \\
+              {[}də]     & [ˈdeɪ]      & [ˈdɛɹ]
+            \end{tabular}
+          \end{example}
+          \begin{block}<24->{A possible rule}
+            \phonb{/ð/}{[d]}{\#}{V}
+          \end{block}
+        }
+        \only<25-27>{
+          \begin{alertblock}{Weakening}
+            \input{\defs/part2/def_weakening.tex}
+          \end{alertblock}
+          \begin{example}<26->
+            \begin{tabular}{c c c}
+              \lexi{the}  & \lexi{they} & \lexi{their} \\
+              /də/       & /ˈdeɪ/      & /ˈdɛɹ/ \\
+              {[}ðə]     & [ˈðeɪ]      & [ˈðɛɹ]
+            \end{tabular}
+          \end{example}
+          \begin{block}<27->{A possible rule}
+            \phonb{/d/}{[ð]}{\#}{V}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}{\subonefour}
+        \only<1-2>{
+          \begin{block}{}
+            Multiple rules are often applied, in which case \emph{order matters}
+          \end{block}
+          \begin{example}<2->
+            \begin{tabular}{c c c}
+              \lexi{writer} & /ˈɹaɪ.tɹ̩/  & [ˈɹəɪ.ɾɹ̩]
+            \end{tabular}
+
+            \vspace{0.3cm}
+            Two rules apply:
+            \begin{itemize}
+              \item \phonb{/t/}{[ɾ]}{V}{V} (consonant flapping)
+              \item \phonr{/aɪ/}{[əɪ]}{\phonfeat{+voiceless}} (diphthong raising)
+            \end{itemize}
+          \end{example}
+        }
+        \only<3-4>{
+          \begin{block}{Two orders}
+            \begin{tabular}{r | l | l}
+              Underlying  & /ˈɹaɪ.tɹ̩/  & /ˈɹaɪ.tɹ̩/ \\
+                          & ˈɹaɪ.ɾɹ̩    & ˈɹəɪ.tɹ̩ \\
+                          & ---        & ˈɹəɪ.ɾɹ̩ \\
+              Surface     & */ˈɹaɪ.ɾɹ̩/ & /ˈɹəɪ.ɾɹ̩/
+            \end{tabular}
+          \end{block}
+          \begin{block}<4->{Correct order}
+            raising $\rightarrow$ flapping
+          \end{block}
+        }
+        \only<5-7>{
+          \begin{block}{Two more rule types}
+            \begin{itemize}
+              \item \alert{Obligatory rules}
+              \begin{itemize}
+                \item<6-> \input{\defs/part2/def_obligatory_rule.tex}
+              \end{itemize}
+              \item \alert{Optional rules}
+              \begin{itemize}
+                \item<6-> \input{\defs/part2/def_optional_rule.tex}
+              \end{itemize}
+            \end{itemize}
+          \end{block}
+          \begin{alertblock}<7>{}
+            So called ``optional rules'' are part of language variation, studied in sociolinguistics
+          \end{alertblock}
+        }
+      \end{frame}
+
+    \subsection{\subonesix}
+      \begin{frame}{\subonesix}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 3 exercises 13, 14, 15, and 16
+        \end{block}
+      \end{frame}
+  \end{document}
