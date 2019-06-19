@@ -10,7 +10,9 @@
                                                        \emph{if no, free variation}};
   \node (environs) [process, below=0.4cm of minpairs] {Identify the left and right environments\\
                                                        using natural classes};
-  \node (compenvs) [process, below=0.4cm of environs] {Indentify complementary environments};
+  \node (compenvs) [process, below=0.4cm of environs] {Indentify complementary environments\\
+                                                       \emph{If overlapping environments, stop:}\\
+                                                       \emph{these aren't allophones}};
   \node (phoneme)  [process, below=0.4cm of compenvs] {Identify which allophone is the phoneme};
   \node (rule)     [process, below=0.4cm of phoneme]  {Write the rules};
   \draw [arrow] (sounds)   -- (minpairs);
