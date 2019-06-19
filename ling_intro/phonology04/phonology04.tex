@@ -1,0 +1,145 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage{phonrule}
+  \input{../material_phono_analysis/material_phono_analysis_pream.tex}
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[Phonological Analysis]{Phonological Analysis of Data}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{When we have more data}
+  \newcommand{\subonetwo}{The general process}
+  \newcommand{\subonethree}{Be careful}
+  \newcommand{\subonefour}{Practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Phonological Analysis}
+    \subsection{\suboneone}
+      \begin{frame}[t]{\suboneone}
+          \begin{block}{An English example}
+            \only<1-2>{
+              Are [ɹ] and [ɹ̥] phonemes or allophones?
+            }
+            \only<3->{
+              What are the phonological rules at play?
+            }
+          \end{block}
+          \only<1-2>{
+            \begin{block}{The data}
+              \begin{tabular}{r l | r l}
+                \lexi{pray}   & [ˈpʰɹ̥eɪ]   & \lexi{gray}    & [ˈgɹeɪ] \\
+                \lexi{crab}   & [ˈkʰɹ̥æb]   & \lexi{par}     & [ˈpʰɑɹ] \\
+                \lexi{broker} & [ˈbɹoʊ.kɹ̩] & \lexi{fresh}   & [ˈfɹ̥ɛʃ] \\
+                \lexi{regain} & [ɹiˈgeɪn]  & \lexi{shriek}  & [ˈʃɹ̥ik] \\
+                \lexi{tar}    & [ˈtʰɑɹ]    &                &
+              \end{tabular}
+            \end{block}
+            \begin{block}<2->{}
+              Are there any minimal pairs?
+            \end{block}
+          }
+          \only<3-6>{
+            \begin{columns}
+              \column{0.45\textwidth}
+                \begin{block}{The data}
+                  \begin{tabular}{r @{\_\_} l | r @{\_\_} l}
+                    \multicolumn{2}{c}{[ɹ̥]} & \multicolumn{2}{c}{[ɹ]} \\
+                    \hline
+                    {[}ˈpʰ  & eɪ]           & [ˈg   & eɪ] \\
+                    {[}ˈkʰ  & æb]           & [\#   & iˈgeɪn] \\
+                    {[}ˈf   & ɛʃ]           & [ˈtʰɑ & \#] \\
+                    {[}ˈʃ   & ik]           & [ˈpʰɑ & \#] \\
+                            &               & [ˈb   & oʊ.kɹ̩]
+                  \end{tabular}
+                \end{block}
+              \column{0.51\textwidth}
+                \begin{block}{\only<3-4>{What are the environments as natural classes?}\only<5->{\alert{Are there complementary environments?}}}
+                  \begin{itemize}
+                    \item<4-> {[}ɹ̥] \alert<6->{after voiceless consonants}, before vowels
+                    \item<4-> {[}ɹ] \alert<6->{after voiced consonants} and vowels, before vowels, word-initial, word-final
+                  \end{itemize}
+                \end{block}
+            \end{columns}
+          }
+          \only<7-9>{
+            \begin{block}{Which allophone is also the phoneme?}
+              \uncover<8->{
+                It's the one that occurs in more environments: [ɹ]
+              }
+            \end{block}
+            \begin{block}<9->{Two types of allophones}
+              \begin{itemize}
+                \item \alert{Basic allophones}: \input{\defs/part2/def_basic_allophone.tex}
+                \item \alert{Restricted allophones}: \input{\defs/part2/def_restricted_allophone.tex}
+              \end{itemize}
+            \end{block}
+          }
+        \only<10->{
+          \begin{block}{Finally}
+            \begin{itemize}
+              \item \phonl{/ɹ/}{[ɹ̥]}{\phonfeat{+voiceless \\ +consonant}}
+              \item \phonc{/ɹ/}{[ɹ]}{elsewhere}
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}{\subonetwo}
+        \small\input{../material_phono_analysis/material_phono_analysis_chart.tex}
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}{\subonethree}
+        \only<1-2>{
+          \begin{block}{No minimal pairs $\neq$ allophones}
+            You must find the sounds in complementary distribution
+          \end{block}
+          \begin{example}<2->
+            No minimal pairs for [b] and [g] in the data but they're in overlapping distribution:
+            \begin{itemize}
+              \item {[}ˈbɹoʊ.kɹ̩]
+              \item {[}ˈgɹeɪ]
+            \end{itemize}
+          \end{example}
+        }
+        \only<3-4>{
+          \begin{block}{Rhyming doesn't matter}
+            Minimal pairs can rhyme but don't have to
+          \end{block}
+          \begin{example}<4->
+            \begin{itemize}
+              \item {[}ˈboʊt] and [ˈbɪt]: don't rhyme, are minimal pair
+              \item {[}ˈlɪ.ɾɹ̩] and [ˈglɪ.ɾɹ̩]: do rhyme, aren't minimal pair
+              \item {[}ˈdɔg] and [ˈlɔg]: do rhyme, are minimal pair
+            \end{itemize}
+          \end{example}
+        }
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}{\subonefour}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 3 exercises 23, 31, and 37
+        \end{block}
+      \end{frame}
+\end{document}
