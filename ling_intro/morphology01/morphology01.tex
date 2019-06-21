@@ -1,0 +1,325 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \input{../material_morpheme_cats/material_morpheme_cats_pream.tex}
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+  \usepackage{extarrows}
+  \usepackage{adjustbox}
+
+  % Document information
+  \subtitle[Word Formation]{Morphology and Word Formation}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{What is it?}
+  \newcommand{\subtwoone}{What's a word?}
+  \newcommand{\subtwotwo}{Derivation}
+  \newcommand{\subtwothree}{Inflection}
+  \newcommand{\subtwofour}{Morpheme classifications}
+  \newcommand{\subtwofive}{Practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Morphology}
+    \subsection{\suboneone}
+      \begin{frame}[t]{\suboneone}
+        \only<1-5>{
+          \begin{block}{Which are words?}
+            \begin{itemize}
+              \item \alert<2->{\lexi{Wind}}
+              \item \alert<2->{\lexi{Unwind}}
+              \item \alert<2->{\lexi{Rewind}}
+              \item \alert<2->{\lexi{Woman}}
+              \item \lexi{Unwoman}
+              \item \lexi{Rewoman}
+            \end{itemize}
+          \end{block}
+          \only<3-4>{
+            \begin{block}{What's wrong with \lexi{unwoman} and \lexi{rewoman}?}
+              \uncover<4->{They're nouns; \lexi{re-} and \lexi{un-} only attach to verbs and adjectives}
+            \end{block}
+          }
+          \only<5->{
+            \begin{alertblock}{Morphology}
+              \input{\defs/part2/def_morphology.tex}
+            \end{alertblock}
+          }
+        }
+        \only<6-7>{
+          \begin{alertblock}{}
+            We're still talking about \emph{a} language: i.e., \input{\defs/part1/def_a_language.tex}
+            \begin{itemize}
+              \item We'll use ``English'' as shorthand for ``the set of features that happen to be shared in the languages of some group of people''
+            \end{itemize}
+          \end{alertblock}
+          \begin{alertblock}<7->{}
+            We'll be learning the item-and-arrangement \parencite{hockett_two_1954} theory of morphology
+          \end{alertblock}
+        }
+      \end{frame}
+
+  \section{Word Formation}
+    \subsection{\subtwoone}
+      \begin{frame}[t]{\subtwoone}
+        \only<1-6>{
+          \begin{block}{Does \lexi{swampy} have meaning on its own?}
+            \uncover<2->{Yes, `like a swamp'}
+          \end{block}
+          \begin{block}<3->{Do both \lexi{swamp} and \lexi{-y} have meanings on their own?}
+            \uncover<4->{No, \lexi{-y} is meaningless}
+          \end{block}
+        }
+        \only<5>{
+          \begin{alertblock}{Word}
+            \input{\defs/part2/def_word.tex} \parencite{bloomfield_set_1926}
+          \end{alertblock}
+        }
+        \only<6>{
+          \begin{alertblock}{Morpheme}
+            \input{\defs/part2/def_morpheme.tex}
+          \end{alertblock}
+        }
+        \only<7-8>{
+          \begin{columns}
+            \column{0.48\textwidth}
+              \begin{minipage}[c][0.6\textheight]{\linewidth}
+                \begin{block}{What about \lexi{Swamp Thing}?}
+                  \uncover<8->{We'll get into compounds in a bit}
+                \end{block}
+              \end{minipage}
+            \column{0.48\textwidth}
+              \includegraphics[scale=0.32]{swamp_thing.jpg}
+          \end{columns}
+        }
+        \only<9-13>{
+          \begin{block}{Are \lexi{sub} and \lexi{hoagie} different words?}
+            \uncover<10->{Maybe: Is the meaning the word or the form the word?}
+          \end{block}
+          \begin{block}<11->{Are \lexi{sub} `sandwich' and \lexi{sub} `submarine' different words?}
+            \uncover<12->{Maybe: Is the form the word or the meaning the word?}
+          \end{block}
+          \begin{alertblock}<13->{}
+            What we can say is that two different forms with different meanings are different words
+          \end{alertblock}
+        }
+        \only<14->{
+          \begin{block}{Two general types of word formation}
+            \begin{itemize}
+              \item Derivation
+              \item Inflection
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subtwotwo}
+      \begin{frame}[t]{\subtwotwo}
+        \only<1-4>{
+          \begin{block}{Are \lexi{swamp} and \lexi{swampy} different words?}
+            \uncover<2->{Yes: They have different forms and different meanings}
+          \end{block}
+          \begin{block}<3->{They're also related}
+            \begin{itemize}
+              \item The meaning of \lexi{swampy} relies on the meaning of \lexi{swamp}
+              \item The form of \lexi{swampy} contains the form of \lexi{swamp}
+            \end{itemize}
+          \end{block}
+        }
+        \only<5>{
+          \begin{alertblock}{Lexical category (or part of speech)}
+            \input{\defs/part2/def_lexical_category.tex}
+          \end{alertblock}
+          \begin{alertblock}{A root}
+            \input{\defs/part2/def_root.tex}
+          \end{alertblock}
+        }
+        \only<4-5>{
+          \begin{alertblock}{Derivation}
+            \input{\defs/part2/def_derivation.tex}
+          \end{alertblock}
+        }
+        \only<6-7>{
+          \begin{block}{Two types of lexical categories}
+            \begin{itemize}
+              \item Open lexical categories
+              \item Closed lexical categories
+            \end{itemize}
+          \end{block}
+          \begin{alertblock}<7->{Open lexical categories}
+            \input{\defs/part2/def_open_lexical_category.tex}
+            \begin{itemize}
+              \item e.g., noun, verb, adjective
+            \end{itemize}
+          \end{alertblock}
+          \begin{alertblock}<7->{Closed lexical categories}
+            \input{\defs/part2/def_closed_lexical_category.tex}
+            \begin{itemize}
+              \item e.g., determiner, preposition, conjunction
+            \end{itemize}
+          \end{alertblock}
+        }
+      \end{frame}
+
+    \subsection{\subtwothree}
+      \begin{frame}[t]{\subtwothree}
+        \only<1-3>{
+          \begin{block}{Are \lexi{swamp} and \lexi{swamps} different words?}
+            \uncover<2->{Yes: They have different forms and different meanings}
+          \end{block}
+          \begin{block}<3->{They're also related, but not like \lexi{swamp} and \lexi{swampy}}
+            One changes the lexical category:
+            \begin{itemize}
+              \item \lexi{swamp} [+noun] $\rightarrow$ \lexi{swampy} [+adjective]
+            \end{itemize}
+            One changes the grammatical feature:
+            \begin{itemize}
+              \item \lexi{swamp} [+singular] $\rightarrow$ \lexi{swamps} [+plural]
+            \end{itemize}
+          \end{block}
+        }
+        \only<4-5>{
+          \begin{alertblock}{Grammatical feature}
+            \input{\defs/part2/def_grammatical_feature.tex}
+          \end{alertblock}
+          \begin{alertblock}<5->{Inflection}
+            \input{\defs/part2/def_inflection.tex}
+          \end{alertblock}
+        }
+      \end{frame}
+
+    \subsection{\subtwofour}
+      \begin{frame}{\subtwofour}
+        \only<1-3>{
+          \begin{block}{We've seen two types of morphemes}
+            \begin{itemize}
+              \item \lexi{Swamp}: a root
+              \item \lexi{-y} and {-s}?
+            \end{itemize}
+          \end{block}
+          \begin{block}<2->{Affixes}
+            \input{\defs/part2/def_affix.tex}
+          \end{block}
+          \begin{block}<3->{Two types of affixes}
+            \begin{itemize}
+              \item \alert{Suffix}: \input{\defs/part2/def_suffix.tex} (e.g., \lexi{-y})
+              \item \alert{Prefix}: \input{\defs/part2/def_prefix.tex} (e.g., \lexi{un-})
+            \end{itemize}
+          \end{block}
+        }
+        \only<4-5>{
+          \begin{block}{More types}
+            \begin{itemize}
+              \item Free morphemes
+              \item Bound morphemes
+            \end{itemize}
+          \end{block}
+          \begin{alertblock}<5->{Free morpheme}
+            \input{\defs/part2/def_free_morpheme.tex}
+          \end{alertblock}
+          \begin{alertblock}<5->{Bound morpheme}
+            \input{\defs/part2/def_bound_morpheme.tex}
+          \end{alertblock}
+        }
+        \only<6-8>{
+          \begin{block}{Familiar definitions?}
+            \uncover<7->{
+              Effectively:
+              \begin{itemize}
+                \item roots $\leftrightarrow$ free morphemes
+                \item affixes $\leftrightarrow$ bound morphemes
+              \end{itemize}
+            }
+          \end{block}
+          \begin{block}<8->{Some unusual cases}
+            \begin{itemize}
+              \item \lexi{abso-freaking-lutely}
+              \item \lexi{cran-berry}
+            \end{itemize}
+          \end{block}
+        }
+        \only<9-11>{
+          \begin{alertblock}{Cran morpheme}
+            \input{\defs/part2/def_cran_morpheme.tex}
+          \end{alertblock}
+          \begin{alertblock}<10->{Productive}
+            \input{\defs/part2/def_productive.tex}
+          \end{alertblock}
+          \begin{block}<11->{Productivity is measured on a continuum}
+            \parbox{0.2\textwidth}{\center not\\productive} $\xleftrightarrow{\hspace*{5.4cm}}$ \parbox{0.2\textwidth}{\center most\\productive}
+          \end{block}
+        }
+        \only<12-13>{
+          \begin{block}{And even more types}
+            \begin{itemize}
+              \item Content morphemes
+              \item Function morphemes
+            \end{itemize}
+          \end{block}
+          \begin{alertblock}<13->{Content morphemes}
+            \input{\defs/part2/def_content_morpheme.tex}
+          \end{alertblock}
+          \begin{alertblock}<13->{Function morphemes}
+            \input{\defs/part2/def_function_morpheme.tex}
+          \end{alertblock}
+        }
+        \only<14-15>{
+          \begin{block}{And finally, relatedly}
+            \begin{itemize}
+              \item Content \emph{words}
+              \item Function \emph{words}
+            \end{itemize}
+          \end{block}
+          \begin{alertblock}<15->{Content morphemes}
+            \input{\defs/part2/def_content_word.tex}
+          \end{alertblock}
+          \begin{alertblock}<15->{Function morphemes}
+            \input{\defs/part2/def_function_word.tex}
+          \end{alertblock}
+        }
+        \only<16>{
+          \begin{adjustbox}{width=0.98\textwidth}
+            \input{../material_morpheme_cats/material_morpheme_cats_chart.tex}
+          \end{adjustbox}
+        }
+        \only<17>{
+          \begin{alertblock}{Be careful}
+            \begin{itemize}
+              \item Only split words up into real morphemes
+              \begin{itemize}
+                \item \lexi{Catalog} doesn't contain \lexi{cat}
+              \end{itemize}
+              \item Long words don't automatically have multiple morphemes
+              \begin{itemize}
+                \item \lexi{Lugubrious} is one morpheme
+              \end{itemize}
+            \end{itemize}
+          \end{alertblock}
+        }
+      \end{frame}
+
+    \subsection{\subtwofive}
+      \begin{frame}{\subtwofive}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 4 exercises 2, 3, and 4
+        \end{block}
+      \end{frame}
+
+    \begin{frame}{References}
+      \printbibliography
+    \end{frame}
+\end{document}
