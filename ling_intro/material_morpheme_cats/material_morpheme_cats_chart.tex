@@ -1,0 +1,23 @@
+% This draws a morpheme categories flowchart
+\begin{tikzpicture}
+  \node (standing) [process]                                         {Can it stand on its own?\\
+                                                                      \emph{If yes, go right;}\\
+                                                                      \emph{if no, go left}};
+  \node (bound)    [process, below left=1cm and -1.5cm of standing]  {\textbf{Bound morpheme/Affix}\\
+                                                                      Is it productive?\\
+                                                                      \emph{If yes, go right;}\\
+                                                                      \emph{if no, go left}};
+  \node (function) [process, below right=1cm and -1.5cm of bound]    {\textbf{Function morpheme}};
+  \node (cran)     [process, below left=1cm and -2cm of bound]       {\textbf{Cran morpheme}};
+  \node (free)     [process, below right=1cm and -1.5cm of standing] {\textbf{Free morpheme/Root}\\
+                                                                      Is it an open or closed lexical category?\\
+                                                                      \emph{If open, go right;}\\
+                                                                      \emph{if closed, go left}};
+  \node (content)  [process, below right=1cm and -3cm of free]       {\textbf{Content morpheme}};
+  \draw [arrow] (standing) -- (bound);
+  \draw [arrow] (bound)    -- (function);
+  \draw [arrow] (bound)    -- (cran);
+  \draw [arrow] (standing) -- (free);
+  \draw [arrow] (free)     -- (function);
+  \draw [arrow] (free)     -- (content);
+\end{tikzpicture}
