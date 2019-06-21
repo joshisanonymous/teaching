@@ -1,0 +1,274 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[Morphological Processes]{Morphological Processes}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{The processes}
+  \newcommand{\subonetwo}{Affixation}
+  \newcommand{\subonethree}{Compounding}
+  \newcommand{\subonefour}{Reduplication}
+  \newcommand{\subonefive}{Apophony (a type of alternation)}
+  \newcommand{\subonesix}{Suppletion}
+  \newcommand{\suboneseven}{Practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Morphological processes}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{block}{We'll look at five}
+          \begin{itemize}
+            \item Affixation
+            \item Compounding
+            \item Reduplication
+            \item Alternation
+            \item Suppletion
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}[t]{\subonetwo}
+        \begin{example}
+          \begin{itemize}
+            \item \lexi{un-} + \lexi{wind} $=$ \lexi{unwind}
+            \item \lexi{re-} + \lexi{wind} $=$ \lexi{rewind}
+            \item \lexi{swamp} + \lexi{-s} $=$ \lexi{swamps}
+          \end{itemize}
+        \end{example}
+        \only<1>{
+          \begin{block}{}
+            This is almost all we've seen so far
+          \end{block}
+        }
+        \only<2->{
+          \begin{alertblock}{Affixation}
+            \input{\defs/part2/def_affixation.tex}
+          \end{alertblock}
+        }
+        \only<3-4>{
+          \begin{block}{What kind of affixes are these?}
+            \uncover<4->{
+              \begin{itemize}
+                \item Prefixes: \lexi{un-} and \lexi{re-}
+                \item Suffixes: \lexi{-s}
+              \end{itemize}
+            }
+          \end{block}
+        }
+        \only<5-6>{
+          \begin{block}{Are these derivations or inflections?}
+            \uncover<6->{
+              \begin{itemize}
+                \item Inflections: \lexi{swamps}
+                \item Derivations: \lexi{unwind} and \lexi{rewind}
+              \end{itemize}
+            }
+          \end{block}
+        }
+    \end{frame}
+
+  \subsection{\subonethree}
+    \begin{frame}[t]{\subonethree}
+      \begin{example}
+        \begin{itemize}
+          \item \lexi{swamp} + \lexi{thing} $=$ \only<-2>{\lexi{Swamp Thing}}\only<3->{\orth{Swamp Thing}}
+          \item<2-> \lexi{black} + \lexi{bird} $=$ \only<-2>{\lexi{blackbird}}\only<3->{\orth{blackbird}}
+          \item<2-> \lexi{self} + \lexi{evident} $=$ \only<-2>{\lexi{self-evident}}\only<3->{\orth{self-evident}}
+        \end{itemize}
+      \end{example}
+      \only<1>{
+        \begin{block}{}
+          We've also seen this
+        \end{block}
+      }
+      \only<2-3>{
+        \begin{block}{}
+          But there's more!
+        \end{block}
+        \begin{block}<3->{Spelling doesn't matter}
+          Compounds can be spelled with spaces, no spaces, or hyphens, but they're always single words
+        \end{block}
+      }
+      \only<4>{
+        \begin{alertblock}{Compound}
+          \input{\defs/part2/def_compound.tex}
+        \end{alertblock}
+        \begin{alertblock}{Compounding}
+          \input{\defs/part2/def_compounding.tex}
+        \end{alertblock}
+      }
+      \only<5>{
+        \begin{block}{Compounds or phrases?}
+          \begin{itemize}
+            \item If (in English) the stress is on the first syllable
+            \begin{itemize}
+              \item[$\rightarrow$] Compound
+            \end{itemize}
+            \item If you can't insert other material between components without changing the meaning
+            \begin{itemize}
+              \item[$\rightarrow$] Compound
+            \end{itemize}
+          \end{itemize}
+        \end{block}
+      }
+      \only<6-7>{
+        \begin{block}{Compounding is highly productive in English}
+          \begin{itemize}
+            \item \begin{tabular}{l l l l}
+                    \lexi{income}      & \lexi{tax}         & \lexi{preparation} & \lexi{fees} \\
+                    \uncover<7->{noun} & \uncover<7->{noun} & \uncover<7->{noun} & \uncover<7->{noun}
+                  \end{tabular}
+          \end{itemize}
+        \end{block}
+      }
+    \end{frame}
+
+  \subsection{\subonefour}
+    \begin{frame}[t]{\subonefour}
+      \only<-2>{
+        \begin{example}
+          \begin{itemize}
+            \item \lexi{like-like}
+            \item \lexi{green-green}
+            \item \lexi{date-date}
+          \end{itemize}
+        \end{example}
+        \begin{block}<2->{Only marginal examples in English}
+          These are very context dependent
+        \end{block}
+      }
+      \only<3-8>{
+        \begin{example}
+          \begin{itemize}
+            \item Indonesian \lexi{rumah} `house' $\rightarrow$ \lexi{rumahrumah} `houses'
+            \item Indonesian \lexi{ibu} `mother' $\rightarrow$ \lexi{ibuibu} `mothers'
+            \item Tagalog \lexi{kain} `eat' $\rightarrow$ \lexi{kakain} `will eat'
+            \item Tagalog [ʔisda] `fish' $\rightarrow$ [maŋʔiʔisda] `fisherman'
+          \end{itemize}
+        \end{example}
+        \only<4>{
+          \begin{alertblock}{Reduplication}
+            \input{\defs/part2/def_reduplication.tex}
+          \end{alertblock}
+          \begin{alertblock}{Reduplicant}
+            \input{\defs/part2/def_reduplicant.tex}
+          \end{alertblock}
+        }
+        \only<5>{
+          \begin{block}{Two types of reduplication}
+            \begin{itemize}
+              \item Total reduplication
+              \item Partial reduplication
+            \end{itemize}
+          \end{block}
+        }
+        \only<6>{
+          \begin{alertblock}{Total reduplication}
+            \input{\defs/part2/def_total_reduplication.tex}
+          \end{alertblock}
+          \begin{alertblock}{Partial reduplication}
+            \input{\defs/part2/def_partial_reduplication.tex}
+          \end{alertblock}
+        }
+        \only<7->{
+          \begin{block}{Which are derivations and which inflections?}
+            \uncover<8->{
+              \begin{itemize}
+                \item Inflections: \lexi{rumahrumah}, \lexi{ibuibu}, and \lexi{kakain}
+                \item Derivations: [maŋʔiʔisda]
+              \end{itemize}
+            }
+          \end{block}
+        }
+      }
+    \end{frame}
+
+  \subsection{\subonefive}
+    \begin{frame}[t]{\subonefive}
+      \begin{example}
+        \begin{itemize}
+          \item {[}ˈgus] $\rightarrow$ [ˈgis]
+          \item {[}ˈfʊt] $\rightarrow$ [ˈfit]
+          \item {[}ˈdɹɪŋk] $\rightarrow$ [ˈdɹæŋk] or $\rightarrow$ [ˈdɹʌŋk]
+          \item {[}ˈstɹaɪf] $\rightarrow$ [ˈstɹaɪv]
+          \item {[}ˈjus] $\rightarrow$ [ˈjuz]
+        \end{itemize}
+      \end{example}
+      \only<2>{
+        \begin{alertblock}{Apophony}
+          \input{\defs/part2/def_apophony.tex}
+        \end{alertblock}
+      }
+      \only<3-4>{
+        \begin{block}{Which are derivations and which inflections?}
+          \uncover<4->{
+            \begin{itemize}
+              \item Inflections: [ˈgis], [ˈfit], and [ˈdɹæŋk]/[ˈdɹʌŋk]
+              \item Derivations: [ˈstɹaɪv] and [ˈjuz]
+            \end{itemize}
+          }
+        \end{block}
+      }
+    \end{frame}
+
+  \subsection{\subonesix}
+    \begin{frame}[t]{\subonesix}
+      \begin{example}
+        \begin{itemize}
+          \item {[}ˈiz] ̩$\rightarrow$ [ˈwʌz]
+          \item {[}ˈgoʊ] $\rightarrow$ [ˈwɛnt]
+          \item {[}ˈgʊd] $\rightarrow$ [ˈbɛ.ɾɹ̩]
+          \item {[}ˈbæd] $\rightarrow$ [ˈwɹ̩s]
+        \end{itemize}
+      \end{example}
+      \only<1>{
+        \begin{block}{}
+          But we can change more than just a vowel or consonant
+        \end{block}
+      }
+      \only<2>{
+        \begin{alertblock}{Suppletion}
+          \input{\defs/part2/def_suppletion.tex}
+        \end{alertblock}
+      }
+      \only<3-4>{
+        \begin{block}{Which are derivations and which inflections?}
+          \begin{itemize}
+            \item Inflections: [ˈwʌz], [ˈwɛnt], [ˈbɛ.ɾɹ̩], and [ˈwɹ̩s]
+            \item Derivations: None. This doesn't exist
+          \end{itemize}
+        \end{block}
+        \begin{alertblock}<4->{}
+          Suppletion requires paradigms
+        \end{alertblock}
+      }
+    \end{frame}
+
+  \subsection{\suboneseven}
+    \begin{frame}{\suboneseven}
+      \begin{block}{Try these}
+        \textcite{dawson_language_2016}, chapter 4 exercises 10, 11, and 12
+      \end{block}
+    \end{frame}
+\end{document}
