@@ -1,0 +1,251 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage{extarrows}
+  \usepackage[linguistics]{forest}
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[Typologies \& Structures]{Morphological Typologies \& Hierarchical Word Structures}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{The types}
+  \newcommand{\subonetwo}{Analytic languages}
+  \newcommand{\subonethree}{Agglutinating languages}
+  \newcommand{\subonefour}{Fusional languages}
+  \newcommand{\subonefive}{Polysynthetic languages}
+  \newcommand{\subonesix}{And English?}
+  \newcommand{\subtwoone}{Let's talk about order}
+  \newcommand{\subtwotwo}{Ambiguity}
+  \newcommand{\subtwothree}{Practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Morphological Typology}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \only<-3>{
+          \begin{block}{}
+            Languages are often classified into types by their word formation processes or lack thereof
+          \end{block}
+          \begin{alertblock}<2->{This is merely a convention}
+            Languages often do not fit neatly into any one type
+          \end{alertblock}
+
+          \vspace{1cm}
+          \uncover<3->{
+            \begin{tabular}{c | c c c}
+              Analytic  &               & Synthetic & \\
+              \multicolumn{4}{c}{$\xleftrightarrow{\hspace{0.9\linewidth}}$} \\
+                        & Agglutinating & Fusional  & Polysynthetic
+            \end{tabular}
+          }
+        }
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}{\subonetwo}
+        \begin{alertblock}{Analytic languages}
+          \input{\defs/part2/def_analytic_language.tex}
+        \end{alertblock}
+        \begin{example}
+          Mandarin:
+          \begin{itemize}
+            \item \begin{tabular}{r @{} l l l l l @{} l}
+                    [  & wɔ  & mən             & tan   & tçin  & lə             & ] \\
+                       & I   & \textsc{plural} & play  & piano & \textsc{past}  & \\
+                    \multicolumn{6}{l}{`We played the piano.'}
+                  \end{tabular}
+          \end{itemize}
+        \end{example}
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}{\subonethree}
+        \begin{alertblock}{Agglutinating languages}
+          \input{\defs/part2/def_agglutinating_language.tex}
+        \end{alertblock}
+        \begin{example}
+          Swahili:
+          \begin{itemize}
+            \item \begin{tabular}{r @{} l l l @{} l}
+                    [  & ni-  & li-             & soma  & ] \\
+                       & I-   & \textsc{past-}  & read  & \\
+                    \multicolumn{5}{l}{`I was reading.'}
+                  \end{tabular}
+          \end{itemize}
+        \end{example}
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}{\subonefour}
+        \begin{alertblock}{Fusional languages}
+          \input{\defs/part2/def_fusional_language.tex}
+        \end{alertblock}
+        \begin{example}
+          Spanish:
+          \begin{itemize}
+            \item \begin{tabular}{r @{} l l @{} l}
+                    [  & abl    & -e  & ] \\
+                       & speak  & \textsc{-past.1sg} & \\
+                    \multicolumn{4}{l}{`I spoke.'}
+                  \end{tabular}
+          \end{itemize}
+        \end{example}
+      \end{frame}
+
+    \subsection{\subonefive}
+      \begin{frame}{\subonefive}
+        \begin{alertblock}{Polysynthetic languages}
+          \input{\defs/part2/def_polysynthetic_language.tex}
+        \end{alertblock}
+        \begin{example}
+          Sora:
+          \begin{itemize}
+            \item \begin{tabular}{r @{} l l l l l @{} l}
+                    [  & pɔ   & -poʊŋ   & -koʊn   & -t                & -am & ] \\
+                       & stab & -belly  & -knife  & \textsc{non-past} & you & \\
+                    \multicolumn{7}{l}{`(Someone) will stab you with a knife in your belly.'}
+                  \end{tabular}
+          \end{itemize}
+        \end{example}
+      \end{frame}
+
+    \subsection{\subonesix}
+      \begin{frame}{\subonesix}
+        \begin{block}{Which language type is English?}
+          \uncover<2->{
+            Kind of analytic, kind of agglutinating
+          }
+        \end{block}
+      \end{frame}
+
+  \section{Hierarchical Word Structure}
+    \subsection{\subtwoone}
+      \begin{frame}[t]{\subtwoone}
+        \only<-8>{
+          \begin{block}{}
+            There are three possible ways to derive \lexi{un-us-able}:
+            \begin{itemize}
+              \item Attach \lexi{un-} and \lexi{-able} to \lexi{use} at the same time
+              \item Attach \lexi{un-} first then \lexi{-able}
+              \item Attach \lexi{-able} first then \lexi{un-}
+            \end{itemize}
+          \end{block}
+        }
+        \only<2-4>{
+          \begin{block}{All at once then?}
+            \uncover<3->{
+              Possible in this case, but what about words like \lexi{in-depend-ent-ly}?
+            }
+          \end{block}
+          \begin{alertblock}<4->{}
+            In general, let's assume that affixes attach at different times
+          \end{alertblock}
+        }
+        \only<5-6>{
+          \begin{block}{\lexi{un-} before \lexi{-able}?}
+            \uncover<6->{
+              Probably not: \lexi{unuse} doesn't make much sense
+            }
+          \end{block}
+        }
+        \only<7-8>{
+          \begin{block}{\lexi{-able} before \lexi{un-}?}
+            \uncover<8->{
+              Seems most likely
+            }
+          \end{block}
+        }
+        \only<9-10>{
+          \begin{block}{}
+            We can represent this derivation with a tree diagram
+          \end{block}
+          \begin{center}
+            \begin{forest}
+              for tree={calign=fixed angles, parent anchor=south}
+              [Adj
+                [un, tier=morph]
+                [Adj
+                  [use (V), tier=morph]
+                  [able, tier=morph]
+                ]
+              ]
+            \end{forest}
+          \end{center}
+          \begin{alertblock}<10->{}
+            The relationship between the affixes is therefore hierarchical
+          \end{alertblock}
+        }
+        \only<11-12>{
+          \begin{block}{Order is often not clear, though}
+            Take \lexi{re-us-able}
+            \begin{itemize}
+              \item \lexi{Re-use} works
+              \item \lexi{Us-able} works
+            \end{itemize}
+          \end{block}
+          \begin{block}<12->{}
+            In these cases, for this class, both orders are acceptable
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subtwotwo}
+      \begin{frame}{\subtwotwo}
+        \begin{block}{}
+          These diagrams can sometimes shed light on ambiguous words: e.g., \lexi{unlockable}
+          \begin{itemize}
+            \item `Unable to be locked' or
+            \item `Able to be unlocked'
+          \end{itemize}
+        \end{block}
+        \begin{columns}
+          \column{0.48\textwidth}
+            \begin{forest}
+              for tree={calign=fixed angles, parent anchor=south}
+              [Adj
+                [un, tier=morph]
+                [Adj
+                  [lock (V), tier=morph]
+                  [able, tier=morph]
+                ]
+              ]
+            \end{forest}
+          \column{0.48\textwidth}
+            \begin{forest}
+              for tree={calign=fixed angles, parent anchor=south}
+              [Adj
+                [V
+                  [un, tier=morph]
+                  [lock (V), tier=morph]
+                ]
+                [able, tier=morph]
+              ]
+            \end{forest}
+        \end{columns}
+      \end{frame}
+
+    \subsection{\subtwothree}
+      \begin{frame}{\subtwothree}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 4 exercises 22, 23, and 24
+        \end{block}
+      \end{frame}
+\end{document}
