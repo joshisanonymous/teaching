@@ -1,0 +1,211 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage{phonrule}
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[Morphological Analysis]{Morphological Analysis}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{Identifying morphemes}
+  \newcommand{\subonetwo}{Identifying allomorphs}
+  \newcommand{\subonethree}{Be careful}
+  \newcommand{\subonefour}{Practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Morphological Analysis}
+    \subsection{\suboneone}
+      \begin{frame}[t]{\suboneone}
+        \only<-7>{
+          \begin{block}{A Classical Greek example}
+            \begin{itemize}
+              \item {[}grapʰɔː] `I write'
+              \item<2-> {[}pʰɛːmi] `to speak'
+              \item<3-> {[}grapʰɛː] `s/he writes'
+            \end{itemize}
+          \end{block}
+          \only<-6>{
+            \begin{block}{Which part means `I'?}
+              \begin{itemize}
+                \item<4-> {[}-ɔː] `I'
+              \end{itemize}
+            \end{block}
+            \begin{block}<5->{What other morphemes can you identify?}
+              \begin{itemize}
+                \item<6-> {[}grapʰ] `write'
+                \item<6-> {[}-ɛː] `s/he'
+              \end{itemize}
+            \end{block}
+          }
+          \only<7->{
+            \begin{alertblock}{}
+              This is possible because we have similar forms and similar meanings
+            \end{alertblock}
+          }
+        }
+        \only<8->{
+          \begin{block}{A Hungarian example}
+            \begin{columns}
+              \column{0.48\linewidth}
+                \begin{itemize}
+                  \item {[}hɔz] `house'
+                  \item {[}ɛɟhɔz] `a house'
+                  \item {[}hɔzɔ] `his/her house'
+                \end{itemize}
+              \column{0.48\linewidth}
+                \begin{itemize}
+                  \item {[}boɾ] `wine'
+                  \item {[}ɛɟboɾ] `a wine'
+                  \item {[}boɾɔ] `his/her wine'
+                \end{itemize}
+            \end{columns}
+          \end{block}
+          \begin{block}{What morphemes can you identify?}
+            \begin{columns}
+              \column{0.48\linewidth}
+                \begin{itemize}
+                  \item<9-> {[}hɔz] `house'
+                  \item<9-> {[}boɾ] `wine'
+                \end{itemize}
+              \column{0.48\linewidth}
+                \begin{itemize}
+                  \item<9-> {[}ɛɟ-] `a'
+                  \item<9-> {[}-ɔ] `his/her'
+                \end{itemize}
+            \end{columns}
+          \end{block}
+          \only<10-11>{
+            \begin{block}{Prefixes or suffixes?}
+              \begin{columns}
+                \column{0.48\linewidth}
+                  \begin{itemize}
+                    \item<11-> Prefix: [ɛɟ-]
+                  \end{itemize}
+                \column{0.48\linewidth}
+                  \begin{itemize}
+                    \item<11-> Suffix: [-ɔ]
+                  \end{itemize}
+              \end{columns}
+            \end{block}
+          }
+          \only<12-13>{
+            \begin{block}{Derivational or inflectional?}
+              \uncover<13->{
+                Both inflectional
+              }
+            \end{block}
+          }
+        }
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}[t]{\subonetwo}
+        \only<1-6>{
+          \begin{example}
+            \begin{tabular}{l l}
+              [\alert<4->{ɪm}.pɹəˈsaɪs]     & [\alert<4->{ɪɹ}.ɹɪˈspɑn.sə.bl̩] \\
+              {[}\alert<4->{ɪn}ˈæ.də.kwɪt]  & [\alert<4->{ɪl}ˈlɛ.dʒə.bl̩] \\
+              {[}\alert<4->{ɪŋ}.kəmˈplit]
+            \end{tabular}
+          \end{example}
+        }
+        \only<1-5>{
+          \begin{block}{What meaning do these all share?}
+            \begin{itemize}
+              \item<2-> Negation
+            \end{itemize}
+          \end{block}
+          \begin{block}<3->{Which morpheme adds the sense of negation?}
+            \uncover<5->{
+              Each \alert{morph} here shares [ɪ-]
+              \begin{itemize}
+                \item[$\rightarrow$] We can write phonological rules
+              \end{itemize}
+            }
+          \end{block}
+        }
+        \only<6>{
+          \begin{block}{The rules}
+            \begin{itemize}
+              \item \phonr{/ɪn-/}{[ɪm-]}{\phonfeat{+labial}}
+              \item \phonr{/ɪn-/}{[ɪŋ-]}{\phonfeat{+velar}}
+              \item \phonr{/ɪn-/}{[ɪɹ-]}{[ɹ]}
+              \item \phonr{/ɪn-/}{[ɪl-]}{[l]}
+              \item \phonc{/ɪn-/}{[ɪn-]}{elsewhere}
+            \end{itemize}
+          \end{block}
+        }
+        \only<7->{
+          \begin{block}{Some definitions}
+            \begin{itemize}
+              \item \alert{Morpheme}: \input{\defs/part2/def_morpheme.tex}
+              \begin{itemize}
+                \item /ɪn-/
+              \end{itemize}
+              \item \alert{Allomorph}: \input{\defs/part2/def_allomorph.tex}
+              \begin{itemize}
+                \item {[}ɪm- ɪŋ- ɪɹ- ɪl-] and [ɪn-]
+              \end{itemize}
+              \item \alert{Morph}: \input{\defs/part2/def_morph.tex}
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}[t]{\subonethree}
+        \begin{block}{}
+          Don't assume all languages have the same types of inflections
+        \end{block}
+        \only<1>{
+          \begin{block}{Tagalog doesn't inflect for plural}
+            \begin{itemize}
+              \item {[}aŋ bataʔ] `the child'
+              \item {[}aŋ mga bataʔ] `the children'
+            \end{itemize}
+          \end{block}
+        }
+        \only<2>{
+          \begin{block}{Sanskrit inflects for dual}
+            \begin{itemize}
+              \item \lexi{juhomi} `I sacrifice'
+              \item \lexi{juhuvas} `we (two people) sacrifice'
+              \item \lexi{juhumas} `we (more than two) sacrifice'
+            \end{itemize}
+          \end{block}
+        }
+        \only<3>{
+          \begin{block}{Comanche inflects for inclusive/exclusive}
+            \begin{itemize}
+              \item {[}taa] `we (inclusive, i.e. including you)'
+              \item {[}nɨnɨ] `we (exclusive, i.e. not including you)'
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}{\subonefour}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 4 exercises 29, 40, and 44
+        \end{block}
+      \end{frame}
+\end{document}
