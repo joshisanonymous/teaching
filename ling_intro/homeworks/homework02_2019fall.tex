@@ -1,0 +1,228 @@
+\documentclass[addpoints]{exam}
+  % Exam settings
+  \pointsinmargin
+  \pointformat{}
+
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{phonrule}
+
+  %% Custom commands
+  % Instructions for a section
+  \newcommand{\instr}[1]{
+    \begin{center}
+      \fbox{
+        \parbox{0.85\textwidth}
+               {#1}
+      }
+    \end{center}
+  }
+
+  % Document information
+  \title{Homework 2: Phonology \& Morphology}
+  \date{}
+
+\begin{document}
+  \maketitle
+
+  % Header
+  \noindent\makebox[0.5\textwidth][l]{Name:} \makebox[0.5\textwidth][r]{Course: LING2100, The Study of Language}\\
+  \makebox[0.5\textwidth][l]{Date:} \makebox[0.5\textwidth][r]{Instructor: Joshua McNeill}
+
+    \section{Phonology}
+
+    \instr{Give either a word that begins with the consonant cluster or otherwise write \emph{impossible} if the consonant cluster is not possible at the beginning of a word in English. (1 point each)}
+
+  \begin{questions}
+
+        \parbox{0.45\linewidth}{
+          \question[1] [ms-]: \hrulefill
+          \question[1] [sl-]: \hrulefill
+          \question[1] [tn-]: \hrulefill
+          \question[1] [mt-]: \hrulefill
+          \question[1] [ʃs-]: \hrulefill
+          \question[1] [pt-]: \hrulefill
+        }
+        \hspace{0.1\linewidth}
+        \parbox{0.45\linewidth}{
+          \question[1] [st-]: \hrulefill
+          \question[1] [ʃɹ-]: \hrulefill
+          \question[1] [mw-]: \hrulefill
+          \question[1] [sɹ-]: \hrulefill
+          \question[1] [sw-]: \hrulefill
+          \question[1] [pɹ-]: \hrulefill
+        }
+
+      \instr{Give the natural class that the sounds in the set all belong to. (1 point each)}
+
+        \parbox[t]{0.45\linewidth}{
+          \question[1] [ʒ s θ]: \hrulefill
+          \question[1] [s h ]: \hrulefill
+          \question[1] [w n]: \hrulefill
+          \question[1] [j dʒ z]: \hrulefill
+          \question[1] [d n t]: \hrulefill
+        }
+        \hspace{0.1\linewidth}
+        \parbox[t]{0.45\linewidth}{
+          \question[1] [g k b]: \hrulefill
+          \question[1] [ʊ ɔ ʌ]: \hrulefill
+          \question[1] [ʌ e i ɪ]: \hrulefill
+          \question[1] [ɪ ʊ]: \hrulefill
+          \question[1] [ɛ ɔ]: \hrulefill
+        }
+
+      \instr{Each of the following is representative of a type of phonological rule. Give the type. (1 point each)}
+
+        \parbox[t]{0.45\linewidth}{
+          \question[1] \phon{/ˈæm.bjə.ləns/}{[ˈæm.bjə.lənts]}: \hrulefill
+          \question[1] \phon{/ˈθɪnk/}{[ˈθɪŋk]}: \hrulefill
+          \question[1] \phon{/ɪn.tɹəˈdus/}{[ɪn.təɹˈdus]} \hrulefill
+        }
+        \hspace{0.1\linewidth}
+        \parbox[t]{0.45\linewidth}{
+          \question[1] \phon{/ˈɪn.pʊt/}{[ˈɪm.pʊt]}: \hrulefill
+          \question[1] \phon{/ˈæm.fə.θi.ɾɹ̩/}{[ˈæm.pə.θi.ɾɹ̩]}: \hrulefill
+          \question[1] \phon{/ˈðoʊz/}{[ˈdoʊz]} \hrulefill
+        }
+
+      \newpage
+
+      \instr{Perform a phonological analysis by using the following data from Burmese to answer the questions below. \emph{N.b.}: The circle diacritic under a nasal indicates that it is voiceless (e.g., [n̥]), whereas nasals are otherwise always voiced. (1 point each)}
+
+        \begin{tabular}{l l l l}
+          {[}mî]     & `fire'              & [mwêɪ]  & `to give birth' \\
+          {[}mjiʔ]   & `river'             & [mjâwn]  & `ditch' \\
+          {[}mjín]   & `to see'            & [nê]     & `small' \\
+          {[}njiʔ]   & `dirty'             & [nwè]    & `to bend flexibly' \\
+          {[}hm̥jawʔ] & `to multiply'       & [hn̥êɪ]   & `slow' \\
+          {[}hn̥wêɪ]  & `to heat'           & [hn̥jaʔ]  & `to cut off (hair)' \\
+          {[}hŋ̥eʔ]   & `bird'              & [niè]    & `fine, small' \\
+          {[}nwâ]    & `cow'               & [ŋâ]     & `five' \\
+          {[}ŋouʔ]   & `stump (of tree)'   & [mîn]    & `old (people)' \\
+          {[}hm̥í]    & `to lean against'   & [hm̥wêɪ]  & `fragrant' \\
+          {[}hm̥jajʔ] & `to cure (meat)'    & [hm̥òwn]  & `flour, powder' \\
+          {[}hn̥jiʔ]  & `to wring, squeeze' & [hn̥jeɪʔ] & `to nod the head' \\
+          {[}hŋ̥â]    & `to borrow'         & [hîn]    & `curry'
+        \end{tabular}
+
+        \question[1] Are the voiced and voiceless versions of the nasals (i.e., [m] vs [m̥], [n] vs [n̥], [ŋ] vs [ŋ̥]) each phonemes or are they allophones of some underlying phonemes? \hrulefill
+          \begin{parts}
+            \part[1] If they're phonemes, which minimal pairs did you find to establish that they are in contrastive distribution? \hrulefill
+            \part[1] If they're allophones, what is the phonological rule that describes the relationship between the underlying phonemes and their allophones?
+          \end{parts}
+
+    \section{Morphology}
+
+      \instr{For each word, identify which morphemes are present. For those with multiple morphemes, indicate the type for each affix (i.e., prefix or suffix) and whether it's derivational or inflectional. (3 points each)}
+
+        \question[3] \emph{Baseball}: \hrulefill
+        \question[3] \emph{Taping}: \hrulefill
+        \question[3] \emph{Housewares}: \hrulefill
+        \question[3] \emph{Novelists}: \hrulefill
+        \question[3] \emph{Racehorses}: \hrulefill
+        \question[3] \emph{Saves}: \hrulefill
+        \question[3] \emph{Demobilizing}: \hrulefill
+        \question[3] \emph{Disobedience}: \hrulefill
+
+      \newpage
+
+      \instr{Each of the following is representative of a type of morphological process. Give the type. (1 point each)}
+
+        \parbox[t]{0.45\linewidth}{
+          \question[1] \phon{\emph{swear}}{\emph{swore}}: \hrulefill
+          \question[1] \phon{\emph{tooth}}{\emph{teeth}}: \hrulefill
+          \question[1] \phon{\emph{irritate}}{\emph{irritates}}: \hrulefill
+          \question[1] \phon{\emph{elbow}}{\emph{elbowing}}: \hrulefill
+        }
+        \hspace{0.1\linewidth}
+        \parbox[t]{0.45\linewidth}{
+          \question[1] \phon{\emph{scraper}}{\emph{skyscraper}}: \hrulefill
+          \question[1] \phon{\emph{steamroll}}{\emph{steamroller}}: \hrulefill
+          \question[1] \phon{\emph{red}}{\emph{RED-red}}: \hrulefill
+          \question[1] \phon{\emph{woman}}{\emph{women}}: \hrulefill
+        }
+
+      \instr{Use a tree diagram to show the morphological structure of the word. Make sure to indicate the lexical category for the root and each branch. (2 points each)}
+
+        \question[2] \emph{Marcher}
+
+        \vspace{3cm}
+
+        \question[2] \emph{Emulation}
+
+        \vspace{3cm}
+
+        \question[2] \emph{Uncommonly}
+
+        \vspace{3cm}
+
+        \question[2] \emph{Entourages}
+
+        \vspace{3cm}
+
+        \question[2] \emph{Landlady}
+
+        \vspace{3cm}
+
+        \question[2] \emph{Maneuverability}
+
+        \vspace{3cm}
+
+
+      \instr{Perform a morphological analysis by using the following data from the language Luiseño to answer the questions below. (1 point each)}
+
+        \begin{tabular}{l l l l}
+          {[}nokaamaj]    & `my son'              & [ʔoki]          & `your house' \\
+          {[}potaana]     & `his blanket'         & [ʔohuukapi]     & `your pipe' \\
+          {[}ʔotaana]     & `your blanket'        & [noki]          & `my house' \\
+          {[}ʔomkim]      & `your (pl.) houses'   & [nokaamajum]    & `my sons' \\
+          {[}popeew]      & `his wife'            & [ʔopeew]        & `your wife' \\
+          {[}ʔomtaana]    & `your (pl.) blanket'  & [tʃamhuukapi]   & `our pipe' \\
+          {[}pokaamaj]    & `his son'             & [poki]          & `his house' \\
+          {[}notaana]     & `my blanket'          & [pohuukapi]     & `his pipe' \\
+          {[}nohuukapi]   & `my pipe'             & [ʔokaamaj]      & `your son' \\
+          {[}pompeewum]   & `their wives'         & [pomki]         & `their house' \\
+          {[}tʃampeewum]  & `our wives'           & [tʃamhuukapim]  & `our pipes' \\
+          {[}ʔomtaanam    & `your (pl.) blankets  & [pomkaamaj]     & `their son'
+
+        \end{tabular}
+
+        \question Give the morpheme that corresponds to the following meanings:
+          \begin{parts}
+            \parbox[t]{0.45\linewidth}{
+              \part[1] `son': \hrulefill
+              \part[1] `house': \hrulefill
+              \part[1] `blanket': \hrulefill
+              \part[1] `wife': \hrulefill
+              \part[1] `my': \hrulefill
+              \part[1] `his': \hrulefill
+            }
+            \hspace{0.1\linewidth}
+            \parbox[t]{0.45\linewidth}{
+              \part[1] `your (sg.)': \hrulefill
+              \part[1] `your (pl.)': \hrulefill
+              \part[1] `their': \hrulefill
+              \part[1] (plural marker) [2 allomorphs]: \hrulefill
+              \part[1] `pipe': \hrulefill
+              \part[1] `our': \hrulefill
+            }
+          \end{parts}
+
+        \question How would you say the following in Isleta?
+          \begin{parts}
+            \part[1] `your sons': \hrulefill
+            \part[1] `their houses': \hrulefill
+            \part[1] `my blankets': \hrulefill
+            \part[1] `his pipes': \hrulefill
+          \end{parts}
+
+  \end{questions}
+
+  \vspace{1.25cm}
+
+  % Grade
+  \begin{center}
+    \gradetable[v][pages]
+  \end{center}
+\end{document}
