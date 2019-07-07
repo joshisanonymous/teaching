@@ -1,0 +1,7 @@
+assimilation
+dissimilation
+insertion
+deletion
+metathesis
+strengthening
+weakening
