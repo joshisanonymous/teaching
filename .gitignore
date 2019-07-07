@@ -244,4 +244,4 @@ TSWLatexianTemp*
 *.spl
 
 # Specific exams
-./exams
+exams/
