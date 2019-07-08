@@ -1,0 +1,167 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[Syntax Basics]{Some Basics of Syntax}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{It's this}
+  \newcommand{\subtwoone}{Grammaticality}
+  \newcommand{\subtwotwo}{Semantics in syntax}
+  \newcommand{\subtwothree}{Practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{What is syntax?}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{definition}
+          \input{\defs/part3/def_syntax.tex}
+        \end{definition}
+        \begin{alertblock}<2->{}
+          We're still talking about \emph{a} language: i.e., \input{\defs/part1/def_a_language.tex}
+          \begin{itemize}
+            \item We'll use ``English'' as shorthand for ``the set of features that happen to be shared in the languages of some group of people''
+          \end{itemize}
+        \end{alertblock}
+        \begin{alertblock}<3->{}
+          We'll be learning a phrase structure \parencite{chomsky_syntactic_2002} theory of syntax
+        \end{alertblock}
+      \end{frame}
+
+  \section{Basic ideas}
+    \subsection{\subtwoone}
+      \begin{frame}[t]{\subtwoone}
+        \begin{example}
+          \begin{enumerate}
+            \item The dog likes to eat filet mignon.
+            \item *Filet to dog eat mignon the likes.
+          \end{enumerate}
+        \end{example}
+        \only<1-2>{
+          \begin{block}{What's wrong with (2)?}
+            \uncover<2->{
+            The linguistic expressions are not combined in accordance with their syntactic properties
+            }
+          \end{block}
+        }
+        \only<3>{
+          \begin{alertblock}{Linguistic expression}
+            \input{\defs/part3/def_linguistic_expression.tex}
+          \end{alertblock}
+        }
+        \only<4>{
+          \begin{block}{Two types of linguistic expressions}
+            \begin{itemize}
+              \item \alert{Lexical expression}: \input{\defs/part3/def_lexical_expression.tex}
+              \item \alert{Phrasal expression}: \input{\defs/part3/def_phrasal_expression.tex}
+            \end{itemize}
+          \end{block}
+        }
+        \only<5-6>{
+          \begin{alertblock}{A grammatical sentence}
+            \input{\defs/part3/def_grammatical_sentence.tex}
+          \end{alertblock}
+          \begin{alertblock}<6->{Grammaticality judgment}
+            \input{\defs/part3/def_grammaticality_judgment.tex}
+          \end{alertblock}
+        }
+      \end{frame}
+
+    \subsection{\subtwotwo}
+      \begin{frame}[t]{\subtwotwo}
+        \begin{block}{}
+          Some links exist between syntax and meaning, but grammaticality is unrelated to meaning
+        \end{block}
+        \only<2-3>{
+          \begin{example}
+            \begin{enumerate}
+              \item The dog likes cats.
+              \item Cats like the dog.
+            \end{enumerate}
+          \end{example}
+          \only<2>{
+            \begin{block}{Syntax can affect meaning}
+              Flipping the subject and object yields a different meaning
+            \end{block}
+          }
+          \only<3>{
+            \begin{alertblock}<2->{Principle of compositionality (Frege, late 19th century)}
+              \input{\defs/part3/def_principle_of_compositionality.tex}
+            \end{alertblock}
+          }
+        }
+        \only<4>{
+          \begin{example}
+            \begin{enumerate}
+              \item Colorless green ideas sleep furiously.
+              \item *Green sleep colorless furiously ideas. \parencite{chomsky_syntactic_2002}
+            \end{enumerate}
+          \end{example}
+          \begin{block}{Grammaticality can be independent of meaning}
+            \begin{itemize}
+              \item (1) is nonsense but grammatical
+              \item (2) is nonsense and ungrammatical
+            \end{itemize}
+          \end{block}
+        }
+        \only<5-6>{
+          \begin{example}
+            From a language learner:
+            \begin{enumerate}
+              \item (*)Me bought dog.
+            \end{enumerate}
+          \end{example}
+          \begin{block}{}
+            Understandable but not grammatical \emph{in your language}
+          \end{block}
+          \only<6>{
+            \begin{alertblock}{However}
+              This is grammatical \emph{in the learner's language}
+            \end{alertblock}
+          }
+        }
+        \only<7>{
+          \begin{example}
+            \begin{enumerate}
+              \item The dog ate a filet mignon.
+              \item The dog devoured a filet mignon.
+              \item The dog ate.
+              \item *The dog devoured.
+            \end{enumerate}
+          \end{example}
+          \begin{block}{}
+            Lexical meaning doesn't predict syntactic properties
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subtwothree}
+      \begin{frame}{\subtwothree}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 5 exercise 3
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{References}
+        \printbibliography
+      \end{frame}
+\end{document}
