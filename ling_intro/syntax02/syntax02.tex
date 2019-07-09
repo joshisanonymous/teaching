@@ -1,0 +1,357 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[Syntactic Properties]{Syntactic Properties}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{What are they?}
+  \newcommand{\subonetwo}{Word order}
+  \newcommand{\subonethree}{Co-occurrence}
+  \newcommand{\subonefour}{Arguments}
+  \newcommand{\subonefive}{Adjunct}
+  \newcommand{\subonesix}{Practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Syntactic Properties}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{definition}
+          \input{\defs/part3/def_syntactic_property.tex}
+        \end{definition}
+        \begin{alertblock}{}
+          Both lexical expressions and phrasal expressions have syntactic properties
+        \end{alertblock}
+        \begin{block}{Two types}
+          \begin{itemize}
+            \item Word order
+            \item Co-occurrence
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}[t]{\subonetwo}
+        \begin{example}
+          \begin{enumerate}
+            \item The dog ate filet mignon.
+            \item *The dog filet mignon ate.
+            \item *Ate the dog filet mignon.
+            \item *Ate filet mignon the dog.
+          \end{enumerate}
+        \end{example}
+        \only<1-2>{
+          \begin{block}{What's wrong with (2-4)?}
+            \uncover<2->{
+            They violate the word order dictated by English sentences: S(ubject)-V(erb)-O(object)
+            }
+          \end{block}
+        }
+        \only<3>{
+          \begin{block}{Word orders in other languages}
+            \begin{itemize}
+              \item SOV (2), more common than SVO (e.g., Korean)
+              \item VSO (3), rarer (e.g., Arabic)
+              \item VOS (4), OVS, OSV, all very rare
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}[t]{\subonetwo}
+        \begin{alertblock}{}
+          Expressions have set word orders, not whole languages
+        \end{alertblock}
+        \only<2>{
+          \begin{example}
+            \begin{enumerate}
+              \item Is that dog a bulldog?
+              \item Now filet mignon, that bulldog likes.
+            \end{enumerate}
+          \end{example}
+          \begin{block}{}
+            \begin{itemize}
+              \item Interrogatives like (1) are VSO
+              \item Topicalized sentences like (2) are OSV
+            \end{itemize}
+          \end{block}
+        }
+        \only<3->{
+          \begin{block}{More exceptions}
+            Some languages have no fixed word order for sentence-level expressions
+            \begin{itemize}
+              \item Dyirbal allows SVO, SOV, VSO, VOS, OVS, and OSV for declarative sentences
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}[t]{\subonetwo}
+        \begin{block}{Other expressions that dictate word order}
+          \begin{itemize}
+            \item Nouns
+            \item Prepositions
+          \end{itemize}
+        \end{block}
+        \only<2>{
+          \begin{example}
+            \begin{tabular}{@{} l l l l l @{}}
+              1)  & these & books         &               & (English) \\
+              2)  & liv   & -sa           & -ye           & (Louisiana Creole) \\
+                  & book  & -\textsc{dem} & -\textsc{pl}  &
+            \end{tabular}
+          \end{example}
+          \begin{block}{}
+            \begin{itemize}
+              \item Demonstrative $\rightarrow$ Noun (English)
+              \item Noun $\rightarrow$ Demonstrative (LC)
+            \end{itemize}
+          \end{block}
+        }
+        \only<3>{
+          \begin{example}
+            \begin{tabular}{@{} l l l l l @{}}
+              3)  & with          & this    & child & (English)\\
+              4)  & kono          & kodomo  & to    & (Japanese) \\
+                  & \textsc{dem}  & child   & with  &
+            \end{tabular}
+          \end{example}
+          \begin{block}{}
+            \begin{itemize}
+              \item Preposition $\rightarrow$ Noun (English)
+              \item Noun $\rightarrow$ Preposition (Japanese)
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}{\subonethree}
+        \begin{block}{}
+          Essentially, which expressions are required by other expressions
+        \end{block}
+        \begin{block}{Two classifications for relationships between expressions}
+          \begin{itemize}
+            \item Arguments
+            \item Adjuncts
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}[t]{\subonefour}
+        \only<1-2>{
+          \begin{alertblock}{Arguments}
+            \input{\defs/part3/def_argument.tex}
+          \end{alertblock}
+        }
+        \only<3->{
+          \begin{alertblock}{Complements}
+            \input{\defs/part3/def_complement.tex}
+          \end{alertblock}
+        }
+        \begin{example}<2->
+          \begin{itemize}
+            \item The dog devoured a filet mignon.
+            \item *The dog devoured.
+          \end{itemize}
+        \end{example}
+        \only<2>{
+          \begin{block}{}
+            \lexi{Devour} requires an object noun, so \lexi{a filet mignon} is an argument of \lexi{devour}
+          \end{block}
+        }
+        \only<4->{
+          \begin{block}{}
+            \lexi{The dog} and \lexi{a filet mignon} are arguments, but only \lexi{a filet mignon} is a complement
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{block}{}
+          Word order requirements have no bearing on argument requirements
+        \end{block}
+        \begin{block}{Serbo-Croatian}
+          \begin{tabular}{@{} l l l l l @{}}
+            1)  & a)  & Marija  & voli    & muziku \\
+                &     & Marija  & likes   & music \\
+                &     & \multicolumn{3}{l}{`Marija likes music.'} \\
+                & b)  & Marija  & muziku  & voli \\
+                & c)  & voli    & muziku  & Marija \\
+                & d)  & voli    & Marija  & muziku \\
+                & e)  & muziku  & voli    & Marija \\
+                & f)  & muziku  & Marija  & voli \\
+            2)  &     & *Marija & voli    &
+          \end{tabular}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{block}{}
+          Arguments are \emph{not} always nouns
+        \end{block}
+        \begin{example}
+          \begin{enumerate}
+            \item *The dog wondered filet mignon.
+            \item The dog wondered about filet mignon.
+          \end{enumerate}
+        \end{example}
+        \begin{block}{}
+          \lexi{Wonder} requires a preposition, not a noun
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{block}{}
+          An expression can require more than one complement
+        \end{block}
+        \begin{example}
+          \begin{enumerate}
+            \item The man put the filet mignon in the trash.
+          \end{enumerate}
+        \end{example}
+        \begin{block}{Two complements}
+          \begin{itemize}
+            \item the filet mignon
+            \item in the trash
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{block}{}
+          Some expressions require arguments to take very specific forms
+        \end{block}
+        \begin{example}
+          \begin{itemize}
+            \item It rained.
+            \item It's raining.
+            \item (?)The sky rains.
+            \item (?)The clouds rain.
+          \end{itemize}
+        \end{example}
+        \begin{block}{}
+          \lexi{Rain} seems to require \lexi{it} except in more poetic expressions
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{block}{}
+          It's not just verbs that take arguments
+        \end{block}
+        \begin{example}
+          \begin{enumerate}
+            \item *The dog wondered about
+            \item *The dog is fond
+          \end{enumerate}
+        \end{example}
+        \begin{block}{}
+          \begin{itemize}
+            \item Prepositions like \lexi{about} take arguments
+            \item Adjectives like \lexi{fond} take arguments
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{alertblock}{}
+          These features do not necessarily hold true for other languages
+        \end{alertblock}
+        \begin{block}{Italian}
+          \begin{tabular}{@{} l l l l l l @{}}
+            1)  & (io)  & ho                & comprato  & un  & libro \\
+                & (I)   & have-\textsc{1sg} & bought    & a   & book \\
+                & \multicolumn{5}{l}{`I bought a book.'}
+          \end{tabular}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonefive}
+      \begin{frame}[t]{\subonefive}
+        \begin{definition}
+          \input{\defs/part3/def_adjunct.tex}
+        \end{definition}
+        \only<2>{
+          \begin{example}
+            \begin{itemize}
+              \item Louis likes music.
+              \item Louis likes loud music.
+              \item Louis likes loud fast music.
+              \item Louis likes loud fast swinging music.
+            \end{itemize}
+          \end{example}
+          \begin{block}{}
+            \lexi{Loud}, \lexi{fast}, and \lexi{swinging} are all adjuncts
+          \end{block}
+        }
+        \only<3>{
+          \begin{block}{Other defining features}
+            \begin{itemize}
+              \item You can add as many as you want (e.g., \lexi{loud fast swinging})
+              \item Sometimes called modifiers because that's what they typically do
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}{\subonefive}
+        \begin{block}{}
+          Other types of expressions can be adjuncts, too
+        \end{block}
+        \begin{example}<2->
+          \begin{enumerate}
+            \item Louis liked jazz last year.
+            \item Louis listens to death metal in January.
+          \end{enumerate}
+        \end{example}
+        \begin{block}<2->{}
+          \begin{itemize}
+            \item \lexi{Last year} is an adverb
+            \item \lexi{In January} is a preposition
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonefive}
+        \begin{alertblock}{}
+          Just because it can be an adjunct, doesn't mean it is
+        \end{alertblock}
+        \begin{example}<2->
+          \begin{itemize}
+            \item Last year was a swinging year.
+          \end{itemize}
+        \end{example}
+        \begin{block}<2->{}
+          \lexi{Last year} is a subject noun here (i.e., an argument)
+        \end{block}
+      \end{frame}
+
+      % Possibly add something from the agreement section here, but it seems off topic and doesn't come up again
+
+    \subsection{\subonesix}
+      \begin{frame}{\subonesix}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 5 exercise 4, 5, 7, 8, and 9
+        \end{block}
+      \end{frame}
+\end{document}
