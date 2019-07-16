@@ -1,0 +1,230 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[Syntactic Categories]{Syntactic Categories}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{What are they?}
+  \newcommand{\subonetwo}{Some major categories}
+  \newcommand{\subonethree}{Summarizing}
+  \newcommand{\subonefour}{Pratice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Syntactic Categories}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{definition}
+          \input{\defs/part3/def_syntactic_category.tex}
+        \end{definition}
+        \begin{example}<2->
+          \begin{enumerate}
+            \item \lexi{the dog} \hfill (noun phrase/NP)
+            \item \lexi{in January} \hfill (prepositional phrase/PP)
+            \item \lexi{The dog listens to death metal in January.} \hfill (sentence/S)
+          \end{enumerate}
+        \end{example}
+        \begin{alertblock}<3->{}
+          This does not include lexical categories (e.g., \lexi{dog}, an N)
+        \end{alertblock}
+      \end{frame}
+
+      \begin{frame}{\suboneone}
+        \begin{alertblock}{Syntactic distribution}
+          \input{\defs/part3/def_syntactic_distribution.tex}
+        \end{alertblock}
+        \begin{example}<2->
+          \begin{enumerate}
+            \item The dog listens to death metal
+            \item The dog listens to jazz
+            \item The dog listens to shoegaze
+          \end{enumerate}
+        \end{example}
+        \begin{block}<2->{}
+          \lexi{Death metal}, \lexi{jazz}, and \lexi{shoegaze} are all have the same distribution and are all NPs
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\suboneone}
+        \begin{block}{}
+          Meaning is not so important
+        \end{block}
+        \begin{example}
+          \begin{enumerate}
+            \item Cooking is fun.
+            \item Games are fun.
+          \end{enumerate}
+        \end{example}
+        \begin{block}{}
+          Both are NPs but \lexi{running} is an action and \lexi{games} a thing
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}{\subonetwo}
+        \begin{block}{S: Sentence}
+          Made up of an NP and a VP
+        \end{block}
+        \begin{block}{To identify Ss}
+          \begin{itemize}
+            \item Sally thinks that \hrulefill
+          \end{itemize}
+        \end{block}
+        \begin{example}<2->
+          \begin{enumerate}
+            \item \only<3->{*}Sally thinks that the dog.
+            \item Sally thinks that the dog listens to death metal.
+          \end{enumerate}
+        \end{example}
+      \end{frame}
+
+      \begin{frame}[t]{\subonetwo}
+        \begin{block}{NP: Noun Phrase}
+          Made up of at least an N
+        \end{block}
+        \begin{block}{To identify NPs}
+          Replace with a pronoun
+        \end{block}
+        \only<2-3>{
+          \begin{example}
+            \begin{enumerate}
+              \item The dog listens to death metal.
+              \item She listens to it.
+              \item \only<3->{*}The she listens to death it.
+            \end{enumerate}
+          \end{example}
+        }
+        \only<4>{
+          \begin{block}{Det: Determiner (a lexical category)}
+            \begin{itemize}
+              \item Articles: \lexi{the}, \lexi{a}, etc.
+              \item Demonstratives: \lexi{this}, \lexi{those}, etc.
+              \item Quantifiers: \lexi{some}, \lexi{many}, \lexi{few}, etc.
+              \item Possessives: \lexi{my}, \lexi{your}, \lexi{their}, etc.
+            \end{itemize}
+            Can combine with Ns but not with NPs
+          \end{block}
+        }
+        \only<5>{
+          \begin{block}{NPs can be very long}
+            \begin{enumerate}
+              \item The tiny brown dog with a short tail from Athens listens to death metal.
+              \item It listens to death metal.
+            \end{enumerate}
+            Contains APs and PPs
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}[t]{\subonetwo}
+        \begin{block}{VP: Verb Phrase}
+          Made up of at least a V
+        \end{block}
+        \begin{block}{To identify VPs}
+          \begin{itemize}
+            \item Add an NP to its left and you should have an S
+            \item Replace with \lexi{does so} or \lexi{did so}
+          \end{itemize}
+        \end{block}
+        \only<2>{
+          \begin{example}
+            \begin{enumerate}
+              \item \rule{1cm}{0.15mm} ate gumbo. $\rightarrow$ Louis ate gumbo.
+              \item Louis slept. $\rightarrow$ Louis did so.
+            \end{enumerate}
+          \end{example}
+        }
+        \only<3>{
+          \begin{block}{}
+            \begin{enumerate}
+              \item Louis gave the tall slender man with a hat and cane the rest of his hot tasty gumbo
+              \item[$\rightarrow$] Louis did so.
+              \item Louis did so his gumbo.
+            \end{enumerate}
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}{\subonetwo}
+        \begin{block}{PP: Prepositional Phrase}
+          Made up of at least a P and a NP
+        \end{block}
+        \begin{example}
+          \begin{enumerate}
+            \item \only<2->{[NP }A tall man \only<2->{[PP }with a hat\only<2->{]]}
+            \item \only<3->{[VP }ate gumbo \only<3->{[PP }at the counter.\only<3->{]]}
+          \end{enumerate}
+        \end{example}
+        \begin{block}<2->{Distribution}
+          \begin{itemize}
+            \item<2-> In NPs (1)
+            \item<3-> In VPs (2)
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonetwo}
+        \begin{block}{AP: Adjectival Phrase}
+          Made up of at least an Adj
+        \end{block}
+        \begin{example}
+          \begin{enumerate}
+            \item \only<2->{[NP }The \only<2->{[AP }tall\only<2->{]} man\only<2->{]}
+            \item \only<3->{[VP }is \only<3->{[AP }slender\only<3->{]}.\only<3->{]}
+          \end{enumerate}
+        \end{example}
+        \begin{block}<2->{Distribution}
+          \begin{itemize}
+            \item<2-> In NPs (1)
+            \item<3-> In VPs (2)
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonetwo}
+        \begin{block}{AdvP: Adverbial Phrase}
+          Made up of at least an Adv
+        \end{block}
+        \begin{example}
+          \begin{enumerate}
+            \item \only<2->{[AP [AdvP }very\only<2->{]} tall\only<2->{]}
+          \end{enumerate}
+        \end{example}
+        \begin{block}<2->{Distribution}
+          For now, only in APs
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}{\subonethree}
+        \small
+          \input{../material_syn_cats/material_syn_cats_table.tex}
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}{\subonefour}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 5 exercise 17 and 19
+        \end{block}
+      \end{frame}
+
+\end{document}
