@@ -1,0 +1,179 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[Syntactic Constituency]{Syntactic Constituency}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{What are they?}
+  \newcommand{\subonetwo}{Answers to questions}
+  \newcommand{\subonethree}{Clefting}
+  \newcommand{\subonefour}{Pro-form substitution}
+  \newcommand{\subonefive}{Interpreting the results}
+  \newcommand{\subonesix}{Practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Syntactic Constituency}
+    \subsection{\suboneone}
+      \begin{frame}[t]{\suboneone}
+        \begin{example}
+          In `The tall man ate tasty gumbo':
+          \begin{enumerate}
+            \item the tall man
+            \item ate tasty gumbo
+            \item tasty gumbo
+            \item \only<2->{*}ate tasty
+          \end{enumerate}
+        \end{example}
+        \only<1-2>{
+          \begin{block}{Do these form cohesive units?}
+            \begin{itemize}
+              \item<2> Yes: (1-3)
+              \item<2> No: (4)
+            \end{itemize}
+          \end{block}
+        }
+        \only<3>{
+          \begin{alertblock}{Syntactic constituent}
+            \input{\defs/part3/def_syntactic_constituent.tex}
+            \begin{itemize}
+              \item Identifying these helps us tease out the structure of a sentence
+            \end{itemize}
+          \end{alertblock}
+        }
+      \end{frame}
+
+      \begin{frame}{\suboneone}
+        \begin{block}{Three tests for identifying constituents}
+          \begin{itemize}
+            \item Answers to questions
+            \item Clefting
+            \item Pro-form substitution
+          \end{itemize}
+        \end{block}
+        \begin{alertblock}{}
+          This is not an exhaustive list of tests
+        \end{alertblock}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}{\subonetwo}
+        \begin{block}{How it works}
+          Replace some part of the sentence with a \lexi{wh-} word and form a question
+          \begin{itemize}
+            \item If the result is grammatical: It's a constituent
+            \item If the result is ungrammatical: It's not a constituent
+          \end{itemize}
+        \end{block}
+        \begin{example}<2->
+          `The tall man ate tasty gumbo':
+          \begin{itemize}
+            \item \emph{Who} ate tasty gumbo?
+            \item \emph{Who} the tall ate tasty gumbo?
+            \item \emph{What did} the tall man do?
+            \item \emph{What did} the tall man do gumbo?
+          \end{itemize}
+        \end{example}
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}{\subonethree}
+        \begin{block}{How it works}
+          Move some part $X$ of the sentence $Y$ to the beginning in the format `It was $X$ who/that $Y$'
+          \begin{itemize}
+            \item If the result is grammatical: It's a constituent
+            \item If the result is ungrammatical: It's not a constituent
+          \end{itemize}
+        \end{block}
+        \begin{example}<2->
+          `The tall man ate tasty gumbo':
+          \begin{itemize}
+            \item It was \emph{the tall man} who ate tasty gumbo.
+            \item It was \emph{man} that the tall ate tasty gumbo.
+            \item It was \emph{eat tasty gumbo} that the tall man did.
+            \item It was \emph{eat tasty} that the tall man did gumbo.
+          \end{itemize}
+        \end{example}
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}[t]{\subonefour}
+        \begin{block}{How it works}
+          Replace some part of the sentence with a pro-form
+          \begin{itemize}
+            \item If the result is grammatical: It's a constituent
+            \item If the result is ungrammatical: It's not a constituent
+          \end{itemize}
+        \end{block}
+        \only<2>{
+          \begin{alertblock}{Pro-form}
+            \input{\defs/part3/def_pro-form.tex}
+          \end{alertblock}
+          \begin{example}
+            \begin{itemize}
+              \item Pronouns: \emph{he}, \emph{it}, \emph{them}
+              \item Pro-verbs: \emph{do}, \emph{be}, \emph{have}
+            \end{itemize}
+          \end{example}
+        }
+        \only<3>{
+          \begin{example}
+            `The tall man ate tasty gumbo':
+            \begin{itemize}
+              \item \emph{He} ate tasty gumbo.
+              \item The tall \emph{he} ate tasty gumbo.
+              \item The tall man \emph{did so}.
+              \item The tall man \emph{did so} gumbo.
+            \end{itemize}
+          \end{example}
+        }
+      \end{frame}
+
+    \subsection{\subonefive}
+      \begin{frame}{\subonefive}
+        \begin{block}{}
+          \begin{itemize}
+            \item Tests that are failed are not conclusive
+            \item Tests that are passed are sufficient
+          \end{itemize}
+        \end{block}
+        \begin{example}
+          \begin{enumerate}
+            \item *\emph{Who} the man ate tasty gumbo?
+            \item<2-> \emph{Who} ate tasty gumbo?
+          \end{enumerate}
+          \only<1>{
+            The test in (1) fails but more tests are needed to be sure
+          }
+          \only<2>{
+            The test in (2) passes, so no more is needed
+          }
+        \end{example}
+      \end{frame}
+
+    \subsection{\subonesix}
+      \begin{frame}{\subonesix}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 5 exercises 15 and 16
+        \end{block}
+      \end{frame}
+\end{document}
