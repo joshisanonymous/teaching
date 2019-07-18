@@ -1,0 +1,384 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+  \usepackage[linguistics]{forest}
+
+  % Document information
+  \subtitle[Constructing a Grammar]{Constructing a Grammar}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{What's this about?}
+  \newcommand{\subonetwo}{The elements}
+  \newcommand{\subonethree}{The rules}
+  \newcommand{\subonefour}{Ambiguity}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Constructing a grammar}
+    \subsection{\suboneone}
+      \begin{frame}[t]{\suboneone}
+        \begin{block}{}
+          Constructing a grammar is equivalent to making a claim about how some speaker's language is organized in their mind
+        \end{block}
+        \only<2>{
+          \begin{columns}
+            \column{0.5\linewidth}
+              \begin{block}{Useful for}
+                The sake of knowledge
+              \end{block}
+            \column{0.5\linewidth}
+              \includegraphics[scale=0.15]{knowledge.jpg}
+          \end{columns}
+        }
+        \only<3>{
+          \begin{block}{Useful for}
+            Language learners
+          \end{block}
+          \begin{center}
+            \includegraphics[scale=0.085]{lang_learning.jpg}
+          \end{center}
+        }
+        \only<4>{
+          \begin{block}{Useful for}
+            Computational systems
+          \end{block}
+          \begin{center}
+            \includegraphics[scale=0.105]{alexa.jpg}
+          \end{center}
+        }
+        \only<5>{
+          \begin{block}{Our goal}
+            Construct a grammar for English syntax using what we've learned about syntax so far
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}[t]{\subonetwo}
+        \begin{block}{Four types of elements involved}
+          \begin{itemize}
+            \item Broad constituents
+            \item Syntactic categories
+            \item Lexical categories
+            \item Lexical expressions
+          \end{itemize}
+        \end{block}
+        \only<2>{
+          \begin{block}{Broad constituents (not a technical term)}
+            For now,
+            \begin{itemize}
+              \item S: Sentence
+            \end{itemize}
+          \end{block}
+        }
+        \only<3-4>{
+          \begin{block}{Syntactic categories}
+            \uncover<4->{
+              \input{\defs/part3/def_syntactic_category.tex}
+              \begin{itemize}
+                \item e.g., NP, VP, AP, and PP
+              \end{itemize}
+            }
+          \end{block}
+        }
+        \only<5-6>{
+          \begin{block}{Lexical categories}
+            \uncover<6->{
+              \input{\defs/part2/def_lexical_category.tex}
+              \begin{itemize}
+                \item e.g., Det, N, V, Adj, P, and Adv
+              \end{itemize}
+            }
+          \end{block}
+        }
+        \only<7-8>{
+          \begin{block}{Lexical expressions}
+            \uncover<8->{
+              \input{\defs/part3/def_lexical_expression.tex}
+              \begin{itemize}
+                \item e.g., the, dog, eat, small, with, very, etc.
+              \end{itemize}
+            }
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}[t]{\subonethree}
+        \begin{alertblock}{Phrase structure rewrite rules \parencite{chomsky_syntactic_2002}}
+          \input{\defs/part3/def_phrase_structure_rewrite_rule.tex}
+        \end{alertblock}
+        \only<2-4>{
+          \begin{block}{The rule for S}
+            S $\rightarrow$ NP VP
+          \end{block}
+          \only<2-3>{
+            \begin{example}
+              S $\rightarrow$ [NP the very green cat] [VP eats the mouse in the alley]
+            \end{example}
+            \begin{block}<3->{Usually not VP NP unless you're Yoda}
+              S $\rightarrow$ [VP eats the mouse in the alley] [NP the very green cat]
+            \end{block}
+          }
+          \only<4>{
+            \begin{block}{}
+              NP and VP are immediate constituents of S
+            \end{block}
+            \begin{alertblock}{Immediate constituents}
+              \input{\defs/part3/def_immediate_constituents.tex}
+            \end{alertblock}
+          }
+        }
+      \end{frame}
+
+      \begin{frame}{\subonethree}
+        \begin{block}{}
+          We can diagram S $\rightarrow$ NP VP as a \alert{phrase structure tree}:
+          \begin{itemize}
+            \item \input{\defs/part3/def_phrase_structure_tree.tex}
+          \end{itemize}
+        \end{block}
+        \begin{forest}
+          [S
+            [NP
+              [the very green cat]
+            ]
+            [VP
+              [eats the mouse in the alley]
+            ]
+          ]
+        \end{forest}
+      \end{frame}
+
+      \begin{frame}[t]{\subonethree}
+        \begin{block}{The rule for NP}
+          NP $\rightarrow$ Det N
+        \end{block}
+        \begin{forest}
+          [S
+            [NP
+              [the very green cat]
+            ]
+            [VP
+              [eats]
+              [NP
+                [D
+                  [the]
+                ]
+                [N
+                  [mouse]
+                ]
+              ]
+              [in the alley]
+            ]
+          ]
+        \end{forest}
+      \end{frame}
+
+      \begin{frame}[t]{\subonethree}
+        \begin{block}{The more extensive rule for NP}
+          NP $\rightarrow$ (Det) (AP)* N (PP)*
+        \end{block}
+        \begin{forest}
+          [S
+            [NP
+              [Det
+                [the]
+              ]
+              [AP
+                [very green]
+              ]
+              [N
+                [cat]
+              ]
+            ]
+            [VP
+              [eats]
+              [NP
+                [D
+                  [the]
+                ]
+                [N
+                  [mouse]
+                ]
+              ]
+              [in the alley]
+            ]
+          ]
+        \end{forest}
+      \end{frame}
+
+      \begin{frame}[t]{\subonethree}
+        \begin{block}{The rule for VP}
+          VP $\rightarrow$ V (NP) (AP) (PP)*
+        \end{block}
+        \begin{forest}
+          [S
+            [NP
+              [Det
+                [the]
+              ]
+              [AP
+                [very green]
+              ]
+              [N
+                [cat]
+              ]
+            ]
+            [VP
+              [V
+                [eats]
+              ]
+              [NP
+                [D
+                  [the]
+                ]
+                [N
+                  [mouse]
+                ]
+              ]
+              [PP
+                [in the alley]
+              ]
+            ]
+          ]
+        \end{forest}
+      \end{frame}
+
+      \begin{frame}[t]{\subonethree}
+        \begin{block}{The rule for PP}
+          PP $\rightarrow$ P NP
+        \end{block}
+        \small
+        \begin{forest}
+          [S
+            [NP
+              [Det
+                [the]
+              ]
+              [AP
+                [very green]
+              ]
+              [N
+                [cat]
+              ]
+            ]
+            [VP
+              [V
+                [eats]
+              ]
+              [NP
+                [D
+                  [the]
+                ]
+                [N
+                  [mouse]
+                ]
+              ]
+              [PP
+                [P
+                  [in]
+                ]
+                [NP
+                  [Det
+                    [the]
+                  ]
+                  [N
+                    [alley]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        \end{forest}
+      \end{frame}
+
+      \begin{frame}[t]{\subonethree}
+        \begin{block}{The rule for AP}
+          AP $\rightarrow$ (Adv)* Adj
+        \end{block}
+        \small
+        \begin{forest}
+          [S
+            [NP
+              [Det
+                [the]
+              ]
+              [AP
+                [Adv
+                  [very]
+                ]
+                [Adj
+                  [green]
+                ]
+              ]
+              [N
+                [cat]
+              ]
+            ]
+            [VP
+              [V
+                [eats]
+              ]
+              [NP
+                [D
+                  [the]
+                ]
+                [N
+                  [mouse]
+                ]
+              ]
+              [PP
+                [P
+                  [in]
+                ]
+                [NP
+                  [Det
+                    [the]
+                  ]
+                  [N
+                    [alley]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        \end{forest}
+      \end{frame}
+
+      \begin{frame}{\subonethree}
+        \begin{block}{}
+          Our grammar of English syntax, then
+        \end{block}
+        \begin{block}{}
+          \begin{itemize}
+            \item S $\rightarrow$ NP VP
+            \item NP $\rightarrow$ (Det) (AP)* N (PP)*
+            \item VP $\rightarrow$ V (NP) (AP) (PP)*
+            \item PP $\rightarrow$ P NP
+            \item AP $\rightarrow$ (Adv)* Adj
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{References}
+        \printbibliography
+      \end{frame}
+\end{document}
