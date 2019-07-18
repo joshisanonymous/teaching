@@ -26,6 +26,8 @@
   \newcommand{\subonetwo}{The elements}
   \newcommand{\subonethree}{The rules}
   \newcommand{\subonefour}{Ambiguity}
+  \newcommand{\subonefive}{A warning}
+  \newcommand{\subonesix}{Resources and practice}
 
 \begin{document}
   % Read in the standard intro slides (title page and table of contents)
@@ -375,6 +377,220 @@
             \item PP $\rightarrow$ P NP
             \item AP $\rightarrow$ (Adv)* Adj
           \end{itemize}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}{\subonefour}
+        \begin{block}{Remember linguistics expressions}
+          \input{\defs/part3/def_linguistic_expression.tex}
+        \end{block}
+        \begin{alertblock}<2->{}
+          \emph{But}, an expression can have one form and multiple unrelated meanings and syntactic properties
+        \end{alertblock}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{example}
+          \lexi{Bank}, whose form is [ˈbæŋk], has two unrelated meanings:
+          \begin{itemize}
+            \item<2-> Where you keep your money
+            \begin{itemize}
+              \item<2-> e.g., The bank\textsubscript{1} charges too many fees.
+            \end{itemize}
+            \item<2->  The edge of a body of water
+            \begin{itemize}
+              \item<2-> e.g., Along the bank\textsubscript{2} of the Oconee River is a nice place to walk.
+            \end{itemize}
+          \end{itemize}
+        \end{example}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{alertblock}{Ambiguity}
+          \input{\defs/part3/def_ambiguity.tex}
+        \end{alertblock}
+        \begin{block}{Two types}
+          \begin{itemize}
+            \item Lexical ambiguity
+            \item Structural ambiguity
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}[t]{\subonefour}
+        \begin{alertblock}{Lexical ambiguity}
+          \input{\defs/part3/def_lexical_ambiguity.tex}
+        \end{alertblock}
+        \only<2>{
+          \begin{block}{}
+            It can be based on meaning
+          \end{block}
+          \begin{example}
+            \lexi{Bank}\textsubscript{1} and \lexi{bank}\textsubscript{2} differed only in meaning
+            \begin{itemize}
+              \item The fee charging place is still a N
+              \item The edge of the water is still a N
+            \end{itemize}
+          \end{example}
+        }
+        \only<3-4>{
+          \begin{block}{}
+            It can be based on syntactic properties
+          \end{block}
+          \begin{example}
+            \lexi{Bank} has two unrelated lexical categories:
+            \begin{itemize}
+              \item<4-> N (e.g., The bank\textsubscript{1} charges too many fees.)
+              \item<4-> V (e.g., You should bank\textsubscript{3} your money there anyway.)
+            \end{itemize}
+          \end{example}
+        }
+      \end{frame}
+
+      \begin{frame}[t]{\subonefour}
+        \begin{alertblock}{Structural ambiguity}
+          \input{\defs/part3/def_structural_ambiguity.tex}
+          \begin{itemize}
+            \item In this case, we mean the form of S is the same
+          \end{itemize}
+        \end{alertblock}
+        \begin{example}<2->
+          These Ss have the same form but two interpretations
+          \begin{enumerate}
+            \item The green cat saw the alien with the telescope.
+            \begin{itemize}
+              \item<3-> `The green cat used a telescope to see the alien.'
+            \end{itemize}
+            \item The green cat saw the alien with the telescope.
+            \begin{itemize}
+              \item<3-> `The alien was holding a telescope when the green cat saw it.'
+            \end{itemize}
+          \end{enumerate}
+        \end{example}
+      \end{frame}
+
+      \begin{frame}[t]{\subonefour}
+        \begin{block}{Which interpretation is this?}
+          \uncover<2->{`The alien was holding a telescope when the green cat saw it.'}
+        \end{block}
+        \tiny
+        \begin{center}
+          \begin{forest}
+            [S
+              [NP
+                [Det
+                  [The]
+                ]
+                [AP
+                  [Adj
+                    [green]
+                  ]
+                ]
+                [N
+                  [cat]
+                ]
+              ]
+              [VP
+                [V
+                  [saw]
+                ]
+                [NP
+                  [Det
+                    [the]
+                  ]
+                  [N
+                    [alien]
+                  ]
+                  [PP
+                    [P
+                      [with]
+                    ]
+                    [NP
+                      [Det
+                        [the]
+                      ]
+                      [N
+                        [telescope]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          \end{forest}
+        \end{center}
+      \end{frame}
+
+      \begin{frame}[t]{\subonefour}
+        \begin{block}{Which interpretation is this?}
+          \uncover<2->{`The green cat used a telescope to see the alien.'}
+        \end{block}
+        \tiny
+        \begin{center}
+          \begin{forest}
+            [S
+              [NP
+                [Det
+                  [The]
+                ]
+                [AP
+                  [Adj
+                    [green]
+                  ]
+                ]
+                [N
+                  [cat]
+                ]
+              ]
+              [VP
+                [V
+                  [saw]
+                ]
+                [NP
+                  [Det
+                    [the]
+                  ]
+                  [N
+                    [alien]
+                  ]
+                ]
+                [PP
+                  [P
+                    [with]
+                  ]
+                  [NP
+                    [Det
+                      [the]
+                    ]
+                    [N
+                      [telescope]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          \end{forest}
+        \end{center}
+      \end{frame}
+
+    \subsection{\subonefive}
+      \begin{frame}{\subonefive}
+        \begin{block}{Our grammar is pretty good, but}
+          It doesn't generate all possible sentences:
+          \begin{itemize}
+            \item The green cat [that likes gumbo] saw the alien [who came in peace].
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonesix}
+      \begin{frame}{\subonesix}
+        \begin{block}{}
+          \input{../shared/syntax_resources.tex}
+        \end{block}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 5 exercise 27
         \end{block}
       \end{frame}
 
