@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Document information
+  \subtitle[Intro to Semantics]{Introduction to Semantics}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{What is it?}
+  \newcommand{\subonetwo}{What do we mean by meaning?}
+  \newcommand{\subtwoone}{}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Semantics Basics}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{definition}
+          \input{\defs/part3/def_semantics.tex}
+        \end{definition}
+        \begin{example}<2->
+          We said that \lexi{bank}\textsubscript{1} and \lexi{bank}\textsubscript{2} have unrelated meanings:
+          \begin{itemize}
+            \item How does that work?
+            \item How do we model that?
+          \end{itemize}
+        \end{example}
+      \end{frame}
+
+      \begin{frame}{\suboneone}
+        \begin{block}{Two broad areas of semantics}
+          \begin{itemize}
+            \item Lexical semantics
+            \item Compositional semantics
+          \end{itemize}
+        \end{block}
+        \begin{alertblock}{Lexical semantics}
+          \input{\defs/part3/def_lexical_semantics.tex}
+        \end{alertblock}
+        \begin{alertblock}{Compositional semantics}
+          \input{\defs/part3/def_compositional_semantics.tex}
+        \end{alertblock}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}[t]{\subonetwo}
+        \begin{block}{Two aspects of meaning}
+          \begin{itemize}
+            \item \alert{Sense}: \input{\defs/part3/def_sense.tex}
+            \item \alert{Reference}: \input{\defs/part3/def_reference.tex}
+          \end{itemize}
+        \end{block}
+        \only<2>{
+          \begin{example}
+            The senses of \lexi{dog}:
+            \begin{itemize}
+              \item \lexi{pet}, \lexi{furry}, \lexi{four legs}, \lexi{mammal}, \lexi{companion}, \lexi{canine}, etc.
+            \end{itemize}
+          \end{example}
+        }
+        \only<3-4>{
+          \begin{example}
+            \parbox{0.48\linewidth}{
+              The reference for \lexi{dog}:
+              \begin{itemize}
+                \item<4-> \alert{Referent}: \input{\defs/part3/def_referent.tex}
+              \end{itemize}
+            }
+            \parbox{0.48\linewidth}{
+              \includegraphics[scale=0.48]{dog.jpg}
+            }
+          \end{example}
+        }
+      \end{frame}
+
+      % \begin{frame}{\subonetwo}
+      %   \begin{block}{}
+      %     \begin{itemize}
+      %       \item Identifying the referent of an expression requires knowing its sense(s), but
+      %       \item Knowing its senses does not mean you can pick out its referent
+      %     \end{itemize}
+      %   \end{block}
+      %   \begin{example}
+      %     \parbox{0.48\linewidth}{
+      %       Is this a diamond?
+      %       \begin{itemize}
+      %         \item<2-> Cubic zirconia
+      %       \end{itemize}
+      %     }
+      %     \parbox{0.48\linewidth}{
+      %       \includegraphics[scale=0.35]{cubic_zirconia.jpg}
+      %     }
+      %   \end{example}
+      % \end{frame}
+
+      % Things probably not to cover
+        % They claim that unicorn has no reference, just senses
+        % They claim the same for Queen of the US
+
+      \begin{frame}{\subonetwo}
+        \begin{center}
+          \includegraphics[scale=0.17]{athens.jpg}
+        \end{center}
+        \begin{columns}
+          \column{0.5\linewidth}
+            \begin{block}{\lexi{the city where R.E.M. got their start}}
+              Senses:
+              \begin{itemize}
+                \item \lexi{Athens}, \lexi{Georgia}, \lexi{music}, \lexi{alternative}, etc.
+              \end{itemize}
+            \end{block}
+          \column{0.5\linewidth}
+            \begin{block}{\lexi{the city where UGA is located}}
+              Senses:
+              \begin{itemize}
+                \item \lexi{Athens}, \lexi{Georgia}, \lexi{university}, etc.
+              \end{itemize}
+            \end{block}
+        \end{columns}
+      \end{frame}
+
+  \section{Lexical Semantics}
+    \subsection{\subtwoone}
+      \begin{frame}{\subtwoone}
+
+      \end{frame}
+
+\end{document}
