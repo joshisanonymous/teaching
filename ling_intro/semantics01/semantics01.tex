@@ -12,6 +12,10 @@
   % Read in standard preamble (cosmetic stuff)
   \input{../shared/slide_preamble.tex}
 
+  % Packages and settings
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
   % Document information
   \subtitle[Intro to Semantics]{Introduction to Semantics}
 
@@ -19,7 +23,10 @@
   % Subsection/frame titles
   \newcommand{\suboneone}{What is it?}
   \newcommand{\subonetwo}{What do we mean by meaning?}
-  \newcommand{\subtwoone}{}
+  \newcommand{\subtwoone}{Sense}
+  \newcommand{\subtwotwo}{Reference}
+  \newcommand{\subtwothree}{Sense relations}
+  \newcommand{\subtwofour}{Practice}
 
 \begin{document}
   % Read in the standard intro slides (title page and table of contents)
@@ -36,6 +43,23 @@
           \begin{itemize}
             \item How does that work?
             \item How do we model that?
+          \end{itemize}
+        \end{example}
+      \end{frame}
+
+      \begin{frame}{\suboneone}
+        \begin{block}{What we're not talking about}
+          Dictionaries
+          \begin{itemize}
+            \item Represent meanings that some group tends to agree on
+            \item But, we're interested in meanings in individuals' languages
+          \end{itemize}
+        \end{block}
+        \begin{example}<2->
+          `There's a dearth of hoagies.'
+          \begin{itemize}
+            \item Is \lexi{dearth} many or few?
+            \item What does \lexi{hoagie} bring to mind?
           \end{itemize}
         \end{example}
       \end{frame}
@@ -80,33 +104,14 @@
               \end{itemize}
             }
             \parbox{0.48\linewidth}{
-              \includegraphics[scale=0.48]{dog.jpg}
+              \includegraphics[scale=0.4]{dog.jpg}
             }
           \end{example}
         }
       \end{frame}
 
-      % \begin{frame}{\subonetwo}
-      %   \begin{block}{}
-      %     \begin{itemize}
-      %       \item Identifying the referent of an expression requires knowing its sense(s), but
-      %       \item Knowing its senses does not mean you can pick out its referent
-      %     \end{itemize}
-      %   \end{block}
-      %   \begin{example}
-      %     \parbox{0.48\linewidth}{
-      %       Is this a diamond?
-      %       \begin{itemize}
-      %         \item<2-> Cubic zirconia
-      %       \end{itemize}
-      %     }
-      %     \parbox{0.48\linewidth}{
-      %       \includegraphics[scale=0.35]{cubic_zirconia.jpg}
-      %     }
-      %   \end{example}
-      % \end{frame}
-
-      % Things probably not to cover
+      % Things probably not to cover b/c they assume that meaning is not language (i.e., individual) dependent
+        % They claim that knowing an expression's sense doesn't help with knowing its reference (e.g., diamond)
         % They claim that unicorn has no reference, just senses
         % They claim the same for Queen of the US
 
@@ -116,14 +121,14 @@
         \end{center}
         \begin{columns}
           \column{0.5\linewidth}
-            \begin{block}{\lexi{the city where R.E.M. got their start}}
+            \begin{block}{\lexi{The city where R.E.M. got their start}}
               Senses:
               \begin{itemize}
                 \item \lexi{Athens}, \lexi{Georgia}, \lexi{music}, \lexi{alternative}, etc.
               \end{itemize}
             \end{block}
           \column{0.5\linewidth}
-            \begin{block}{\lexi{the city where UGA is located}}
+            \begin{block}{\lexi{The city where the University of Georgia is located}}
               Senses:
               \begin{itemize}
                 \item \lexi{Athens}, \lexi{Georgia}, \lexi{university}, etc.
@@ -135,7 +140,330 @@
   \section{Lexical Semantics}
     \subsection{\subtwoone}
       \begin{frame}{\subtwoone}
+        \begin{block}{}
+          The concept of \lexi{sense} is pretty vague
+        \end{block}
+        \begin{block}{What senses might be linked to in your language}
+          \begin{itemize}
+            \item Other expressions
+            \item Mental images
+          \end{itemize}
+        \end{block}
+      \end{frame}
 
+      \begin{frame}[t]{\subtwoone}
+        \begin{block}{Linked to other expressions?}
+          We do often talk about sense relations in semantics
+          \begin{itemize}
+            \item<2-> But, this can be circular
+          \end{itemize}
+        \end{block}
+        \begin{example}
+          Sense of \lexi{pride}:
+          \begin{itemize}
+            \item `The quality of state of being proud'
+          \end{itemize}
+          \uncover<2->{
+            Sense of \lexi{proud}:
+            \begin{itemize}
+              \item `Feeling or showing pride'
+            \end{itemize}
+          }
+        \end{example}
+      \end{frame}
+
+      \begin{frame}[t]{\subtwoone}
+        \begin{block}{Linked to mental images?}
+          This is useful and gets around any circularity
+          \begin{itemize}
+            \item<3-> But, how do we get to non-prototypes?
+            \item<5-> This also encroaches on the concept of reference
+            \item<6-> And what about words like \lexi{the} or \lexi{pride}?
+          \end{itemize}
+        \end{block}
+        \begin{example}
+          \parbox{0.48\linewidth}{
+            Sense of \lexi{bird}:
+            \begin{itemize}
+              \item<2-> \alert{Prototype}: \input{\defs/part3/def_prototype.tex}
+            \end{itemize}
+          }
+          \parbox{0.48\linewidth}{
+            \only<-2>{
+              \includegraphics[scale=0.08]{bird_proto.jpg}
+            }
+            \only<3>{
+              \includegraphics[scale=0.075]{bird_ostrich.jpg}
+            }
+            \only<4->{
+              \includegraphics[scale=0.06]{bird_penguin.jpg}
+            }
+          }
+        \end{example}
+      \end{frame}
+
+      \begin{frame}{\subtwoone}
+        \begin{block}{}
+          In this class, we'll typically talk about sense as connections between different expressions
+        \end{block}
+      \end{frame}
+
+    \subsection{\subtwotwo}
+      \begin{frame}{\subtwotwo}
+        \begin{block}{}
+          Reference is clearer than sense
+        \end{block}
+        \begin{block}{Lexical categories we'll look at}
+          \begin{itemize}
+            \item Proper nouns
+            \item Common nouns
+            \item Non-nouns
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}[t]{\subtwotwo}
+        \begin{block}{Proper nouns}
+          Simple, because reference is to exactly one thing
+        \end{block}
+        \begin{columns}
+          \column{0.48\linewidth}
+            \begin{minipage}[c][0.6\textheight]{\linewidth}
+              \begin{block}{}
+                \begin{itemize}
+                  \item \lexi{China}:
+                  \item<2-> \lexi{Dr. John}:
+                  \item<3-> \lexi{Sanford Stadium}:
+                \end{itemize}
+              \end{block}
+            \end{minipage}
+          \column{0.48\linewidth}
+            \only<1>{
+              \includegraphics[scale=0.2]{china.jpg}
+            }
+            \only<2>{
+              \includegraphics[scale=0.25]{dr_john.jpg}
+            }
+            \only<3>{
+              \includegraphics[scale=0.042]{sanford_stadium.jpg}
+            }
+        \end{columns}
+      \end{frame}
+
+      \begin{frame}[t]{\subtwotwo}
+        \begin{block}{Common nouns}
+          Reference is to a set of things
+        \end{block}
+        \begin{block}{}
+          \begin{itemize}
+            \item \lexi{A cat}:
+            \item<2-> \lexi{A woman}:
+          \end{itemize}
+        \end{block}
+        \begin{center}
+          \only<1>{
+          \includegraphics[scale=0.25]{cats.jpg}
+          }
+          \only<2>{
+          \includegraphics[scale=0.4]{women.jpg}
+          }
+        \end{center}
+      \end{frame}
+
+      \begin{frame}[t]{\subtwotwo}
+        \begin{block}{Non-nouns}
+          Reference works when they can be expressed as nouns
+        \end{block}
+        \begin{columns}
+          \column{0.48\linewidth}
+            \begin{minipage}[c][0.6\textheight]{\linewidth}
+              \begin{block}{}
+                \begin{itemize}
+                  \item \lexi{Swim} (V):
+                  \item<2-> \lexi{Large} (Adj):
+                \end{itemize}
+              \end{block}
+            \end{minipage}
+          \column{0.48\linewidth}
+            \only<1>{
+              \includegraphics[scale=0.082]{swim.jpg}
+            }
+            \only<2>{
+              \includegraphics[scale=0.1]{large.jpg}
+            }
+        \end{columns}
+      \end{frame}
+
+    \subsection{\subtwothree}
+      \begin{frame}{\subtwothree}
+        \begin{block}{Which two words seem more related?}
+          \begin{itemize}
+            \item \alert<2->{\lexi{Pot}}
+            \item \lexi{Floor}
+            \item \alert<2->{\lexi{Pan}}
+          \end{itemize}
+        \end{block}
+        \begin{alertblock}<2->{Sense relation}
+          \input{\defs/part3/def_sense_relation.tex}
+        \end{alertblock}
+        \begin{block}<2->{The types}
+          \begin{itemize}
+            \item Hyponymy
+            \item Synonymy
+            \item Antonymy
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}[t]{\subtwothree}
+        \begin{alertblock}{Hyponymy}
+          \input{\defs/part3/def_hyponymy.tex}
+          \only<1>{
+            \begin{itemize}
+              \item \alert{Hyponym}: \input{\defs/part3/def_hyponym.tex}
+              \item \alert{Hypernym}: \input{\defs/part3/def_hypernym.tex}
+            \end{itemize}
+          }
+        \end{alertblock}
+        \begin{columns}
+          \column{0.48\linewidth}
+            \begin{minipage}[c][0.6\textheight]{\linewidth}
+              \begin{example}<2->
+                \only<2-3>{
+                  \begin{itemize}
+                    \item \lexi{Poodle} is a hyponym of \lexi{dog}
+                    \item<3-> Multiple layers are possible
+                  \end{itemize}
+                }
+                \only<4->{
+                  \lexi{Dog}, \lexi{sheep}, \lexi{cow}, and \lexi{platypus} are \alert{sister terms}:
+                  \begin{itemize}
+                    \item \input{\defs/part3/def_sister_terms.tex}
+                  \end{itemize}
+                }
+              \end{example}
+            \end{minipage}
+          \column{0.48\linewidth}
+            \only<2>{
+              \includegraphics[scale=0.6]{dogs_poodles.jpg}
+            }
+            \only<3->{
+              \includegraphics[scale=0.325]{dogs_mammals.jpg}
+            }
+        \end{columns}
+      \end{frame}
+
+      \begin{frame}[t]{\subtwothree}
+        \begin{alertblock}{Synonymy}
+          \input{\defs/part3/def_synonymy.tex}
+        \end{alertblock}
+        \begin{example}<2->
+          True examples are rare: e.g., \lexi{couch} and \lexi{sofa}
+          \begin{itemize}
+            \item<3-> \lexi{Sofa} might sound more British
+            \item<3-> \lexi{Sofa} might sound more formal
+            \item<3-> \lexi{Sofa} might be for a living room and \lexi{couch} a family room
+          \end{itemize}
+        \end{example}
+      \end{frame}
+
+      \begin{frame}[t]{\subtwothree}
+        \begin{alertblock}{Antonymy}
+          \input{\defs/part3/def_antonymy.tex}
+        \end{alertblock}
+        \begin{block}{`Opposite' is vague}
+          So we'll talk about types of opposites:
+          \begin{itemize}
+            \item Complementary antonyms
+            \item Gradable antonyms
+            \item Reverse antonyms
+            \item Converse antonyms
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}[t]{\subtwothree}
+        \begin{alertblock}{Complementary antonyms}
+          \input{\defs/part3/def_complementary_antonyms.tex}
+        \end{alertblock}
+        \begin{columns}
+          \column{0.48\linewidth}
+            \begin{example}
+              \begin{itemize}
+                \item \lexi{off}/\lexi{on}
+                \item \lexi{mortal}/\lexi{immortal}
+                \item<2-> \lexi{dead}/\lexi{alive}
+              \end{itemize}
+            \end{example}
+          \column{0.48\linewidth}
+            \uncover<2->{
+              \includegraphics[scale=0.275]{dead_alive.jpg}
+            }
+        \end{columns}
+      \end{frame}
+
+      \begin{frame}[t]{\subtwothree}
+        \begin{alertblock}{Gradable antonyms}
+          \input{\defs/part3/def_gradable_antonyms.tex}
+        \end{alertblock}
+        \begin{example}
+          \begin{itemize}
+            \item \lexi{wet}/\lexi{dry}
+            \item \lexi{easy}/\lexi{hard}
+            \item \lexi{young}/\lexi{old}
+            \item \lexi{hot}/\lexi{cold}
+          \end{itemize}
+        \end{example}
+      \end{frame}
+
+      \begin{frame}{\subtwothree}
+        \begin{block}{To distinguish between complementary and gradable antonyms:}
+          \begin{itemize}
+            \item Is there an expression with a sense in between?
+            \item<2-> Can the question `how X?' be answered?
+          \end{itemize}
+        \end{block}
+        \begin{example}
+          \begin{enumerate}
+            \item \lexi{dead}/\lexi{alive}?
+            \item \lexi{young}/\lexi{old}?
+            \item<2-> How \lexi{hot} is it?
+            \item<2-> How \lexi{married} is he?
+          \end{enumerate}
+        \end{example}
+      \end{frame}
+
+      \begin{frame}[t]{\subtwothree}
+        \begin{alertblock}{Reverse antonyms}
+          \input{\defs/part3/def_reverse_antonyms.tex}
+        \end{alertblock}
+        \begin{example}
+          \begin{itemize}
+            \item \lexi{expand}/\lexi{contract}
+            \item \lexi{ascent}/\lexi{descent}
+            \item \lexi{put together}/\lexi{take apart}
+          \end{itemize}
+        \end{example}
+      \end{frame}
+
+      \begin{frame}[t]{\subtwothree}
+        \begin{alertblock}{Converse antonyms}
+          \input{\defs/part3/def_converse_antonyms.tex}
+        \end{alertblock}
+        \begin{example}
+          \begin{itemize}
+            \item \lexi{lend}/\lexi{borrow}
+            \item \lexi{send}/\lexi{receive}
+            \item \lexi{over}/\lexi{under}
+          \end{itemize}
+        \end{example}
+      \end{frame}
+
+    \subsection{\subtwofour}
+      \begin{frame}{\subtwofour}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 6 exercises 5, 8, 9, 10, and 12
+        \end{block}
       \end{frame}
 
 \end{document}
