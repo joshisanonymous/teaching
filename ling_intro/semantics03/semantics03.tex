@@ -1,0 +1,156 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage{tikz}
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[More Compositional Semantics]{More Compositional Semantics}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{Intuition}
+  \newcommand{\subonetwo}{NP and VP combinations}
+  \newcommand{\subonethree}{AP and N combinations}
+  \newcommand{\subonefour}{Practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{More Compositional Semantics}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{block}{}
+          So far we've used intuition to obtain truth values for propositions like:
+          \begin{enumerate}
+            \item The dog barks.
+          \end{enumerate}
+        \end{block}
+        \begin{block}<2->{}
+          We can do better
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}{\subonetwo}
+        \begin{block}{`The dog barks'}
+          True when the dog in question is part of the intersection of the NP's reference and the VP's reference
+        \end{block}
+        \begin{center}
+          \begin{tikzpicture}
+            \draw (0,0)  circle (1.35cm) node[font=\tiny] (dogsA)    {Spot, Fido, etc.};
+            \draw (5,0)  circle (1.35cm) node[font=\tiny] (barkingA) {Barking things};
+            \draw (2,-2.5) circle (1.35cm) node (dogsB)    {};
+            \draw (3,-2.5) circle (1.35cm) node (barkingB) {};
+            \draw[->] (0.5,-1.25) -- (1,-1.5);
+            \draw[->] (4.5,-1.25) -- (4,-1.5);
+            \path (dogsB) -- (barkingB) node[midway,font=\tiny] {Dogs that bark};
+          \end{tikzpicture}
+        \end{center}
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}[t]{\subonethree}
+        \begin{block}{`green sweater'}
+          \begin{itemize}
+            \item Some AP + N combinations work similarly
+          \end{itemize}
+        \end{block}
+        \only<1>{
+          \begin{center}
+            \begin{tikzpicture}
+              \draw (0,0)  circle (1.35cm) node[font=\tiny] (sweatersA) {All sweaters};
+              \draw (5,0)  circle (1.35cm) node[font=\tiny] (greenA)    {All green things};
+              \draw (2,-2.5) circle (1.35cm) node (sweatersB) {};
+              \draw (3,-2.5) circle (1.35cm) node (greenB)    {};
+              \draw[->] (0.5,-1.25) -- (1,-1.5);
+              \draw[->] (4.5,-1.25) -- (4,-1.5);
+              \path (sweatersB) -- (greenB) node[midway,font=\tiny] {Green sweaters};
+            \end{tikzpicture}
+          \end{center}
+        }
+        \only<2->{
+          \begin{block}{}
+            In this case, we're asking if the thing exists
+          \end{block}
+          \begin{alertblock}<3->{Pure intersective adjectives}
+            \input{\defs/part3/def_pure_intersective_adjective.tex}
+          \end{alertblock}
+        }
+      \end{frame}
+
+      \begin{frame}{\subonethree}
+        \begin{block}{Semantic types of adjectives}
+          \begin{itemize}
+            \item Intersective adjectives
+            \begin{itemize}
+              \item Pure intersective adjectives
+              \item Subsective adjectives
+            \end{itemize}
+            \item Non-intersective adjectives
+            \begin{itemize}
+              \item Anti-intersective adjectives
+            \end{itemize}
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonethree}
+        \begin{alertblock}{Subsective adjectives}
+          \input{\defs/part3/def_subsective_adjective.tex}
+        \end{alertblock}
+        \begin{block}{`big mouse', `big whale'}
+          The AP can't be understood independently of the N
+        \end{block}
+        \begin{center}
+          \includegraphics[scale=0.75]{big.jpg}
+        \end{center}
+      \end{frame}
+
+      \begin{frame}{\subonethree}
+        \begin{alertblock}{Non-intersective adjectives}
+          \input{\defs/part3/def_non-intersective_adjective.tex}
+        \end{alertblock}
+        \begin{example}
+          \begin{enumerate}
+            \item possible solution
+            \item alleged thief
+          \end{enumerate}
+        \end{example}
+      \end{frame}
+
+      \begin{frame}{\subonethree}
+        \begin{alertblock}{Anti-intersective adjectives}
+          \input{\defs/part3/def_anti-intersective_adjective.tex}
+        \end{alertblock}
+        \begin{example}
+          \begin{enumerate}
+            \setcounter{enumi}{2}
+            \item fake Picasso
+            \item counterfeit dollar
+          \end{enumerate}
+        \end{example}
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}{\subonefour}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 6 exercise 29
+        \end{block}
+      \end{frame}
+
+\end{document}
