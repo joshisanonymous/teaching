@@ -1,0 +1,172 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[Compositional Semantics]{Compositional Semantics}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{Why we need it}
+  \newcommand{\subonetwo}{Propositions}
+  \newcommand{\subonethree}{Entailment}
+  \newcommand{\subonefour}{Incompatibility}
+  \newcommand{\subonefive}{Practice}
+  % First example of a proposition
+  \newcommand{\proptrue}{China is the most populous country in the world}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Compositional Semantics}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{block}{What do these words express together?}
+          \begin{enumerate}
+            \item \lexi{China}, \lexi{country}, \lexi{populous}, \lexi{world}
+          \end{enumerate}
+          \uncover<2->{
+            What about these?
+            \begin{enumerate}
+              \setcounter{enumi}{1}
+              \item \proptrue
+            \end{enumerate}
+          }
+        \end{block}
+        \begin{block}<2->{}
+          We cannot communicate complex meanings solely through word meanings
+          \begin{itemize}
+            \item (2) goes beyond (1); it makes a claim
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\suboneone}
+        \begin{alertblock}{Compositional semantics}
+          \input{\defs/part3/def_compositional_semantics.tex}
+          \begin{itemize}
+            \item The basic unit of compositional semantics is the proposition
+          \end{itemize}
+        \end{alertblock}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}[t]{\subonetwo}
+        \begin{definition}
+          \input{\defs/part3/def_proposition.tex}
+          \begin{itemize}
+            \item They have \alert{truth values}: \input{\defs/part3/def_truth_value.tex}
+          \end{itemize}
+        \end{definition}
+        \only<2>{
+          \begin{example}
+            This proposition is true according to the world
+            \begin{enumerate}
+              \setcounter{enumi}{1}
+              \item \proptrue
+            \end{enumerate}
+          \end{example}
+        }
+        \only<3>{
+          \begin{example}
+            This proposition is false according to the world
+            \begin{enumerate}
+              \setcounter{enumi}{2}
+              \item Luxembourg is the most populous country in the world
+            \end{enumerate}
+          \end{example}
+        }
+      \end{frame}
+
+      \begin{frame}{\subonetwo}
+        \begin{block}{Truth values are based on \alert{truth conditions}}
+          \input{\defs/part3/def_truth_condition.tex}
+        \end{block}
+        \begin{block}{What is this proposition's truth value?}
+          \begin{itemize}
+            \item The Queen of England is sleeping.
+          \end{itemize}
+          \uncover<2->{It depends on its the truth conditions.}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}[t]{\subonethree}
+        \begin{definition}
+          \input{\defs/part3/def_entailment.tex}
+        \end{definition}
+        \only<-2>{
+          \begin{example}
+            \begin{enumerate}
+              \item All dogs bark.
+              \item[$\rightarrow$] Sally's dog barks.
+              \item<2-> All cats bark.
+              \item<2->[$\rightarrow$] Sally's cat barks.
+            \end{enumerate}
+            \uncover<2->{
+              The first proposition becomes the truth condition for the second
+            }
+          \end{example}
+        }
+        \only<3->{
+          \begin{block}{Does this work as entailment?}
+            \begin{enumerate}
+              \item Sally's dog barks.
+              \item[$\rightarrow$] All dogs bark.
+            \end{enumerate}
+            \uncover<4->{
+            No, this entailment relationship is asymmetric
+            }
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}{\subonethree}
+        \begin{alertblock}{Mutual entailment}
+          \input{\defs/part3/def_mutual_entailment.tex}
+        \end{alertblock}
+        \begin{example}
+          \begin{enumerate}
+            \item Ian has a female sibling.
+            \item[$\rightarrow$] Ian has a sister.
+            \item Ian has a sister.
+            \item[$\rightarrow$] Ian has a female sibling.
+          \end{enumerate}
+        \end{example}
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}{\subonefour}
+        \begin{definition}
+          \input{\defs/part3/def_incompatibility.tex}
+        \end{definition}
+        \begin{example}
+          \begin{enumerate}
+            \item Abraham Lincoln is dead.
+            \item Abraham Lincoln is alive.
+          \end{enumerate}
+        \end{example}
+      \end{frame}
+
+    \subsection{\subonefive}
+      \begin{frame}{\subonefive}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 6 exercises 17, 18, 20, 22, and 23
+        \end{block}
+      \end{frame}
+\end{document}
