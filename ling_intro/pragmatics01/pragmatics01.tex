@@ -1,0 +1,190 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[Pragmatics Intro]{Introduction to Pragmatics}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{What is it?}
+  \newcommand{\subonetwo}{Sentences and utterances}
+  \newcommand{\subonethree}{Context types}
+  \newcommand{\subonefour}{Felicity}
+  \newcommand{\subonefive}{Practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Pragmatics Intro}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \includegraphics[scale=0.24]{garfield.jpg}
+        \begin{block}{In what two ways can Jon's statement be understood?}
+          \begin{enumerate}
+            \item<2-> It's nice to lie around all day. \hfill (Semantics)
+            \item<2-> Get up!                          \hfill (Pragmatics)
+          \end{enumerate}
+        \end{block}
+        \begin{alertblock}<2->{Pragmatics}
+          \input{\defs/part3/def_pragmatics.tex}
+        \end{alertblock}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}[t]{\subonetwo}
+        \begin{example}
+          \begin{enumerate}
+            \item \uttr{Lying around all day... must be nice.}  \hfill (Utterance)
+            \item \sent{It must be nice to lie around all day.} \hfill (Sentence)
+            \item Get up!                                       \hfill (Meaning)
+          \end{enumerate}
+        \end{example}
+        \only<1>{
+          \begin{alertblock}{Utterance}
+            \input{\defs/part3/def_utterance.tex}
+          \end{alertblock}
+          \begin{alertblock}{Sentence}
+            \input{\defs/part3/def_sentence.tex}
+          \end{alertblock}
+        }
+        \only<2>{
+          \begin{block}{Notation}
+            \begin{itemize}
+              \item Utterances are in single quotes
+              \item Sentences are in italics
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}{\subonetwo}
+        \begin{block}{A clearer example}
+          \begin{enumerate}
+            \item \uttr{It must be nice, I mean, all day, lying around.}
+            \item \sent{It must be nice to lie around all day.}
+          \end{enumerate}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}[t]{\subonetwo}
+        \begin{block}{Why do we need this distinction?}
+          Because context matters, and sentences don't have any
+        \end{block}
+        \only<1-2>{
+          \begin{example}
+            \sent{He is there now.}
+            \begin{itemize}
+              \item What does this mean?
+            \end{itemize}
+          \end{example}
+          \begin{alertblock}<2->{Deictic word}
+            \input{\defs/part3/def_deictic_word.tex}
+          \end{alertblock}
+        }
+        \only<3->{
+          \begin{block}{Even besides deictics}
+            \sent{Can you take the trash out?}
+          \end{block}
+          \begin{block}{What does this mean?}
+            \begin{itemize}
+              \item<4-> A parent requesting that you do something?
+              \item<4-> A therapist asking if you're physically capable of lifting trash after an accident?
+              \item<4-> Someone trying to get rid of you be reminding you of your chores?
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}{\subonethree}
+        \begin{block}{Three types of contexts}
+          \begin{itemize}
+            \item Linguistic context
+            \item Situational context
+            \item Social context
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonethree}
+        \begin{alertblock}{Linguistic context}
+          \input{\defs/part3/def_linguistic_context.tex}
+        \end{alertblock}
+        \begin{block}{Does \uttr{yes} mean the same thing in each?}
+          After someone asks:
+          \begin{enumerate}
+            \item \uttr{Do you like green beans?}
+            \item \uttr{Is there a computer available in the lab?}
+            \item \uttr{Does Santa Claus exist?}
+          \end{enumerate}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonethree}
+        \begin{alertblock}{Situational context}
+          \input{\defs/part3/def_situational_context.tex}
+        \end{alertblock}
+        \begin{block}{Who are we talking about here?}
+          \uttr{The governor was on TV last night.}
+        \end{block}
+        \begin{block}<2->{How tall should we expect Rachel to be?}
+          When stating that \uttr{Rachel is very tall} and
+          \begin{enumerate}
+            \item Rachel is 5 years old
+            \item Rachel is 20 years old
+          \end{enumerate}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonethree}
+        \begin{alertblock}{Social context}
+          \input{\defs/part3/def_social_context.tex}
+        \end{alertblock}
+        \begin{block}{How should we take this?}
+          Someone says \uttr{yes ma'am} to:
+          \begin{enumerate}
+            \item A younger person
+            \item An older person
+            \item An employee of theirs
+          \end{enumerate}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}{\subonefour}
+        \begin{alertblock}{Felicitous utterances}
+          \input{\defs/part3/def_felicitous_utterance.tex}
+        \end{alertblock}
+        \begin{block}{Are these each appropriate responses?}
+          Someone asks, \uttr{What do you do for a living?}, and you respond:
+          \begin{enumerate}
+            \item \uttr{I'm a student at UGA, and I wait tables on the weekends.}
+            \item \only<2->{\#}\uttr{I have a job.}
+            \item \only<2->{\#}\uttr{My favorite color is purple.}
+          \end{enumerate}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonefive}
+      \begin{frame}{\subonefive}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 7 exercises 1i, 5, and 6
+        \end{block}
+      \end{frame}
+\end{document}
