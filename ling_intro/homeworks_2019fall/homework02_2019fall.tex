@@ -1,23 +1,9 @@
 \documentclass[addpoints]{exam}
-  % Exam settings
-  \pointsinmargin
-  \pointformat{}
+  % Read in shared preamble for all homeworks
+  \input{../shared/homework_preamble.tex}
 
   % Packages and settings
-  \usepackage{fontspec}
-    \setmainfont{Charis SIL}
   \usepackage{phonrule}
-
-  %% Custom commands
-  % Instructions for a section
-  \newcommand{\instr}[1]{
-    \begin{center}
-      \fbox{
-        \parbox{0.85\textwidth}
-               {#1}
-      }
-    \end{center}
-  }
 
   % Document information
   \title{Homework 2: Phonology \& Morphology}
@@ -27,8 +13,7 @@
   \maketitle
 
   % Header
-  \noindent\makebox[0.5\textwidth][l]{Name:} \makebox[0.5\textwidth][r]{Course: LING2100, The Study of Language}\\
-  \makebox[0.5\textwidth][l]{Date:} \makebox[0.5\textwidth][r]{Instructor: Joshua McNeill}
+  \input{../shared/homework_intro.tex}
 
     \section{Phonology}
 

@@ -1,0 +1,23 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is the standard preamble for homework assignments and exams %
+%                                                                  %
+% -Joshua McNeill (joshua dot mcneill at uga dot edu)              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam settings
+\pointsinmargin
+\pointformat{}
+
+% Packages and settings
+\usepackage{fontspec}
+  \setmainfont{Charis SIL}
+
+%% Custom commands
+% Instructions for a section
+\newcommand{\instr}[1]{
+  \begin{center}
+    \fbox{
+      \parbox{0.85\textwidth}
+             {#1}
+    }
+  \end{center}
+}

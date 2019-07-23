@@ -1,20 +1,6 @@
 \documentclass[addpoints]{exam}
-  % Packages and settings
-  \usepackage{fontspec}
-    \setmainfont{Charis SIL}
-  \pointsinmargin
-  \pointformat{}
-
-  %% Custom commands
-  % Instructions for a section
-  \newcommand{\instr}[1]{
-    \begin{center}
-      \fbox{
-        \parbox{0.85\textwidth}
-               {#1}
-      }
-    \end{center}
-  }
+  % Read in shared preamble for all homeworks
+  \input{../shared/homework_preamble.tex}
 
   % Document information
   \title{Homework 1: Phonetics}
@@ -24,8 +10,7 @@
   \maketitle
 
   % Header
-  \noindent\makebox[0.5\textwidth][l]{Name:} \makebox[0.5\textwidth][r]{Course: LING2100, The Study of Language}\\
-  \makebox[0.5\textwidth][l]{Date:} \makebox[0.5\textwidth][r]{Instructor: Joshua McNeill}
+  \input{../shared/homework_intro.tex}
 
   % Questions
     \instr{Give the IPA symbol for the \emph{consonant} that corresponds to the description. (1 point each)}
