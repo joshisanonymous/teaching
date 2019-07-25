@@ -1,0 +1,179 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
+  % Document information
+  \subtitle[Presupposition]{Presupposition}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{What is it?}
+  \newcommand{\subonetwo}{Relation to truth values}
+  \newcommand{\subonethree}{Presupposition triggers}
+  \newcommand{\subonefour}{Presupposition accommodation}
+  \newcommand{\subonefive}{Practice}
+  % Existence presupposition examples
+  \newcommand{\existsampone}{\uttr{The Bvryzax River runs through Europe.}}
+  \newcommand{\existsamptwo}{\uttr{The monster under my bed has fangs.}}
+  \newcommand{\existsampthree}{\uttr{The Niche has good pizza.}}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Presupposition}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{block}{If I say}
+          \begin{enumerate}
+            \item \existsampone
+            \item \existsamptwo
+          \end{enumerate}
+        \end{block}
+        \begin{block}{Would these be reasonable questions?}
+          \begin{itemize}
+            \item Where is the Bvryzax River actually located?
+            \item<2-> Does the monster really have fangs?
+          \end{itemize}
+          \uncover<3->{
+            No. The utterances presume facts that aren't accurate, and these responses accept them
+          }
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\suboneone}
+        \begin{alertblock}{Presupposition}
+          \input{\defs/part3/def_presupposition.tex}
+        \end{alertblock}
+        \begin{block}{In order to be satisfied}
+          All participants must believe or behave as if they believe that the presupposed information is true
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\suboneone}
+        \begin{block}{These were existence presuppositions}
+          \begin{enumerate}
+            \item \existsampone
+            \item \existsamptwo
+          \end{enumerate}
+        \end{block}
+        \begin{alertblock}{Existence presupposition}
+          \input{\defs/part3/def_existence_presupposition.tex}
+        \end{alertblock}
+      \end{frame}
+
+      \begin{frame}{\suboneone}
+        \begin{block}{}
+          We're still talking about existence presuppositions even when a thing exist
+        \end{block}
+        \begin{example}
+          \begin{enumerate}
+            \item \#\existsampone
+            \item \existsampthree
+          \end{enumerate}
+        \end{example}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}{\subonetwo}
+        \begin{block}{Test for an unsatisfied presupposition}
+          If the truth value of the negation is still false
+          \begin{itemize}
+            \item[$\rightarrow$] Unsatisfied presupposition
+          \end{itemize}
+        \end{block}
+        \begin{block}{What are the truth values here?}
+          \begin{enumerate}
+            \item \existsampone
+            \item \uttr{The Bvryzax River does not run through Europe.}
+            \item \uttr{The Niche does not have good pizza.}
+            \item \existsampthree
+          \end{enumerate}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}[t]{\subonethree}
+        \begin{alertblock}{Presupposition trigger}
+          \input{\defs/part3/def_presupposition_trigger.tex}
+        \end{alertblock}
+        \only<-4>{
+          \begin{block}{What are the main triggers in these utterances?}
+            \begin{enumerate}
+              \item \uttr{\alert<2->{The monster} under my bed has fangs.}
+              \item \uttr{\alert<2->{The Niche} has good pizza.}
+            \end{enumerate}
+          \end{block}
+          \begin{block}<3->{Triggers can also be Vs}
+            \begin{enumerate}
+              \setcounter{enumi}{2}
+              \item \uttr{He \alert<4->{returned} to his hometown last year.}
+              \item \uttr{She \alert<4->{stopped} writing books.}
+            \end{enumerate}
+          \end{block}
+        }
+        \only<5-8>{
+          \begin{block}{As well as Ps}
+            \begin{enumerate}
+              \item \uttr{\alert<6->{After} the 54th US state was added, the flag was changed.}
+            \end{enumerate}
+          \end{block}
+          \begin{block}<7->{And comparatives and even pitch accents}
+            \begin{enumerate}
+              \setcounter{enumi}{2}
+              \item \uttr{Carol is a \alert<8->{better} linguist than Barbara.}
+              \item \uttr{John didn't compete in the \alert<8->{↗Olympics}.}
+            \end{enumerate}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}{\subonefour}
+        \begin{block}{How would you react to the following utterances?}
+          \begin{enumerate}
+            \item \uttr{Sorry I'm late, my giraffe is sick.}
+            \item \uttr{Sorry I'm late, my dog is sick.}
+          \end{enumerate}
+          \uncover<2->{
+            What if I have neither a giraffe nor a dog?
+          }
+        \end{block}
+        \begin{alertblock}<3->{Presupposition accommodation}
+          \input{\defs/part3/def_presupposition_accommodation.tex}
+        \end{alertblock}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{block}{}
+          We reserve accommodation for plausible and accessible presuppositions
+        \end{block}
+        \begin{block}{Is all relevant information accessible here?}
+          \uttr{I went to the library, \alert<2->{too}.}
+          \begin{itemize}
+            \item<2-> Where else did I go?
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonefive}
+      \begin{frame}{\subonefive}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 7 exercises 41 and 43
+        \end{block}
+      \end{frame}
+\end{document}
