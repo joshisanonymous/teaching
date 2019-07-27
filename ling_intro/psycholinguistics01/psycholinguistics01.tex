@@ -12,13 +12,20 @@
   % Read in standard preamble (cosmetic stuff)
   \input{../shared/slide_preamble.tex}
 
+  % Packages and settings
+  \usepackage[backend=biber, style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+
   % Document information
   \subtitle[Psycholinguistics Intro]{Introduction to Psycholinguistics}
 
   %% Custom commands
   % Subsection/frame titles
   \newcommand{\suboneone}{What is it?}
-  \newcommand{\subtwoone}{}
+  \newcommand{\subtwoone}{A little anatomy}
+  \newcommand{\subtwotwo}{Language centers}
+  \newcommand{\subtwothree}{Disorders}
+  \newcommand{\subtwofour}{Practice}
 
 \begin{document}
   % Read in the standard intro slides (title page and table of contents)
@@ -42,7 +49,7 @@
 
       \begin{frame}{\suboneone}
         \begin{alertblock}{Psycholinguistics}
-          \input{\defs/part1/def_pyscholinguistics.tex}
+          \input{\defs/part1/def_psycholinguistics.tex}
         \end{alertblock}
         \begin{block}{The related field of \alert{neurolinguistics}}
           \input{\defs/part4/def_neurolinguistics.tex}
@@ -51,7 +58,281 @@
 
   \section{The Brain}
     \subsection{\subtwoone}
-      \begin{frame}{\subtwoone}
-        
+      \begin{frame}[t]{\subtwoone}
+        \begin{center}
+          \includegraphics[scale=0.175]{cerebral_hemispheres.jpg}
+        \end{center}
+        \only<1>{
+          \begin{alertblock}{Cerebrum}
+            \input{\defs/part4/def_cerebrum.tex}
+          \end{alertblock}
+        }
+        \only<2>{
+          \begin{alertblock}{Cerebral cortex}
+            \input{\defs/part4/def_cerebral_cortex.tex}
+            \begin{itemize}
+              \item Location of the language centers
+            \end{itemize}
+          \end{alertblock}
+        }
+        \only<3>{
+          \begin{block}{}
+            The two hemispheres and the \alert{corpus callosum}:
+            \begin{itemize}
+              \item \input{\defs/part4/def_corpus_callosum.tex}
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}[t]{\subtwoone}
+        \begin{center}
+          \includegraphics[scale=0.14]{cerebral_lobes.jpg}
+        \end{center}
+        \only<1-2>{
+          \begin{block}{Four lobes}
+            \begin{itemize}
+              \item Occipital\uncover<2->{: Handles visual processing}
+              \item Parietal\uncover<2->{: Handles tactile processing}
+              \item \alert<2->{Temporal}
+              \item \alert<2->{Frontal}
+            \end{itemize}
+          \end{block}
+        }
+        \only<3>{
+          \begin{alertblock}{Temporal lobe}
+            \input{\defs/part4/def_temporal_lobe.tex}
+          \end{alertblock}
+        }
+        \only<4>{
+          \begin{alertblock}{Frontal lobe}
+            \input{\defs/part4/def_frontal_lobe.tex}
+          \end{alertblock}
+        }
+        \only<5>{
+          \begin{block}{The bumps and grooves}
+            \begin{itemize}
+              \item \alert{Fissure}: \input{\defs/part4/def_fissure.tex}
+              \item \alert{Gyrus}: \input{\defs/part4/def_gyrus.tex}
+              \item \alert{Sulcus}: \input{\defs/part4/def_sulcus.tex}
+            \end{itemize}
+          \end{block}
+        }
+        \only<6>{
+          \begin{block}{To describe a location}
+            hemisphere $+$ direction $+$ lobe $+$ gyrus/sulcus
+            \begin{itemize}
+              \item We will only need the directions \emph{superior} and \emph{inferior}
+            \end{itemize}
+          \end{block}
+        }
+        \only<7->{
+          \begin{example}
+            Left inferior frontal gyrus (LIFG)
+            \begin{itemize}
+              \item<8-> This is Broca's area
+            \end{itemize}
+          \end{example}
+        }
+      \end{frame}
+
+    \subsection{\subtwotwo}
+      \begin{frame}{\subtwotwo}
+        \begin{alertblock}{Lateralization}
+          \input{\defs/part4/def_lateralization.tex}
+        \end{alertblock}
+        \begin{block}<2->{}
+          The language centers are lateralized left for 96\% of right-handers and 73\% of left-handers \parencite{knecht_handedness_2000}
+          \begin{itemize}
+            \item We'll assume this for our descriptions here
+          \end{itemize}
+        \end{block}
+        \begin{block}<3->{Disclaimer}
+          Rapidly advancing area of research; subject to change
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subtwotwo}
+        \begin{block}{}
+          In the frontal lobe:
+          \begin{itemize}
+            \item Left inferior frontal gyrus (LIFG)
+          \end{itemize}
+          In the temporal lobe:
+
+          \begin{minipage}[t]{0.48\linewidth}
+            \begin{itemize}
+              \item Left superior temporal gyrus (LSTG)
+              \item Left inferior temporal gyrus (LITG)
+            \end{itemize}
+          \end{minipage}
+          \begin{minipage}[t]{0.48\linewidth}
+            \begin{itemize}
+              \item Left parietotemporal junction (LPTJ)
+              \item Angular gyrus
+            \end{itemize}
+          \end{minipage}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}[t]{\subtwotwo}
+        \begin{center}
+          \includegraphics[scale=0.14]{cerebral_lobes.jpg}
+        \end{center}
+        \only<1>{
+          \begin{block}{LIFG, aka \alert{Broca's area}}
+            \input{\defs/part4/def_brocas_area.tex}
+          \end{block}
+        }
+        \only<2>{
+          \begin{block}{LSTG, aka \alert{Wernicke's area}}
+            \input{\defs/part4/def_wernickes_area.tex}
+          \end{block}
+        }
+        \only<3>{
+          \begin{block}{LITG}
+            Responsible for \emph{lexical} semantics
+          \end{block}
+        }
+        \only<4>{
+          \begin{block}{LPTJ or the Sylvian fissure}
+            Responsible for linking phonological representations to articulatory-motor representations
+          \end{block}
+        }
+        \only<5>{
+          \begin{block}{Angular gyrus, between the LPTJ and LSTG}
+            Responsible for connecting visual objects to linguistic representations
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}{\subtwotwo}
+        \begin{columns}
+          \column{0.48\linewidth}
+            \only<1>{
+              \begin{block}{The pathways}
+                \begin{itemize}
+                  \item Arcuate fasciculus
+                  \item Extreme capsule
+                \end{itemize}
+              \end{block}
+            }
+            \only<2>{
+              \begin{block}{Arcuate fasciculus}
+                Wernicke's/\emph{LPTJ} $\leftrightarrow$ Broca's
+                \begin{itemize}
+                  \item Transmits phonetic and phonological information
+                  \item Handles working memory
+                \end{itemize}
+              \end{block}
+            }
+            \only<3>{
+              \begin{block}{Extreme capsule}
+                Wernicke's/\emph{LITG} $\leftrightarrow$ Broca's
+                \begin{itemize}
+                  \item Transmits semantic information
+                \end{itemize}
+              \end{block}
+            }
+          \column{0.48\linewidth}
+            \begin{minipage}[t][\textheight][c]{\linewidth}
+              \includegraphics[scale=0.6]{cerebral_pathways.jpg}
+            \end{minipage}
+        \end{columns}
+      \end{frame}
+
+    \subsection{\subtwothree}
+      \begin{frame}{\subtwothree}
+        \begin{block}{How did we identify language centers?}
+          \uncover<2->{
+            The old way: disorders
+            \begin{itemize}
+              \item Split-brain patients
+              \item Aphasias
+              \begin{itemize}
+                \item Broca's aphasia
+                \item Wernicke's aphasia
+                \item Conduction aphasia
+              \end{itemize}
+              \item Alexia
+              \item Agraphia
+            \end{itemize}
+          }
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subtwothree}
+        \begin{alertblock}{Split-brain patient}
+          \input{\defs/part4/def_split_brain_patient.tex}
+        \end{alertblock}
+        \begin{block}{Evidence for lateralization}
+          Split-brain patients have \href{https://youtu.be/ZMLzP1VCANo?t=96}{difficulty} naming objects that they only see with their left eye but no difficulty with the right eye
+        \end{block}
+        \begin{alertblock}<2->{Aphasia}
+          \input{\defs/part4/def_aphasia.tex}
+        \end{alertblock}
+      \end{frame}
+
+      \begin{frame}{\subtwothree}
+        \begin{alertblock}{Broca's aphasia}
+          \input{\defs/part4/def_brocas_aphasia.tex}
+        \end{alertblock}
+        \begin{block}{Where might the damage be?}
+          \uncover<2->{
+            Broca's area
+          }
+        \end{block}
+        \begin{example}<3->
+          Can be realized as \href{https://youtu.be/JWC-cVQmEmY?t=21}{difficulty} with function words and inflections
+        \end{example}
+      \end{frame}
+
+      \begin{frame}{\subtwothree}
+        \begin{alertblock}{Wernicke's aphasia}
+          \input{\defs/part4/def_wernickes_aphasia.tex}
+        \end{alertblock}
+        \begin{block}{Where might the damage be?}
+          \uncover<2->{
+            Wernicke's area and/or the LPTJ
+          }
+        \end{block}
+        \begin{example}<3->
+          Can be realized as \href{https://youtu.be/3oef68YabD0?t=8}{difficulty} understanding others \emph{as well as} difficulty choosing semantically coherent words
+        \end{example}
+      \end{frame}
+
+      \begin{frame}{\subtwothree}
+        \begin{alertblock}{Conduction aphasia}
+          \input{\defs/part4/def_conduction_aphasia.tex}
+        \end{alertblock}
+        \begin{block}{Damage area}
+          Possibly the arcuate fasciculus or Wernicke's area
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subtwothree}
+        \begin{block}{}
+          \begin{itemize}
+            \item \alert{Alexia}: \input{\defs/part4/def_alexia.tex}
+            \begin{itemize}
+              \item Specifically when due to brain damage
+            \end{itemize}
+            \item \alert{Agraphia}: \input{\defs/part4/def_agraphia.tex}
+          \end{itemize}
+        \end{block}
+        \begin{block}{Damage area}
+          Both result from damage to the angular gyrus
+        \end{block}
+      \end{frame}
+
+    \subsection{\subtwofour}
+      \begin{frame}{\subtwofour}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 9 exercises 5 and 8
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{References}
+        \printbibliography
       \end{frame}
 \end{document}
