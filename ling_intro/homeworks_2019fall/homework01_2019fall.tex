@@ -2,6 +2,10 @@
   % Read in shared preamble for all homeworks
   \input{../shared/homework_preamble.tex}
 
+  % Packages and settings
+  \usepackage{graphicx}
+    \graphicspath{{../figures/}}
+
   % Document information
   \title{Homework 1: Phonetics}
   \date{}
@@ -13,10 +17,26 @@
   \input{../shared/homework_intro.tex}
 
   % Questions
-    \instr{Give the IPA symbol for the \emph{consonant} that corresponds to the description. (1 point each)}
+    \instr{Give the IPA transcription of each word that you hear just as it's pronounced. Make sure to include stress. (1 point each)}
 
   \begin{questions}
+      \parbox[t]{0.45\linewidth}{
+        \question[1] \hrulefill
+        \question[1] \hrulefill
+        \question[1] \hrulefill
+        \question[1] \hrulefill
+        \question[1] \hrulefill
+      }
+      \hspace{0.1\linewidth}
+      \parbox[t]{0.45\linewidth}{
+        \question[1] \hrulefill
+        \question[1] \hrulefill
+        \question[1] \hrulefill
+        \question[1] \hrulefill
+        \question[1] \hrulefill
+      }
 
+    \instr{Give the IPA symbol for the \emph{consonant} that corresponds to the description. (1 point each)}
       \parbox[t]{0.45\linewidth}{
         \question[1] Voiced alveolar approximant: \hrulefill
         \question[1] Voiceless alveolar fricative: \hrulefill
@@ -36,7 +56,6 @@
       }
 
     \instr{Give the IPA symbol for the \emph{vowel} that corresponds to the description. (1 point each)}
-
       \parbox[t]{0.45\linewidth}{
         \question[1] High-mid back rounded: \hrulefill
         \question[1] Low-mid front unrounded: \hrulefill
@@ -50,7 +69,6 @@
       }
 
     \instr{Give the description -- meaning the voicing, place of articulation, and manner of articulation -- that corresponds to the following \emph{consonant} IPA symbols. (1 point each)}
-
       \parbox[t]{0.45\linewidth}{
         \question[1] [d]: \hrulefill
         \question[1] [l]: \hrulefill
@@ -70,7 +88,6 @@
       }
 
     \instr{Give the description -- meaning the height, advancement, and lip rounding -- that corresponds to the following \emph{vowel} IPA symbols. (1 point each)}
-
       \parbox[t]{0.45\linewidth}{
         \question[1] [u]: \hrulefill
         \question[1] [a]: \hrulefill
@@ -83,10 +100,7 @@
         \question[1] [e]: \hrulefill
       }
 
-    \newpage
-
     \instr{Give the word, in standard English spelling, that corresponds to the IPA transcription. (1 point each)}
-
       \parbox[t]{0.45\linewidth}{
         \question[1] [ˈfaɪ.næn.sɪŋ]: \hrulefill
         \question[1] [ɹəˈtɹækt]: \hrulefill
@@ -114,35 +128,51 @@
       }
 
     \instr{Give the syllable structure, as a tree diagram, for the following one syllable words. (1 point per label)}
-
       \question[1] [ˈðɛɹ]
-
       \vspace{\stretch{1}}
-
       \question[1] [ˈwaɪld]
-
       \vspace{\stretch{1}}
-
       \question[1] [ˈkæt]
-
       \vspace{\stretch{1}}
-
       \newpage
-
       \question[1] [ˈbɑɹk]
-
       \vspace{\stretch{1}}
-
       \question[1] [ˈkloʊz]
-
       \vspace{\stretch{1}}
-
       \question[1] [ˈnæt]
-
       \vspace{\stretch{1}}
 
-      % Show 2-3 spectrograms for vowels and have them identify F1 and F2 in each
-
+    \instr{The two spectrograms below represent two different vowels. As best as you can, identify the approximate frequency of F1 and F2 for each. Be aware that three formants are visible. (1 point each)}
+      \question[1]
+        \begin{minipage}{0.45\linewidth}
+          \includegraphics[scale=0.6]{vowel4.jpg}
+        \end{minipage}\hspace{0.1\linewidth}
+        \begin{minipage}{0.45\linewidth}
+          \begin{itemize}
+            \item[F1:] \hrulefill
+            \item[F2:] \hrulefill
+          \end{itemize}
+        \end{minipage}
+      \question[1]
+        \begin{minipage}{0.45\linewidth}
+          \includegraphics[scale=0.6]{vowel5.jpg}
+        \end{minipage}\hspace{0.1\linewidth}
+        \begin{minipage}{0.45\linewidth}
+          \begin{itemize}
+            \item[F1:] \hrulefill
+            \item[F2:] \hrulefill
+          \end{itemize}
+        \end{minipage}
+      \question[1]
+        \begin{minipage}{0.45\linewidth}
+          \includegraphics[scale=0.6]{vowel6.jpg}
+        \end{minipage}\hspace{0.1\linewidth}
+        \begin{minipage}{0.45\linewidth}
+          \begin{itemize}
+            \item[F1:] \hrulefill
+            \item[F2:] \hrulefill
+          \end{itemize}
+        \end{minipage}
   \end{questions}
 
   \vspace{1.25cm}
