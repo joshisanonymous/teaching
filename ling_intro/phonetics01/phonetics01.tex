@@ -66,20 +66,29 @@
   \section{Representing speech sounds}
     \subsection{\subtwoone}
       \begin{frame}{\subtwoone}
-        \only<1>{
-          \begin{block}{Articulatory phonetics}
-            Several tools are used:
-            \begin{itemize}
-              \item \href{https://www.youtube.com/watch?v=DcNMCB-Gsn8}{X-ray}
-              \item Ultrasound
-              \item Palatography
+        \only<1-2>{
+          \begin{columns}
+            \column{0.48\linewidth}
+              \begin{block}{Articulatory phonetics}
+                Several tools are used:
                 \begin{itemize}
-                  \item Dye is added to the tongue and roof of the mouth and a picture is taken after pronouncing a sound
+                  \item \href{https://www.youtube.com/watch?v=DcNMCB-Gsn8}{X-ray}
+                  \item Ultrasound
+                  \item Palatography
+                    \begin{itemize}
+                      \item Dye is added to the tongue and roof of the mouth and a picture is taken after pronouncing a sound
+                    \end{itemize}
                 \end{itemize}
-            \end{itemize}
-          \end{block}
+              \end{block}
+            \column{0.48\linewidth}
+              \uncover<2->{
+                % \begin{center}
+                  \includegraphics[scale=0.225]{palatography.jpg}
+                % \end{center}
+              }
+          \end{columns}
         }
-        \only<2>{
+        \only<3>{
           \begin{block}{Acoustic phonetics}
             \begin{itemize}
               \item Spectrograms
@@ -87,16 +96,16 @@
             \includegraphics[scale=0.55]{sharcoustic.jpg}
           \end{block}
         }
-        \only<3-6>{
+        \only<4-7>{
           \begin{block}{Impressionistic transcription}
             \href{https://youtu.be/J2oEmPP5dTM?t=51}{Satchmo and tomatoes}
             \begin{itemize}
-              \item<4-6> təˈmeɪ.ɾoʊ
-              \item<4-6> təˈmɑ.ɾoʊ
-              \item<5-6> təˈmeɪ.ɾə
+              \item<5-> təˈmeɪ.ɾoʊ
+              \item<5-> təˈmɑ.ɾoʊ
+              \item<6-> təˈmeɪ.ɾə
             \end{itemize}
           \end{block}
-          \begin{alertblock}<6>{International phonetic alphabet (IPA)}
+          \begin{alertblock}<7->{International phonetic alphabet (IPA)}
             % Read in the definition of the IPA
             \input{\defs/part1/def_IPA.tex}
           \end{alertblock}
