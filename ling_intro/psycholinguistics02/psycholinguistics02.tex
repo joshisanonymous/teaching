@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage{tikz}
+    \usetikzlibrary{shapes.geometric, arrows}
+    \tikzstyle{process} = [rectangle,
+                           text centered,
+                           draw=black,
+                           align=center]
+    \tikzstyle{arrow} = [thick,->]
+
+  % Document information
+  \subtitle[Speech Production]{Speech Production}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{Thoughts to messages}
+  \newcommand{\subonetwo}{Models}
+  \newcommand{\subonethree}{Extenuating factors}
+  \newcommand{\subonefour}{Errors}
+  \newcommand{\subonefive}{Practice}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Speech Production}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{block}{A very general model}
+          \begin{tikzpicture}[node distance=3.5cm]
+            \node (holistic) [process]                    {Holistic thought \\
+                                                          \emph{the idea that} \\
+                                                          \emph{you're tired}};
+            \node (stuff)    [process, right of=holistic] {Stuff happens};
+            \node (linear)   [process, right of=stuff]    {Linear utterance \\
+                                                          \uttr{I am tired}};
+            \draw [arrow] (holistic) -- (stuff);
+            \draw [arrow] (stuff)    -- (linear);
+          \end{tikzpicture}
+        \end{block}
+        \begin{block}{}
+          Both sentence structures and phonetic forms are arranged linearly
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}{\subonetwo}
+        \begin{block}{Two models}
+          \begin{itemize}
+            \item The utterance generator model %\parencite{fromkin_non-anomalous_1971}
+            \item %\citeauthor{levelt_speaking:_1989}'s (\citeyear{levelt_speaking:_1989}) model
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}[t]{\subonetwo}
+        \begin{block}{The utterance generator}
+          Identify meaning $\rightarrow$ Select syntactic structure $\rightarrow$ Generate intonation contour $\rightarrow$ Insert content words $\rightarrow$ Insert function words \& affixes $\rightarrow$ Specify phonetic segments
+        \end{block}
+        \only<1>{
+          \begin{block}{This is a serial model}
+            \begin{itemize}
+              \item \alert{Serial model}: \input{\defs/part4/def_serial_model.tex}
+              \item \alert{Parallel mode}: \input{\defs/part4/def_parallel_model.tex}
+            \end{itemize}
+          \end{block}
+        }
+        \only<2>{
+          \begin{block}{Example: \uttr{Peter walked down the stairs.}}
+            \begin{tabular}{r @{) } l @{: } l}
+              1 & Meaning     & \emph{Peter walking down the stairs in the past} \\
+              2 & Structure   & [NP \_] [V \_] [P \_] [NP \_] \\
+              3 & Intonation  & [NP \_] ↗[V \_] [P \_] ↘[NP \_] \\
+              4 & Content     & [NP Peter] ↗[V walk] [P \_] ↘[NP stair] \\
+              5 & Function    & \begin{tabular}[t]{@{} l @{}}
+                                  [NP Peter] ↗[V walk-ed] [P down] \\
+                                  ↘[NP the stair-s]
+                                \end{tabular} \\
+              6 & Phonetics   & [ˈpi.tɹ̩ ˈwɔkt ˈdaʊn ðə ˈstɛɹz]
+            \end{tabular}
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}{\subonetwo}
+        \begin{block}{Levelt's parallel model}
+          \begin{tikzpicture}[node distance=3.5cm]
+            \node (concept)    [process]                   {Conceptualizer};
+            \node (form)       [process, right of=concept] {Formulator};
+            \node (articulate) [process, right of=form]    {Articulator};
+            \draw [arrow] (concept)    -- (form);
+            \draw [arrow] (form)       -- (articulate);
+            \draw [arrow] (articulate) --++ (0cm, -0.5cm) -| (concept);
+          \end{tikzpicture}
+        \end{block}
+        \begin{block}{Formulator functions}
+          Grammatical encoding
+          \begin{itemize}
+            \item i.e., syntactic structure \& lexical expressions
+          \end{itemize}
+          Phonological encoding
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{References}
+        % \printbibliography
+      \end{frame}
+\end{document}
