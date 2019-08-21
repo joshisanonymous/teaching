@@ -246,5 +246,6 @@ TSWLatexianTemp*
 # Specific exams
 exams*/
 
-# Attendance sheets
+# Attendance related stuff
 attendance/
+shared/attendance_preamble.tex
