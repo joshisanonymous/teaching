@@ -245,3 +245,6 @@ TSWLatexianTemp*
 
 # Specific exams
 exams*/
+
+# Attendance sheets
+attendance/
