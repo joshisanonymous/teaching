@@ -29,7 +29,8 @@
   \newcommand{\subonethree}{Intonation}
   \newcommand{\subonefour}{Tone}
   \newcommand{\subonefive}{Stress}
-  \newcommand{\subonesix}{Resources and Practice}
+  \newcommand{\subonesix}{A note about syllabic consonants}
+  \newcommand{\suboneseven}{Resources and Practice}
 
 \begin{document}
   % Read in the standard intro slides (title page and table of contents)
@@ -45,10 +46,10 @@
                 \begin{block}{A segment}
                   \input{\defs/part1/def_segment.tex}
                 \end{block}
-                \begin{block}<2>{A \emph{supra}segmental}
+                \begin{alertblock}<2>{A \emph{supra}segmental}
                   % Read in definition of a suprasegmental
                   \input{\defs/part1/def_suprasegmental.tex}
-                \end{block}
+                \end{alertblock}
               }
               \only<3>{
                 \begin{block}{Examples of suprasegmentals}
@@ -72,7 +73,7 @@
     \subsection{\subonetwo}
       \begin{frame}[t]{\subonetwo}
         \begin{block}{}
-          Notated using [ː] (e.g., [kɑː]\only<2->{\orth{car}})
+          Notated using [ː] (e.g., [kɑː]\only<2->{ \lexi{car}})
         \end{block}
         \begin{example}<3->
           Finnish
@@ -95,17 +96,17 @@
           \begin{block}<2>{Notation}
             In \textcite{dawson_language_2016}:
             \begin{itemize}
-              \item ``Use CAPS to indicate words where the pitch is HIGHER''
+              \item \uttr{Use CAPS to indicate words where the pitch is HIGHER}
             \end{itemize}
             In general:
             \begin{itemize}
-              \item ``Use ↗arrows ↘to indicate words where the pitch ↗changes.''
+              \item \uttr{Use ↗arrows ↘to indicate words where the pitch ↗changes.}
             \end{itemize}
           \end{block}
         }
         \only<3-6>{
           \begin{example}
-            ``Use ↗arrows ↘to indicate words where the pitch ↗changes.''
+            \uttr{Use ↗arrows ↘to indicate words where the pitch ↗changes.}
           \end{example}
           \only<4>{
             \begin{alertblock}{Pitch accent}
@@ -123,7 +124,7 @@
               \end{itemize}
             \end{alertblock}
             \begin{block}<6>{Not limited to sentences}
-              ``You got an A on the ↘test, a C on the ↘homework, and a B on the ↘quiz.''
+              \uttr{You got an A on the ↘test, a C on the ↘homework, and a B on the ↘quiz.}
             \end{block}
           }
         }
@@ -151,14 +152,14 @@
 
             \parbox{0.45\linewidth}{
               \begin{itemize}
-                \item {[}ma55] or [má] or [ma˦] `mother' \orth{妈}
-                \item {[}ma35] or [ma᷄] or [ma˧˥] `hemp' \orth{麻}
+                \item {[}ma55] or [má] or [ma˦] `mother' \lexi{妈}
+                \item {[}ma35] or [ma᷄] or [ma˧˥] `hemp' \lexi{麻}
               \end{itemize}
             }
             \parbox{0.45\linewidth}{
               \begin{itemize}
-                \item {[}ma214] or [ma᷉] or [ma˨˩˦] `horse' \orth{马}
-                \item {[}ma51] or [mâ] or [ma˥˩] `scold' \orth{骂}
+                \item {[}ma214] or [ma᷉] or [ma˨˩˦] `horse' \lexi{马}
+                \item {[}ma51] or [mâ] or [ma˥˩] `scold' \lexi{骂}
               \end{itemize}
             }
           \end{example}
@@ -179,7 +180,7 @@
         \end{block}
         \only<3>{
           \begin{example}
-            \orth{photograph} [ˈfoʊ.də.gɹæf] vs \orth{photography} [fəˈtɑ.gɹəˌfi]
+            \lexi{photograph} [ˈfoʊ.də.gɹæf] vs \lexi{photography} [fəˈtɑ.gɹəˌfi]
           \end{example}
         }
         \only<4>{
@@ -193,7 +194,7 @@
         \only<5>{
           \begin{block}{Stress can be semantically contrastive}
             \begin{itemize}
-              \item {[}waɪtˈhaʊs] vs [ˈwait.haʊs]
+              \item {[}waɪtˈhaʊs] vs [ˈwaɪt.haʊs]
             \end{itemize}
           \end{block}
         }
@@ -201,6 +202,64 @@
 
     \subsection{\subonesix}
       \begin{frame}{\subonesix}
+        \begin{columns}
+          \column{0.5\textwidth}
+            \begin{minipage}[c][0.6\textheight]{\linewidth}
+              \begin{block}{Four syllabic consonants in English}
+                [ɹ̩ l̩ n̩ m̩]
+                \begin{itemize}
+                  \item {[}ˈwɔ.ɾɹ̩]
+                  \item {[}ˈteɪ.bl̩]
+                  \item {[}ˈkɑʔ.n̩]
+                  \item {[}ɹɪ.ðm̩]
+                \end{itemize}
+              \end{block}
+            \end{minipage}
+          \column{0.5\textwidth}
+            \only<1-2>{
+              \begin{forest}
+                [ Syllable
+                  [ Onset
+                    [ \only<1>{ɾ}\only<2>{b}, tier=segment ]
+                  ]
+                  [ Rhyme
+                    [ Nucleus
+                      [ \only<1>{ɹ̩}\only<2>{l̩}, tier=segment ]
+                    ]
+                  ]
+                ]
+              \end{forest}
+            }
+            \only<3>{
+              \begin{forest}
+                [ Syllable
+                  [ Rhyme
+                    [ Nucleus
+                      [ n̩, tier=segment ]
+                    ]
+                  ]
+                ]
+              \end{forest}
+            }
+            \only<4>{
+              \begin{forest}
+                [ Syllable
+                  [ Onset
+                    [ ð, tier=segment ]
+                  ]
+                  [ Rhyme
+                    [ Nucleus
+                      [ m̩, tier=segment ]
+                    ]
+                  ]
+                ]
+              \end{forest}
+            }
+        \end{columns}
+      \end{frame}
+
+    \subsection{\suboneseven}
+      \begin{frame}{\suboneseven}
         \begin{block}{}
           \input{../shared/phonetics_artic_resources.tex}
         \end{block}
