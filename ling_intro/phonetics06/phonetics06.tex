@@ -67,7 +67,7 @@
           \begin{block}<6->{Two types of visualizations}
             \begin{itemize}
               \item Waveform
-              \item Spectrogram/Spectrograph
+              \item Spectrogram
             \end{itemize}
           \end{block}
         }
@@ -178,12 +178,13 @@
           \begin{alertblock}{Formant}
             % Definition of a formant
             \input{\defs/part1/def_formant.tex}
-            There are two important formants for vowels:
+          \end{alertblock}
+          \begin{block}{There are two important formants for vowels}
             \begin{itemize}
               \item \alert{Formant 1 (F1)}: \input{\defs/part1/def_F1.tex}
               \item \alert{Formant 2 (F2)}: \input{\defs/part1/def_F2.tex}
             \end{itemize}
-          \end{alertblock}
+          \end{block}
         }
         \only<2>{
           \begin{block}{}
@@ -209,17 +210,17 @@
 
     \subsection{\subtwofour}
       \begin{frame}{\subtwofour}
-        \only<1-2>{
+        \only<1>{
           \begin{block}{Stops}
             Appear as gaps on a spectrogram
             \begin{itemize}
               \item Place of articulation can be determined by how the formants shift from a consonant to the following vowel
-              \item<2> Voiced sounds have a \alert{voice bar} at the bottom
+              \item Voiced sounds have a \alert{voice bar} at the bottom
             \end{itemize}
           \end{block}
           \includegraphics[scale=0.95]{spectrogram_stops_voiced.jpg}
         }
-        \only<3>{
+        \only<2>{
           \begin{alertblock}{Aspiration}
             % Definition of aspiration
             \input{\defs/part1/def_aspiration.tex}, notated with [ʰ]
@@ -229,7 +230,7 @@
           \end{alertblock}
           \includegraphics[scale=0.45]{spectrogram_stops_aspirated.jpg}
         }
-        \only<4>{
+        \only<3>{
           \begin{block}{Fricatives}
             Appear as high amplitude masses covering large high frequency areas on a spectrogram
             \begin{itemize}
@@ -238,12 +239,12 @@
           \end{block}
           \includegraphics[scale=0.6]{spectrogram_fricatives.jpg}
         }
-        \only<5-6>{
+        \only<4>{
           \begin{block}{Nasals}
             Appear with formants on a spectrogram, like vowels, but the formants shift sharply when transitioning into vowels
             \begin{itemize}
               \item Formants are essentially the same for all nasals
-              \item<6> Liquids and glides also have formants
+              \item Liquids and glides also have formants
             \end{itemize}
           \end{block}
           \includegraphics[scale=0.55]{spectrogram_nasals.jpg}
