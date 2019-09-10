@@ -67,7 +67,7 @@
                                             /i/};
               \node (rules) [process, right of=underlying] {Rules};
               \node (surface) [process, right of=rules] {Surface form \\
-                                                         Phone \\
+                                                         Allophone \\
                                                          {[}ĩ]};
               \draw [arrow] (underlying) -- (rules);
               \draw [arrow] (rules) -- (surface);
@@ -93,7 +93,7 @@
         \only<5>{
           \begin{block}{Rule notation}
             \begin{center}
-              \phonb{phoneme}{phone}{left context}{right context}
+              \phonb{phoneme}{allophone}{left context}{right context}
             \end{center}
           \end{block}
         }
@@ -110,7 +110,7 @@
 
     \subsection{\subonetwo}
       \begin{frame}[t]{\subonetwo}
-        \only<1-7>{
+        \only<1-6>{
           \begin{columns}
             \column{0.48\textwidth}
               \begin{block}{Data}
@@ -127,41 +127,41 @@
                   \item {[}ɾ] between two vowels (or vocalic sounds)
                   \item {[}t] elsewhere
                 \end{itemize}
-                \uncover<3->{This applies to /d/, too}
+                \uncover<2->{This applies to /d/, too}
               \end{block}
           \end{columns}
-          \begin{block}<4->{The rule}
+          \begin{block}<3->{The rule}
             \begin{center}
               \phonb{/t d/}{[ɾ]}{V}{V}
             \end{center}
           \end{block}
-          \only<5-6>{
+          \only<4-5>{
             \begin{block}{What do /t/ and /d/ have in common?}
-              \uncover<6->{They're both alveolar stops, a natural class}
+              \uncover<5->{They're both alveolar stops, a natural class}
             \end{block}
           }
-          \only<7>{
+          \only<6>{
             \begin{alertblock}{Natural class}
               \input{\defs/part2/def_natural_class.tex}
             \end{alertblock}
           }
         }
-        \only<8-11>{
+        \only<7-10>{
           \begin{block}{Some new natural classes}
             \begin{itemize}
               \item \alert{Sibilants}: \input{\defs/part2/def_sibilant.tex}
               \begin{itemize}
                 \item Includes [s, z, ʃ, ʒ, tʃ, dʒ]
               \end{itemize}
-              \item<9-> \alert{Labials}: \input{\defs/part2/def_labial.tex}
+              \item<8-> \alert{Labials}: \input{\defs/part2/def_labial.tex}
               \begin{itemize}
                 \item Includes labiodentals and bilabials
               \end{itemize}
-              \item<10-> \alert{Obstruents}: \input{\defs/part2/def_obstruent.tex}
+              \item<9-> \alert{Obstruents}: \input{\defs/part2/def_obstruent.tex}
               \begin{itemize}
                 \item Includes stops, fricatives, and affricates
               \end{itemize}
-              \item<11-> \alert{Sonorants}: \input{\defs/part2/def_sonorant.tex}
+              \item<10-> \alert{Sonorants}: \input{\defs/part2/def_sonorant.tex}
               \begin{itemize}
                 \item Includes vowels, approximants, and nasals
               \end{itemize}
@@ -202,115 +202,115 @@
             \end{itemize}
           \end{block}
         }
-        \only<5-6>{
-          \begin{block}{A special case}
-            \begin{itemize}
-              \item \alert{Vowel harmony}: \input{\defs/part2/def_vowel_harmony.tex}
-            \end{itemize}
-          \end{block}
-          \begin{example}<6->
-            In Finnish:
-            \begin{itemize}
-              \item All vowels in a word are either front vowels or back vowels
-              \item /metsæ/ `forest' + /ss\alert{ɑ}/ `in' = [metsæss\alert{æ}] `in the forest'
-            \end{itemize}
-          \end{example}
-        }
-        \only<7-10>{
+        % \only<5-6>{
+        %   \begin{block}{A special case}
+        %     \begin{itemize}
+        %       \item \alert{Vowel harmony}: \input{\defs/part2/def_vowel_harmony.tex}
+        %     \end{itemize}
+        %   \end{block}
+        %   \begin{example}<6->
+        %     In Finnish:
+        %     \begin{itemize}
+        %       \item All vowels in a word are either front vowels or back vowels
+        %       \item /metsæ/ `forest' + /ss\alert{ɑ}/ `in' = [metsæss\alert{æ}] `in the forest'
+        %     \end{itemize}
+        %   \end{example}
+        % }
+        \only<5-8>{
           \begin{alertblock}{Dissimilation}
             \input{\defs/part2/def_dissimilation.tex}
           \end{alertblock}
-          \begin{example}<8->
+          \begin{example}<6->
             \begin{tabular}{c c}
               \lexi{sixth}                & \\
-              \uncover<9->{/ˈsɪks\alert{θ}/}  & \uncover<9->{[ˈsiks\alert{t}]}
+              \uncover<7->{/ˈsɪks\alert{θ}/}  & \uncover<9->{[ˈsɪks\alert{t}]}
             \end{tabular}
           \end{example}
-          \begin{block}<10->{A possible rule}
+          \begin{block}<8->{A possible rule}
             \begin{itemize}
               \item \phonb{/θ/}{[t]}{s}{\#}
             \end{itemize}
           \end{block}
         }
-        \only<11-14>{
+        \only<9-12>{
           \begin{alertblock}{Insertion}
             \input{\defs/part2/def_insertion.tex}
           \end{alertblock}
-          \begin{example}<12->
+          \begin{example}<10->
             \begin{tabular}{c c}
               \lexi{dance}            & \lexi{hamster} \\
-              \uncover<13->{/ˈdæns/}  & \uncover<13->{/ˈhæm.stɹ̩/} \\
-              \uncover<13->{[ˈdæn\alert{t}s]} & \uncover<13->{[ˈhæm\alert{p}.stɹ̩]}
+              \uncover<11->{/ˈdæns/}  & \uncover<11->{/ˈhæm.stɹ̩/} \\
+              \uncover<11->{[ˈdæn\alert{t}s]} & \uncover<11->{[ˈhæm\alert{p}.stɹ̩]}
             \end{tabular}
           \end{example}
-          \begin{block}<14->{Some possible rules}
+          \begin{block}<12->{Some possible rules}
             \begin{itemize}
               \item \phonb{//}{[t]}{n}{s}
               \item \phonb{//}{[p]}{m}{s}
             \end{itemize}
           \end{block}
         }
-        \only<15-17>{
+        \only<13-15>{
           \begin{alertblock}{Deletion}
             \input{\defs/part2/def_deletion.tex}
           \end{alertblock}
-          \begin{example}<16->
+          \begin{example}<14->
             \begin{tabular}{c c c}
               \lexi{govern}       & \lexi{governer} & \lexi{government} \\
               /ˈgʌ.və\alert{ɹn}/  & [ˈgʌ.və.nɹ̩]     & [ˈgʌ.vəɹ.mn̩t] \\
             \end{tabular}
           \end{example}
-          \begin{block}<17->{Some possible rules}
+          \begin{block}<15->{Some possible rules}
             \begin{itemize}
               \item \phonb{/ɹ/}{[]}{ə}{nɹ̩}
               \item \phonb{/n/}{[]}{ɹ}{m}
             \end{itemize}
           \end{block}
         }
-        \only<18-21>{
+        \only<16-19>{
           \begin{alertblock}{Metathesis}
             \input{\defs/part2/def_metathesis.tex}
           \end{alertblock}
-          \begin{example}<19->
+          \begin{example}<17->
             \begin{tabular}{c c}
               \href{https://youtu.be/h0JI33xyT8Q?t=30}{\lexi{ask}}  & \\
-              \uncover<20->{[ˈask]}                                 & \uncover<20->{[ˈaks]}
+              \uncover<18->{[ˈask]}                                 & \uncover<18->{[ˈaks]}
             \end{tabular}
           \end{example}
-          \begin{block}<21->{Two possible rules}
+          \begin{block}<19->{Two possible rules}
             \begin{itemize}
               \item \phonb{/sk/}{[ks]}{æ}{\#}
               \item \phonb{/ks/}{[sk]}{æ}{\#}
             \end{itemize}
           \end{block}
         }
-        \only<22-24>{
+        \only<20-22>{
           \begin{alertblock}{Strengthening}
             \input{\defs/part2/def_strengthening.tex}
           \end{alertblock}
-          \begin{example}<23->
+          \begin{example}<21->
             \begin{tabular}{c c c}
               \lexi{the}  & \lexi{they} & \lexi{their} \\
               /ðə/       & /ˈðeɪ/      & /ˈðɛɹ/ \\
               {[}də]     & [ˈdeɪ]      & [ˈdɛɹ]
             \end{tabular}
           \end{example}
-          \begin{block}<24->{A possible rule}
+          \begin{block}<22->{A possible rule}
             \phonb{/ð/}{[d]}{\#}{V}
           \end{block}
         }
-        \only<25-27>{
+        \only<23-25>{
           \begin{alertblock}{Weakening}
             \input{\defs/part2/def_weakening.tex}
           \end{alertblock}
-          \begin{example}<26->
+          \begin{example}<24->
             \begin{tabular}{c c c}
               \lexi{the}  & \lexi{they} & \lexi{their} \\
               /də/       & /ˈdeɪ/      & /ˈdɛɹ/ \\
               {[}ðə]     & [ˈðeɪ]      & [ˈðɛɹ]
             \end{tabular}
           \end{example}
-          \begin{block}<27->{A possible rule}
+          \begin{block}<25->{A possible rule}
             \phonb{/d/}{[ð]}{\#}{V}
           \end{block}
         }
@@ -341,27 +341,27 @@
               Underlying  & /ˈɹaɪ.tɹ̩/  & /ˈɹaɪ.tɹ̩/ \\
                           & ˈɹaɪ.ɾɹ̩    & ˈɹəɪ.tɹ̩ \\
                           & ---        & ˈɹəɪ.ɾɹ̩ \\
-              Surface     & */ˈɹaɪ.ɾɹ̩/ & /ˈɹəɪ.ɾɹ̩/
+              Surface     & *[ˈɹaɪ.ɾɹ̩] & [ˈɹəɪ.ɾɹ̩]
             \end{tabular}
           \end{block}
           \begin{block}<4->{Correct order}
             raising $\rightarrow$ flapping
           \end{block}
         }
-        \only<5-7>{
+        \only<5-6>{
           \begin{block}{Two more rule types}
             \begin{itemize}
               \item \alert{Obligatory rules}
               \begin{itemize}
-                \item<6-> \input{\defs/part2/def_obligatory_rule.tex}
+                \item \input{\defs/part2/def_obligatory_rule.tex}
               \end{itemize}
               \item \alert{Optional rules}
               \begin{itemize}
-                \item<6-> \input{\defs/part2/def_optional_rule.tex}
+                \item \input{\defs/part2/def_optional_rule.tex}
               \end{itemize}
             \end{itemize}
           \end{block}
-          \begin{alertblock}<7>{}
+          \begin{alertblock}<6>{}
             So called ``optional rules'' are part of language variation, studied in sociolinguistics
           \end{alertblock}
         }
