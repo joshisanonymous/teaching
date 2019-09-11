@@ -110,7 +110,7 @@
 
     \subsection{\subonetwo}
       \begin{frame}[t]{\subonetwo}
-        \only<1-6>{
+        \only<1-7>{
           \begin{columns}
             \column{0.48\textwidth}
               \begin{block}{Data}
@@ -132,7 +132,12 @@
           \end{columns}
           \begin{block}<3->{The rule}
             \begin{center}
-              \phonb{/t d/}{[ɾ]}{V}{V}
+              \only<3-6>{
+                \phonb{/t d/}{[ɾ]}{V}{V}
+              }
+              \only<7->{
+                \phonb{\phonfeat{+alveolar\\+stop}}{[ɾ]}{V}{V}
+              }
             \end{center}
           \end{block}
           \only<4-5>{
@@ -146,22 +151,22 @@
             \end{alertblock}
           }
         }
-        \only<7-10>{
+        \only<8-11>{
           \begin{block}{Some new natural classes}
             \begin{itemize}
               \item \alert{Sibilants}: \input{\defs/part2/def_sibilant.tex}
               \begin{itemize}
                 \item Includes [s, z, ʃ, ʒ, tʃ, dʒ]
               \end{itemize}
-              \item<8-> \alert{Labials}: \input{\defs/part2/def_labial.tex}
+              \item<9-> \alert{Labials}: \input{\defs/part2/def_labial.tex}
               \begin{itemize}
                 \item Includes labiodentals and bilabials
               \end{itemize}
-              \item<9-> \alert{Obstruents}: \input{\defs/part2/def_obstruent.tex}
+              \item<10-> \alert{Obstruents}: \input{\defs/part2/def_obstruent.tex}
               \begin{itemize}
                 \item Includes stops, fricatives, and affricates
               \end{itemize}
-              \item<10-> \alert{Sonorants}: \input{\defs/part2/def_sonorant.tex}
+              \item<11-> \alert{Sonorants}: \input{\defs/part2/def_sonorant.tex}
               \begin{itemize}
                 \item Includes vowels, approximants, and nasals
               \end{itemize}
@@ -223,7 +228,7 @@
           \begin{example}<6->
             \begin{tabular}{c c}
               \lexi{sixth}                & \\
-              \uncover<7->{/ˈsɪks\alert{θ}/}  & \uncover<9->{[ˈsɪks\alert{t}]}
+              \uncover<7->{/ˈsɪks\alert{θ}/}  & \uncover<7->{[ˈsɪks\alert{t}]}
             \end{tabular}
           \end{example}
           \begin{block}<8->{A possible rule}
@@ -274,7 +279,7 @@
           \begin{example}<17->
             \begin{tabular}{c c}
               \href{https://youtu.be/h0JI33xyT8Q?t=30}{\lexi{ask}}  & \\
-              \uncover<18->{[ˈask]}                                 & \uncover<18->{[ˈaks]}
+              \uncover<18->{[ˈæsk]}                                 & \uncover<18->{[ˈæks]}
             \end{tabular}
           \end{example}
           \begin{block}<19->{Two possible rules}
