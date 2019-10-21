@@ -48,7 +48,14 @@
     \subsection{\subonetwo}
       \begin{frame}{\subonetwo}
         \begin{block}{`The dog barks'}
-          True when the dog in question is part of the intersection of the NP's reference and the VP's reference
+          \only<1>{
+            True when the dog in question is part of the intersection of the NP's reference and the VP's reference
+          }
+          \only<2>{
+            \small{
+              $\text{TV}\left(\text{dog barking}\right) = \text{true} \iff \text{animal} \in \text{DOG} \land \text{action} \in \text{BARKING}$
+            }
+          }
         \end{block}
         \begin{center}
           \begin{tikzpicture}
