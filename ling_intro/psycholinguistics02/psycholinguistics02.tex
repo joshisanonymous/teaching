@@ -20,6 +20,9 @@
                            draw=black,
                            align=center]
     \tikzstyle{arrow} = [thick,->]
+  \usepackage[style=apa, backend=biber]{biblatex}
+    \addbibresource{../references/References.bib}
+
 
   % Document information
   \subtitle[Speech Production]{Speech Production}
@@ -52,7 +55,10 @@
           \end{tikzpicture}
         \end{block}
         \begin{block}{}
-          Both sentence structures and phonetic forms are arranged linearly
+          \begin{itemize}
+            \item Thoughts are whole units
+            \item Sentence structures and phonetic forms are produced as linearly arranged parts
+          \end{itemize}
         \end{block}
       \end{frame}
 
@@ -60,8 +66,8 @@
       \begin{frame}{\subonetwo}
         \begin{block}{Two models}
           \begin{itemize}
-            \item The utterance generator model %\parencite{fromkin_non-anomalous_1971}
-            \item %\citeauthor{levelt_speaking:_1989}'s (\citeyear{levelt_speaking:_1989}) model
+            \item The utterance generator model \parencite{fromkin_non-anomalous_1971}
+            \item \citeauthor{levelt_speaking:_1989}'s (\citeyear{levelt_speaking:_1989}) model
           \end{itemize}
         \end{block}
       \end{frame}
@@ -115,7 +121,310 @@
         \end{block}
       \end{frame}
 
-      \begin{frame}{References}
-        % \printbibliography
+    \subsection{\subonethree}
+      \begin{frame}[t]{\subonethree}
+        \begin{block}{English speech rate}
+          Four syllables per second
+        \end{block}
+        \only<1-4>{
+          \begin{columns}
+            \column{0.48\linewidth}
+            \begin{minipage}[c][0.6\textheight]{\linewidth}
+              \begin{block}{But how does this go wrong?}
+                Name the following objects as quickly as possible:
+              \end{block}
+              \begin{block}<4->{}
+                More frequent and familiar words are produced quicker
+              \end{block}
+            \end{minipage}
+            \column{0.48\linewidth}
+            \only<2>{
+            \includegraphics[scale=0.125]{ladle.jpg}
+            }
+            \only<3->{
+            \includegraphics[scale=0.25]{cats.jpg}
+            }
+          \end{columns}
+        }
+        \only<5->{
+          \begin{block}{Word length isn't important}
+            Speakers start to say
+            \begin{itemize}
+              \item \lexi{cat} and
+              \item \lexi{caterpillar}
+            \end{itemize}
+            equally quickly \parencite{damian_does_2010}
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}{\subonethree}
+        \begin{block}{It's not just speech rate}
+          \alert{Phonetic reduction}: \input{\defs/part4/def_phonetic_reduction.tex}
+        \end{block}
+        \begin{block}{How do you pronounce \lexi{probably}?}
+          \uncover<2->{
+            \begin{itemize}
+              \item In careful speech: [ˈpɹɑ.bə.bli]?
+              \item Repeated in casual speech: [ˈpɹɑ.bli]? [ˈpɹɑ.li]?
+            \end{itemize}
+          }
+        \end{block}
+      \end{frame}
+
+      % Repetitions do increase access speed as well
+
+    \subsection{\subonefour}
+      \begin{frame}{\subonefour}
+        \begin{block}{How do we use speech production to learn about language?}
+          We use production errors
+        \end{block}
+        \begin{columns}
+          \column{0.48\linewidth}
+          \begin{block}{Is uttering the word \uttr{untasteful} an error?}
+            \uncover<2->{
+            \begin{itemize}
+              \item If part of competence: No
+              \item If part of performance: Yes
+            \end{itemize}
+            }
+          \end{block}
+          \column{0.48\linewidth}
+          \uncover<2->{
+          \includegraphics[scale=0.125]{performance_cat.jpg}
+          }
+        \end{columns}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{block}{Types of production errors}
+          \begin{itemize}
+            \item Anticipation
+            \item Perseveration
+            \item Addition
+            \item Deletion
+            \item Metathesis
+            \item Spoonerism
+            \item Shifting
+            \item Substitution
+            \item Blending
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{alertblock}{Anticipation}
+          \input{\defs/part4/def_anticipation.tex}
+
+          \begin{tabular}{r @{: } l}
+            Meant & \sent{spl\alert{i}cing from one t\alert{a}pe} \\
+            Said  & \uttr{spl\alert{a}cing from one t\alert{a}pe}
+          \end{tabular}
+        \end{alertblock}
+        \begin{alertblock}{Perseveration}
+          \input{\defs/part4/def_perseveration.tex}
+
+          \begin{tabular}{r @{: } l}
+            Meant & \sent{spl\alert{i}cing from one t\alert{a}pe} \\
+            Said  & \uttr{spl\alert{i}cing from one t\alert{y}pe}
+          \end{tabular}
+        \end{alertblock}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{alertblock}{Addition}
+          \input{\defs/part4/def_addition.tex}
+
+          \begin{tabular}{r @{: } l}
+            Meant & \sent{spic and span} \\
+            Said  & \uttr{spic and sp\alert{l}an}
+          \end{tabular}
+        \end{alertblock}
+        \begin{alertblock}{Deletion}
+          \input{\defs/part4/def_deletion.tex}
+
+          \begin{tabular}{r @{: } l}
+            Meant & \sent{his immor\alert{t}al soul} \\
+            Said  & \uttr{his immoral soul}
+          \end{tabular}
+        \end{alertblock}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{alertblock}{Metathesis}
+          \input{\defs/part2/def_metathesis.tex}
+
+          \begin{tabular}{r @{: } l}
+            Meant & \sent{f\alert{i}ll the p\alert{oo}l} \\
+            Said  & \uttr{f\alert{oo}l the p\alert{i}ll}
+          \end{tabular}
+        \end{alertblock}
+        \begin{alertblock}{Spoonerism}
+          \input{\defs/part4/def_spoonerism.tex}
+
+          \begin{tabular}{r @{: } l}
+            Meant & \sent{\alert{f}ill the \alert{p}ool} \\
+            Said  & \uttr{\alert{p}ill the \alert{f}ool}
+          \end{tabular}
+        \end{alertblock}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{alertblock}{Shifting}
+          \input{\defs/part4/def_shifting.tex}
+
+          \begin{tabular}{r @{: } l}
+            Meant & \sent{she decide\alert{s} to hit it} \\
+            Said  & \uttr{she decide to hit\alert{s} it}
+          \end{tabular}
+        \end{alertblock}
+        \begin{alertblock}{Substitution}
+          \input{\defs/part4/def_substitution.tex}
+
+          \begin{tabular}{r @{: } l}
+            Meant & \sent{it's \alert{hot} in here} \\
+            Said  & \uttr{it's \alert{cold} in here}
+          \end{tabular}
+        \end{alertblock}
+        \begin{block}<2->{}
+          These examples involve morphemes and words, respectively
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{alertblock}{Blending}
+          \input{\defs/part4/def_blending.tex}
+
+          \begin{tabular}{r @{: } l}
+            Meant & \sent{grizzly and ghastly} \\
+            Said  & \uttr{grastly}
+          \end{tabular}
+        \end{alertblock}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{block}{Are phonemes, morphemes, and words real?}
+          Even our errors involve these units
+          \begin{itemize}
+            \item Why not \sent{decides to hit} $\rightarrow$ \uttr{deci to hitdes}?
+          \end{itemize}
+        \end{block}
+        \begin{block}<2->{What about features?}
+          Errors can involve just a single feature
+          \begin{itemize}
+            \item \sent{clear blue sky} $\rightarrow$ \uttr{glear plue sky}
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{block}{Are rules real?}
+          Phonotactics are adhered to in errors
+          \begin{itemize}
+            \item \sent{Freudian slip} $\rightarrow$ \uttr{Freulian [ʃɹ]ip}
+          \end{itemize}
+          And morphological rules
+          \begin{itemize}
+            \item \sent{cook[t] a roast} $\rightarrow$ \uttr{roast[əd] a cook}
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{block}{Are sense relations real?}
+          Substitutions are often semantically related
+          \begin{itemize}
+            \item \sent{My thesis is too \alert{long}} $\rightarrow$ \uttr{My thesis is too \alert{short}}
+            \item \sent{before the place \alert{opens}} $\rightarrow$ \uttr{Before the place \alert{closes}}
+          \end{itemize}
+        \end{block}
+        \begin{block}<2->{Are there phonological links in speakers' mental lexicons?}
+          Substitutions are often phonologically similar
+          \begin{itemize}
+            \item \sent{spreading like wild\alert{fire}} $\rightarrow$ \uttr{spreading like wild\alert{flowers}}
+            \item \sent{I'm a \alert{contortionist}!} $\rightarrow$ \uttr{I'm an \alert{extortionist}!}
+          \end{itemize}
+          \alert{Malapropism}: \input{\defs/part4/def_malapropism.tex}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}[t]{\subonefour}
+        \begin{example}
+          \begin{itemize}
+            \item Plural morpheme: /z/
+            \item Plural allomorphs: [z], [əz], [s]
+            \item \sent{\emph{[ˈmɪ.nɪ.stɹ̩\alert{z}]} in our church} $\rightarrow$ \uttr{[ˈtʃɹ̩.tʃ\alert{əz}] in our minister}
+          \end{itemize}
+        \end{example}
+        \only<1>{
+          \begin{block}{Does this support the utterance generator model?}
+            \begin{itemize}
+              \item (4) Insert content words $\rightarrow$ (5) Insert function words \& affixes $\rightarrow$ (6) Specify phonetic segments
+            \end{itemize}
+          \end{block}
+        }
+        \only<2>{
+          \begin{block}{Does this support Levelt's model?}
+            \begin{itemize}
+              \item (1) Conceptualizer $\rightarrow$ (2) Formulator (\mbox{(2a) Grammatical encoding} $\rightarrow$ \mbox{(2b) Phonological encoding}) $\rightarrow$ (3) Articulator
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}[t]{\subonefour}
+        \begin{example}
+          \parbox{0.48\linewidth}{
+            \begin{tabular}{r l l}
+              a)  & Farm  & Smoke \\
+                  & Fern  & Smash \\
+                  & Fat   & Small \\
+                  & Smart & Fell
+            \end{tabular}
+          }
+          \parbox{0.48\linewidth}{
+            \begin{tabular}{r l l}
+              b)  & Tail  & Smoke \\
+                  & Term  & Smash \\
+                  & Tank  & Small \\
+                  & Smart & Tell
+            \end{tabular}
+          }
+        \end{example}
+        \only<-2>{
+          \begin{block}{Which is more likely to yield a spoonerism? \parencite{motley_covert_1982}}
+            \uncover<2->{
+              (a) because \uttr{fart smell} is more taboo
+              \begin{itemize}
+                \item This means we check the resulting words before we utter them
+              \end{itemize}
+            }
+          \end{block}
+        }
+        \only<3-4>{
+          \begin{block}{Does this support the utterance generator model?}
+            \uncover<4->{
+              No: (6) \emph{Specify phonetic segments} has to feed back into (4) \emph{Insert content words} to avoid taboo
+            }
+          \end{block}
+        }
+        \only<5->{
+          \begin{block}{Does this support Levelt's model?}
+            Yes: Parallel models support feed back
+          \end{block}
+        }
+      \end{frame}
+
+      % Both models need to add post-articulation feedback though: we stop ourselves when we can hear ourselves mess up (Postma & Noordanus 1996)
+
+    \subsection{\subonefive}
+      \begin{frame}{\subonefive}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 9 exercises 9 and 12
+        \end{block}
+      \end{frame}
+
+      \begin{frame}[allowframebreaks]{References}
+        \printbibliography
       \end{frame}
 \end{document}
