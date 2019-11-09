@@ -20,7 +20,7 @@
   \newcommand{\suboneone}{What are we looking at?}
   \newcommand{\subtwoone}{What do we mean by ``variety''?}
   \newcommand{\subtwotwo}{Dialects}
-  \newcommand{\subtwothree}{Sociolects and registers}
+  \newcommand{\subtwothree}{Other lects and registers}
   \newcommand{\subtwofour}{Idiolects and styles}
   \newcommand{\subtwofive}{Jargon and slang}
   \newcommand{\subtwosix}{Standards}
@@ -63,12 +63,20 @@
         \end{alertblock}
         \begin{block}{Types of varieties}
           Socio-political varieties (i.e., systematic-like)
-          \begin{itemize}
-            \item Languages % (English vs French)
-            \item Dialects % (Appalachian English vs New Yor English)
-            \item Sociolects % (Working-class English vs Upper-class English)
-            \item Registers % (Newscaster English vs Infant Directed Speech)
-          \end{itemize}
+          \parbox{0.48\linewidth}{
+            \begin{itemize}
+              \item Languages
+              \item Dialects
+              \item Sociolects
+            \end{itemize}
+          }
+          \parbox{0.48\linewidth}{
+            \begin{itemize}
+              \item Ethnolects
+              \item Registers % (Newscaster English vs Infant Directed Speech)
+              \item[]
+            \end{itemize}
+          }
           Real systems
           \begin{itemize}
             \item Idiolects
@@ -142,67 +150,133 @@
         \begin{block}{}
           How do we tell the difference between dialects and languages?
         \end{block}
-        \begin{columns}
-          \column{0.5\linewidth}
-            \begin{minipage}[t][0.6\textheight]{\linewidth}
-              \begin{block}<2->{Mutual intelligibility?}
-                \only<2-4>{
-                  \begin{itemize}
-                    \item \href{https://www.greenvilleonline.com/videos/news/2019/02/04/gullah-dialect-still-spoken-south-carolina/2653241002/}{Difficult to measure}
-                    \item<3-> Swedes and Norwegians often understand each other
-                    \item<4-> Speakers of different Chinese ``dialects'' often \emph{don't} understand each other
-                  \end{itemize}
-                }
-                \only<5->{
-                  Also, \alert{dialect continuums}:
-                  \begin{itemize}
-                    \item
-                  \end{itemize}
-                }
-              \end{block}
-            \end{minipage}
-          \column{0.5\linewidth}
-            \only<3>{
-              \includegraphics[scale=0.15]{sweden_norway.jpg}
-            }
-            \only<4>{
-              \includegraphics[scale=0.06]{chinese_dialects.jpg}
-            }
-            \only<5>{
+        \only<2-5>{
+          \begin{columns}
+            \column{0.5\linewidth}
+              \begin{minipage}[t][0.6\textheight]{\linewidth}
+                \begin{block}{Mutual intelligibility?}
+                  \only<-4>{
+                    \begin{itemize}
+                      \item \href{https://www.greenvilleonline.com/videos/news/2019/02/04/gullah-dialect-still-spoken-south-carolina/2653241002/}{Difficult to measure}
+                      \item<3-> Swedes and Norwegians often understand each other
+                      \item<4-> Speakers of different Chinese ``dialects'' often \emph{don't} understand each other
+                    \end{itemize}
+                  }
+                  \only<5->{
+                    Also, \alert{dialect continuums}:
+                    \begin{itemize}
+                      \item \input{\defs/part4/def_dialect_continuum.tex}
+                    \end{itemize}
+                  }
+                \end{block}
+              \end{minipage}
+            \column{0.5\linewidth}
+              \only<3>{
+                \includegraphics[scale=0.15]{sweden_norway.jpg}
+              }
+              \only<4>{
+                \includegraphics[scale=0.06]{chinese_dialects.jpg}
+              }
+              \only<5>{
+                \includegraphics[scale=0.2]{germany_netherlands.jpg}
+              }
+          \end{columns}
+        }
+        \only<6>{
+          \begin{block}{People decide}
+            Languages and dialects are social constructs
+          \end{block}
+        }
+      \end{frame}
 
+    \subsection{\subtwothree}
+      \begin{frame}{\subtwothree}
+        \begin{alertblock}{Sociolect}
+          \input{\defs/part4/def_sociolect.tex}
+          \begin{itemize}
+            \item Working-class English vs Upper-class English
+          \end{itemize}
+        \end{alertblock}
+        \begin{alertblock}{Ethnolect}
+          \input{\defs/part4/def_ethnolect.tex}
+          \begin{itemize}
+            \item African-American English vs Chicano English
+          \end{itemize}
+        \end{alertblock}
+        \begin{alertblock}{Register}
+          \input{\defs/part4/def_register.tex}
+          \begin{itemize}
+            \item Newscaster speech vs Infant directed speech
+          \end{itemize}
+        \end{alertblock}
+      \end{frame}
+
+    \subsection{\subtwofour}
+      \begin{frame}{\subtwofour}
+        \begin{block}{How would you greet the Queen of England?}
+          \begin{enumerate}
+            \item \uttr{Hey, how's it goin'?}
+            \item \uttr{It's an honor to meet you, Your Majesty.}
+          \end{enumerate}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}[t]{\subtwofour}
+        \begin{alertblock}{Style}
+          \input{\defs/part4/def_style.tex}
+        \end{alertblock}
+        \only<2-3>{
+          \begin{alertblock}{Idiolect}
+            \input{\defs/part4/def_idiolect.tex}
+          \end{alertblock}
+          \begin{block}{What does ``context'' mean?}
+            \uncover<3->{
+            Like in pragmatics:
+            \begin{itemize}
+              \item Situational context
+              \item Social context
+            \end{itemize}
             }
-        \end{columns}
+          \end{block}
+        }
+        \only<4->{
+          \begin{columns}
+            \column{0.5\linewidth}
+              \begin{alertblock}{Style shifting}
+                \input{\defs/part4/def_style_shifting.tex}
+                \begin{itemize}
+                  \item Often, this is subconscious
+                \end{itemize}
+              \end{alertblock}
+            \column{0.5\linewidth}
+              \includegraphics[scale=0.45]{r_stratification.jpg}
+          \end{columns}
+        }
+      \end{frame}
+
+    \subsection{\subtwofive}
+      \begin{frame}{\subtwofive}
+        \begin{block}{Lexical variation}
+          \begin{itemize}
+            \item \alert{Jargon}: \input{\defs/part4/def_jargon.tex}
+            \item \alert{Slang}: \input{\defs/part4/def_slang.tex}
+          \end{itemize}
+        \end{block}
+        \begin{block}{What are these useful for?}
+          \uncover<2->{
+            Both express the idea that you're in-the-know
+          }
+        \end{block}
+      \end{frame}
+
+    \subsection{\subtwosix}
+      \begin{frame}{\subtwosix}
+        \begin{alertblock}{Standard variety}
+          
+        \end{alertblock}
       \end{frame}
 
       % "Variety" is generic term: any systematic or systematic-like form of language
-        % Dialects
-          % What makes languages and dialects different?
-            % Mutual intelligibility, however:
-              % Dialect continuums confuse the matter further
-                % Define
-                % At the Germany-Netherlands border, the Dutch and German speakers can often understand each other, even though speakers of those languages who don't live at the border often can't
-            % What really makes languages and dialects different is that speakers consider them to be different
-              % They are socio-political constructs
-        % Sociolects and registers
-          % Where dialects are geographically defined varieties ->
-            % Sociolects defined by social class, economic class, or ethnicity more generally
-            % Registers defined by activity
-        % Idiolects and styles
-          % Which utterance would you use to greet the Queen of England?
-            % One is appropriate for the context, one is not
-          % Definintions: styles first, idiolects next (repertoire of styles)
-            % What counts as context? Same as in pragmatics: situational and social
-          % Style shifting
-            % Define
-            % This typically happens subconsciously
-        % Jargon and slang
-          % Where do these fit in?
-          % Both deal purely with lexical expressions
-          % Define jargon
-            % Useful in style shifting: employ it to sound in-the-know, avoid it to make yourself understandable to others
-          % Slang is not well-defined in linguistics
-            % Try to define it anyway
-            % Useful in style shifting: marks one as being part of a group, in-the-know, and excludes others
         % Standards
           % No variety is superior to another: they're all rule-governed and equally logical
           % However, there are standard varieties
