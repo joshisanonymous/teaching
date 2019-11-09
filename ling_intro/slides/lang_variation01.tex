@@ -12,6 +12,10 @@
   % Read in standard preamble (cosmetic stuff)
   \input{../shared/slide_preamble.tex}
 
+  % Packages and settings
+  \usepackage[style=apa, backend=biber]{biblatex}
+    \addbibresource{../references/References.bib}
+
   % Document information
   \subtitle[Variation and Varieties]{Introduction to Language Variation and Language Varieties}
 
@@ -24,6 +28,7 @@
   \newcommand{\subtwofour}{Idiolects and styles}
   \newcommand{\subtwofive}{Jargon and slang}
   \newcommand{\subtwosix}{Standards}
+  \newcommand{\subtwoseven}{Practice}
 
 \begin{document}
   % Read in the standard intro slides (title page and table of contents)
@@ -73,7 +78,7 @@
           \parbox{0.48\linewidth}{
             \begin{itemize}
               \item Ethnolects
-              \item Registers % (Newscaster English vs Infant Directed Speech)
+              \item Registers
               \item[]
             \end{itemize}
           }
@@ -122,7 +127,7 @@
               \begin{minipage}[t][0.6\textheight]{\linewidth}
                 \only<2>{
                   \begin{alertblock}{Speech community}
-                    \input{\defs/part4/def_speech_community.tex} % \parencite{labov_social_2006}
+                    \input{\defs/part4/def_speech_community.tex} \parencite{labov_social_2006}
                   \end{alertblock}
                 }
                 \only<3>{
@@ -246,6 +251,7 @@
                 \input{\defs/part4/def_style_shifting.tex}
                 \begin{itemize}
                   \item Often, this is subconscious
+                  \item Chart from \textcite{labov_social_2006}
                 \end{itemize}
               \end{alertblock}
             \column{0.5\linewidth}
@@ -272,36 +278,107 @@
     \subsection{\subtwosix}
       \begin{frame}{\subtwosix}
         \begin{alertblock}{Standard variety}
-          
+          \input{\defs/part4/def_standard_variety.tex}
+          \begin{itemize}
+            \item ``Standard'' does \emph{not} mean ``superior''
+          \end{itemize}
         \end{alertblock}
+        \begin{example}
+          Negative concord (i.e., double negation) is non-standard but was standard (Chaucer, 1400):
+          \begin{enumerate}
+            \item
+            \parbox[t]{\linewidth}{
+              \begin{tabular}{l l l l l l l}
+                He & nevere & yet & no & vileynye & ne  & sayde \\
+                He & never  & yet & no & villainy & not & said
+              \end{tabular}
+              \begin{tabular}{l l l l l l l l}
+                In & al  & his & lyf  & unto & no & maner   & wight \\
+                In & all & his & life & to   & no & kind of & creature
+              \end{tabular}
+            }
+          \end{enumerate}
+        \end{example}
       \end{frame}
 
-      % "Variety" is generic term: any systematic or systematic-like form of language
-        % Standards
-          % No variety is superior to another: they're all rule-governed and equally logical
-          % However, there are standard varieties
-            % Define
-            % Double negation example:
-              % Used in Chaucer (1) but not considered standard today
-              % Point is that the standard is structurally arbitrary
-          % Desire to speak the standard for the prestige leads to hypercorrection
-            % Use pronoun case in coordinate subjects and objects to demonstrate (3-7)
-          % Standards for whole countries often given names:
-            % US: Standard American English (SAE)
-            % UK: Received Pronunciation (RP)
-          % Non-standard varieties are not substandard
-            % Maybe show example of reflexive pronoun construction in standard vs non-standard for discussion
-            % Being able to use both is advantageous, actually
-              % Covert prestige
+      \begin{frame}[t]{\subtwosix}
+        \begin{alertblock}{Hypercorrection}
+          \input{\defs/part4/def_hypercorrection.tex}
+        \end{alertblock}
+        \only<-2>{
+          \begin{example}
+            \begin{enumerate}
+              \item \only<2->{\alert{*}}Kim and me went to the store
+              \item Kim and I went to the store
+              \item Give the money to Kim and me
+              \item \only<2->{\alert{*}}Give the books to Kim and I
+              \item This is a matter between Kim and me
+              \item \only<2->{\alert{*}}This is a matter between Kim and I
+            \end{enumerate}
+          \end{example}
+        }
+        \only<3>{
+          \begin{columns}
+            \column{0.5\linewidth}
+              \begin{block}{}
+                Hypercorrection can occur on any linguistic level
+                \begin{itemize}
+                  \item Graph from \textcite{labov_social_2006}
+                \end{itemize}
+              \end{block}
+            \column{0.5\linewidth}
+              \includegraphics[scale=0.375]{hypercorrection.jpg}
+          \end{columns}
+        }
+        \only<4>{
+          \begin{block}{Standard varieties by country}
+            \begin{itemize}
+              \item US $\rightarrow$ Standard American English (SAE)
+              \item UK $\rightarrow$ Received Pronunciation (RP)
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
 
-    \subsection{}
-      \begin{frame}{}
+      \begin{frame}{\subtwosix}
+        \begin{block}{Non-standard varieties are just as systematic}
+          \parbox{0.48\linewidth}{
+            \begin{tabular}{l l}
+              Standard               & Non-standard \\
+              \hline
+              myself                 & myself \\
+              yourself               & yourself \\
+              \alert<2->{him}self    & hisself \\
+              herself                & herself \\
+              ourselves              & ourselves \\
+              yourselves             & yourselves \\
+              \alert<2->{them}selves & theirselves
+            \end{tabular}
+          }
+          \parbox{0.48\linewidth}{
+            \uncover<2->{
+              \lexi{Him} and \lexi{them} are not chosen in the same way as the others
+            }
+          }
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subtwosix}
+        \begin{block}{Why do non-standard varieties persist?}
+          \uncover<2->{
+            \alert{Covert prestige} \parencite{labov_social_2006}: \input{\defs/part4/def_covert_prestige.tex}
+          }
+        \end{block}
+      \end{frame}
+
+    \subsection{\subtwoseven}
+      \begin{frame}{\subtwoseven}
         \begin{block}{Try these}
-          % \textcite{dawson_language_2016}, chapter 9 exercise 15
+          \textcite{dawson_language_2016}, chapter 10 exercise 10
         \end{block}
       \end{frame}
 
       \begin{frame}{References}
-        % \printbibliography
+        \printbibliography
       \end{frame}
 \end{document}
