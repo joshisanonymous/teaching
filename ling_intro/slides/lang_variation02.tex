@@ -1,0 +1,159 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Packages and settings
+  \usepackage{phonrule}
+
+  % Document information
+  \subtitle[Variation at Different Levels]{Variation at Different Levels of Linguistic Structure}
+
+  %% Custom commands
+  % Subsection/frame titles
+  \newcommand{\suboneone}{Which levels?}
+  \newcommand{\subonetwo}{Phonetics}
+  \newcommand{\subonethree}{Phonology}
+  \newcommand{\subonefour}{Morphology}
+  \newcommand{\subonefive}{Syntax}
+  \newcommand{\subonesix}{Semantics}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Variation at Different Levels}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{block}{Language variation can occur at any level}
+          \begin{itemize}
+            \item Phonetics
+            \item Phonology
+            \item Morphology
+            \item Syntax
+            \item Semantics
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}[t]{\subonetwo}
+        \begin{definition}
+          \input{\defs/part1/def_phonetics.tex}
+        \end{definition}
+        \only<1>{
+          \begin{block}{Dialectal variation of (t d s z n)}
+            \begin{itemize}
+              \item Most of the US $\rightarrow$ Alveolar: [t d s z n]
+              \item NY $\rightarrow$ Dental: [t̪ d̪ s̪ z̪ n̪]
+            \end{itemize}
+          \end{block}
+          \begin{block}{Dialectal variation of (ɹ)}
+            \begin{itemize}
+              \item Parts of the US $\rightarrow$ Alveolar: [ɹ]
+              \item Other parts $\rightarrow$ Retroflex: [ɻ]
+              \item Scotland $\rightarrow$ Trill: [r]
+            \end{itemize}
+          \end{block}
+        }
+        \only<2>{
+          \begin{block}{Stylistic variation of intervocalic (t)}
+            \begin{itemize}
+              \item In casual contexts $\rightarrow$ Flap: [ɾ]
+              \item Enunciating in formal contexts $\rightarrow$ Stop: [t]
+            \end{itemize}
+          \end{block}
+          \begin{example}
+            {[}ˈlɪɾl̩] vs [ˈlɪ.tʰəl]
+          \end{example}
+        }
+      \end{frame}
+
+    \subsection{\subonethree}
+      \begin{frame}[t]{\subonethree}
+        \begin{definition}
+          \input{\defs/part2/def_phonology.tex}
+        \end{definition}
+        \only<-2>{
+          \begin{block}{Which vowel(s) is/are in the following words?}
+            \begin{tabular}{l l l l l l l}
+              \lexi{caught}     & \lexi{dawn}       & \lexi{hawk}       & \lexi{cot}        & \lexi{Don}        & \lexi{hock}       & \\
+              \uncover<2->{/ɔ/} & \uncover<2->{/ɔ/} & \uncover<2->{/ɔ/} & \uncover<2->{/ɑ/} & \uncover<2->{/ɑ/} & \uncover<2->{/ɑ/} & \uncover<2->{(for some)} \\
+              \uncover<2->{/ɑ/} & \uncover<2->{/ɑ/} & \uncover<2->{/ɑ/} & \uncover<2->{/ɑ/} & \uncover<2->{/ɑ/} & \uncover<2->{/ɑ/} & \uncover<2->{(for others)}
+            \end{tabular}
+          \end{block}
+        }
+        \only<3>{
+          \begin{block}{Dialectal variation of (ʌ)}
+            \begin{itemize}
+              \item In the US $\rightarrow$ [ʌ]
+              \item In Northern England $\rightarrow$ [ʊ]
+            \end{itemize}
+          \end{block}
+          \begin{example}
+            \begin{tabular}{l l l l l l l}
+              \lexi{flood} & \lexi{but} & \lexi{cup} & \lexi{full} & \lexi{good} & \lexi{put} & \\
+              /ʌ/          & /ʌ/        & /ʌ/        & /ʊ/         & /ʊ/         & /ʊ/        & (US) \\
+              /ʊ/          & /ʊ/        & /ʊ/        & /ʊ/         & /ʊ/         & /ʊ/        & (Northern England) \\
+            \end{tabular}
+          \end{example}
+        }
+        \only<4->{
+          \begin{block}{Phonotactic variation in (Cɹ) sequences}
+            \begin{itemize}
+              \item {[}pʰəˈfɛ.ʃn̩] (some US speakers)
+              \item {[}pɹəˈfɛ.ʃn̩] (other US speakers)
+            \end{itemize}
+          \end{block}
+          \begin{block}<5->{Dialectal variation of the flap rule}
+            \begin{itemize}
+              \item \phonb{/t, d/}{[ɾ]}{V}{V} (US)
+              \item \phonb{/t, d/}{[ʔ]}{V}{V} (England)
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonefour}
+      \begin{frame}[t]{\subonefour}
+        \begin{definition}
+          \input{\defs/part2/def_morphology.tex}
+        \end{definition}
+        \only<1-2>{
+          \begin{block}{Variation in the distribution of the approximative suffix \lexi{ish}}
+            \begin{tabular}{}
+              Adj     & Adv       & N         & phrase               & \\
+              \hline
+              reddish & now-ish   & tree-ish  & close-to-home-ish    & (some in the US) \\
+              reddish & about now & tree-like & pretty close-to-home & (others in the US)
+            \end{tabular}
+          \end{block}
+          \begin{block}<2->{Variation in pronoun forms}
+            \begin{itemize}
+              \item himself vs hisself
+              \item themselves vs theirselves
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{}
+      \begin{frame}{}
+        \begin{block}{Try these}
+          % \textcite{dawson_language_2016}, chapter 10 exercise
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{References}
+        % \printbibliography
+      \end{frame}
+\end{document}
