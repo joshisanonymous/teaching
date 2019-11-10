@@ -14,6 +14,8 @@
 
   % Packages and settings
   \usepackage{phonrule}
+  \usepackage[style=apa, backend=biber]{biblatex}
+    \addbibresource{../references/References.bib}
 
   % Document information
   \subtitle[Variation at Different Levels]{Variation at Different Levels of Linguistic Structure}
@@ -25,7 +27,8 @@
   \newcommand{\subonethree}{Phonology}
   \newcommand{\subonefour}{Morphology}
   \newcommand{\subonefive}{Syntax}
-  \newcommand{\subonesix}{Semantics}
+  \newcommand{\subonesix}{Semantics and lexicons}
+  \newcommand{\suboneseven}{Practice}
 
 \begin{document}
   % Read in the standard intro slides (title page and table of contents)
@@ -40,7 +43,7 @@
             \item Phonology
             \item Morphology
             \item Syntax
-            \item Semantics
+            \item Semantics (and lexicons)
           \end{itemize}
         \end{block}
       \end{frame}
@@ -130,11 +133,11 @@
         \end{definition}
         \only<1-2>{
           \begin{block}{Variation in the distribution of the approximative suffix \lexi{ish}}
-            \begin{tabular}{}
-              Adj     & Adv       & N         & phrase               & \\
+            \begin{tabular}{l l l l}
+              Adj     & Adv       & N         & phrase               \\
               \hline
-              reddish & now-ish   & tree-ish  & close-to-home-ish    & (some in the US) \\
-              reddish & about now & tree-like & pretty close-to-home & (others in the US)
+              reddish & now-ish   & tree-ish  & close-to-home-ish    \\
+              reddish & about now & tree-like & pretty close-to-home
             \end{tabular}
           \end{block}
           \begin{block}<2->{Variation in pronoun forms}
@@ -144,16 +147,130 @@
             \end{itemize}
           \end{block}
         }
+        \only<3->{
+          \begin{block}{Variation in past tense morphemes}
+            \begin{tabular}{l l l l}
+              \lexi{climb} & \lexi{eat} & \lexi{heat} & \\
+              \hline
+              /ˈklʌm/      & /ˈɛt/      & /ˈhɛt/      & (Appalachia) \\
+              /ˈklaɪmd/    & /ˈeɪt/     & /ˈhi.təd/   & (Elsewhere)
+            \end{tabular}
+          \end{block}
+          \begin{block}<4->{Variation in 3rd person singular morpheme}
+            \begin{tabular}{l l l l}
+              \lexi{walk} & \lexi{run} & \lexi{mash} & \\
+              \hline
+              walk[s]     & run[z]     & mash[əz]    & (some speakers) \\
+              walk\_      & run\_      & mash\_      & (other speakers)
+            \end{tabular}
+          \end{block}
+        }
       \end{frame}
 
-    \subsection{}
-      \begin{frame}{}
+    \subsection{\subonefive}
+      \begin{frame}[t]{\subonefive}
+        \begin{definition}
+          \input{\defs/part3/def_syntax.tex}
+        \end{definition}
+        \only<-2>{
+          \begin{block}{Variation in perfect aspect}
+            \begin{enumerate}
+              \item She done told you. (some speakers)
+              \item *She done told you. (other speakers)
+              \begin{itemize}
+                \item[$\rightarrow$] She has told you.
+              \end{itemize}
+            \end{enumerate}
+          \end{block}
+          \begin{block}<2->{Variation in intensifiers}
+            \begin{enumerate}
+              \setcounter{enumi}{2}
+              \item right good meal (some speakers, e.g. Appalachia)
+              \item *right good meal (other speakers)
+              \begin{itemize}
+                \item[$\rightarrow$] very good meal
+              \end{itemize}
+            \end{enumerate}
+          \end{block}
+        }
+        \only<3-4>{
+          \begin{block}{Variation in modals}
+            \begin{enumerate}
+              \item I might could go to the party. (some speakers)
+              \item *I might could go to the party. (other speakers)
+              \begin{itemize}
+                \item[$\rightarrow$] I might be able to go to the party.
+              \end{itemize}
+            \end{enumerate}
+          \end{block}
+          \begin{block}<4->{Variation in syntactic properties}
+            \begin{enumerate}
+              \setcounter{enumi}{2}
+              \item The plants need watered. (particularly in the Midwest)
+              \item The plants need watering.
+              \item The plants need to be watered.
+            \end{enumerate}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonesix}
+      \begin{frame}[t]{\subonesix}
+        \begin{block}{}
+          \begin{itemize}
+            \item Semantics: \input{\defs/part3/def_semantics.tex}
+            \item Lexical expression: \input{\defs/part3/def_lexical_expression.tex}
+          \end{itemize}
+        \end{block}
+        \only<-2>{
+          \begin{columns}
+            \column{0.5\linewidth}
+              \begin{block}{What do you call this?}
+                \begin{itemize}
+                  \item<2-> Soda
+                  \item<2-> Pop
+                  \item<2-> Coke
+                \end{itemize}
+              \end{block}
+            \column{0.5\linewidth}
+              \includegraphics[scale=0.125]{sprite.jpg}
+          \end{columns}
+        }
+        \only<3>{
+          \begin{block}{Variation in the sense of \lexi{knock up}}
+            \begin{itemize}
+              \item `wake up' (UK)
+              \item `get pregnant' (US)
+            \end{itemize}
+          \end{block}
+        }
+        \only<4>{
+          \begin{block}{Variation in the sense of \lexi{pissed}}
+            \begin{itemize}
+              \item `drunk' (UK)
+              \item `angry' (US)
+            \end{itemize}
+          \end{block}
+        }
+        \only<5>{
+          \begin{block}{Stylistic variation in lexical expressions}
+            If you were telling your grandmother about that time you fell:
+            \begin{enumerate}
+              \item \uttr{I fell on my backside.}
+              \item \uttr{I fell on my ass.}
+            \end{enumerate}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\suboneseven}
+      \begin{frame}{\suboneseven}
         \begin{block}{Try these}
-          % \textcite{dawson_language_2016}, chapter 10 exercise
+          \textcite{dawson_language_2016}, chapter 10 exercises 15, 16, and 17
         \end{block}
       \end{frame}
 
       \begin{frame}{References}
-        % \printbibliography
+        \printbibliography
       \end{frame}
 \end{document}
