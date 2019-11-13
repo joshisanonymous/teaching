@@ -12,15 +12,26 @@
   % Read in standard preamble (cosmetic stuff)
   \input{../shared/slide_preamble.tex}
 
+  % Packages and settings
+  \usepackage[style=apa, backend=biber]{biblatex}
+    \addbibresource{../references/References.bib}
+
   % Document information
   \subtitle[Dialectology]{Dialectology}
 
   %% Custom commands
-  % Subsection/frame titles
+  \newcommand{\regscale}{0.35}
+  % Subsection/frame title
   \newcommand{\suboneone}{What are we talking about?}
   \newcommand{\subonetwo}{What's so important about geography?}
   \newcommand{\subonethree}{Origin of American dialects}
   \newcommand{\subonefour}{The North}
+  \newcommand{\subonefive}{New England}
+  \newcommand{\subonesix}{The South}
+  \newcommand{\suboneseven}{Appalachia}
+  \newcommand{\suboneeight}{The Midland}
+  \newcommand{\subonenine}{The West}
+  \newcommand{\suboneten}{Discussion}
 
 \begin{document}
   % Read in the standard intro slides (title page and table of contents)
@@ -120,18 +131,18 @@
 
       \begin{frame}[t]{\subonethree}
         \begin{center}
-          \includegraphics[scale=0.425]{supraregional_dialects.jpg}
+          \includegraphics[scale=\regscale]{supraregional_dialects.jpg}
         \end{center}
         \only<1>{
           \begin{block}{The resulting dialect regions}
             \begin{itemize}
               \item Homogenized a bit for the middle-class
-              \item Stable for the working-class
+              \item Stable for the working-class \parencite{schneider_american_1997,labov_atlas_2006}
             \end{itemize}
           \end{block}
         }
         \only<2->{
-          \begin{block}{Doctrine of first effective settlement (Zelinsky, 1992)}
+          \begin{block}{Doctrine of first effective settlement \parencite{zelinsky_cultural_1992}}
             The first group to settle an area has an outsized influence on the culture that develops there
           \end{block}
         }
@@ -146,25 +157,21 @@
                 \only<1>{
                 \begin{itemize}
                   \item \href{https://youtu.be/9UoJ1-ZGb1w?t=59}{The northern cities vowel shift}
-                  \item Gerunds where \lexi{to be} constructions are expected
+                  \item \alert{Chain shift}: \input{\defs/part4/def_chain_shift.tex}
+                \end{itemize}
+                }
+                \only<2>{
+                  Gerunds where \lexi{to be} constructions are expected
                   \begin{enumerate}
                     \item The table needs cleaning
                     \item The table needs to be cleaned
                   \end{enumerate}
-                \end{itemize}
-                }
-                \only<2>{
-                \begin{itemize}
-                  \item \lexi{By} where \lexi{at} is expected
+                  \lexi{By} where \lexi{at} is expected
                   \begin{enumerate}
+                    \setcounter{enumi}{2}
                     \item I was by Sarah's house
                     \item I was at Sarah's house
                   \end{enumerate}
-                  \item Lexical differences
-                  \begin{itemize}
-                    \item \lexi{sneaker}, \lexi{pop}, \lexi{roly-poly}
-                  \end{itemize}
-                \end{itemize}
                 }
               \end{block}
             \end{minipage}
@@ -173,19 +180,354 @@
         \end{columns}
       \end{frame}
 
-      % "how do we end up with geographic variation"
-        % Characteristics of the supra-regional dialects
-          % New England
-
-
-    \subsection{}
-      \begin{frame}{}
-        \begin{block}{Try these}
-          % \textcite{dawson_language_2016}, chapter 10 exercises
+      \begin{frame}{\subonefour}
+        \begin{center}
+          \includegraphics[scale=0.15]{sneaker.jpg}
+        \end{center}
+        \begin{block}{What do you call this?}
+          \uncover<2->{
+            sneaker
+          }
         \end{block}
       \end{frame}
 
-      \begin{frame}{References}
-        % \printbibliography
+      \begin{frame}{\subonefour}
+        \begin{columns}
+          \column{0.5\linewidth}
+            \begin{block}{What do you call this?}
+              \uncover<2->{
+                pop
+              }
+            \end{block}
+          \column{0.5\linewidth}
+            \includegraphics[scale=0.175]{sprite.jpg}
+        \end{columns}
+      \end{frame}
+
+      \begin{frame}{\subonefour}
+        \begin{center}
+          \includegraphics[scale=0.9]{roly-poly.jpg}
+        \end{center}
+        \begin{block}{What do you call this?}
+          \uncover<2->{
+            roly-poly
+          }
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonefive}
+      \begin{frame}[t]{\subonefive}
+        \begin{center}
+          \includegraphics[scale=\regscale]{supraregional_dialects.jpg}
+        \end{center}
+        \only<1>{
+          \begin{block}{The \textsc{cot-caught} merger}
+            \lexi{Cot} and \lexi{caught} are both [ˈkɑt]
+            \begin{itemize}
+              \item \alert{Merger}: \input{\defs/part4/def_merger.tex}
+            \end{itemize}
+          \end{block}
+        }
+        \only<2>{
+          \begin{columns}
+            \column{0.5\linewidth}
+              \begin{block}{Non-rhotic}
+                [ˈpʰɑːk jə ˈkʰɑː]
+              \end{block}
+            \column{0.5\linewidth}
+              \begin{block}{To mark agreement}
+                So don't I
+              \end{block}
+          \end{columns}
+        }
+        \only<3>{
+          \begin{block}{Lexical differences}
+            \parbox{0.48\linewidth}{
+              \begin{enumerate}
+                \item Waiting on line
+                \item Waiting in line
+              \end{enumerate}
+            }
+            \parbox{0.48\linewidth}{
+              \begin{itemize}
+                \item soda
+                \item pill bug
+              \end{itemize}
+            }
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}{\subonefive}
+        \begin{center}
+          \includegraphics[scale=0.15]{bubbler.jpg}
+        \end{center}
+          \begin{block}{What would you call this?}
+            \uncover<2->{
+              bubbler
+            }
+          \end{block}
+      \end{frame}
+
+    \subsection{\subonesix}
+      \begin{frame}[t]{\subonesix}
+        \begin{center}
+          \includegraphics[scale=\regscale]{supraregional_dialects.jpg}
+        \end{center}
+        \only<-2>{
+          \begin{block}{Diphthongization}
+            How do you pronounce the vowel in \lexi{net}?
+            \begin{itemize}
+              \item<2-> {[}ˈnɛɪt]
+              \item<2-> (ɪ) and (ɛ) are made into dipthongs
+            \end{itemize}
+          \end{block}
+        }
+        \only<3-4>{
+          \begin{block}{Monophthongization}
+            How do you pronounce the vowels in \lexi{wide} and \lexi{my}?
+            \begin{itemize}
+              \item<4-> {[}ˈwɑːd] and [ˈmɑː]
+              \item<4-> The diphthong (aɪ) is often made into a monophthong
+            \end{itemize}
+          \end{block}
+        }
+        \only<5>{
+          \begin{block}{The \textsc{pin-pen} merger \parencite{thomas_acoustic_2001}}
+            \lexi{Pin} and \lexi{pen} are both [ˈpɪn]
+            \begin{itemize}
+              \item This is the case when the following consonant is /n/
+            \end{itemize}
+          \end{block}
+        }
+        \only<6>{
+          \begin{block}{Morphosyntactic differences}
+            \begin{enumerate}
+              \item Fixin': I'm fixin' to clean the gutters
+              \item Double modals: I might could clean the gutters
+            \end{enumerate}
+          \end{block}
+        }
+        \only<7>{
+          \begin{block}{Lexical differences}
+            \begin{itemize}
+              \item coke
+              \item roly-poly
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}{\subonesix}
+        \begin{columns}
+          \column{0.5\linewidth}
+            \begin{block}{What do you call this?}
+              \uncover<2->{
+                buggy
+              }
+            \end{block}
+          \column{0.5\linewidth}
+            \includegraphics[scale=0.13]{buggy.jpg}
+        \end{columns}
+      \end{frame}
+
+    \subsection{\suboneseven}
+      \begin{frame}[t]{\suboneseven}
+        \begin{center}
+          \includegraphics[scale=\regscale]{supraregional_dialects.jpg}
+        \end{center}
+        \only<1>{
+          \begin{block}{(ɪ) and (ʊ) are tensed \parencite{brandes_dialect_1977}}
+            \begin{itemize}
+              \item \lexi{fish}: [ˈfiʃ]
+              \item \lexi{push}: [ˈpuʃ]
+            \end{itemize}
+          \end{block}
+        }
+        \only<2>{
+          \begin{block}{Primary stress on the first syllable \parencite{brandes_dialect_1977}}
+            \begin{itemize}
+              \item {[}ˈsɪ.ɡɑɹ] instead of [sɪˈɡɑɹ]
+              \item {[}ˈnoʊ.vɛm.bɹ̩] instead of [noʊˈvɛm.bɹ̩]
+            \end{itemize}
+          \end{block}
+        }
+        \only<3>{
+          \begin{block}{a-prefixing \parencite{wolfram_if_2006}}
+            \begin{enumerate}
+              \item He come a-running to tell me the news
+              \item The dog was a-crying when he saw the deer
+            \end{enumerate}
+          \end{block}
+        }
+        \only<4>{
+          \begin{block}{Apophony for past tense \parencite{wolfram_appalachian_1976}}
+            \begin{itemize}
+              \item {[}ˈklaɪm] $\rightarrow$ [ˈklʌm]
+              \item {[}ˈhit] $\rightarrow$ [ˈhɛt]
+              \item {[}ˈreɪk] $\rightarrow$ [ˈrʌk]
+            \end{itemize}
+          \end{block}
+        }
+        \only<5>{
+          \begin{block}{Negative concord \parencite{brandes_dialect_1977}}
+            I didn't have no lunch
+            \begin{itemize}
+              \item Questionably regional
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\suboneeight}
+      \begin{frame}[t]{\suboneeight}
+        \begin{center}
+          \includegraphics[scale=\regscale]{supraregional_dialects.jpg}
+        \end{center}
+        \only<1>{
+          \begin{alertblock}{}
+            This region doesn't exactly include NJ and eastern PA
+          \end{alertblock}
+        }
+        \only<2>{
+          \begin{block}{The dipthong (oʊ) as [øʊ] \parencite{thomas_acoustic_2001}}
+            \parbox{\linewidth}{
+              Which words are these?
+            }
+            \parbox{0.48\linewidth}{
+              \begin{itemize}
+                \item {[}ˈbøʊt]
+              \end{itemize}
+            }
+            \parbox{0.48\linewidth}{
+              \begin{itemize}
+                \item {[}ˈmøʊ]
+              \end{itemize}
+            }
+          \end{block}
+        }
+        \only<3>{
+          \begin{block}{l-vocalization \parencite{dodsworth_attribute_2005}}
+            \parbox{\linewidth}{
+              Which words are these?
+            }
+            \parbox{0.48\linewidth}{
+              \begin{itemize}
+                \item {[}ˈhɪw]
+              \end{itemize}
+            }
+            \parbox{0.48\linewidth}{
+              \begin{itemize}
+                \item {[}ˈbɛwt]
+              \end{itemize}
+            }
+          \end{block}
+        }
+        \only<4>{
+          \begin{block}{Near merger of \textsc{cot-caught} \parencite{durian_new_2012,labov_atlas_2006}}
+            There is still some differentiation between (ɑ) and (ɔ)
+          \end{block}
+        }
+        \only<5-6>{
+          \begin{block}{Morphosyntactic differences}
+            \only<5>{
+              \begin{enumerate}
+                \item Positive anymore: \uttr{It seems to rain every weekend anymore.} \parencite{frazer_positive_1993}
+                \item All the further: \uttr{Johnstown was all the further I could drive.} \parencite{frazer_use_1993}
+              \end{enumerate}
+            }
+            \only<6>{
+              \begin{enumerate}
+                \setcounter{enumi}{2}
+                \item Verbed: \uttr{The tabled needs washed.} \parencite{murray_need_1996}
+              \end{enumerate}
+            }
+          \end{block}
+        }
+        \only<7>{
+          \begin{block}{Lexical differences}
+            \begin{itemize}
+              \item pop
+              \item potato bug
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}{\suboneeight}
+        \begin{columns}
+          \column{0.5\linewidth}
+            \begin{block}{What do you call this?}
+              \uncover<2->{
+                sweeper
+              }
+            \end{block}
+          \column{0.5\linewidth}
+            \includegraphics[scale=0.13]{sweeper.jpg}
+        \end{columns}
+      \end{frame}
+
+    \subsection{\subonenine}
+      \begin{frame}[t]{\subonenine}
+        \begin{center}
+          \includegraphics[scale=\regscale]{supraregional_dialects.jpg}
+        \end{center}
+        \only<-2>{
+          \begin{block}{Phonological differences}
+            \only<1>{
+              \begin{itemize}
+                \item \textsc{cot-caught} merger
+                \item (u) is fronted so that \lexi{dude} is [ˈdʉd] \parencite{preston_national_2003}
+              \end{itemize}
+            }
+            \only<2>{
+              \begin{itemize}
+                \item (ɪ) as [i]: \lexi{thing} [ˈθiŋ]
+                \item (ɪ) as [ɛ]ː \lexi{hid} [ˈhɛd] \parencite{eckert_vowel_nodate}
+              \end{itemize}
+            }
+          \end{block}
+        }
+        \only<3>{
+          \begin{block}{Quotative \lexi{like} and \lexi{all} \parencite{wolfram_getting_2006}}
+            \begin{itemize}
+              \item \uttr{I'm like, ``I don't have a crush on Kim.''}
+              \item \uttr{I'm all, ``No he didn't.''}
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+      \begin{frame}[t]{\subonenine}
+        \begin{center}
+          \includegraphics[scale=0.19]{firefly.jpg}
+        \end{center}
+        \only<-2>{
+          \begin{block}{What would you call these?}
+            \begin{itemize}
+              \item<2-> \lexi{fireflies}
+            \end{itemize}
+          \end{block}
+        }
+        \only<3->{
+          \begin{block}{Other lexical differences}
+            \begin{itemize}
+              \item \lexi{soda}
+              \item \lexi{lookie lou}: traffic jam caused by people looking at an accident
+              \item \lexi{granola}: a healthy person
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\suboneten}
+      \begin{frame}{\suboneten}
+        \begin{block}{}
+          How accurate were these descriptions for you?
+        \end{block}
+      \end{frame}
+
+      \begin{frame}[allowframebreaks]{References}
+        \printbibliography
       \end{frame}
 \end{document}
