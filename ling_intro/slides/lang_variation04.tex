@@ -1,0 +1,71 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Document information
+  \subtitle[Social Factors]{Social Factors in Language Variation}
+
+  %% Custom commands
+  % Subsection/frame title
+  \newcommand{\suboneone}{What are social factors?}
+  \newcommand{\subonetwo}{Socioeconomic class}
+  \newcommand{\subonethree}{Age}
+  \newcommand{\subonefour}{Gender}
+  \newcommand{\subonefive}{Ethnicity}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Social Factors}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{block}{These people likely wouldn't speak the same}
+          \begin{enumerate}
+            \item A \alert<2>{20 year old}, \alert<4>{white}, \alert<1>{working-class} \alert<3>{female} from Georgia in a casual conversation
+            \item A \only<2>{\alert{60 year old}}\only<1,3->{20 year old}, \only<4>{\alert{African-American}}\only<1-3>{white}, \only<1>{\alert{upper-class}}\only<2->{working-class} \only<3>{\alert{male}}\only<1-2,4->{female} from Georgia in a casual conversation
+          \end{enumerate}
+        \end{block}
+        \begin{block}{Social factors}
+          \begin{itemize}
+            \item Socioeconomic class
+            \item<2-> Age
+            \item<3-> Gender
+            \item<4-> Ethnicity
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+    \subsection{\subonetwo}
+      \begin{frame}{\subonetwo}
+        \begin{block}{}
+          Those of different socioeconomic classes in a community often speak differently
+        \end{block}
+        \begin{columns}
+          \column{0.5\linewidth}
+            \begin{block}{Like in department stores} %\parencite{labov_social_2006}
+              Each store is a proxy for a socioeconomic class:
+              \begin{itemize}
+                \item Saks: upper-class
+                \item Macy's: middle-class
+                \item S. Klein: lower-class
+              \end{itemize}
+            \end{block}
+          \column{0.5\linewidth}
+        \end{columns}
+      \end{frame}
+
+      \begin{frame}{References}
+        % \printbibliography
+      \end{frame}
+\end{document}
