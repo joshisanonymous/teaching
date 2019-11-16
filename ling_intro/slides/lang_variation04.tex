@@ -12,6 +12,10 @@
   % Read in standard preamble (cosmetic stuff)
   \input{../shared/slide_preamble.tex}
 
+  % Packages and settings
+  \usepackage[style=apa, backend=biber]{biblatex}
+    \addbibresource{../references/References.bib}
+
   % Document information
   \subtitle[Social Factors]{Social Factors in Language Variation}
 
@@ -22,6 +26,7 @@
   \newcommand{\subonethree}{Age}
   \newcommand{\subonefour}{Gender}
   \newcommand{\subonefive}{Ethnicity}
+  \newcommand{\subonesix}{Practice}
 
 \begin{document}
   % Read in the standard intro slides (title page and table of contents)
@@ -58,7 +63,7 @@
         \begin{definition}
           \input{\defs/part4/def_socioeconomic_class.tex}
         \end{definition}
-        \begin{block}{Labov analyzed \alert{rhoticity} according to socioeconomic class} %\textcite{labov_social_2006}
+        \begin{block}{\textcite{labov_social_2006} analyzed \alert{rhoticity} according to socioeconomic class}
           \input{\defs/part4/def_rhoticity.tex}
         \end{block}
         \begin{block}{Method}
@@ -94,7 +99,7 @@
             \item \input{\defs/part4/def_language_change.tex}
           \end{itemize}
         \end{block}
-        \begin{block}{Dubois and Horvath analyzed Cajun English linguistic variables by age} %\textcite{dubois_when_1999}
+        \begin{block}{\textcite{dubois_when_1999} analyzed Cajun English linguistic variables by age}
           \begin{itemize}
             \item (dh): whether speakers pronounced [ð] or [d]
             \item (th): whether speakers pronounced [θ] or [t]
@@ -148,8 +153,8 @@
       \begin{frame}{\subonefour}
         \begin{block}{This result is often found}
           \begin{itemize}
-            \item Trudgill for (ing) in Norwich, England %\textcite{trudgill_social_1974}
-            \item Eiskovits for negative concord in Australia %\textcite{collins_girl-talk_1989}
+            \item \textcite{trudgill_social_1974} for (ing) in Norwich, England
+            \item \textcite{eisikovits_girl-talk/boy-talk:_1989} for negative concord in Australia
           \end{itemize}
         \end{block}
         \begin{block}{Why might women use standard variants more than men?}
@@ -185,7 +190,7 @@
         \end{center}
         \begin{block}{What do we learn from this graph?}
           \uncover<2->{
-            Vowel height for (æh) differed between Jewish people and Italians in New York %\parencite{labov_social_2006}
+            Vowel height for (æh) differed between Jewish people and Italians in New York \parencite{labov_social_2006}
           }
         \end{block}
       \end{frame}
@@ -203,11 +208,11 @@
           \begin{itemize}
             \item \uttr{He be going to class every week.}
           \end{itemize}
-          Lack of 3rd person singular inflection %\parencite{rickford_addressee-_1994}
+          Lack of 3P sing.~inflection \parencite{rickford_addressee-_1994}
           \begin{itemize}
             \item \uttr{She want us to pass the papers to the front.}
           \end{itemize}
-          Past tense morpheme deletion %\parencite{finegan_african_2004}
+          Past tense morpheme deletion \parencite{finegan_african_2004}
           \begin{itemize}
             \item \uttr{He pass[] the salt.}
           \end{itemize}
@@ -216,7 +221,7 @@
 
       \begin{frame}[t]{\subonefive}
         \begin{block}{Another case study}
-          Chicano English
+          Chicano English (associated with Mexican Americans)
         \end{block}
         \only<1>{
           \begin{block}{Not Spanglish}
@@ -225,12 +230,74 @@
         }
         \only<2>{
           \begin{block}{Some notable features}
-
+            (oʊ) is realized as [o] \parencite{thomas_acoustic_2001}
+            \begin{itemize}
+              \item \lexi{boat} would be [ˈbot]
+            \end{itemize}
+            (ɪŋ) is realized with [i]
+            \begin{itemize}
+              \item \lexi{think} would be [ˈθiŋk]
+            \end{itemize}
+            Spanish-origin lexical expressions \parencite{wolfram_talkin_2006}
+            \begin{itemize}
+              \item \lexi{abuelo} for grandfather
+            \end{itemize}
+            Zero \lexi{have} perfect \parencite{penfield_chicano_1985}
+            \begin{itemize}
+              \item \uttr{I seen almost all his movies.}
+            \end{itemize}
           \end{block}
         }
       \end{frame}
 
-      \begin{frame}{References}
-        % \printbibliography
+      \begin{frame}{\subonefive}
+        \begin{block}{Some questions}
+          \begin{itemize}
+            \item How would you judge the quality of African-American English and Chicano English versus Standard American English?
+            \item<2-> Where might African-American English and Chicano English be spoken?
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}[t]{\subonefive}
+        \begin{block}{A last case study}
+          Lumbee English (associated with the Lumbee Indians)
+        \end{block}
+        \only<1>{
+          \begin{center}
+            \includegraphics[scale=0.035]{robeson_county.jpg}
+          \end{center}
+        }
+        \only<2>{
+          \begin{block}{Some notable \href{https://youtu.be/4BLzH8UGZrE?t=94}{features}}
+            (aɪ) is realized as [ɔɪ]
+            \begin{itemize}
+              \item \lexi{ride} would be [ˈɹɔɪd]
+            \end{itemize}
+            \lexi{Weren't} in 1P sing. \parencite{wolfram_dialect_1999}
+            \begin{itemize}
+              \item \uttr{I weren't over there last night.}
+            \end{itemize}
+            (is/are) realized as \lexi{bes}
+            \begin{itemize}
+              \item \uttr{The cats bes playing in the yard.}
+            \end{itemize}
+            Lexical expressions \parencite{wolfram_brickhouse_2006}
+            \begin{itemize}
+              \item \lexi{toten} `ghost', \lexi{buddyrow} `friend'
+            \end{itemize}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subonesix}
+      \begin{frame}{\subonesix}
+        \begin{block}{Try these}
+          \textcite{dawson_language_2016}, chapter 10 exercises 26, 27, 28, and 29
+        \end{block}
+      \end{frame}
+
+      \begin{frame}[allowframebreaks]{References}
+        \printbibliography
       \end{frame}
 \end{document}
