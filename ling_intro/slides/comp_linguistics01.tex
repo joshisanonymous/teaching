@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../shared/slide_preamble.tex}
+
+  % Document information
+  \subtitle[Computational Linguistics and Corpora]{Computational Linguistics and Corpora}
+
+  %% Custom commands
+  % Subsection/frame title
+  \newcommand{\suboneone}{What is it?}
+  \newcommand{\subtwoone}{}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \input{../shared/slide_intro.tex}
+
+  \section{Computational Linguistics and Corpora}
+    \subsection{\suboneone}
+      \begin{frame}{\suboneone}
+        \begin{definition}
+          \input{\defs/part1/def_computational_linguistics.tex}
+          \only<1>{
+            \begin{itemize}
+              \item Also called \alert{natural language processing}
+            \end{itemize}
+          }
+        \end{definition}
+        \begin{block}{Two goals of this engineering}
+          \only<1>{
+            Basing models on linguistic theories allows us to test those theories
+          }
+          \only<2->{
+            Models allow us to interact with computers and process data more efficiently
+          }
+        \end{block}
+        \uncover<2->{
+          \begin{columns}
+            \column{0.5\linewidth}
+              \includegraphics[scale=0.1]{alexa.jpg}
+            \column{0.5\linewidth}
+              \includegraphics[scale=0.325]{autocomplete_dino.jpg}
+          \end{columns}
+        }
+      \end{frame}
+
+  \section{Corpora}
+    \subsection{\subtwoone}
+      \begin{frame}{\subtwoone}
+
+      \end{frame}
+
+    \subsection{}
+      \begin{frame}{}
+        \begin{block}{Try these}
+          % \textcite{dawson_language_2016}, chapter 16 exercises
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{References}
+        % \printbibliography
+      \end{frame}
+\end{document}
