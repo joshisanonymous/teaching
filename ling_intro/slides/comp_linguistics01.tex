@@ -17,6 +17,8 @@
   \usepackage{listings}
     \lstset{basicstyle=\ttfamily\small,
             breaklines=true}
+  \usepackage[style=apa, backend=biber]{biblatex}
+    \addbibresource{../references/References.bib}
 
   % Document information
   \subtitle[Computational Linguistics and Corpora]{Computational Linguistics and Corpora}
@@ -71,8 +73,8 @@
           \begin{itemize}
             \item Shakespeare's works
             \item Google Books
-            \item NY Times newspapers from 1987 to 2007
             \item Sociolinguistic interviews
+            \item NY Times newspapers from 1987 to 2007
           \end{itemize}
         \end{example}
       \end{frame}
@@ -109,6 +111,15 @@
           \end{alertblock}
         }
         \only<4>{
+          \begin{block}{Part-of-speech annotations from the Brown corpus \parencite{francis_brown_1964}}
+            Here, the format is \texttt{word/pos}
+            \begin{itemize}
+              \item You might also find \texttt{<pos>word</pos>}
+            \end{itemize}
+          \end{block}
+          \lstinputlisting[firstline=15, lastline=15]{../data/brown.txt}
+        }
+        \only<5>{
           \begin{block}{How often do all four parts of our NP rule appear with the lemma \lexi{senator}?}
             \begin{enumerate}
               \item Log on to the UGA corpus server: \url{https://research.franklin.uga.edu/linglab/corpora}
@@ -118,7 +129,7 @@
             \end{enumerate}
           \end{block}
         }
-        \only<5>{
+        \only<6>{
           \begin{block}{And for fun...}
             Check which adjectives are most frequently used to describe senators
             \begin{enumerate}
@@ -129,6 +140,44 @@
         }
       \end{frame}
 
+      \begin{frame}[t]{\subtwotwo}
+        \begin{block}{Other levels of annotations}
+          \begin{itemize}
+            \item Syntactic structure (a \alert{treebank})
+            \item<3-> Phonetic transcription
+            \item<4-> Compositional semantics
+          \end{itemize}
+        \end{block}
+        \only<1>{
+          \begin{columns}
+            \column{0.6\linewidth}
+              \lstinputlisting[basicstyle=\tiny]{../data/treebank_tree.py}
+            \column{0.4\linewidth}
+              \begin{block}{}
+                From the Penn Treebank \parencite{marcus_building_1993}
+              \end{block}
+          \end{columns}
+        }
+        \only<2>{
+          \begin{center}
+            \includegraphics[scale=0.275]{treebank_examp.jpg}
+          \end{center}
+        }
+        \only<3->{
+          \begin{columns}
+            \column{0.5\linewidth}
+              \lstinputlisting[basicstyle=\tiny, firstline=300, lastline=315]{../data/cmudict-0.7b}
+            \column{0.5\linewidth}
+              \begin{block}{}
+                From the CMU Pronouncing Dictionary
+                \begin{itemize}
+                  \item \alert{ARPAbet}: \input{\defs/part4/def_arpabet.tex}
+                \end{itemize}
+              \end{block}
+          \end{columns}
+        }
+      \end{frame}
+
     \subsection{\subtwotwo}
       \begin{frame}{\subtwotwo}
         \begin{block}{What variety does the NYT corpus tell us about?}
@@ -136,19 +185,54 @@
             One register: Journalistic writing at the NYT
           }
         \end{block}
-        \begin{alertblock}<3->{Balanced corpus}
+        \begin{alertblock}<2->{Balanced corpus}
           \input{\defs/part4/def_balanced_corpus.tex}
         \end{alertblock}
+      \end{frame}
+
+      \begin{frame}{\subtwotwo}
+        \begin{block}{The British National Corpus (BNC) \parencite{bnc_consortium_british_2007}}
+          Meant to be representative of late 20th century British English by including:
+          \begin{tabular}{l l}
+            \hline
+            Writing             & Speech \\
+            \hline
+            Newspapers          & In different institutional settings \\
+            Scientific articles & Private conversations \\
+            Magazines           & \\
+            Fiction             &
+          \end{tabular}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subtwotwo}
+        \begin{block}{Corpus of Contemporary American English (COCA) \parencite{davies_corpus_2010}}
+          Meant to be representative of American English since the 1990s in the same way
+          \begin{itemize}
+            \item A \alert{monitor corpus}: \input{\defs/part4/def_monitor_corpus.tex}
+            \item As opposed to a \alert{reference corpus}: \input{\defs/part4/def_reference_corpus.tex}
+          \end{itemize}
+        \end{block}
+      \end{frame}
+
+      \begin{frame}{\subtwotwo}
+        \begin{alertblock}{Parallel corpus}
+          \input{\defs/part4/def_parallel_corpus.tex}
+        \end{alertblock}
+        \begin{block}{The Europarl corpus \parencite{koehn_europarl:_2009}}
+          Proceedings from the European Parliament in multiple languages from 1996 onward
+        \end{block}
+        % Add an example here in two languages
       \end{frame}
 
     \subsection{}
       \begin{frame}{}
         \begin{block}{Try these}
-          % \textcite{dawson_language_2016}, chapter 16 exercises
+          \textcite{dawson_language_2016}, chapter 16 exercise 12
         \end{block}
       \end{frame}
 
-      \begin{frame}{References}
-        % \printbibliography
+      \begin{frame}[allowframebreaks]{References}
+        \printbibliography
       \end{frame}
 \end{document}

@@ -11,10 +11,10 @@ AP -> Adj | Adv Adj
 
 # Lexical categories
 lexicon = """
-N -> 'dog' | 'house' | 'gumbo'
-Det -> 'the' | 'a'
-V -> 'run' | 'leave' | 'eat'
-P -> 'to' | 'from' | 'with'
+N -> 'dog' | 'house' | 'gumbo' | 'I' | 'elephant' | 'pajamas'
+Det -> 'the' | 'a' | 'an' | 'my'
+V -> 'run' | 'leave' | 'eat' | 'shot'
+P -> 'to' | 'from' | 'with' | 'in'
 Adj -> 'tall' | 'small' | 'green'
 Adv -> 'very' | 'really'
 """
