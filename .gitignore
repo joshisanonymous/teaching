@@ -249,3 +249,6 @@ exams*/
 # Attendance related stuff
 attendance/
 ling_intro/shared/attendance_preamble.tex
+
+# Python stuff
+__pycache__
