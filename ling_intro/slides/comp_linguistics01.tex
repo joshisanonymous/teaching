@@ -12,13 +12,20 @@
   % Read in standard preamble (cosmetic stuff)
   \input{../shared/slide_preamble.tex}
 
+  % Packages and settings
+  \usepackage{xcolor}
+  \usepackage{listings}
+    \lstset{basicstyle=\ttfamily\small,
+            breaklines=true}
+
   % Document information
   \subtitle[Computational Linguistics and Corpora]{Computational Linguistics and Corpora}
 
   %% Custom commands
   % Subsection/frame title
   \newcommand{\suboneone}{What is it?}
-  \newcommand{\subtwoone}{}
+  \newcommand{\subtwoone}{What are they?}
+  \newcommand{\subtwotwo}{Types of corpora}
 
 \begin{document}
   % Read in the standard intro slides (title page and table of contents)
@@ -26,24 +33,25 @@
 
   \section{Computational Linguistics and Corpora}
     \subsection{\suboneone}
-      \begin{frame}{\suboneone}
+      \begin{frame}[t]{\suboneone}
         \begin{definition}
           \input{\defs/part1/def_computational_linguistics.tex}
           \only<1>{
             \begin{itemize}
-              \item Also called \alert{natural language processing}
+              \item Also called \alert{natural language processing} or NLP
             \end{itemize}
           }
         \end{definition}
-        \begin{block}{Two goals of this engineering}
-          \only<1>{
+        \only<2>{
+          \begin{block}{Two goals of this engineering}
             Basing models on linguistic theories allows us to test those theories
-          }
-          \only<2->{
+          \end{block}
+          \lstinputlisting[firstline=3, lastline=10]{../data/grammar.py}
+        }
+        \only<3->{
+          \begin{block}{Two goals of this engineering}
             Models allow us to interact with computers and process data more efficiently
-          }
-        \end{block}
-        \uncover<2->{
+          \end{block}
           \begin{columns}
             \column{0.5\linewidth}
               \includegraphics[scale=0.1]{alexa.jpg}
@@ -56,7 +64,81 @@
   \section{Corpora}
     \subsection{\subtwoone}
       \begin{frame}{\subtwoone}
+        \begin{alertblock}{Corpus}
+          \input{\defs/part4/def_corpus.tex}
+        \end{alertblock}
+        \begin{example}
+          \begin{itemize}
+            \item Shakespeare's works
+            \item Google Books
+            \item NY Times newspapers from 1987 to 2007
+            \item Sociolinguistic interviews
+          \end{itemize}
+        \end{example}
+      \end{frame}
 
+      \begin{frame}[t]{\subtwoone}
+        \begin{block}{}
+          \begin{tabular}{l r}
+            \multicolumn{2}{c}{The NY Times} \\
+            \hline
+            Tokens                & 1,350,046,523 \\
+            \uncover<3->{Annotations} & \uncover<3->{part-of-speech \& lemma}
+          \end{tabular}
+        \end{block}
+        \only<1>{
+          \begin{alertblock}{Token}
+            \input{\defs/part4/def_token.tex}
+          \end{alertblock}
+          \begin{alertblock}{Type}
+            \input{\defs/part4/def_type.tex}
+          \end{alertblock}
+        }
+        \only<2>{
+          \lstinputlisting[lastline=10]{../data/prep_token_type.txt}
+        }
+        \only<3>{
+          \begin{alertblock}{Annotation}
+            \input{\defs/part4/def_annotation.tex}
+          \end{alertblock}
+          \begin{alertblock}{Lemma}
+            \input{\defs/part4/def_lemma.tex}
+            \begin{itemize}
+              \item You would look up \lexi{lasers} under the lemma \lexi{laser} in the dictionary
+            \end{itemize}
+          \end{alertblock}
+        }
+        \only<4>{
+          \begin{block}{How often do all four parts of our NP rule appear with the lemma \lexi{senator}?}
+            \begin{enumerate}
+              \item Log on to the UGA corpus server: \url{https://research.franklin.uga.edu/linglab/corpora}
+              \item Load CQP: \texttt{cqp -eC}
+              \item Load the NYT corpus: \texttt{NYT;}
+              \item Perform a query: \texttt{[pos="DT"] @[pos="JJ"] [lemma="senator"] [pos="IN"];}
+            \end{enumerate}
+          \end{block}
+        }
+        \only<5>{
+          \begin{block}{And for fun...}
+            Check which adjectives are most frequently used to describe senators
+            \begin{enumerate}
+              \setcounter{enumi}{4}
+              \item Type: \texttt{count Last by word on target[0];}
+            \end{enumerate}
+          \end{block}
+        }
+      \end{frame}
+
+    \subsection{\subtwotwo}
+      \begin{frame}{\subtwotwo}
+        \begin{block}{What variety does the NYT corpus tell us about?}
+          \uncover<2->{
+            One register: Journalistic writing at the NYT
+          }
+        \end{block}
+        \begin{alertblock}<3->{Balanced corpus}
+          \input{\defs/part4/def_balanced_corpus.tex}
+        \end{alertblock}
       \end{frame}
 
     \subsection{}
