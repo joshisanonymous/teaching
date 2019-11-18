@@ -1,0 +1,89 @@
+\documentclass[addpoints]{exam}
+  % Read in shared preamble for all homeworks
+  \input{../shared/homework_preamble.tex}
+
+  % Packages and settings
+  \usepackage{listings}
+    \lstset{basicstyle=\ttfamily\small,
+            breaklines=true}
+    \usepackage{graphicx}
+      \graphicspath{{../figures/}}
+
+  % Document information
+  \title{Homework 4: Psycholinguistics, Language Variation, \& Computational Linguistics}
+  \date{}
+
+\begin{document}
+  \maketitle
+
+  % Header
+  \input{../shared/homework_intro.tex}
+
+    \section{Psycholinguistics}
+      \instr{On the diagram below of the left hemisphere of the cerebrum, circle and label each of the following language centers: \emph{Wernicke's area}, \emph{Broca's} area, the \emph{Angular gyrus}, and the \emph{Sylvian fissure}. (1 point each)}
+  \begin{questions}
+        \question[4]
+          \includegraphics{brain_unlabelled.jpg}
+
+      \instr{Each of the following represents speech produced by someone who suffers from either \emph{Wernicke's} aphasia or \emph{Broca's} phasia. For each, identify which type they have. (1 point each)}
+        \question[1] \rule{4cm}{0.4pt} `What ... hovercraft? Well, it ... specialized boat ... sense. I mean, it go ... surface ... water. ... hovercraft ... sort of vessel ... got ... skirt all around ...'
+        \question[1] \rule{4cm}{0.4pt} `I take ... thing ... down, I not put ... back. I say ... rings ... top drawer ... bureau garage. You go ... them, ... Paul ... help you ... remount ... whole thing.'
+        \question[1] \rule{4cm}{0.4pt} `Now, you will infuriate from your point of percussionist that the Peruvian will be about half unlined. It will be more than that, I would think. So, you will module part of the shallow right.'
+        \question[1] \rule{4cm}{0.4pt} `That right. ... tapes and conversation detail ... become ... anonymous ... completely. No one ... know who ... words ... whose voices ... tapes. Together, they ... permanent record ... English language ... speak ... number.'
+        \question[1] \rule{4cm}{0.4pt} `I can't Amazonian the education window, with their shallow of money, brushing for transport for children out here to shape to the hospital to inflict a garden. The education Philson and the bogeyman governors have no desolate at all to fidget for that.'
+
+      \instr{Each of the following represents a sentence followed by an utterance of that sentence that has an error in it. Identify the type of error being made. (1 point each)}
+        \question[1] \rule{4cm}{0.4pt} \textit{Bacon and eggs} $\rightarrow$ `Beggs'
+        \question[1] \rule{4cm}{0.4pt} \textit{Tom came to the barn every day} $\rightarrow$ `Tarm came to the barn every day'
+        \question[1] \rule{4cm}{0.4pt} \textit{Get on the bus} $\rightarrow$ `Bet on the Gus'
+        \question[1] \rule{4cm}{0.4pt} \textit{The other darts look sharp} $\rightarrow$ `The other dart look sharp'
+        \question[1] \rule{4cm}{0.4pt} \textit{They rode elephants across the Alps} $\rightarrow$ `They rode Alps across the elephants'
+        \question[1] \rule{4cm}{0.4pt} \textit{The struggle to survive in hostile surroundings} $\rightarrow$ `The struggles to survive in hostile surrounding'
+        \question[1] \rule{4cm}{0.4pt} \textit{Shut the back gate} $\rightarrow$ `Shut the shack gate'
+
+    \section{Language Variation}
+      \instr{Many speakers in the South have what is called the \textsc{pin-pen} merger, which is the merging of the vowels /ɪ/ and /ɛ/ into just /ɪ/. This only occurs in specific phonetic environment. Use the data below to identify this environment. (2 points)}
+      \begin{tabular}{l l l}
+        Word & Southern English & Standard English \\
+        \hline
+        pin  & [ˈpɪn]           & [ˈpɪn] \\
+        pen  & [ˈpɪn]           & [ˈpɛn] \\
+        lit  & [ˈlɪt]           & [ˈlɪt] \\
+        let  & [ˈlɛt]           & [ˈlɛt] \\
+        Nick & [ˈnɪk]           & [ˈnɪk] \\
+        neck & [ˈnɛk]           & [ˈnɛk] \\
+        tin  & [ˈtɪn]           & [ˈtɪn] \\
+        ten  & [ˈtɪn]           & [ˈtɛn]
+      \end{tabular}
+        \question[2] Environment: \hrulefill
+
+      \instr{Something else}
+
+    \section{Computational Linguistics}
+      \instr{Use the text below, from the Brown corpus, to answer the following questions. When asked for parts-of-speech, simply give the abbreviations. You \emph{do not} need to know what the abbreviations stand for in order to complete this section. (1 point each)}
+        \lstinputlisting[firstline=24, lastline=27]{../data/brown.txt}
+
+        \question[1] What is the most frequent part-of-speech? \hrulefill
+          \begin{parts}
+            \part[1] How many types are there for this part-of-speech? \hrulefill
+            \part[2] List any types that have more than one token, if any: \hrulefill
+
+            \hrulefill
+          \end{parts}
+        \parbox{0.45\linewidth}{
+          \question[1] How many types are there? \hrulefill
+        }
+        \hspace{0.1\linewidth}
+        \parbox{0.45\linewidth}{
+          \question[1] How many tokens are there? \hrulefill
+        }
+
+  \end{questions}
+
+  \vspace{1.25cm}
+
+  % Grade
+  \begin{center}
+    \gradetable[v][pages]
+  \end{center}
+\end{document}
