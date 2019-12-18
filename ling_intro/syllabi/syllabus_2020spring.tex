@@ -1,0 +1,146 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Compile with XeLaTeX %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{longtable}
+  \usepackage{caption}
+    \captionsetup{labelformat=empty,
+                  font=bf}
+  \usepackage[backend=biber,style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+    \DeclareLanguageMapping{english}{english-apa}
+
+  % Custom commands
+  % Used to add a line break in a table cell
+  \newcommand{\cellbreak}[2]{
+    \begin{tabular}[t]{@{}l@{}}
+      #1\\
+      #2
+    \end{tabular}}
+  % Used to add some space above a row in a table
+  \newcommand{\rowvspace}{\rule{0pt}{14pt}}
+
+  % Document information
+  \title{LING2100: The Study of Language\footnote{The course syllabus is a general plan for the course; deviations announced to the class by the instructor may be necessary.}}
+  \author{Joshua McNeill}
+  \date{Fall, 2019}
+
+\begin{document}
+  \maketitle
+
+  \begin{center}
+    \begin{tabular}{@{} l r @{}}
+      E-mail: \url{joshua.mcneill@uga.edu}              & Class hours: M/W/F 11:15-12:05\\
+      Office hours: \input{../shared/office_hours.tex}  & M/W/F 1:25-2:15\\
+      Office: \input{../shared/office_location.tex}     & Classroom: Caldwell G10\\
+      TA supervisor: Mi-Ran Kim                         & Sections 24174/32824\\
+      Super e-mail: \url{mrkim@uga.edu}
+    \end{tabular}
+  \end{center}
+
+  \hrule
+
+  \paragraph{Description}
+    The \emph{scientific} study of language, emphasizing such topics as the organization of grammar, language in space and time, and the relationship between the study of language and other disciplines.
+
+  \paragraph{Objectives}
+    At the end of the course, students, having read a substantial body of material related to the scientific study of language, will be able to use linguistic terminology accurately; to discuss basic linguistic facts, theories, and methodologies; to analyze samples of written or spoken language from a variety of world languages; and to understand both language change and how language supports all learning and communication. They will be prepared to undertake more advanced and specific linguistic studies.
+
+  \paragraph{Topics}
+    The topics will consist of writings about various linguistic matters, including phonetics/phonology, morphology, syntax, lexicons, and semantics, as they relate to the general fields of sociolinguistics, historical linguistics, language acquisition, cognitive linguistics, and language variation. A number of graded tasks will be assigned, such as quizzes, tests, and various writing assignments done either in or outside of class.
+
+  \paragraph{Course Materials}
+    Everything you will need to know will be presented in class, but reading is encouraged.
+    \fullcitebib{dawson_language_2016}
+
+  \paragraph{Grading} \mbox{}\\
+    {\small
+      \begin{tabular}{@{} l @{} l l l @{} l l | r l @{}}
+        A   & (4.0) & 100 - 93  & C+  & (2.3) & 79.9 - 77 & Participation & 11\%\\
+        A-  & (3.7) & 92.9 - 90 & C   & (2.0) & 76.9 - 73 & Homework      & 45\% (4x11\% + 1x1\%)\\
+        B+  & (3.3) & 89.9 - 87 & C-  & (1.7) & 72.9 - 70 & Exams         & 44\% (4x11\%)\\
+        B   & (3.0) & 86.9 - 83 & D   & (1.0) & 69.9 - 60 & \\
+        B-  & (2.7) & 82.9 - 80 & F   & (0.0) & 59.9 - 0  & \\
+      \end{tabular}
+    }
+
+  \paragraph{Participation}
+    You are expected to post at least one question to the discussion forum on eLC for each of the four sections sections of the semester (which are correlated with each of the four homeworks and each of the four exams). Each question is worth 1\% of your final grade.
+
+    You are allowed three absences per semester (no need to explain), after which 1\% will be deducted from your final grade for each additional absence up to 7\%. If you find yourself in extentuating circumstances, please reach out sooner rather than later.
+
+  \paragraph{Make-up Work}
+    Homeworks \emph{will not be accepted late}. If you foresee that you will not be able to make it to an exam date, please get in touch with the instructor \emph{beforehand}. No make-ups will be allowed after the fact.
+
+    \begin{longtable}{c l l l}
+      Week  & Date (Day)  & Topic                           & Due by Scheduled Class\\
+      \hline
+      1     & 1/8 (W)     & Welcome \rowvspace              & \\
+            & 1/10 (F)    & Phonetics                       & Read 2.0 and 2.1\\
+      2     & 1/13 (M)    &                                 & Read 2.2\\
+            & 1/15 (W)    &                                 & Read 2.3\\
+            & 1/17 (F)    &                                 & Read 2.4\\
+      3     & 1/20 (M)    &                                 & Read 2.5\\
+            & 1/22 (W)    &                                 & Read 2.6\\
+            & 1/24 (F)    &                                 & \\
+      4     & 1/27 (M)    & Phonetics Review                & \cellbreak{Homework 0 and}
+                                                                        {Homework 1 due}\\
+            & 1/29 (W)    & Phonetics Exam                  & \\
+            & 1/31 (F)    & Phonology                       & Read 3.0 and 3.1\\
+      5     & 2/3 (M)     &                                 & Read 3.2\\
+            & 2/5 (W)     &                                 & Read 3.3\\
+            & 2/7 (F)     &                                 & Read 3.5\\
+      6     & 2/10 (M)    & Morphology                      & Read 4.0 and 4.1\\
+            & 2/12 (W)    &                                 & Read 4.2\\
+            & 2/14 (F)    &                                 & Read 4.3 and 4.4\\
+      7     & 2/17 (M)    &                                 & Read 4.5\\
+            & 2/19 (W)    & \cellbreak{Phonology \&}
+                                      {Morphology Review}   & Homework 2 due\\
+            & 2/21 (F)    & \cellbreak{Phonology \&}
+                                      {Morphology Exam}     & \\
+      8     & 2/23 (M)    & No class                        & \\
+            & 2/25 (W)    & No class                        & \\
+            & 2/28 (F)    & Syntax                          & Read 5.0 and 5.1\\
+      9     & 3/2 (M)     &                                 & Read 5.2\\
+            & 3/4 (W)     &                                 & Read 5.3\\
+            & 3/6 (F)     &                                 & Read 5.4\\
+      10    & 3/9 - 3/13  & Spring Break/No class           & \\
+            & 3/16 (M)    &                                 & Read 5.5\\
+            & 3/18 (W)    &                                 & \\
+      11    & 3/20 (F)    & Semantics                       & Read 6.0, 6.1, and 6.2\\
+            & 3/23 (M)    &                                 & Read 6.3\\
+            & 3/25 (W)    &                                 & Read 6.4\\
+      12    & 3/27 (F)    & Pragmatics                      & Read 7.0 and 7.1\\
+            & 3/30 (M)    &                                 & Read 7.2, 7.3 and 7.5\\
+            & 4/1 (W)     & \cellbreak{Syntax, Semantics}
+                                      {\& Pragmatics Review}& Homework 3 due\\
+      13    & 4/3 (F)     & \cellbreak{Syntax, Semantics}
+                                      {\& Pragmatics Exam}  & \\
+            & 4/6 (M)     & Psycholinguistics               & Read 9.0, 9.1, and 9.2\\
+            & 4/8 (W)     &                                 & Read 9.3\\
+      14    & 4/10 (F)    &                                 & Read 9.4\\
+            & 4/13 (M)    & Language Variation              & Read 10.0 and 10.1\\
+            & 4/15 (W)    &                                 & Read 10.2\\
+      15    & 4/17 (F)    &                                 & Read 10.3\\
+            & 4/20 (M)    &                                 & Read 10.4\\
+            & 4/22 (W)    &                                 & \\
+      16    & 4/24 (F)    & Computational Linguistics       & Read 16.0 and 16.5\\
+            & 4/27 (M)    &                                 & \\
+            & 4/28 (T)    & Final Review                    & Homework 4 due\\
+      17    & 5/4 (M)     & \cellbreak{Final (section 32824)}
+                                      {12-3}                & \\
+            & 5/6 (W)     & \cellbreak{Final (section 24174)}
+                                      {12-3}                &
+    \end{longtable}
+
+  \paragraph{University Honor Code and Academic Honesty Policy}
+    As a University of Georgia student, you have agreed to abide by the University’s academic honesty policy, ``A Culture of Honesty,'' and the Student Honor Code. All academic work must meet the standards described in ``A Culture of Honesty'' found at: \url{www.uga.edu/honesty}. Lack of knowledge of the academic honesty policy is not a reasonable explanation for a violation. Questions related to course assignments and the academic honesty policy should be directed to the instructor. The link to more detailed information about academic honesty can be found at: \url{www.uga.edu/ovpi/honesty/acadhon.htm}
+
+\end{document}
