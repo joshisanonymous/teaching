@@ -4,7 +4,7 @@
 % Compiled from material_IPA_en_chart.tex when a                                    %
 % standalone document is needed                                                     %
 %                                                                                   %
-% Code is only slightly from:                                                       %
+% Code is only slightly modified from:                                              %
 %   https://tex.stackexchange.com/questions/156955/tikz-pgf-linguistics-vowel-chart %
 %                                                                                   %
 % -Joshua McNeill (joshua dot mcneill at uga dot edu)                               %
@@ -33,20 +33,20 @@
   \draw (\V(3,0)) -- (\V(3,2));
 
   % Place all the unrounded-rounded pairs next, on top of the horizontal lines.
-  \path (\V(0,0))     node[vowel, left] {i} node[vowel, right] { } node[dot] {};
-  \path (\V(0,1))     node[vowel, left] { } node[vowel, right] { } node[dot] {};
-  \path (\V(0,2))     node[vowel, left] { } node[vowel, right] {u} node[dot] {};
-  \path (\V(0.5,0.4)) node[vowel, left] {ɪ} node[vowel, right] { } node[   ] {};
-  \path (\V(0.5,1.6)) node[vowel, left] { } node[vowel, right] {ʊ} node[   ] {};
-  \path (\V(1,0))     node[vowel, left] {e} node[vowel, right] { } node[dot] {};
-  \path (\V(1,1))     node[vowel, left] { } node[vowel, right] { } node[dot] {};
-  \path (\V(1,2))     node[vowel, left] { } node[vowel, right] {o} node[dot] {};
-  \path (\V(2,0))     node[vowel, left] {ɛ} node[vowel, right] { } node[dot] {};
-  \path (\V(2,1))     node[vowel, left] { } node[vowel, right] { } node[dot] {};
-  \path (\V(2,2))     node[vowel, left] {ʌ} node[vowel, right] {ɔ} node[dot] {};
-  \path (\V(2.5,0))   node[vowel, left] {æ} node[vowel, right] { } node[   ] {};
-  \path (\V(3,0))     node[vowel, left] {a} node[vowel, right] { } node[dot] {};
-  \path (\V(3,2))     node[vowel, left] {ɑ} node[vowel, right] { } node[dot] {};
+  \path (\V(0,0))     node[vowel, left] {i}          node[vowel, right] { }          node[dot] {};
+  \path (\V(0,1))     node[vowel, left] { }          node[vowel, right] { }          node[dot] {};
+  \path (\V(0,2))     node[vowel, left] { }          node[vowel, right] {u}          node[dot] {};
+  \path (\V(0.5,0.4)) node[vowel, left] {\textbf{ɪ}} node[vowel, right] { }          node[   ] {};
+  \path (\V(0.5,1.6)) node[vowel, left] { }          node[vowel, right] {\textbf{ʊ}} node[   ] {};
+  \path (\V(1,0))     node[vowel, left] {e}          node[vowel, right] { }          node[dot] {};
+  \path (\V(1,1))     node[vowel, left] { }          node[vowel, right] { }          node[dot] {};
+  \path (\V(1,2))     node[vowel, left] { }          node[vowel, right] {o}          node[dot] {};
+  \path (\V(2,0))     node[vowel, left] {\textbf{ɛ}} node[vowel, right] { }          node[dot] {};
+  \path (\V(2,1))     node[vowel, left] { }          node[vowel, right] { }          node[dot] {};
+  \path (\V(2,2))     node[vowel, left] {\textbf{ʌ}} node[vowel, right] {ɔ}          node[dot] {};
+  \path (\V(2.5,0))   node[vowel, left] {\textbf{æ}} node[vowel, right] { }          node[   ] {};
+  \path (\V(3,0))     node[vowel, left] {a}          node[vowel, right] { }          node[dot] {};
+  \path (\V(3,2))     node[vowel, left] {ɑ}          node[vowel, right] { }          node[dot] {};
 
   % Draw the vertical lines.
   \draw (\V(0,0)) -- (\V(3,0));
@@ -54,6 +54,12 @@
   \draw (\V(0,2)) -- (\V(3,2));
 
   % Place the unpaired symbols last, on top of the vertical lines.
-  \path (\V(1.5,1))   node[vowel]       {ə};
-  \path (\V(2.5,1))   node[vowel]       { };
+  \path (\V(1.5,1))   node[vowel]       {\textbf{ə}};
+  \path (\V(-0.25,0)) node[vowel]       {front};
+  \path (\V(-0.25,1)) node[vowel]       {central};
+  \path (\V(-0.25,2)) node[vowel]       {back};
+  \path (\V(0,-0.5))  node[vowel]       {high};
+  \path (\V(1,-0.8))  node[vowel]       {high-mid};
+  \path (\V(2,-1.55)) node[vowel]       {low-mid};
+  \path (\V(3,-2.95)) node[vowel]       {low};
 \end{tikzpicture}
