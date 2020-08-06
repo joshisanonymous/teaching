@@ -1,0 +1,159 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Compile with XeLaTeX %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{longtable}
+  \usepackage{caption}
+    \captionsetup{labelformat=empty,
+                  font=bf}
+  \usepackage[backend=biber,style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+    \DeclareLanguageMapping{english}{english-apa}
+  \usepackage[normalem]{ulem}
+
+  % Custom commands
+  % Used to add some space above a row in a table
+  \newcommand{\rowvspace}{\rule{0pt}{14pt}}
+
+  % Document information
+  \title{LING2100: The Study of Language\footnote{The course syllabus is a general plan for the course; deviations announced to the class by the instructor may be necessary.}}
+  \author{Joshua McNeill}
+  \date{Fall, 2020}
+
+\begin{document}
+  \maketitle
+
+  \begin{center}
+    \begin{tabular}{@{} l r @{}}
+      E-mail: \url{joshua.mcneill@uga.edu}              & Class hours: M/W/F 10:10-11:00\\
+      Office hours: \input{../shared/office_hours.tex}  & M/W/F 11:15-12:05\\
+      Office: \input{../shared/office_location.tex}     & Classrooms: Journalism 508\\
+      TA supervisor: Mi-Ran Kim                         & LeConte 323\\
+      Super e-mail: \url{mrkim@uga.edu}                 & Sections: 40516/11637
+    \end{tabular}
+  \end{center}
+
+  \hrule
+
+  \paragraph{Description}
+    The \emph{scientific} study of language, emphasizing such topics as the organization of grammar, language in space and time, and the relationship between the study of language and other disciplines.
+
+  \paragraph{Objectives}
+    At the end of the course, students, having read a substantial body of material related to the scientific study of language, will be able to use linguistic terminology accurately; to discuss basic linguistic facts, theories, and methodologies; to analyze samples of written or spoken language from a variety of world languages; and to understand both language change and how language supports all learning and communication. They will be prepared to undertake more advanced and specific linguistic studies.
+
+  \paragraph{Topics}
+    The topics will consist of writings about various linguistic matters, including phonetics/phonology, morphology, syntax, lexicons, and semantics, as they relate to the general fields of sociolinguistics, historical linguistics, language acquisition, cognitive linguistics, and language variation. A number of graded tasks will be assigned, such as quizzes, tests, and various writing assignments done either in or outside of class.
+
+  \paragraph{Course Materials}
+    Everything you will need to know will be presented in the video lectures, but reading is encouraged.
+    \fullcitebib{dawson_language_2016}
+
+  \paragraph{Grading} \mbox{}\\
+    {\small
+      \begin{tabular}{@{} l @{} l l l @{} l l | r l @{}}
+        A   & (4.0) & 100 - 93  & C+  & (2.3) & 79.9 - 77 & Participation & 7.5\%\\
+        A-  & (3.7) & 92.9 - 90 & C   & (2.0) & 76.9 - 73 & Homework      & 47.5\%\\
+        B+  & (3.3) & 89.9 - 87 & C-  & (1.7) & 72.9 - 70 &               & (6x7.5\% + 1x2.5\%)\\
+        B   & (3.0) & 86.9 - 83 & D   & (1.0) & 69.9 - 60 & Exams         & 45\% (6x7.5\%)\\
+        B-  & (2.7) & 82.9 - 80 & F   & (0.0) & 59.9 - 0  &               &
+      \end{tabular}
+    }
+
+  \paragraph{Class Attendance}
+    While attendance will not be taken this semester except for purposes of contact tracing, in person classes will still be held for discussion and activities related to the lectures.
+    For each week listed in the schedule below, you will be expected to attend one of the three days depending on the group you are in, as follows:
+    \begin{itemize}
+      \item Group 1: First day of each week
+      \item Group 2: Second day of each week
+      \item Group 3: Third day of each week
+    \end{itemize}
+    You will be placed into groups randomly.
+    However, you may arrange to switch groups with another student if you like, but only if you both agree to switch groups as we \emph{cannot} have in person class sessions with more than 11 students in the room.
+
+  \paragraph{Participation Grade}
+    You will be expected to post at least one question to the discussion forum on eLC for each of the six sections of the semester (which are correlated with each of the six homeworks and each of the six exams). Each question is worth 1.25\% of your final grade.
+
+  \paragraph{Make-up Work}
+    Homeworks and exams \emph{will not be accepted late}.
+
+    \begin{longtable}{c l l | l}
+      Week  & Date (Day)  & Topic                           & By Scheduled Class \\
+      \hline
+      \hline
+      1     & 8/21 (F)    & Welcome \rowvspace              & \\
+            & 8/24 (M)    &                                 & \\
+            & 8/26 (W)    &                                 & \\
+      \hline
+      2     & 8/28 (F)    & Phonetics                       & Read 2.0 - 2.3\\
+            & 8/31 (M)    &                                 & Watch\\
+            & 9/2  (W)    &                                 & \\
+      \hline
+      3     & 9/4  (F)    &                                 & Read 2.4 - 2.6\\
+            & \sout{9/7  (M)} & No class (Labor Day)            & Watch\\
+            & 9/9  (W)    &                                 & \\
+            & 9/11 (F)    &                                 & \\
+      \hline
+      4     & 9/14 (M)    & Phonology                       & HW 0, 1 \& Exam 1 due\\
+            & 9/16 (W)    &                                 & Read 3.0 - 3.2\\
+            & 9/18 (F)    &                                 & Watch\\
+      \hline
+      5     & 9/21 (M)    &                                 & Read 3.3 \& 3.5\\
+            & 9/23 (W)    &                                 & Watch\\
+            & 9/25 (F)    &                                 & \\
+      \hline
+      6     & 9/28 (M)    & Morphology                      & HW 2 \& Exam 2 due\\
+            & 9/30 (W)    &                                 & Read 4.0 - 4.2\\
+            & 10/2 (F)    &                                 & Watch\\
+      \hline
+      7     & 10/5 (M)    &                                 & Read 4.3 - 4.5\\
+            & 10/7 (W)    &                                 & Watch\\
+            & 10/9 (F)    &                                 & \\
+      \hline
+      8     & 10/12 (M)   & Syntax                          & HW 3 \& Exam 3 due\\
+            & 10/14 (W)   &                                 & Read 5.0 - 5.3\\
+            & 10/16 (F)   &                                 & Watch\\
+      \hline
+      9     & 10/19 (M)   &                                 & Read 5.4 - 5.5\\
+            & 10/21 (W)   &                                 & Watch\\
+            & 10/23 (F)   &                                 & \\
+      \hline
+      10    & 10/26 (M)   & Semantics                       & HW 4 \& Exam 4 due\\
+            & 10/28 (W)   &                                 & Read 6.0 - 6.4\\
+            & \sout{10/30 (F)}   & No class (Fall break)           & Watch\\
+            & 11/2 (M)    &                                 & \\
+      \hline
+      11    & 11/4 (W)    & Pragmatics                      & Read 7.0 - 7.3 \& 7.5\\
+            & 11/6 (F)    &                                 & Watch\\
+            & 11/9 (M)    &                                 & \\
+      \hline
+      12    & 11/11 (W)   & Psycholinguistics               & HW 5 \& Exam 5 due\\
+            & 11/13 (F)   &                                 & Read 9.0 - 9.4\\
+            & 11/16 (M)   &                                 & Watch\\
+      \hline
+      13    & 11/18 (W)   & Language Variation              & Read 10.0 - 10.2\\
+            & 11/20 (F)   &                                 & Watch\\
+            & 11/23 (M)   &                                 & \\
+            & 11/25 - 11/27 & No class (Thanksgiving)       & \\
+      \hline
+      14    & 11/30 (M)   &                                 & Read 10.3 \& 10.4\\
+            & 12/2 (W)    &                                 & Watch\\
+            & 12/4 (F)    &                                 & \\
+      \hline
+      15    & 12/7 (M)    & Computational                   & Read 16.0 \& 16.5\\
+            & 12/9 (W)    & Linguistics                     & Watch\\
+      \hline
+      16    & ??          & Final (section 40516)           & \\
+            & ??          & Final (section 11637)           &
+    \end{longtable}
+
+  \paragraph{University Honor Code and Academic Honesty Policy}
+    As a University of Georgia student, you have agreed to abide by the University’s academic honesty policy, ``A Culture of Honesty,'' and the Student Honor Code. All academic work must meet the standards described in ``A Culture of Honesty'' found at: \url{www.uga.edu/honesty}. Lack of knowledge of the academic honesty policy is not a reasonable explanation for a violation. Questions related to course assignments and the academic honesty policy should be directed to the instructor. The link to more detailed information about academic honesty can be found at: \url{www.uga.edu/ovpi/honesty/acadhon.htm}
+
+\end{document}
