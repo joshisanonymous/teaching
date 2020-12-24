@@ -1,0 +1,166 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Compile with XeLaTeX %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+  % Packages and settings
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage{hyperref}
+    \hypersetup{colorlinks=true,
+                allcolors=blue}
+  \usepackage{longtable}
+  \usepackage{caption}
+    \captionsetup{labelformat=empty,
+                  font=bf}
+  \usepackage[backend=biber,style=apa]{biblatex}
+    \addbibresource{../references/References.bib}
+    \DeclareLanguageMapping{english}{english-apa}
+  \usepackage[normalem]{ulem}
+
+  % Custom commands
+  % Used to add some space above a row in a table
+  % \newcommand{\rowvspace}{\rule{0pt}{14pt}}
+
+  % Document information
+  \title{LING2100: The Study of Language\footnote{The course syllabus is a general plan for the course; deviations announced to the class by the instructor may be necessary.}}
+  \author{Joshua McNeill}
+  \date{Spring, 2021}
+
+\begin{document}
+  \maketitle
+
+  \begin{center}
+    \begin{tabular}{@{} l r @{}}
+      E-mail: \url{joshua.mcneill@uga.edu}              & Class hours: M/W/F 10:20-11:10\\
+      Office hours: \input{../shared/office_hours.tex}  & M/W/F 11:30-12:20\\
+      Office: \input{../shared/office_location.tex}     & Classrooms: Caldwell G-10\\
+      TA supervisor: Mi-Ran Kim                         & Sections: 24169/24172\\
+      Super e-mail: \url{mrkim@uga.edu}                 &
+    \end{tabular}
+  \end{center}
+
+  \hrule
+
+  \paragraph{Description}
+    The \emph{scientific} study of language, emphasizing such topics as the organization of grammar, language in space and time, and the relationship between the study of language and other disciplines.
+
+  \paragraph{Objectives}
+    At the end of the course, students, having read a substantial body of material related to the scientific study of language, will be able to use linguistic terminology accurately; to discuss basic linguistic facts, theories, and methodologies; to analyze samples of written or spoken language from a variety of world languages; and to understand both language change and how language supports all learning and communication. They will be prepared to undertake more advanced and specific linguistic studies.
+
+  \paragraph{Topics}
+    The topics will consist of writings about various linguistic matters, including phonetics/phonology, morphology, syntax, lexicons, and semantics, as they relate to the general fields of sociolinguistics, historical linguistics, language acquisition, cognitive linguistics, and language variation. A number of graded tasks will be assigned, such as quizzes, tests, and various writing assignments done either in or outside of class.
+
+  \paragraph{Course Materials}
+    Everything you will need to know will be presented in the video lectures, but reading is encouraged.
+    \fullcitebib{dawson_language_2016}
+
+  \paragraph{Grading} \mbox{}\\
+    {\small
+      \begin{tabular}{@{} l @{} l l l @{} l l | r l @{}}
+        A   & (4.0) & 100 - 93  & C+  & (2.3) & 79.9 - 77 & Participation & 7.5\%\\
+        A-  & (3.7) & 92.9 - 90 & C   & (2.0) & 76.9 - 73 & Homework      & 47.5\%\\
+        B+  & (3.3) & 89.9 - 87 & C-  & (1.7) & 72.9 - 70 &               & (6x7.5\% + 1x2.5\%)\\
+        B   & (3.0) & 86.9 - 83 & D   & (1.0) & 69.9 - 60 & Exams         & 45\% (6x7.5\%)\\
+        B-  & (2.7) & 82.9 - 80 & F   & (0.0) & 59.9 - 0  &               &
+      \end{tabular}
+    }
+
+  \paragraph{Class Attendance}
+    While attendance will not be taken this semester except for purposes of contact tracing, in person classes will still be held for discussion and activities related to the video lectures.
+    For each week listed in the schedule below, you will be expected to attend one of the three days depending on the group you are in, as follows:
+    \begin{itemize}
+      \item Group 1: First day of each week
+      \item Group 2: Second day of each week
+      \item Group 3: Third day of each week
+    \end{itemize}
+    If you access eLC before the beginning of class sessions, you will be able to choose which group you would like to be in.
+    After classes have started, you will be placed into a group automatically.
+    However, you may arrange to switch groups with another student if you like, but only if you both agree to switch groups as we \emph{cannot} have in person class sessions with more than 11 students in the room.
+
+    \emph{PLEASE NOTE}: ``First day of each week'' \emph{does not} just mean ``Monday''. Three meetings in a row constitute a week, so because of holidays, the first day will change periodically. Refer to the schedule below to see where the ``first'', ``second'', and ``third'' days of the week fall at any given time during the semester.
+
+  \paragraph{Participation Grade}
+    You will be expected to post at least one question to the discussion forum on eLC for each of the six sections of the semester (which are correlated with each of the six homeworks and each of the six exams). Each question is worth 1.25\% of your final grade.
+
+  \paragraph{Make-up Work}
+    Homeworks and exams \emph{will not be accepted late}.
+
+    \begin{longtable}{c l l | l}
+      Week  & Date (Day)  & Topic                           & Due Before Meeting \\
+      \hline
+      \hline
+      1     & 1/13 (W)    & Welcome                         & \\
+            & 1/15 (F)    &                                 & \\
+            & \sout{1/18 (M)} & No class (MLK Day)          & \\
+            & 1/20 (W)    &                                 & \\
+      \hline
+      2     & 1/22 (F)    & Phonetics                       & Read 2.0 - 2.3\\
+            & 1/25 (M)    &                                 & Watch phonetics01-03\\
+            & 1/27 (W)    &                                 & \\
+      \hline
+      3     & 1/29 (F)    &                                 & Read 2.5 - 2.6\\
+            & 2/1  (M)    &                                 & Watch phonetics05-06\\
+            & 2/3  (W)    &                                 & \\
+      \hline
+      4     & 2/5  (F)    & Phonology                       & HW 0, 1 \& Exam 1 due\\
+            & 2/8  (M)    &                                 & Read 3.0 - 3.2\\
+            & 2/10 (W)    &                                 & Watch\\
+            &             &                                 & phonology01-02\\
+      \hline
+      5     & 2/12 (F)    &                                 & Read 3.3 \& 3.5\\
+            & 2/15 (M)    &                                 & Watch\\
+            & \sout{2/17 (W)} & No class (Inst Break)       & phonology03-04\\
+            & 2/19 (F)    &                                 & \\
+      \hline
+      6     & 2/22 (M)    & Morphology                      & HW 2 \& Exam 2 due\\
+            & 2/24 (W)    &                                 & Read 4.0 - 4.2\\
+            & 2/26 (F)    &                                 & Watch\\
+            &             &                                 & morphology01-02\\
+      \hline
+      7     & 3/1  (M)    &                                 & Read 4.3 - 4.5\\
+            & 3/3  (W)    &                                 & Watch\\
+            & 3/5  (F)    &                                 & morphology03-04\\
+      \hline
+      8     & 3/8  (M)    & Syntax                          & HW 3 \& Exam 3 due\\
+            & 3/10 (W)    &                                 & Read 5.0 - 5.3\\
+            & \sout{3/12 (F)} & No class (Inst Break)       & Watch syntax01-03\\
+            & 3/15 (M)    &                                 & \\
+      \hline
+      9     & 3/17 (W)    &                                 & Read 5.4 - 5.5\\
+            & 3/19 (F)    &                                 & Watch syntax04-05\\
+            & 3/22 (M)    &                                 & \\
+      \hline
+      10    & 3/24 (W)    & Semantics                       & HW 4 \& Exam 4 due\\
+            & 3/26 (F)    &                                 & Read 6.0 - 6.4\\
+            & 3/29 (M)    &                                 & Watch semantics01-03\\
+      \hline
+      11    & 3/31 (W)    & Pragmatics                      & Read 7.0 - 7.3 \& 7.5\\
+            & 4/2  (F)    &                                 & Watch\\
+            & 4/5  (M)    &                                 & pragmatics01-03\\
+      \hline
+      12    & 4/7  (W)    & Psycholinguistics               & HW 5 \& Exam 5 due\\
+            & 4/9  (F)    &                                 & Read 9.0 - 9.4\\
+            & 4/12 (M)    &                                 & Watch\\
+            &             &                                 & psycholinguistics01-03\\
+      \hline
+      13    & 4/14 (W)    & Language Variation              & Read 10.0 - 10.2\\
+            & 4/16 (F)    &                                 & Watch\\
+            & 4/19 (M)    &                                 & lang\_variation01-02\\
+      \hline
+      14    & 4/21 (W)    &                                 & Read 10.3 \& 10.4\\
+            & 4/23 (F)    &                                 & Watch\\
+            & 4/26 (M)    &                                 & lang\_variation03-04\\
+      \hline
+      15    & 4/28 (W)    & Computational                   & Read 16.0 \& 16.5\\
+            & 4/30 (F)    & Linguistics                     & Watch\\
+            & 5/3  (M)    &                                 & comp\_linguistics01\\
+      \hline
+      16    & 5/5  (W)    & Final (section 24169)           & \\
+            & 5/7  (F)    & Final (section 24172)           &
+    \end{longtable}
+
+  \paragraph{University Honor Code and Academic Honesty Policy}
+    As a University of Georgia student, you have agreed to abide by the University’s academic honesty policy, ``A Culture of Honesty,'' and the Student Honor Code. All academic work must meet the standards described in ``A Culture of Honesty'' found at: \url{www.uga.edu/honesty}. Lack of knowledge of the academic honesty policy is not a reasonable explanation for a violation. Questions related to course assignments and the academic honesty policy should be directed to the instructor. The link to more detailed information about academic honesty can be found at: \url{www.uga.edu/ovpi/honesty/acadhon.htm}
+
+\end{document}
