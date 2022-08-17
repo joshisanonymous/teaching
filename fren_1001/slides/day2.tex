@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../../shared/slide_preamble.tex}
+
+  % Packages and settings
+
+  % Document information
+  \subtitle[Présentons-nous]{Présentons-nous}
+
+  %% Custom commands
+  % Subsection/frame titles
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \begin{frame}
+    \titlepage
+    \tiny{Office: \input{../../shared/office_location.tex}\\
+          Office hours: \input{../../shared/office_hours.tex}}
+  \end{frame}
+
+  \begin{frame}{Qui est-ce?}
+    \gloss{Say who that is and confirm with a \lexi{pronom disjoint}.}
+    \centering
+    \includegraphics[scale=0.22]{hulk_et_she-hulk.jpg}
+
+    \uncover<2->{
+      Ce sont \alert<3->{Hulk et She-Hulk}.
+    }
+
+    \uncover<3->{
+      Ce sont \alert{eux}.
+    }
+  \end{frame}
+
+  \begin{frame}{Qui est-ce?}
+    \centering
+    \includegraphics[scale=0.15]{stromae.jpg}
+
+    \uncover<2->{
+      C'est \alert<3->{Stromae}.
+    }
+
+    \uncover<3->{
+      C'est \alert{lui}.
+    }
+  \end{frame}
+
+  \begin{frame}{Toi ou vous?}
+    \gloss{Find a partner, and imagine that they are the person on their card.
+    Introduce yourself, ask them how they are doing, and tell them how you are doing.
+    For example:}
+
+    <E1 $\to$ teacher, E2 $\to$ student>
+    \begin{itemize}
+      \item[E1:] Bonjour, je m'appelle Monsieur McNeill. Comment tu t'appelles?
+      \item[E2:] Bonjour, je m'appelle ...
+      \item[E1:] Comment ça va?
+      \item[E2:] Je suis fatigué, et vous?
+      \item[E1:] Je vais bien.
+    \end{itemize}
+  \end{frame}
+\end{document}
