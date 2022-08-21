@@ -243,8 +243,9 @@ TSWLatexianTemp*
 # generated if using elsarticle.cls
 *.spl
 
-# Specific exams
-exams*/
+# Exams and quizzes
+exams/
+quizzes/
 
 # Attendance related stuff
 attendance/
