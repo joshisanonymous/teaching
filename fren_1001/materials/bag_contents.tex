@@ -1,0 +1,55 @@
+% This goes with an activity for day 3
+
+\documentclass{article}
+  % Packages
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage[margin=1in]{geometry}
+  \usepackage{calc}
+  \pagenumbering{gobble}
+
+  % Document info
+  \date{}
+
+  % New commands
+  \newcommand{\tabHeader}[1]{\textbf{#1}}
+
+\begin{document}
+  \centering
+  \noindent
+  {\LARGE
+    \begin{tabular}{| p{0.5\textwidth-2\tabcolsep} | p{0.5\textwidth-2\tabcolsep} |}
+      \hline
+      une craie             & une gomme \\
+      un livre              & un livre \\
+      une brosse            & une brosse \\
+      une carte             & un crayon \\
+      une gomme             & un cahier \\
+      \hline
+      une affiche           & un stylo \\
+      une brosse            & un crayon \\
+      un téléphone portable & une brosse \\
+      un livre              & une craie \\
+      un feutre             & une feuille de papier \\
+      \hline
+      un feutre             & une brosse \\
+      un cahier             & une craie \\
+      une tablette          & un ordinateur portable \\
+      un crayon             & une carte \\
+      un livre              & un livre \\
+      \hline
+      un téléphone portable & une feuille de papier \\
+      un stylo              & un ordinateur portable \\
+      un crayon             & une brosse \\
+      une gomme             & une gomme \\
+      un feutre             & une affiche \\
+      \hline
+      une brosse            & un crayon \\
+      un feutre             & un stylo \\
+      un cahier             & un ordinateur portable \\
+      une tablette          & une affiche \\
+      un téléphone portable & une feuille de papier \\
+      \hline
+    \end{tabular}
+  }
+\end{document}
