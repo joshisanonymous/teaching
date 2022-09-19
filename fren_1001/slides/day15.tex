@@ -1,0 +1,72 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../../shared/slide_preamble.tex}
+
+  % Packages and settings
+
+  % Document information
+  \subtitle[Nos loisirs (encore)]{Nos loisirs (encore)}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \begin{frame}
+    \titlepage
+    \tiny{Office: \input{../../shared/office_location.tex}\\
+          Office hours: \input{../../shared/office_hours.tex}}
+  \end{frame}
+
+  \begin{frame}{Annonces}
+    \begin{itemize}
+      \item Le devoir 2 à rendre le 23 septembre.
+      \item[] \tinygloss{Homework 2 to be turned in September 23rd.}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Révision}
+    \begin{center}
+      \input{../conj_tables/faire.tex}
+    \end{center}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Quiz
+    \end{center}
+  \end{frame}
+
+  \begin{frame}{Un sondage}
+    \begin{columns}
+      \column{0.5\textwidth}
+        \includegraphics[scale=0.75]{loisirs_france.png} \\
+        Les Français...
+        \begin{itemize}
+          \item travaillent 35 heures par semaine.
+          \item prennent 5 semaines de vacances au moins.
+        \end{itemize}
+      \column{0.5\textwidth}
+        Comparons les loisirs des Français avec les loisirs de la classe. \\
+        \tinygloss{Let's compare the leisure activities of the French with the leisure activities of the class.}
+        \begin{enumerate}
+          \item Demandez $\to$ \emph{Qui fait de la musique?}
+          \item Comptez les mains
+          \item Annoncez les résultats $\to$ \emph{6 étudiants font de la musique. C'est 30 pour cent.}
+        \end{enumerate}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Questions?
+    \end{center}
+  \end{frame}
+\end{document}
