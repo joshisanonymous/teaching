@@ -1,0 +1,50 @@
+% This goes with an activity for day 24
+
+\documentclass{article}
+  % Packages
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage[margin=1in]{geometry}
+  \usepackage{calc}
+  \pagenumbering{gobble}
+
+  % Document info
+  \date{}
+
+  % New commands
+  \newcommand{\tabHeader}[1]{\textbf{#1}}
+  \newcommand{\tabrowEnd}{\rule{0pt}{45pt}\\}
+
+\begin{document}
+  \centering
+  \noindent
+  {\LARGE
+    \begin{tabular}{| p{0.5\textwidth-2\tabcolsep} | p{0.5\textwidth-2\tabcolsep} |}
+      \hline
+      acteur/actrice       & architecte \tabrowEnd
+      \hline
+      artiste              & assistant/e \tabrowEnd
+      \hline
+      assistant/e social   & avocat/e \tabrowEnd
+      \hline
+      musicien/ne          & comptable \tabrowEnd
+      \hline
+      dentiste             & directeur/directrice \tabrowEnd
+      \hline
+      docteur/e            & écrivain/e \tabrowEnd
+      \hline
+      fonctionnaire        & homme/femme d'affaires \tabrowEnd
+      \hline
+      infirmier/infirmière & informaticien/ne \tabrowEnd
+      \hline
+      ingénieur/e          & journaliste \tabrowEnd
+      \hline
+      pharmacien/ne        & policier/policière \tabrowEnd
+      \hline
+      pompier/pompière     & professeur/e \tabrowEnd
+      \hline
+      serveur/serveuse     & vendeur/vendeuse \tabrowEnd
+      \hline
+    \end{tabular}
+  }
+\end{document}
