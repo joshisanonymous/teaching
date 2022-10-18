@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../../shared/slide_preamble.tex}
+
+  % Packages and settings
+
+  % Document information
+  \subtitle[Heures et verbes \lexi{-ir}]{Les heures et les verbes \lexi{-ir}}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \begin{frame}
+    \titlepage
+    \tiny{Office: \input{../../shared/office_location.tex}\\
+          Office hours: \input{../../shared/office_hours.tex}}
+  \end{frame}
+
+  \begin{frame}[t]{Des comparaisons}
+    Qui est...
+    \only<1-2>{
+      plus grand? \underline{\uncover<2>{Lebron James (6'9'')}}
+    }
+    \only<3-4>{
+      plus chic? \underline{\uncover<4>{Cyndi Lauper}}
+    }
+    \only<5-6>{
+      plus ? \underline{\uncover<6>{}}
+    }
+    \vspace{0.5cm}
+    \begin{columns}
+      \column{0.5\textwidth}
+        \begin{center}
+          \only<1-2>{
+            \includegraphics[scale=0.5]{lebron.jpg}
+          }
+          \only<3-4>{
+            \includegraphics[scale=0.5]{lady_gaga.jpg}
+          }
+        \end{center}
+      \column{0.5\textwidth}
+        \begin{center}
+          \only<1-2>{
+            \includegraphics[scale=0.5]{jordan.png}
+          }
+          \only<3-4>{
+            \includegraphics[scale=0.5]{cyndi_lauper.jpg}
+          }
+        \end{center}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Quiz
+    \end{center}
+  \end{frame}
+
+  \begin{frame}{}
+     \\
+    \tinygloss{}
+    \begin{columns}
+      \column{0.6\textwidth}
+        \begin{description}
+          \item[] \textbf{Modèle:}
+          \item[] \lexi{se lever}
+          \item[E1:]
+        \end{description}
+      \column{0.4\textwidth}
+        \begin{enumerate}
+          \item
+        \end{enumerate}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{}
+     \\
+    \tinygloss{}
+    \begin{columns}
+      \column{0.6\textwidth}
+        \begin{description}
+          \item[] \textbf{Modèle:}
+          \item[] \lexi{se lever}
+          \item[E1:]
+        \end{description}
+      \column{0.4\textwidth}
+        \begin{enumerate}
+          \item
+        \end{enumerate}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Questions?
+    \end{center}
+  \end{frame}
+\end{document}
