@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../../shared/slide_preamble.tex}
+
+  % Packages and settings
+
+  % Document information
+  \subtitle[\lexi{Mettre} et adjectifs démonstratifs]{Le verbe \lexi{mettre} et les adjectifs démonstratifs}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \begin{frame}
+    \titlepage
+    \tiny{Office: \input{../../shared/office_location.tex}\\
+          Office hours: \input{../../shared/office_hours.tex}}
+  \end{frame}
+
+  \begin{frame}{Annonces}
+    \begin{itemize}
+      \item La révision de l'examen 2 va avoir lieu vendredi.
+      \item[] \tinygloss{The exam 2 review will take place Friday.}
+      \item L'examen 2 va avoir lieu lundi!
+      \item[] \tinygloss{Exam 2 will take place Monday!}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Le verbe}
+    \begin{center}
+      \input{../conj_tables/mettre.tex}
+    \end{center}
+  \end{frame}
+
+  \begin{frame}[t]{Des comparaisons}
+    Qu'est-ce qu'on met?
+    \vspace{0.5cm}
+    \begin{columns}
+      \column{0.5\textwidth}
+        \begin{enumerate}
+          \item \underline{\uncover<2->{}}
+        \end{enumerate}
+      \column{0.5\textwidth}
+        \begin{center}
+          \only<1-2>{
+            \includegraphics[scale=0.14]{}
+          }
+        \end{center}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Quiz
+    \end{center}
+  \end{frame}
+
+  \begin{frame}{Les voyelles /ø/ et /œ/}
+    Quelle voyelle ai-je prononcé dans le mot?
+    \begin{columns}
+      \column{0.5\textwidth}
+        \begin{enumerate}
+          \item peu \only<-1>{/ø/}\only<2->{\underline{/ø/}} /œ/
+          \item veulent /ø/ \only<-2>{/œ/}\only<3->{\underline{/œ/}}
+          \item tailleur /ø/ \only<-3>{/œ/}\only<4->{\underline{/œ/}}
+          \item bleu \only<-4>{/ø/}\only<5->{\underline{/ø/}} /œ/
+          \item jeudi \only<-5>{/ø/}\only<6->{\underline{/ø/}} /œ/
+        \end{enumerate}
+      \column{0.5\textwidth}
+        \begin{enumerate}
+          \setcounter{enumi}{5}
+          \item couleur /ø/ \only<-6>{/œ/}\only<7->{\underline{/œ/}}
+          \item monsieur \only<-7>{/ø/}\only<8->{\underline{/ø/}} /œ/
+          \item vendeuse \only<-8>{/ø/}\only<9->{\underline{/ø/}} /œ/
+          \item sœur /ø/ \only<-9>{/œ/}\only<10->{\underline{/œ/}}
+          \item neuf /ø/ \only<-10>{/œ/}\only<11->{\underline{/œ/}}
+        \end{enumerate}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{Le mieux}
+     \\
+    \tinygloss{}
+    \begin{columns}
+      \column{0.45\textwidth}
+        \begin{description}
+          \item[] \textbf{Modèle:}
+          \item[] \lexi{}
+          \item[E1:]
+        \end{description}
+      \column{0.55\textwidth}
+        \begin{enumerate}
+          \item
+        \end{enumerate}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{Vrai ou faux?}
+     \\
+    \tinygloss{}
+    \begin{description}
+      \item[] \textbf{Modèle:} \lexi{}
+      \item[E1:]
+    \end{description}
+    \begin{enumerate}
+      \item
+    \end{enumerate}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Questions?
+    \end{center}
+  \end{frame}
+\end{document}
