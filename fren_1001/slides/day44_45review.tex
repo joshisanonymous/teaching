@@ -1,0 +1,166 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../../shared/slide_preamble.tex}
+
+  % Packages and settings
+
+  % Document information
+  \subtitle[Révision: Examen final]{La révision pour l'examen final}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \begin{frame}
+    \titlepage
+    \tiny{Office: \input{../../shared/office_location.tex}\\
+          Office hours: \input{../../shared/office_hours.tex}}
+  \end{frame}
+
+  \begin{frame}{Renseignements}
+    \begin{itemize}
+      \item Le 14 décembre, 7h du soir.
+      \item[] \tinygloss{December 14th, 7pm.}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \tableofcontents[hideallsubsections]
+  \end{frame}
+
+  \section{Les quantités}
+    \begin{frame}{Les quantités}
+      Comment pouvons-nous quantifier ces aliments?
+      \begin{description}
+        \item[] \textbf{Modèle:} \emph{des baguettes}
+        \item[E1:] beaucoup de baguettes
+        \item[E2:] quinze baguettes
+      \end{description}
+      \begin{columns}
+        \column{0.5\textwidth}
+          \begin{enumerate}
+            \item des croissants
+            \item des œufs
+            \item du chocolat chaud
+            \item du beurre
+          \end{enumerate}
+          \column{0.5\textwidth}
+          \begin{enumerate}
+            \setcounter{enumi}{4}
+            \item du thon
+            \item de l'oignon
+            \item du vin
+            \item des glaçons
+          \end{enumerate}
+      \end{columns}
+    \end{frame}
+
+  \section{Les verbes au présent}
+    \begin{frame}{Les verbes au présent}
+      Comment conjuguons-nous ces verbes au présent?
+      \begin{description}
+        \item[] \textbf{Modèle:} \emph{tu \underline{donnes} (to give)}
+      \end{description}
+      \begin{columns}
+        \column{0.5\textwidth}
+          \begin{enumerate}
+            \item tu \underline{\uncover<2->{sers}} (to serve)
+            \item elles \underline{\uncover<3->{prennent}} (to take)
+            \item nous \underline{\uncover<4->{buvons}} (to drink)
+            \item j' \underline{\uncover<5->{attends}} (to wait)
+          \end{enumerate}
+          \column{0.5\textwidth}
+          \begin{enumerate}
+            \setcounter{enumi}{4}
+            \item vous \underline{\uncover<6->{devez}} (to have to)
+            \item ils \underline{\uncover<7->{veulent}} (to want)
+            \item il \underline{\uncover<8->{met}} (to put)
+            \item nous \underline{\uncover<9->{nous levons}} (to get up)
+          \end{enumerate}
+      \end{columns}
+    \end{frame}
+
+  \section{Les verbes au passé composé}
+    \begin{frame}{Les verbes au passé composé}
+      Comment conjuguons-nous ces verbes au passé composé?
+      \begin{description}
+        \item[] \textbf{Modèle:} \emph{tu \underline{as donné} (to give)}
+      \end{description}
+      \begin{columns}[t]
+        \column{0.5\textwidth}
+          \begin{enumerate}
+            \item tu \underline{\uncover<2->{as travaillé}} (to work)
+            \item elles \underline{\uncover<3->{ont acheté}} (to buy)
+            \item nous \underline{\uncover<4->{sommes allé(e)s}} (to go)
+            \item je \underline{\uncover<5->{suis devenu(e)}} (to become)
+          \end{enumerate}
+          \column{0.5\textwidth}
+          \begin{enumerate}
+            \setcounter{enumi}{4}
+            \item vous \underline{\uncover<6->{avez jeté}} (to throw)
+            \item ils \underline{\uncover<7->{se sont reposés}} (to relax)
+            \item il \underline{\uncover<8->{se sont rentré}} (to return home)
+            \item nous \underline{\uncover<9->{avons commandé}} (to order)
+          \end{enumerate}
+      \end{columns}
+    \end{frame}
+
+  \section{Les articles}
+    \begin{frame}{Les articles}
+      Quel article faut-il?
+      \begin{description}
+        \item[] \textbf{Modèle:} \emph{Je préfère \underline{les} pommes.}
+      \end{description}
+      \begin{columns}
+        \column{0.5\textwidth}
+          \begin{enumerate}
+            \item Pourquoi est-ce que tu n'aimes pas \underline{\uncover<2->{le}} thé?
+            \item Elle bois \underline{\uncover<3->{du}} café.
+            \item Quand est-ce que je prends beaucoup \underline{\uncover<4->{de}} café?
+            \item Nous détestons \underline{\uncover<5->{les}} épinards.
+          \end{enumerate}
+          \column{0.5\textwidth}
+          \begin{enumerate}
+            \setcounter{enumi}{4}
+            \item Où est-ce qu'il achète \underline{\uncover<6->{des}} épinards?
+            \item Vous mangez \underline{\uncover<7->{une}} saucisse.
+            \item Ils adorent \underline{\uncover<8->{la}} viande.
+            \item Nous voulons \underline{\uncover<9->{un}} morceau \underline{\uncover<10->{de}} viande.
+          \end{enumerate}
+      \end{columns}
+    \end{frame}
+
+  \section{Le pronom \lexi{en}}
+    \begin{frame}{Le pronom \lexi{en}}
+      Où faut-il mettre le pronom \lexi{en}?
+      \begin{description}
+        \item[] \textbf{Modèle:} \emph{Je \underline{ en } mange \underline{\hspace{0.5cm}} tous les jours.}
+      \end{description}
+      \begin{columns}[t]
+        \scriptsize
+        \column{0.5\textwidth}
+          \begin{enumerate}
+            \item Tu \underline{\hspace{0.35cm}} vas \underline{ \uncover<2->{en} } prendre \underline{\hspace{0.35cm}} au restaurant.
+            \item Elle \underline{ \uncover<3->{en} } bois \underline{\hspace{0.35cm}} une tasse.
+            \item Nous \underline{ \uncover<4->{en} } prenons \underline{\hspace{0.35cm}} beaucoup.
+            \item Nous \underline{\hspace{0.35cm}} n'\underline{ \uncover<5->{en} } avons \underline{\hspace{0.35cm}} pas \underline{\hspace{0.35cm}} bu \underline{\hspace{0.35cm}} assez.
+          \end{enumerate}
+          \column{0.5\textwidth}
+          \begin{enumerate}
+            \setcounter{enumi}{4}
+            \item Ils \underline{\hspace{0.35cm}} peuvent \underline{ \uncover<6->{en} } commander \underline{\hspace{0.35cm}} avant 9h du soir.
+            \item Vous \underline{ \uncover<7->{en} } avez \underline{\hspace{0.35cm}} mangé \underline{\hspace{0.35cm}} dix.
+            \item Je \underline{\hspace{0.35cm}} ne \underline{\hspace{0.35cm}} vais \underline{\hspace{0.35cm}} pas \underline{ \uncover<8->{en} } servir \underline{\hspace{0.35cm}} quinze.
+            \item Nous \underline{ \uncover<8->{en} } servons \underline{\hspace{0.35cm}} trois \underline{\hspace{0.35cm}} assiettes \underline{\hspace{0.35cm}} le matin.
+          \end{enumerate}
+      \end{columns}
+    \end{frame}
+\end{document}
