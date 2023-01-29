@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../../shared/slide_preamble.tex}
+
+  % Packages and settings
+
+  % Document information
+  \subtitle[Température et narration]{La température et la narration}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \begin{frame}
+    \titlepage
+    \tiny{Office: \input{../../shared/office_location.tex}\\
+          Office hours: \input{../../shared/office_hours.tex}}
+  \end{frame}
+
+  \begin{frame}{Pourquoi pas?}
+    Pourquoi est-ce que ces étudiants ne sont pas venus en classe?
+    \begin{columns}
+      \column{0.5\textwidth}
+        \small
+        \begin{enumerate}
+          \item Ben: sa grand-mère / téléphoner
+          \item<2->[$\to$] Sa grand-mère lui a téléphoné.
+          \item<3-> Adrien: il / être malade
+          \item<4->[$\to$] Il était malade.
+          \item<5-> Guillaume: son chien / manger ses devoirs
+          \item<6->[$\to$] Son chien a mangé ses devoirs.
+          \item<7-> Claire: elle / avoir un accident
+          \item<8->[$\to$] Elle a eu un accident.
+          \item<9-> Grégory: il / faire 25 degrés
+          \item<10->[$\to$] Il faisait 25 degrés.
+        \end{enumerate}
+      \column{0.5\textwidth}
+        \begin{minipage}[0.6\textheight]{\linewidth}
+          \begin{center}
+            \only<1-2>{
+              \includegraphics[scale=0.16]{téléphoner.jpg}
+            }
+            \only<3-4>{
+              \includegraphics[scale=0.32]{malade.jpg}
+            }
+            \only<5-6>{
+              \includegraphics[scale=0.27]{chien_devoirs.jpg}
+            }
+            \only<7-8>{
+              \includegraphics[scale=0.24]{accident.jpg}
+            }
+            \only<9-10>{
+              \includegraphics[scale=0.17]{froid.jpg}
+            }
+          \end{center}
+        \end{minipage}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Quiz
+    \end{center}
+  \end{frame}
+
+  \begin{frame}{Qu'est-ce qu'ils ont fait?}
+    En groupes de 3 ou 4, imaginez une histoire un de ces dessins.
+    Utilisez l'imparfait et le passé composé.
+    \begin{description}
+      \item[] \textbf{Modèle:} \emph{Qu'est-ce que Julie a fait dans le magasin hier?}
+      \item[E1:] Elle a travaillé. (Elle est vendeuse.)
+      \item[E2:] Elle a acheté une robe.
+    \end{description}
+    \begin{columns}[t]
+      \column{0.5\textwidth}
+        Qu'est-ce que...
+        \begin{enumerate}
+          \item ... vous avez fait dans le quartier hier?
+          \item ... les Aubert ont fait au lac l'été dernier?
+          \item ... tu as fait dans le potager hier?
+          \item ... on a fait dans la forêt il y a deux jours \gloss{2 days ago}?
+        \end{enumerate}
+      \column{0.5\textwidth}
+        \begin{enumerate}
+          \setcounter{enumi}{4}
+          \item ... Clément a fait à la rivière avant-hier?
+          \item ... vos camarades ont fait chez eux le week-end dernier?
+          \item ... le prof a fait sur une colline ce matin?
+          \item ... tu as fait chez toi hier soir?
+        \end{enumerate}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Questions?
+    \end{center}
+  \end{frame}
+\end{document}
