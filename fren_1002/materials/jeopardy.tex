@@ -1,0 +1,50 @@
+% This goes with an activity for day 12
+
+\documentclass{article}
+  % Packages
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage[margin=1in]{geometry}
+  \usepackage{calc}
+  \pagenumbering{gobble}
+
+  % Document info
+  \date{}
+
+  % New commands
+  \newcommand{\tabHeader}[1]{\textbf{#1}}
+  \newcommand{\tabrowEnd}{\rule{0pt}{45pt}\\}
+
+\begin{document}
+  \centering
+  \noindent
+  {\LARGE
+    \begin{tabular}{| p{0.5\textwidth-2\tabcolsep} | p{0.5\textwidth-2\tabcolsep} |}
+      \hline
+      un bon film          & de la pizza \tabrowEnd
+      \hline
+      Carrie Underwood     & la sociologie \tabrowEnd
+      \hline
+      un match de foot     & du chocolat \tabrowEnd
+      \hline
+      un disque de jazz    & allemand \tabrowEnd
+      \hline
+      une lettre           & un essai \tabrowEnd
+      \hline
+      la Tour Eiffel       & le Louvre \tabrowEnd
+      \hline
+      à ta belle-mère      & à ton neveu \tabrowEnd
+      \hline
+      un poisson           & espagnol \tabrowEnd
+      \hline
+      Usain Bolt           & un chien \tabrowEnd
+      \hline
+      le Walking Dead      & le lac Michigan \tabrowEnd
+      \hline
+      le basket            & de la musique classique \tabrowEnd
+      \hline
+      une pièce            & la philosophie \tabrowEnd
+      \hline
+    \end{tabular}
+  }
+\end{document}
