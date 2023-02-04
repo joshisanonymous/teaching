@@ -1,0 +1,76 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../../shared/slide_preamble.tex}
+
+  % Packages and settings
+
+  % Document information
+  \subtitle[Contrastes au passé]{D'autres contrastes au passé}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \begin{frame}
+    \titlepage
+    \tiny{Office: \input{../../shared/office_location.tex}\\
+          Office hours: \input{../../shared/office_hours.tex}}
+  \end{frame}
+
+  \begin{frame}[b]{Qu'est-ce qu'ils faisaient?}
+    Quand Solange est arrivée, ... \\
+    \only<1-2>{
+      Julie \underline{\uncover<2>{dansait}}.
+    }
+    \only<3-4>{
+      Robert \underline{\uncover<4>{jouait de la guitare}}.
+    }
+    \only<5-6>{
+      Laurent \underline{\uncover<6>{dormait}}.
+    }
+    \only<7-8>{
+      Thomas \underline{\uncover<8>{mangeait}}.
+    }
+    \only<9-10>{
+      Béa \underline{\uncover<10>{sortait}}.
+    }
+    \begin{center}
+      \includegraphics[scale=0.35]{fête.png}
+    \end{center}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Quiz
+    \end{center}
+  \end{frame}
+
+  \begin{frame}{Des alibis}
+    Un/e étudiant/e dans la classe a bu le café du prof hier entre midi et 13h!
+    Avec un/e partenaire, préparez un alibi ensemble.
+    Après, interroge \gloss{interrogate} tes camarades de classe et décide qui a le pire \gloss{worst} alibi.
+    \begin{description}
+      \item[] \textbf{Modèle:}
+      \item[E1:] Où étais-tu hier à midi?
+      \item[E2:] Mon ami et moi, nous étions au gymnase.
+      \item[E1:] Qu'est-ce que vous faisiez au gymnase?
+      \item[E2:] Nous jouions au basket.
+      \item[E1:] Qui est ton ami?
+      \item[E2:] C'est Joe.
+    \end{description}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Questions?
+    \end{center}
+  \end{frame}
+\end{document}
