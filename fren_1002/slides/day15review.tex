@@ -1,0 +1,66 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../../shared/slide_preamble.tex}
+
+  % Packages and settings
+
+  % Document information
+  \subtitle[Révision, examen 1]{Révision pour l'examen 1}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \begin{frame}
+    \titlepage
+    \tiny{Office: \input{../../shared/office_location.tex}\\
+          Office hours: \input{../../shared/office_hours.tex}}
+  \end{frame}
+
+  \begin{frame}{}
+    \hypertarget{début}{}
+    \begin{columns}
+      \column{0.5\textwidth}
+        \begin{center}
+          \includegraphics[scale=0.3]{aventure.jpg} \\
+          Le Trésor de pirate du dragon d'onyx
+        \end{center}
+      \column{0.5\textwidth}
+        Tu es sur un bâteau.
+        Tu vois...
+        \begin{enumerate}
+          \item \hyperlink{questions}{Des questions} au nord
+          \item \hyperlink{passé}{Le passé} à l'est
+          \item \hyperlink{pronoms}{Des pronoms} au sud
+          \item \hyperlink{modes}{Des modes} à l'ouest
+          \item \hyperlink{imparfait}{Imparfait}
+          \item \hyperlink{direct}{Objets directs}
+          \item \hyperlink{indirect}{Objets indirects}
+        \end{enumerate}
+        Choisis une direction.
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{}
+    \hypertarget{questions}{}
+    
+    \item \hyperlink{que}{Qui et que}
+    \item \hyperlink{quel}{Quel/le/s}
+
+    En tout cas, tu peux revenir au \hyperlink{début}{début}...
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Questions?
+    \end{center}
+  \end{frame}
+\end{document}
