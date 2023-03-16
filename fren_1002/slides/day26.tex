@@ -1,0 +1,105 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../../shared/slide_preamble.tex}
+
+  % Packages and settings
+
+  % Document information
+  \subtitle[Caractéristiques, \lexi{voir} et \lexi{que}]{Les caractéristiques, \lexi{voir} et la conjonction \lexi{que}}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \begin{frame}
+    \titlepage
+    \tiny{Office: \input{../../shared/office_location.tex}\\
+          Office hours: \input{../../shared/office_hours.tex}}
+  \end{frame}
+
+  \begin{frame}{Les verbes comme \lexi{voir}}
+    \begin{center}
+      \input{../conj_tables/voir.tex}
+    \end{center}
+    \lexi{Croire} au futur simple $\to$ \lexi{je croirai}
+  \end{frame}
+
+  \begin{frame}{Des jugements}
+    \begin{columns}
+      \column{0.5\textwidth}
+        Tu vois un homme ou une femme qui est comment?
+        \begin{enumerate}
+          \item<2-> Je vois une femme qui est \alert{écologiste}.
+          \item<4-> Je vois un homme qui est \alert{soucieux de sa santé}.
+          \item<6-> Je vois un homme qui est \alert{bien dans sa peau}.
+          \item<8-> Je vois une femme qui est \alert{croyante}.
+          \item<10-> Je vois une femme qui est \alert{polie}.
+        \end{enumerate}
+      \column{0.5\textwidth}
+        \begin{minipage}[c][0.8\textheight]{\linewidth}
+          \begin{center}
+            \only<1-2>{
+              \includegraphics[scale=0.45]{nucléaire.jpg}
+            }
+            \only<3-4>{
+              \includegraphics[scale=0.15]{jogging.jpg}
+            }
+            \only<5-6>{
+              \includegraphics[scale=0.55]{burgundy.jpg}
+            }
+            \only<7-8>{
+              \includegraphics[scale=0.19]{soeur_andré.jpg} \\
+              Lucille Radon, dit sœur André, à 117 ans en 2021.
+            }
+            \only<9-10>{
+              \includegraphics[scale=0.27]{politesse.jpg}
+            }
+          \end{center}
+        \end{minipage}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Quiz
+    \end{center}
+  \end{frame}
+
+  \begin{frame}{Qu'est-ce qui est plus important?}
+    Avec un/e partenaire, dites si \alert{vous croyez que} la première caractéristique ou la deuxième caractéristique est plus importante.
+    \begin{description}
+      \item[] \textbf{Modèle:} \emph{la politesse ou l'honnêteté}
+      \item[E1:] \emph{Je crois que} la politesse est plus importante. Si on est poli, ...
+      \item[E2:] Moi, \emph{je ne crois pas}. Il faut être honnête parce que ...
+    \end{description}
+    \begin{columns}[t]
+      \column{0.5\textwidth}
+        \begin{enumerate}
+          \item la politesse ou l'honnêteté
+          \item l'individualisme ou la solidarité
+          \item la tradition ou l'indépendance
+        \end{enumerate}
+      \column{0.5\textwidth}
+        \begin{enumerate}
+          \setcounter{enumi}{3}
+          \item le bien commun ou le succès personnel
+          \item la créativité ou la discipline
+          \item la recherche spirituelle ou les pratiques religieuses
+        \end{enumerate}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Questions?
+    \end{center}
+  \end{frame}
+\end{document}
