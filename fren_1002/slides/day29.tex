@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../../shared/slide_preamble.tex}
+
+  % Packages and settings
+
+  % Document information
+  \subtitle[Exclamations, \lexi{savoir} et \lexi{connaître}]{Les exclamations et les verbes \lexi{savoir} et \lexi{connaître}}
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \begin{frame}
+    \titlepage
+    \tiny{Office: \input{../../shared/office_location.tex}\\
+          Office hours: \input{../../shared/office_hours.tex}}
+  \end{frame}
+
+  \begin{frame}{/w/ vs /ɥ/}
+    \begin{center}
+      Quel son entendez-vous?
+
+      \begin{tabular}{l | c c}
+        Mot                          & /w/             & /ɥ/ \\
+        \hline
+        \uncover<2->{ess\alert{u}yé} &                 & \uncover<2->{X} \\
+        \uncover<3->{v\alert{oy}ez}  & \uncover<3->{X} & \\
+        \uncover<4->{s\alert{oi}s}   & \uncover<4->{X} & \\
+        \uncover<5->{pl\alert{u}ie}  &                 & \uncover<5->{X} \\
+        \uncover<6->{s\alert{u}is}   &                 & \uncover<6->{X} \\
+      \end{tabular}
+    \end{center}
+  \end{frame}
+
+  \begin{frame}{!!!}
+    Qu'est-ce qu'on dit?
+    \begin{columns}
+      \column{0.5\textwidth}
+        \only<2>{
+          \begin{itemize}
+            \item Zut!
+            \item Imbécile!
+            \item Quel idiot!
+            \item Incroyable!
+          \end{itemize}
+        }
+        \only<4>{
+          \begin{itemize}
+            \item Ça va s'arranger.
+            \item Ne t'en fais pas!
+          \end{itemize}
+        }
+        \only<6>{
+          \begin{itemize}
+            \item Ne crie pas!
+            \item Ne sois pas furieux!
+            \item Sois plus calme!
+            \item Ce n'est pas grave.
+          \end{itemize}
+        }
+      \column{0.5\textwidth}
+        \begin{minipage}[c][0.8\textheight]{\linewidth}
+          \begin{center}
+            \only<1-2>{
+              \includegraphics[scale=0.4]{vase.jpg}
+            }
+            \only<3-4>{
+              \includegraphics[scale=0.14]{séparation.jpg}
+            }
+            \only<5-6>{
+              \includegraphics[scale=0.14]{colère.jpg}
+            }
+          \end{center}
+        \end{minipage}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Quiz
+    \end{center}
+  \end{frame}
+
+  \begin{frame}{Sais-tu conjuguer connaître?}
+    savoir \alert{faire} (v.), connaître \alert{une chose} (n.)
+    \begin{enumerate}
+      \item Je \underline{\uncover<2->{connais}} (connaître) bien sa famille.
+      \item Ma mère \underline{\uncover<3->{sait}} (savoir) se détendre.
+      \item Ils \underline{\uncover<5->{savent}} (savoir) se disputer.
+      \item Nous \underline{\uncover<6->{connaissons}} (connaître) Athens.
+      \item Vous \underline{\uncover<7->{connaissez}} ce poème?
+    \end{enumerate}
+  \end{frame}
+
+  \begin{frame}{Explique-nous!}
+    \begin{columns}
+      \column{0.5\textwidth}
+        \begin{enumerate}
+          \item \alert{En phrases complètes}, ecris deux choses que tu sais faire et deux choses que tu connais sur un papier (que tu vas rendre à M. McNeill).
+          \item<2-> Explique à un/e partenaire comment faire l'une des choses que tu as écrites.
+          \item<3-> Explique à la classe.
+        \end{enumerate}
+      \column{0.5\textwidth}
+        \only<2->{
+          \begin{description}
+            \item[] \textbf{Modèle:}
+            \item[E1:] Moi, je sais surfer. D'abord, il faut entrer dans l'eau avec une planche de surf. Ensuite, il est important de trouver une grande vague \gloss{wave}...
+          \end{description}
+        }
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}{}
+    \begin{center}
+      \Large Questions?
+    \end{center}
+  \end{frame}
+\end{document}
