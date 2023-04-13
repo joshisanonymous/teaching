@@ -1,0 +1,42 @@
+% This is for the day 38 activity
+
+\documentclass{article}
+  % Packages
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage[margin=1in]{geometry}
+  \usepackage{calc}
+  \pagenumbering{gobble}
+
+  % Document info
+  \date{}
+
+  % New commands
+  \newcommand{\tabHeader}[1]{\textbf{#1}}
+  \newcommand{\tabrowEnd}{\\}
+
+\begin{document}
+  \centering
+  \noindent
+  {\LARGE
+    \begin{tabular}{| p{0.5\textwidth-2\tabcolsep} | p{0.5\textwidth-2\tabcolsep} |}
+      \hline
+      \parbox{\linewidth}{\textbf{l'environnement}\\
+                          Par exemple, le gaspillage alimentaire, l'utilisation des transports en commun, la pollution\\} &
+      \parbox{\linewidth}{\textbf{la vie universitaire}\\
+                          Par exemple, la réduction de nombre de postes de professeurs, l'augmentation des frais de scolarité, les vacances trop courtes} \tabrowEnd
+      \hline
+      \parbox{\linewidth}{\textbf{les droits humains}\\
+                          Par exemple, la situation des migrants dans votre communauté, le problème des réfugiés, la violence, les SDF, l'accès à l'eau potable} & \tabrowEnd
+      \hline
+      \parbox{\linewidth}{\textbf{l'environnement}\\
+                          Par exemple, le gaspillage alimentaire, l'utilisation des transports en commun, la pollution\\} &
+      \parbox{\linewidth}{\textbf{la vie universitaire}\\
+                          Par exemple, la réduction de nombre de postes de professeurs, l'augmentation des frais de scolarité, les vacances trop courtes} \tabrowEnd
+      \hline
+      \parbox{\linewidth}{\textbf{les droits humains}\\
+                          Par exemple, la situation des migrants dans votre communauté, le problème des réfugiés, la violence, les SDF, l'accès à l'eau potable} & \tabrowEnd
+      \hline
+    \end{tabular}
+  }
+\end{document}
