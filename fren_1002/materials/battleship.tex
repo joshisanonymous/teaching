@@ -1,0 +1,57 @@
+% This is for the day 41 activity
+
+\documentclass{article}
+  % Packages
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage[margin=1in]{geometry}
+  \usepackage{calc}
+  \usepackage{lscape}
+  \pagenumbering{gobble}
+
+  % Document info
+  \date{}
+
+  % New commands
+  \newcommand{\tabHeader}[1]{\textbf{#1}}
+  \newcommand{\tabrowEnd}{\\}
+
+\begin{document}
+  \begin{landscape}
+  \centering
+  \noindent
+  {\LARGE
+    Plateau `Board'
+    \begin{tabular}{| l | c | c | c | c | c | c | c | c | c | c |}
+      \hline
+                & préférer & appeler & boire & aller & vouloir & faire & pouvoir & parler & descendre & dormir \\
+      \hline
+      Je/J'     &          &         &       &       &         &       &         &        &           & \\
+      \hline
+      Que je/j' &          &         &       &       &         &       &         &        &           & \\
+      \hline
+      Tu        &          &         &       &       &         &       &         &        &           & \\
+      \hline
+      Que tu    &          &         &       &       &         &       &         &        &           & \\
+      \hline
+      On        &          &         &       &       &         &       &         &        &           & \\
+      \hline
+      Qu'on     &          &         &       &       &         &       &         &        &           & \\
+      \hline
+      Nous      &          &         &       &       &         &       &         &        &           & \\
+      \hline
+      Que nous  &          &         &       &       &         &       &         &        &           & \\
+      \hline
+      Vous      &          &         &       &       &         &       &         &        &           & \\
+      \hline
+      Que vous  &          &         &       &       &         &       &         &        &           & \\
+      \hline
+      Ils       &          &         &       &       &         &       &         &        &           & \\
+      \hline
+      Qu'ils    &          &         &       &       &         &       &         &        &           & \\
+      \hline
+      \multicolumn{11}{c}{\textit{Que} est un abréviation d'\textit{il faut que}}
+    \end{tabular}
+  }
+  \end{landscape}
+\end{document}
