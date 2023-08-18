@@ -15,7 +15,7 @@
   % Packages and settings
 
   % Document information
-  \subtitle[Présentons-nous]{Présentons-nous}
+  \subtitle[Présentons-nous et articles]{Présentons-nous et les articles}
 
   %% Custom commands
   % Subsection/frame titles
@@ -28,6 +28,30 @@
           Office hours: \input{../../shared/office_hours.tex}}
   \end{frame}
 
+  \begin{frame}{Le genre des articles \gloss{Gender of articles}}
+    \begin{columns}
+      \column{0.5\textwidth}
+        Quel est le genre du mot? \\
+        \tinygloss{What is the gender of the word?}
+        \begin{enumerate}
+          \item \underline{\uncover<2->{masculin}} le livre
+          \item \underline{\uncover<3->{féminin\ \ }} une f\textcolor<8->{green}{e}nêtre
+          \item \underline{\uncover<4->{masculin}} le bureau
+          \item \underline{\uncover<5->{masculin}} un coll\textcolor<8->{blue}{è}ge
+          \item \underline{\uncover<6->{féminin\ \ }} la t\textcolor<8->{red}{é}l\textcolor<8->{red}{é}
+          \item \underline{\uncover<7->{féminin\ \ }} les portes
+        \end{enumerate}
+      \column{0.5\textwidth}
+        \uncover<8->{
+          \begin{itemize}
+            \item \textcolor{blue}{Prononcé [e] comme dans \lexi{say}}
+            \item \textcolor{red}{Prononcé [ɛ] comme dans \lexi{red}}
+            \item \textcolor{green}{Prononcé [ə] comme dans \lexi{was}}
+          \end{itemize}
+        }
+    \end{columns}
+  \end{frame}
+
   \begin{frame}{Le premier verbe \gloss{The first verb}}
     \begin{center}
       \input{../conj_tables/etre.tex}
@@ -35,14 +59,36 @@
   \end{frame}
 
   \begin{frame}{Le premier verbe \gloss{The first verb}}
-    \begin{enumerate}
-      \item Elle \underline{\uncover<2->{est}} une amie.
-      \item Tu \underline{\uncover<3->{es}} occupé/e.
-      \item Nous \underline{\uncover<4->{sommes}} malades.
-      \item Ils \underline{\uncover<5->{sont}} en forme.
-      \item Je \underline{\uncover<6->{suis}} stressé/e.
-      \item Elles \underline{\uncover<7->{sont}} de Géorgie.
-    \end{enumerate}
+    Quelle est la bonne conjugaison pour le verbe \lexi{être}? \\
+    \tinygloss{What is the right conjugation for the verb \lexi{être}?}
+    \begin{columns}
+      \column{0.5\textwidth}
+        \begin{enumerate}
+          \item Tu \underline{\uncover<2->{es}} occupé/e.
+          \item Nous \underline{\uncover<4->{sommes}} malades.
+          \item Ils \underline{\uncover<6->{sont}} en forme.
+          \item Je \underline{\uncover<8->{suis}} stressé/e.
+          \item Elles \underline{\uncover<10->{sont}} de Géorgie.
+        \end{enumerate}
+      \column{0.5\textwidth}
+        \begin{minipage}[c][0.6\textheight]{\linewidth}
+          \begin{center}
+            \only<1-2>{
+              \includegraphics[scale=0.21]{occupé.jpg}
+            }
+            \only<3-4>{
+              \includegraphics[scale=0.25]{malade.jpg}
+            }
+            \only<5-6>{
+              \includegraphics[scale=0.2]{conan.jpg} \\
+              Le gouverneur de Californie
+            }
+            \only<7-8>{
+              \includegraphics[scale=0.21]{stressé.jpg}
+            }
+          \end{center}
+        \end{minipage}
+    \end{columns}
   \end{frame}
 
   \begin{frame}{Les pronoms disjoints}
@@ -60,21 +106,22 @@
     \end{itemize}
   \end{frame}
 
+  % \begin{frame}{Qui est-ce? \gloss{Who is that?}}
+    % \gloss{Say who that is and confirm with a \lexi{pronom disjoint}.}
+  %   \centering
+  %   \includegraphics[scale=0.2]{lebron.jpg}
+
+  %   \uncover<2->{
+  %     C'est \alert<3->{LeBron James}.
+  %   }
+
+  %   \uncover<3->{
+  %     C'est \alert{lui}.
+  %   }
+  % \end{frame}
+
   \begin{frame}{Qui est-ce? \gloss{Who is that?}}
     \gloss{Say who that is and confirm with a \lexi{pronom disjoint}.}
-    \centering
-    \includegraphics[scale=0.2]{lebron.jpg}
-
-    \uncover<2->{
-      C'est \alert<3->{LeBron James}.
-    }
-
-    \uncover<3->{
-      C'est \alert{lui}.
-    }
-  \end{frame}
-
-  \begin{frame}{Qui est-ce? \gloss{Who is that?}}
     \centering
     \includegraphics[scale=0.22]{hulk_et_she-hulk.jpg}
 
@@ -87,18 +134,18 @@
     }
   \end{frame}
 
-  \begin{frame}{Qui est-ce? \gloss{Who is that?}}
-    \centering
-    \includegraphics[scale=0.15]{stromae.jpg}
+  % \begin{frame}{Qui est-ce? \gloss{Who is that?}}
+  %   \centering
+  %   \includegraphics[scale=0.15]{stromae.jpg}
 
-    \uncover<2->{
-      C'est \alert<3->{Stromae}.
-    }
+  %   \uncover<2->{
+  %     C'est \alert<3->{Stromae}.
+  %   }
 
-    \uncover<3->{
-      C'est \alert{lui}.
-    }
-  \end{frame}
+  %   \uncover<3->{
+  %     C'est \alert{lui}.
+  %   }
+  % \end{frame}
 
   % \begin{frame}{Qui est-ce? \gloss{Who is that?}}
   %   \centering
