@@ -1,0 +1,54 @@
+% This goes with an activity for day 28
+
+\documentclass{article}
+  % Packages
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage[margin=1in]{geometry}
+  \usepackage{calc}
+  \pagenumbering{gobble}
+
+  % Document info
+  \date{}
+
+  % New commands
+  \newcommand{\tabHeader}[1]{\textbf{#1}}
+  \newcommand{\tabrowEnd}{\rule{0pt}{35pt}\\}
+
+\begin{document}
+  \centering
+  \noindent
+  {\LARGE
+    \begin{tabular}{| p{0.5\textwidth-2\tabcolsep} | p{0.5\textwidth-2\tabcolsep} |}
+      \hline
+      une brosse à dents        & une brosse à dents \tabrowEnd
+      \hline
+      une brosse à cheveux      & une brosse à cheveux \tabrowEnd
+      \hline
+      du dentifrice             & du dentifrice \tabrowEnd
+      \hline
+      un gant de toilette       & un gant de toilette \tabrowEnd
+      \hline
+      du maquillage             & du maquillage \tabrowEnd
+      \hline
+      un peigne                 & un peigne \tabrowEnd
+      \hline
+      un rasoir                 & un rasoir \tabrowEnd
+      \hline
+      un savon                  & un savon \tabrowEnd
+      \hline
+      une serviette de toilette & une serviette de toilette \tabrowEnd
+      \hline
+      du shampooing             & du shampooing \tabrowEnd
+      \hline
+      un savon                  & un savon \tabrowEnd
+      \hline
+      du shampooing             & du shampooing \tabrowEnd
+      \hline
+      une serviette de toilette & une serviette de toilette \tabrowEnd
+      \hline
+      un peigne                 & un peigne \tabrowEnd
+      \hline
+    \end{tabular}
+  }
+\end{document}
