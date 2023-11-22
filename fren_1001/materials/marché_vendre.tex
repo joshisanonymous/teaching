@@ -1,0 +1,55 @@
+% This goes with an activity for day 41
+% Print 3 of these
+
+\documentclass{article}
+  % Packages
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage[margin=1in]{geometry}
+  \usepackage{calc}
+  \pagenumbering{gobble}
+
+  % Document info
+  \date{}
+
+  % New commands
+  \newcommand{\tabHeader}[1]{\textbf{#1}}
+  \newcommand{\tabrowEnd}{\rule{0pt}{35pt}\\}
+
+\begin{document}
+  \centering
+  \noindent
+  {\LARGE
+    \begin{tabular}{| p{0.5\textwidth-2\tabcolsep} | p{0.5\textwidth-2\tabcolsep} |}
+      \hline
+      1 ananas \textbf{à vendre}      & 1 melon \textbf{à vendre} \tabrowEnd
+      \hline
+      1 pêche \textbf{à vendre}       & 1 aubergine \textbf{à vendre} \tabrowEnd
+      \hline
+      1 carotte \textbf{à vendre}     & 1 champignon \textbf{à vendre} \tabrowEnd
+      \hline
+      1 concombre \textbf{à vendre}   & 1 courgette \textbf{à vendre} \tabrowEnd
+      \hline
+      1 oignon \textbf{à vendre}      & 1 poivron \textbf{à vendre} \tabrowEnd
+      \hline
+      1 tomate \textbf{à vendre}      & 2 ananas \textbf{à vendre} \tabrowEnd
+      \hline
+      2 melons \textbf{à vendre}      & 2 pêches \textbf{à vendre} \tabrowEnd
+      \hline
+      2 aubergines \textbf{à vendre}  & 2 carottes \textbf{à vendre} \tabrowEnd
+      \hline
+      2 champignons \textbf{à vendre} & 2 concombres \textbf{à vendre} \tabrowEnd
+      \hline
+      2 courgettes \textbf{à vendre}  & 2 oignons \textbf{à vendre} \tabrowEnd
+      \hline
+      2 poivrons \textbf{à vendre}    & 2 tomates \textbf{à vendre} \tabrowEnd
+      \hline
+      3 ananas \textbf{à vendre}      & 3 melons \textbf{à vendre} \tabrowEnd
+      \hline
+      3 pêches \textbf{à vendre}      & 3 aubergines \textbf{à vendre} \tabrowEnd
+      \hline
+      3 carottes \textbf{à vendre}    & 3 champignons \textbf{à vendre} \tabrowEnd
+      \hline
+    \end{tabular}
+  }
+\end{document}

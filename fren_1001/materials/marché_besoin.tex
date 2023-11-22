@@ -1,0 +1,54 @@
+% This goes with an activity for day 41
+
+\documentclass{article}
+  % Packages
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage[margin=1in]{geometry}
+  \usepackage{calc}
+  \pagenumbering{gobble}
+
+  % Document info
+  \date{}
+
+  % New commands
+  \newcommand{\tabHeader}[1]{\textbf{#1}}
+  \newcommand{\tabrowEnd}{\rule{0pt}{35pt}\\}
+
+\begin{document}
+  \centering
+  \noindent
+  {\LARGE
+    \begin{tabular}{| p{0.5\textwidth-2\tabcolsep} | p{0.5\textwidth-2\tabcolsep} |}
+      \hline
+      \textbf{besoin de} 4 ananas      & \textbf{besoin de} 4 melons \tabrowEnd
+      \hline
+      \textbf{besoin de} 4 pêches      & \textbf{besoin de} 4 aubergines \tabrowEnd
+      \hline
+      \textbf{besoin de} 4 carottes    & \textbf{besoin de} 4 champignons \tabrowEnd
+      \hline
+      \textbf{besoin de} 4 concombres  & \textbf{besoin de} 4 courgettes \tabrowEnd
+      \hline
+      \textbf{besoin de} 4 oigons      & \textbf{besoin de} 4 poivrons \tabrowEnd
+      \hline
+      \textbf{besoin de} 4 tomates     & \textbf{besoin de} 5 ananas \tabrowEnd
+      \hline
+      \textbf{besoin de} 5 melons      & \textbf{besoin de} 5 pêches \tabrowEnd
+      \hline
+      \textbf{besoin de} 5 aubergines  & \textbf{besoin de} 5 carottes \tabrowEnd
+      \hline
+      \textbf{besoin de} 5 champignons & \textbf{besoin de} 5 concombres \tabrowEnd
+      \hline
+      \textbf{besoin de} 5 courgettes  & \textbf{besoin de} 5 oignons \tabrowEnd
+      \hline
+      \textbf{besoin de} 5 poivrons    & \textbf{besoin de} 5 tomates \tabrowEnd
+      \hline
+      \textbf{besoin de} 6 ananas      & \textbf{besoin de} 6 melons \tabrowEnd
+      \hline
+      \textbf{besoin de} 6 pêches      & \textbf{besoin de} 6 aubergines \tabrowEnd
+      \hline
+      \textbf{besoin de} 6 carottes    & \textbf{besoin de} 6 champignons \tabrowEnd
+      \hline
+    \end{tabular}
+  }
+\end{document}
