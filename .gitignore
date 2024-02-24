@@ -253,3 +253,8 @@ ling_intro/shared/attendance_preamble.tex
 
 # Python stuff
 __pycache__
+
+# R stuff
+.Rproj.user
+.Rhistory
+*.Rproj
