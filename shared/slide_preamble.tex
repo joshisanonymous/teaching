@@ -47,6 +47,10 @@
 \newcommand{\uttr}[1]{`#1'}
 % Sentences (pragmatics)
 \newcommand{\sent}[1]{\textit{#1}}
+% Fixed length underlines
+\newcommand{\funderline}[2][4cm]{
+  \underline{\makebox[\ifdim\width>#1\width\else#1\fi]{#2}}
+}
 % Base dir for definitions
 \newcommand{\defs}{../definitions}
 \newcommand{\activity}[1]{
