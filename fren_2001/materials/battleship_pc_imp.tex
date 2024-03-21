@@ -1,0 +1,51 @@
+% This is for the day 41 activity
+
+\documentclass{article}
+  % Packages
+  \usepackage{fontspec}
+    \setmainfont{Charis SIL}
+  \usepackage[margin=1in]{geometry}
+  \usepackage{calc}
+  \usepackage{lscape}
+  \pagenumbering{gobble}
+
+  % Document info
+  \date{}
+
+  % New commands
+  \newcommand{\tabHeader}[1]{\textbf{#1}}
+  \newcommand{\tabrowEnd}{\\}
+  \newcommand{\plateau}{
+    \Large
+    Plateau `Board' \\
+    \begin{tabular}{| l | c | c | c | c | c | c | c | c |}
+      \hline
+                & venir & tomber & lire     & devoir & venir & tomber & lire  & devoir \\
+                & (PC)  & (PC)   & (PC)     & (PC)   & (imp) & (imp)  & (imp) & (imp) \\
+      \hline
+      Je/J'     &       &        &          &        &       &        &       & \\
+      \hline
+      Tu        &       &        &          &        &       &        &       & \\
+      \hline
+      On        &       &        &          &        &       &        &       & \\
+      \hline
+      Nous      &       &        &          &        &       &        &       & \\
+      \hline
+      Vous      &       &        &          &        &       &        &       & \\
+      \hline
+      Ils       &       &        &          &        &       &        &       & \\
+      \hline
+    \end{tabular}
+  }
+
+\begin{document}
+  \centering
+  \noindent
+  \plateau
+
+  \plateau
+
+  \plateau
+
+  \plateau
+\end{document}
