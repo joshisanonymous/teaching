@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   %
+% Compile with XeLaTeX and biber    %
+%                                   %
+% Questions or comments:            %
+%                                   %
+% joshua dot mcneill at uga dot edu %
+%                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{beamer}
+  % Read in standard preamble (cosmetic stuff)
+  \input{../../shared/slide_preamble.tex}
+
+  % Packages and settings
+
+  % Document information
+  \subtitle[Révision]{La révision pour le dernier examen}
+
+  %% Custom commands
+  % Subsection/frame titles
+
+\begin{document}
+  % Read in the standard intro slides (title page and table of contents)
+  \begin{frame}
+    \titlepage
+    \tiny{Office: \input{../../shared/office_location.tex}\\
+          Office hours: \input{../../shared/office_hours.tex}}
+  \end{frame}
+
+  \activity{dernier_annonce}
+
+  \begin{frame}
+    \hypertarget{début}{}
+    \tableofcontents[hideallsubsections]
+  \end{frame}
+
+  \section{Verbes au présent}
+    \activity{verbes_pres_dernier}
+  \section{Verbes au passé}
+    \activity{verbes_pass_dernier}
+  \section{Adjectifs}
+    \activity{adjectifs_dernier}
+  \section{Articles}
+    \activity{articles_dernier}
+  \section{Adjectifs possessifs}
+    \activity{adj_poss_dernier}
+  \section{Pronoms possessifs}
+    \activity{pro_poss_dernier}
+  \section{Interrogatifs}
+    \activity{interrogatifs_dernier}
+  \section{Négations}
+    \activity{negations_dernier}
+\end{document}
