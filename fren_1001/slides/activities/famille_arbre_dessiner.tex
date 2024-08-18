@@ -1,0 +1,27 @@
+\begin{frame}{Dessinons des arbres \gloss{Let's draw some trees}}
+  Avec un/e partenaire, décris ton arbre généalogique pour que ce/tte partenaire puisse le dessiner.
+  Utilise les adjectifs possessifs pour décrire les relations. Par exemple: \\
+  \tinygloss{With a partner, describe your family try so that your partner can draw it.
+  Use possessive adjectives to describe the relationships. For example:}
+  \begin{columns}
+    \column{0.5\textwidth}
+      \begin{itemize}
+        \item[E1:] Ma mère s'appelle Linda. Sa sœur est ma tante Suzanne. Son mari est mon oncle Frank. Leur fils est mon cousin Rob.
+        \item[] \tinygloss{My mother's name is Linda. Her sister is my aunt Suzanne. Her husband is my uncle Frank. Their son is my cousin Rob.}
+      \end{itemize}
+    \column{0.5\textwidth}
+      \begin{center}
+        \small
+        \begin{tikzpicture}[level 1/.style={sibling distance=3cm},level 2/.style={sibling distance=1cm}]
+          \node {}[edge from parent fork down]
+            child { node {Linda}
+              child {node{M. McNeill}}
+              }	
+            child { node {Suzanne - Frank}
+               child {node{Rob}}
+              }		 		
+          ;
+        \end{tikzpicture}
+      \end{center}
+  \end{columns}
+\end{frame}
