@@ -13,12 +13,21 @@
   \begin{columns}
     \footnotesize
     \column{0.48\textwidth}
-      \textbf{Modèle:} \\
-      <<Mon centre-ville idéal est tranquille mais aussi animé. Il y a une grande rivière au centre et des gens qui arrivent en métro. \alert{Rend} les gens contents! Il y a des parcs élégants et des magasins, aussi. \alert{Rend} les bâtiments des magasins plutôt gothiques mais rénovés, et je veux pas de gratte-ciel affreux dans mon centre-ville idéal!>>
+      \only<1>{
+        \textbf{Modèle:} \\
+        <<Mon centre-ville idéal est tranquille mais aussi animé. Il y a une grande rivière au centre et des gens qui arrivent en métro. \alert{Rend} les gens contents! Il y a des parcs élégants et des magasins, aussi. \alert{Rend} les bâtiments des magasins plutôt gothiques mais rénovés, et je ne veux pas de gratte-ciel affreux dans mon centre-ville idéal!>>
+      }
+      \only<2->{
+        \normalsize
+        \alert{Maintenant}, rendez-moi les dessins.
+        Je vais vous en donner un nouveau, et vous allez écrire une description de l'image avec \emph{beaucoup d'adjectifs}.
+      }
     \column{0.04\textwidth}
-      \begin{center}
-        $\to$
-      \end{center}
+      \only<1>{
+        \begin{center}
+          $\to$
+        \end{center}
+      }
     \column{0.48\textwidth}
       \begin{center}
         \includegraphics[scale=0.18]{centre-ville.png} \\
