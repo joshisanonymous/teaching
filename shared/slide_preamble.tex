@@ -32,8 +32,8 @@
   \usetikzlibrary{trees}
 
 % Document information
-\author{M. McNeill}
-\title[FREN2001]{Français 2001}
+\author{Joshua McNeill}
+\title[Louisiana French 1]{Louisiana French 1}
 \institute{\url{joshua.mcneill@uga.edu}}
 \date{}
 
@@ -49,12 +49,14 @@
 \newcommand{\uttr}[1]{`#1'}
 % Sentences (pragmatics)
 \newcommand{\sent}[1]{\textit{#1}}
-% Fixed length underlines
+% Underlines
 \newcommand{\funderline}[2][3.5cm]{
   \underline{\makebox[\ifdim\width>#1\width\else#1\fi]{#2}}
-}
+} % filled fix length
+\newcommand{\blank}{\underline{\hspace{2cm}}} % blank
 % Base dir for definitions
 \newcommand{\defs}{../definitions}
+% Activity slides
 \newcommand{\activity}[1]{
   \input{./activities/#1.tex}
 }
